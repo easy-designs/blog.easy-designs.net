@@ -35,10 +35,17 @@
 
 				<header>
 					<h1>{exp:typogrify}{title}{/exp:typogrify}</h1>
-					<h3 class="meta">Posted by <a href="/archives/by-author/{username}/">{author}</a> on <time class="published" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
-  					<a rel="bookmark" href="{the_permalink}">Permalink</a></h3>
+                    {exp:query sql="SELECT `url_title` AS `author_url_title`
+                                    FROM   `exp_weblog_titles` AS `t`
+                                    INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
+                                    WHERE  `m`.`username` = '{username}'
+                                        AND  `t`.`weblog_id` = 8"}
+					<h3 class="meta">Posted by <a href="/archives/by-author/{author_url_title}/">{author}</a> on 
+					    <time class="published" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
+  					    <a rel="bookmark" href="{the_permalink}">Permalink</a></h3>
+                    {/exp:query}
 				</header>
-		  	{exp:typogrify}{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
+		  	    {exp:typogrify}{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
 					{exp:allow_eecode embed="y"}
 						{entry_body}
 					{/exp:allow_eecode}

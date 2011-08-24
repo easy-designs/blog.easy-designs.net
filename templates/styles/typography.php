@@ -60,7 +60,7 @@ li p, li table, li pre, li ul {
 cite, em, dfn, .notes {
   font-family: {italic}, {serif};
   font-style: italic;
-  font-size: 100%;
+  font-size: 100%; 
 }
 .notes {
   font-size: 0.92307692em;
