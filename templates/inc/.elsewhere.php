@@ -7,7 +7,7 @@
                 <h2>We made this</h2>
                 <h3 class="figure featured">
                     <a href="http://adaptivewebdesign.info">
-                        <img title="Adaptive Web Design" src="/img/adaptive-web-design-promo.png" alt="" />
+                        <img title="Adaptive Web Design" src="{cdn}/general/adaptive-web-design-promo.png" alt="" />
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
