@@ -1,4 +1,4 @@
-{assign_variable:easy_images="http://images.easy-designs.net/global"}
+{assign_variable:easy_images="http://cdn1.easy-designs.net/global"}
 {assign_variable:my_weblog="blog"}
 {assign_variable:team="{exp:structure:child_ids entry_id='388'}"}
 
@@ -6,8 +6,9 @@
 
 {!-- individual post or author archive --}
 {if embed:author}
-	{exp:weblog:entries site="easy-designs" weblog="staff" username="{embed:author}" limit="1" status="open|closed"
-											dynamic="off" rdf="off" disable="categories|category_fields|member_data|pagination|trackbacks"}
+	{exp:weblog:entries site="easy-designs" weblog="staff" username="{embed:author}" 
+	                    limit="1" status="open|closed" dynamic="off" rdf="off" 
+						disable="categories|category_fields|member_data|pagination|trackbacks"}
 				<div class="vcard">
 					<figure>
 						<img class="photo" src="{easy_images}/{url_title}.jpg" alt="" />
@@ -35,7 +36,7 @@
 											cache="yes" refresh="1440"}
 						<li class="vcard">
 							<a title="{title}" href="/archives/by-author/{url_title}/">
-								<img style="background-image: url({easy_images}/{url_title}-sm.jpg);" src="/img/css/frame-author-sm.png" alt=""/>
+								<img style="background-image: url({easy_images}/{url_title}-sm.jpg);" src="{cdn}/css/frame-author-sm.png" alt=""/>
 								<span class="fn">{title}</span>
 							</a>
 						</li>

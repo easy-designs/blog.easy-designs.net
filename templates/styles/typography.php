@@ -1,4 +1,3 @@
-{assign_variable:easy_css_images="http://images.easy-designs.net/css"}
 {assign_variable:sans="'ratio-1', 'ratio-2', 'Myriad Pro', 'Trebuchet MS', sans-serif"}
 {assign_variable:serif="Georgia, Times, 'Times New Roman', serif"}
 {assign_variable:italic="'apolline-1', 'apolline-2'"}
@@ -61,7 +60,7 @@ li p, li table, li pre, li ul {
 cite, em, dfn, .notes {
   font-family: {italic}, {serif};
   font-style: italic;
-  font-size: 115%;
+  font-size: 100%;
 }
 .notes {
   font-size: 0.92307692em;
@@ -204,7 +203,7 @@ a[rel=feed]:after {
   margin-left: .5em;
 }
 .focal ul {
-	list-style: url({easy_css_images}/bullet.png);
+	list-style: url({cdn}/css/bullet.png);
 }
 .focal .meta {
 	list-style: none;

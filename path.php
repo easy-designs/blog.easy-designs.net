@@ -19,6 +19,9 @@ $site_url       = "http://{$_SERVER['HTTP_HOST']}/";
 $site_index     = '';
 $site_404       = '';
 $site_name      = 'easy-reader';
-$global_vars    = array(); // This array must be associative
+// This array must be associative
+$global_vars    = array(
+    'cdn'   => 'http://cdn3.easy-designs.net'
+); 
 
 ?>

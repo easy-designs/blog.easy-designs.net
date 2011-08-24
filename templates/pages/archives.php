@@ -78,62 +78,62 @@ if ( $show == 'not found' )
 }
 
 ?>
-{assign_variable:easy_images="http://images.easy-designs.net/global"}
+{assign_variable:easy_images="http://cdn1.easy-designs.net/global"}
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/"}
 
 {embed="inc/.head" title="<?php echo $title; ?>"}
 {embed="inc/.header" body_id="archive"}
 
     <section id="main">
-      <article class="focal">
+        <article class="focal">
 
-	 			<header>
-          <h1>{exp:typogrify}<?php echo $title; ?>&nbsp;<a href="{if segment_3=="author" OR segment_3=="category" OR segment_3=="tag"}/rss/by-{segment_3}/{segment_4}{if:else}/rss/posts{/if}.rss" title="Subscribe to this archive"><img src="/img/rss-icon.png" alt="Subscribe"/></a>{/exp:typogrify}</h1>
-				</header>
+			<header>
+                <h1>{exp:typogrify}<?php echo $title; ?>&nbsp;<a href="{if segment_3=="author" OR segment_3=="category" OR segment_3=="tag"}/rss/by-{segment_3}/{segment_4}{if:else}/rss/posts{/if}.rss" title="Subscribe to this archive"><img src="{cdn}/general/rss-icon.png" alt="Subscribe"/></a>{/exp:typogrify}</h1>
+			</header>
 
 {exp:weblog:entries weblog="blog" orderby="date" sort="desc" limit="10" rdf="off"
                     category="<?php echo $category; ?>" username="<?php echo $username; ?>" 
-										year="<?php echo $year; ?>" month="<?php echo $month; ?>" day="<?php echo $day; ?>"
+					year="<?php echo $year; ?>" month="<?php echo $month; ?>" day="<?php echo $day; ?>"
                     paginate="bottom" paginate_base="<?php echo $base; ?>"}
-  {if no_results}
-    		<p>No posts were found. Sorry.</p>
-  {/if}
+    {if no_results}
+            <p>No posts were found. Sorry.</p>
+    {/if}
 	{if count=="1"}
-				<ol class="hfeed">
+	        <ol class="hfeed">
 	{/if}
-					<li class="hentry{if count=='10' OR count==total_results} last{/if}">
-          	<article>
-            	<ul class="meta">
-  {exp:query sql="SELECT `url_title` AS `author_url_title`
-                  FROM   `exp_weblog_titles` AS `t`
+        		<li class="hentry{if count=='10' OR count==total_results} last{/if}">
+                  	<article>
+                    	<ul class="meta">
+    {exp:query sql="SELECT `url_title` AS `author_url_title`
+                    FROM   `exp_weblog_titles` AS `t`
                     INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
-                  WHERE  `m`.`username` = '{username}'
-                    AND  `t`.`weblog_id` = 8"}
-	              <li class="author vcard">
-	                <a href="/archives/by-author/{author_url_title}/">
-	                  <img src="{easy_images}/{author_url_title}-wide.jpg" alt=""/>
-	                  <b class="frame"></b>
-	                  <span class="fn">{author}</span>
-	                </a>
-	              </li>
-  {/exp:query}
-	              <li><time class="published" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %M %Y'}</time></li>
-                {categories show="151|184|183"}<li>
-									<a rel="tag" href="/archives/by-category/{category_name}/">{category_name}</a>
-								</li>{/categories}
-                {if comment_total!="0"}<li><a href="{permalink}#comments">{comment_total} Comment{if comment_total!="1"}s{/if}</a></li>{/if}
-              </ul>
-              <section class="body">
-                <h2><a class="entry-title" rel="bookmark permalink" href="{permalink}">{title}</a></h2>
-                <div class="entry-summary">
-									{exp:allow_eecode embed="y"}{entry_excerpt}{/exp:allow_eecode}
-								</div>
-                <p class="more"><a rel="bookmark" href="{permalink}">Read&nbsp;more&#8230;</a></p>
-              </section>
-          	</article>
-					</li>
+                    WHERE  `m`.`username` = '{username}'
+                        AND  `t`.`weblog_id` = 8"}
+        	                <li class="author vcard">
+        	                    <a href="/archives/by-author/{author_url_title}/">
+        	                        <img src="{easy_images}/{author_url_title}-wide.jpg" alt=""/>
+        	                        <b class="frame"></b>
+        	                        <span class="fn">{author}</span>
+        	                    </a>
+        	                </li>
+    {/exp:query}
+	                        <li><time class="published" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %M %Y'}</time></li>
+                            {categories show="151|184|183"}<li>
+						        <a rel="tag" href="/archives/by-category/{category_name}/">{category_name}</a>
+					        </li>{/categories}
+                            {if comment_total!="0"}<li><a href="{permalink}#comments">{comment_total} Comment{if comment_total!="1"}s{/if}</a></li>{/if}
+                        </ul>
+                        <section class="body">
+                            <h2><a class="entry-title" rel="bookmark permalink" href="{permalink}">{title}</a></h2>
+                            <div class="entry-summary">
+						        {exp:allow_eecode embed="y"}{entry_excerpt}{/exp:allow_eecode}
+					        </div>
+                            <p class="more"><a rel="bookmark" href="{permalink}">Read&nbsp;more&#8230;</a></p>
+                        </section>
+          	        </article>
+		        </li>
 	{if count==total_results}
-				</ol>
+	        </ol>
 	{/if}
           
   {paginate}
@@ -144,7 +144,7 @@ if ( $show == 'not found' )
   {/paginate}
         
 {/exp:weblog:entries}
-			</article>
+		</article>
 
 {embed="inc/.sidebar" version="archive"<?php echo $archive=='author' ? "author='{$username}'" : ''; ?>}
       

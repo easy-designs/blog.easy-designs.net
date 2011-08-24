@@ -42,5 +42,5 @@ RewriteRule ^archives\/(.*)$ /pages/archives/$1 [L]
 RewriteRule ^rss\/by-(category|author|tag)\/(.*)\.rss$ /rss/$1/$2/ [L]
 
 # rewrite out the index.php page
-RewriteCond $1 !^(images|demos|img|css|js|__ee_admin|scripts|tpl|themes|favicon\.ico|robots\.txt|index\.php) [NC]
+RewriteCond $1 !^(images|demos|assets|img|css|js|__ee_admin|scripts|tpl|themes|favicon\.ico|robots\.txt|index\.php) [NC]
 RewriteRule ^(.*)$ index.php/$1 [L]

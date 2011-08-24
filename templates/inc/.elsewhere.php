@@ -1,29 +1,29 @@
 {assign_variable:my_weblog="blog"}
 {assign_variable:my_template_group="blog"}
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
-      <aside id="elsewhere" class="promo"><div class="inner">
+        <aside id="elsewhere" class="promo"><div class="inner">
         
-        <section id="software">
-          <h2>We made this</h2>
-          <h3 class="figure featured">
-            <a href="http://ecsstender.org">
-            <img title="eCSStender" src="{cdn}/general/ecsstender-logo.png" alt="" />
-            <b class="frame"><b></b></b>
-          </a>
-          </h3>
-          <p><strong>Take control of your CSS!</strong> Say goodbye to the browser-specific properties and hacks cluttering your files and say hello to lean, mean CSS. With <a href="http://ecsstender.org">eCSStender</a>, when you write the rules, browsers pay attention.</p>
-        </section>
-        
-        <section id="retreats">
-          <h2>Learn with us</h2>
-          <h3 class="figure featured">
-            <a href="http://retreats4geeks.com/2010/retreat-js/">
-              <img title="eCSStender" src="{cdn}/general/r4g-logo.png" alt="" />
-              <b class="frame"><b></b></b>
-            </a>
-          </h3>
-          <p>Join us April 8th&#8211;10th, 2011 for <a href="http://retreats4geeks.com/2011/html5-css3/">our HTML5 &amp; CSS3 retreat</a>, an intimate training experience in a beautiful setting, tailored to attendees, and focused on topics you want to cover.</p>
-        </section>
+            <section id="software">
+                <h2>We made this</h2>
+                <h3 class="figure featured">
+                    <a href="http://adaptivewebdesign.info">
+                        <img title="Adaptive Web Design" src="/img/adaptive-web-design-promo.png" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>“<a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style.” — Jeremy Keith</p>
+            </section>
+            
+            <section id="retreats">
+                <h2>Learn with us</h2>
+                <h3 class="figure featured">
+                    <a href="http://retreats4geeks.com/">
+                        <img title="eCSStender" src="{cdn}/general/r4g-logo.png" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
+            </section>
         
 <?php global $DB;
 
