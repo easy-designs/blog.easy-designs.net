@@ -1,3 +1,5 @@
+{assign_variable:easy_css_images="http://cdn1.easy-designs.net"}
+
 /* =Global Layout */
 #page-header, #content, #main, #extras, aside.promo, #page-footer {
   width: 100%;
@@ -570,24 +572,24 @@ ul#pagination li {
   left: 0;
 }
 #pagination .prev a {
-  background: url({cdn}/css/icon-prev.png) 0 -32px no-repeat;
+  background: url({easy_css_images}/css/icon-prev.png) 0 -32px no-repeat;
   right: 0;
 }
 #pagination .prev {
   background: 1px 0 no-repeat;
 }
 #pagination .prev:hover {
-  background-image: url({cdn}/css/icon-prev.png);
+  background-image: url({easy_css_images}/css/icon-prev.png);
 }
 #pagination .next a {
-  background: url({cdn}/css/icon-next.png) 100% -32px no-repeat;
+  background: url({easy_css_images}/css/icon-next.png) 100% -32px no-repeat;
   right: 0;
 }
 #pagination .next {
   background: 100% 0 no-repeat;
 }
 #pagination .next:hover {
-  background-image: url({cdn}/css/icon-next.png);
+  background-image: url({easy_css_images}/css/icon-next.png);
 }
 #pagination .prev a:hover,
 #pagination .next a:hover {

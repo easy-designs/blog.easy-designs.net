@@ -1,4 +1,3 @@
-{assign_variable:easy_css_images="http://images.easy-designs.net/css"}
 {assign_variable:white="rgb(255, 255, 255)"}
 {assign_variable:white_alpha="rgb(255, 255, 255, .43)"}
 {assign_variable:black="rgb(30, 30, 30)"}
