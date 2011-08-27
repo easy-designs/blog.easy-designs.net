@@ -19,9 +19,17 @@ $site_url       = "http://{$_SERVER['HTTP_HOST']}/";
 $site_index     = '';
 $site_404       = '';
 $site_name      = 'easy-reader';
+
+$production = TRUE;
+if ( strpos( $_SERVER['SERVER_NAME'], 'dev' ) !== FALSE OR
+     strpos( $_SERVER['SERVER_NAME'], 'local' ) !== FALSE )
+{
+    $production = FALSE;
+}
+
 // This array must be associative
 $global_vars    = array(
-    'cdn'   => 'http://cdn3.easy-designs.net'
+    'cdn'   => ( $production ? 'http://cdn3.easy-designs.net' : '/img' )
 ); 
 
 ?>

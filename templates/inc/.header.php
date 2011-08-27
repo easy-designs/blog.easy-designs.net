@@ -5,7 +5,7 @@
 {if:else}
  		<h4 id="logo"><a href="/" title="Return to the homepage">
 {/if}
-			<img src="{cdn}/general/logo.png" alt="Easy Reader" />
+			<img src="{cdn}/general/easy-blog.png" alt="The Easy Designs Blog" />
 {if '{embed:body_id}'=='home'}
 		</h1>
 {if:else}
