@@ -7,13 +7,19 @@ RewriteBase /
 php_value auto_prepend_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/prepend.php
 php_value auto_append_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/append.php
 
-# redirect to no www
+# redirect old easy-reader.net URL to blog.easy-design.net
+RewriteCond %{HTTP_HOST} ^dev\.easy-reader\.net$ [NC]
+RewriteRule ^(.*)$ http://dev.blog.easy-designs.net/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^easy-reader\.net$ [NC]
+RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
+
+# remove www
 RewriteCond %{HTTP_HOST} ^www\.easy-reader\.net$ [NC]
-RewriteRule ^(.*)$ http://easy-reader.net/$1 [R=301,L]
+RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
 
 # remove the port
 RewriteCond %{HTTP_HOST} 8080$ [NC]
-RewriteRule ^(.*)$ http://easy-reader.net/$1 [R=301,L]
+RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
 
 # drop ridiculous query strings
 RewriteCond %{QUERY_STRING} !=""
