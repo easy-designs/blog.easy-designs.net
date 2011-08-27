@@ -77,7 +77,7 @@ a:hover .frame b {
 #logo img {
   position: absolute;
   left: 30px;
-  top: 30px;
+  top: 27px;
   z-index: 1;
 }
 #search-form  {
