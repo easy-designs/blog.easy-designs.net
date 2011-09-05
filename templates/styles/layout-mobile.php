@@ -53,6 +53,7 @@ img {
 }
 
 #page-header {
+  border-top-width: 14px;
   position: static;
 }
 
@@ -65,7 +66,8 @@ img {
 
 #logo img {
   left: 50%;
-  margin-left: -117px;
+  margin-left: -126px;
+  top: 25px
 }
 
 #search-form {
@@ -359,6 +361,7 @@ li.checkbox {
 
 /* =Hide non-essentials */
 #elsewhere,
-.sidebar {
+.sidebar,
+#easy-network {
   display: none;
 }

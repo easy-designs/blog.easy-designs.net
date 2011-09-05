@@ -214,3 +214,34 @@ body {
 #about {
   background: {background_green_alpha} url({cdn}/css/star-2.png) center -231px no-repeat;
 }
+
+#social-links li {
+    background: transparent;
+}
+#social-links li.twitter a {
+	background-image: url({cdn}/css/twitter.png);
+}
+#social-links li.facebook a {
+	background-image: url({cdn}/css/facebook.png);
+}
+#social-links li.github a {
+	background-image: url({cdn}/css/github.png);
+}
+
+#easy-network a {
+    color: inherit;
+    opacity: 0.5;
+}
+#easy-network a:hover,
+#easy-network a:focus {
+    opacity: 0.99;
+}
+#easy-network .easy-designs a {
+    background-image: url({cdn}/css/en-easy-designs.png);
+}
+#easy-network .easy-readers a {
+    background-image: url({cdn}/css/en-easy-readers.png);
+}
+#easy-network .r4g a {
+    background-image: url({cdn}/css/en-r4g.png);
+}

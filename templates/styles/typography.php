@@ -230,7 +230,12 @@ a[rel=feed]:after {
 .sidebar dl {
   font: 0.75em/1.5 {serif};
 }
-
+#bookmark {
+    margin-bottom: 1em;
+}
+#bookmark p, #bookmark iframe {
+  margin: 0 0 .5em;
+}
 
 /* =Inline lists */
 ul.inline {
@@ -311,7 +316,7 @@ ul.inline li {
   margin: 0;
 }
 #events .summary {
-  font: 1.07692308em/1 {serif};
+  font: 1.0769em/1.2 {serif};
   margin: 0 0 7px;
 }
 .promo h2 {
@@ -411,4 +416,15 @@ ul.inline li {
   font-style: normal;
   text-align: center;
   text-indent: 0;
+}
+
+
+#easy-network a {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#easy-network a:focus,
+#easy-network a:hover {
+	text-decoration: underline;
 }

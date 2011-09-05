@@ -26,15 +26,16 @@
 	{/exp:lg_replace:replacement}
 	{!-- end variables for insertion elsewhere --}
 
-{embed="inc/.head" entry_id="{entry_id}" title="{title}" canonical_url="{the_permalink}"
-									 author="{screen_name}"}
+{embed="inc/.head" entry_id="{entry_id}"
+                   title="{title}" canonical_url="{the_permalink}"
+				   description="{exp:ee_typography formatting="none"}{entry_excerpt}{/exp:ee_typography}" author="{screen_name}"}
 {embed="inc/.header" body_id="single-entry"}
 
 		<section role="main" id="main">
 			<article role="article" class="focal">
 
 				<header>
-					<h1>{exp:typogrify}{title}{/exp:typogrify}</h1>
+					<h1 itemprop="name">{exp:typogrify}{title}{/exp:typogrify}</h1>
                     {exp:query sql="SELECT `url_title` AS `author_url_title`
                                     FROM   `exp_weblog_titles` AS `t`
                                     INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`

@@ -81,6 +81,13 @@
 
 {!-- single entry --}
 {if:else}
+	            <h2>Spread the word</h2>
+	            <section id="bookmark">
+	                <p class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="EasyDesigns">Tweet</a></p>
+	                <p class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id=217768048280447&amp;href&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe></p>
+	                <p class="google_plus"><div class="g-plusone" data-annotation="none"></div></p>
+	            </section>
+	
 	{exp:weblog:entries entry_id="{embed:entry_id}" rdf="off"
   										disable="category_fields|member_data|pagination|trackbacks"}
 				<h2>Filed under</h2>

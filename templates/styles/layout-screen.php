@@ -64,14 +64,14 @@ a:hover .frame b {
 
 /* =Header */
 #page-header {
-  border-top: 14px solid;
+  border-top: 30px solid;
   border-bottom: 7px solid;
   margin: 0;
 }
 #logo {
   height: 70px;
-  margin: -14px 0 0 -430px;
-  padding-top: 14px;
+  margin: -30px 0 0 -430px;
+  padding-top: 50px;
   position: relative;
   left: 50%;
   width: 860px;
@@ -79,12 +79,12 @@ a:hover .frame b {
 #logo img {
   position: absolute;
   left: 30px;
-  top: 27px;
+  top: 51px;
   z-index: 1;
 }
 #search-form  {
   position: absolute;
-  top: 22px;
+  top: 32px;
   right: 50%;
   margin: 0 -410px 0 0;
 }
@@ -612,4 +612,54 @@ ul#pagination li {
   opacity: 1;
   right: 20%;
   left: -80%;
+}
+
+#social-links {
+    overflow: hidden;
+}
+#social-links li {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+#social-links li a {
+	background: top left no-repeat;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 30px;
+	height: 30px;
+}
+
+#easy-network {
+    width: 860px;
+    margin: 0 0 0 -430px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1000;
+}
+#easy-network ul {
+    margin: 0;
+    padding: 0 20px;
+    text-align: right;
+}
+#easy-network li {
+    display: inline;
+}
+#easy-network a {
+    background: center left no-repeat;
+    line-height: 30px;
+    padding: 0 20px 0 27px;
+}
+#easy-network .r4g a {
+    padding-left: 16px;
+}
+#easy-network .easy-readers a {
+    padding-right: 0;
 }
