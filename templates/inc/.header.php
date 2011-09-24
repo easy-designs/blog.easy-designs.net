@@ -12,7 +12,5 @@
 		</a></h4>
 {/if}
 
-{embed="search/.form"}
-
 	</header>
 	<section id="content">

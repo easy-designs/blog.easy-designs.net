@@ -105,14 +105,14 @@ pre.shell {
   background-color: {background_blue_blue};
   background-color: {background_blue_alpha};
 }
-.promo, #page-footer {
+.promo, #page-footer, #search-form {
   background-color: {background_green};
 }
 .inner {
   background-color: {background_blue_blue};
   background-color: {background_blue_alpha};
 }
-#page-footer p {
+#page-footer p, #search-form p {
   background-color: {background_blue_green};
   background-color: {background_blue_alpha};
 }
@@ -144,14 +144,8 @@ pre.shell {
   background-color: {background_white_blue};
   background-color: {background_blue_alpha};
 }
-#comments .hentry {
-  background: transparent url({cdn}/css/bubble-top.png) no-repeat 0 0;
-}
-#comments .entry-content {
-  background: transparent url({cdn}/css/bubble-mid.png) repeat-y;
-}
 #comments .meta {
-  background: transparent url({cdn}/css/bubble-bottom.png) no-repeat 0 0;
+  background: transparent url({cdn}/css/bubble-bottom.png) 0 -5px no-repeat;
 }
 
 
@@ -181,9 +175,6 @@ pre.shell {
 
 
 /* =Footer Content */
-#about-us {
-  background: url({cdn}/css/orange-stars.png) no-repeat 11px 19px;
-}
 #more li {
   background: url({cdn}/css/all-entries.png) no-repeat 0 50%;
 }
@@ -205,16 +196,6 @@ pre.shell {
 
 
 /* =RGBa Enhancements */
-body {
-  background: {background_white_alpha} url({cdn}/css/star.png) center 0 no-repeat;
-}
-#extras {
-  background: {background_white_alpha} url({cdn}/css/star-2.png) center top no-repeat;
-}
-#about {
-  background: {background_green_alpha} url({cdn}/css/star-2.png) center -231px no-repeat;
-}
-
 #social-links li {
     background: transparent;
 }
@@ -244,4 +225,31 @@ body {
 }
 #easy-network .r4g a {
     background-image: url({cdn}/css/en-r4g.png);
+}
+
+
+@media screen and (min-width:860px) {
+    
+    body {
+      background: {background_white_alpha} url({cdn}/css/star.png) center 0 no-repeat;
+    }
+    #comments .hentry {
+		  background: transparent url({cdn}/css/bubble-top.png) no-repeat 0 0;
+		}
+		#comments .entry-content {
+		  background: transparent url({cdn}/css/bubble-mid.png) repeat-y;
+		}
+		#comments .meta {
+			background-position: 0 0;
+		}
+		#extras {
+      background: {background_white_alpha} url({cdn}/css/star-2.png) center top no-repeat;
+    }
+    #about {
+      background: {background_green_alpha} url({cdn}/css/star-2.png) center -231px no-repeat;
+    }
+		#about-us {
+		  background: url({cdn}/css/orange-stars.png) no-repeat 11px 19px;
+		}
+		
 }
