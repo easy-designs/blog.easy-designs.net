@@ -11,18 +11,18 @@
 	
 	{exp:lg_replace:replacement needle="the_permalink"}{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/{/exp:lg_replace:replacement}
 
-	{exp:lg_replace:replacement needle="comment_link"}{if allow_comments}<a href="#comment-form">Be the first</a>.{/if}{/exp:lg_replace:replacement}
+	{exp:lg_replace:replacement needle="comment_link"}
+	    {if allow_comments}<a href="#comment-form">Be the first</a>.{/if}
+	    {if allow_comments==FALSE}Comments are now closed on this entry.{/if}
+	{/exp:lg_replace:replacement}
 
 	{exp:lg_replace:replacement needle="comment_form"}
+	    {if allow_comments}
 		<section id="comment-form" class="focal">
 			<h2>Post a Comment</h2>
-		{if allow_comments}
 			{embed="inc/.comment-form" entry_id="{entry_id}" return="{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/#comments"}
-		{/if}
-		{if allow_comments==FALSE}
-			<p>Comments are now closed on this entry.</p>
-		{/if}
 		</section>
+		{/if}
 	{/exp:lg_replace:replacement}
 	{!-- end variables for insertion elsewhere --}
 
@@ -58,14 +58,17 @@
 
 {/exp:weblog:entries}
 
-			<section id="comments" class="focal">
-				<h2>Comments</h2>
 {exp:comment:entries sort="asc"}
-	{if no_results}
-				<p id="no-comments">No comments have been left on this entry. {comment_link}</p>
-	{/if}
+    {if no_results}
+	        <section id="comments" class="focal">
+		        <h2>Comments</h2>
+    			<p id="no-comments">No comments have been left on this entry. {comment_link}</p>
+    		</section>
+    {/if}
 	{if count=="1"}
-	      <ol class="hfeed">
+        	<section id="comments" class="focal">
+        		<h2>Comments</h2>
+    	        <ol class="hfeed">
 	{/if}
 					<li class="hentry" id="comment-{comment_id}">
 						<article class="entry-content">
@@ -87,9 +90,9 @@
 					</li>
 	{if count==total_results}
 				</ol>
+			</section>
 	{/if}
 {/exp:comment:entries}
-			</section>
 
 {comment_form}{!-- comes from LG Replace (above) --}
 
