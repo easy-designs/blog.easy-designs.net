@@ -107,7 +107,7 @@ a:hover .frame b {
 }
 article.focal figure {
 	background: #fff;
-	width: 520px;
+	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -125,8 +125,10 @@ article.focal figure embed,
 article.focal figure canvas,
 article.focal figure iframe {
 	background: #fff;
-	border: 10px solid #fff; 
-	width: 500px;
+	border: 10px solid;
+	margin-left: -10px;
+	width: 100%;
+	height: auto;
 }
 article.focal figure figcaption {
 	background: #fff;
@@ -173,12 +175,15 @@ article.focal figure:before {
 	bottom: 20px; 
 	z-index: -2; 
 }
+article.focal .gist-meta {
+	display: none;
+}
 
 
 /* =Comments */
 #comments {
 	margin: 0;
-	padding: 15px 20px 10px;
+	padding: 15px 20px 20px;
 }
 #comments p:last-child {
 	margin-bottom: 0;
@@ -201,7 +206,7 @@ article.focal figure:before {
 	z-index: 2;
 }
 #comments .meta {
-	margin: 0 0 2em;
+	margin: 0;
 	padding: 30px 0 0 150px;
 	position: relative;
 	top: -15px;
@@ -293,8 +298,20 @@ article.focal figure:before {
 } */
 
 
-/* =Sidebars
-.sidebar {
+/* =Sidebars */
+.sidebar .inner > * {
+	display: none;
+}
+.sidebar #bookmark {
+	display: block;
+	padding: 0 20px;
+	overflow: hidden;
+}
+#bookmark p {
+	float: left;
+	margin-right: 10px;
+}
+/* .sidebar {
 	position: absolute;
 	left: 50%;
 	right: 0;
@@ -723,27 +740,6 @@ article ul#pagination,
 }
 
 
-article.focal figure {
-	width: 85%;
-}
-article.focal figure img,
-article.focal figure video,
-article.focal figure audio,
-article.focal figure object,
-article.focal figure embed,
-article.focal figure canvas,
-article.focal figure iframe {
-	border-width: 10px;
-	width: 100%;
-}
-article.focal figure img,
-article.focal figure video,
-article.focal figure audio,
-article.focal figure object,
-article.focal figure embed,
-article.focal figure canvas {
-	height: auto;
-}
 
 
 #comment-form {
@@ -760,7 +756,6 @@ article.focal figure canvas {
  
 /* =Hide non-essentials */
 #elsewhere,
-.sidebar,
 #easy-network {
 	display: none;
 }

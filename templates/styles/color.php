@@ -112,9 +112,30 @@ pre.shell {
   background-color: {background_blue_blue};
   background-color: {background_blue_alpha};
 }
+.sidebar .inner {
+	background: transparent;
+}
 #page-footer p, #search-form p {
   background-color: {background_blue_green};
   background-color: {background_blue_alpha};
+}
+
+/* =Figures */
+article.focal figure,
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe,
+article.focal figure figcaption {
+	background: {white};
+	border-color: {white};
+}
+article.focal figure:after,
+article.focal figure:before { 
+	background: transparent;
 }
 
 
@@ -241,6 +262,10 @@ pre.shell {
 		}
 		#comments .meta {
 			background-position: 0 0;
+		}
+		.sidebar .inner {
+		  background-color: {background_blue_blue};
+		  background-color: {background_blue_alpha};
 		}
 		#extras {
       background: {background_white_alpha} url({cdn}/css/star-2.png) center top no-repeat;

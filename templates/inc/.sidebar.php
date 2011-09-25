@@ -1,4 +1,5 @@
 {assign_variable:easy_images="http://cdn1.easy-designs.net/global"}
+{assign_variable:css_images="http://cdn3.easy-designs.net/css"}
 {assign_variable:my_weblog="blog"}
 {assign_variable:team="{exp:structure:child_ids entry_id='388'}"}
 
@@ -6,9 +7,11 @@
 
 {!-- individual post or author archive --}
 {if embed:author}
+
 	{exp:weblog:entries site="easy-designs" weblog="staff" username="{embed:author}" 
 	                    limit="1" status="open|closed" dynamic="off" rdf="off" 
 						disable="categories|category_fields|member_data|pagination|trackbacks"}
+
 				<div class="vcard">
 					<figure>
 						<img class="photo" src="{easy_images}/{url_title}.jpg" alt="" />
@@ -23,10 +26,12 @@
 	  {/if}
 					<li><a rel="feed" href="/rss/by-author/{url_title}.rss">Subscribe to {title}&#8217;s posts</a></li>
 				</ul>
+
 	{/exp:weblog:entries}
 
 {!-- general archive --}
 {if:else}
+
 				<h2>Easy writers</h2>
 				<nav role="navigation">
 					<ul class="easy-writers">
@@ -42,6 +47,8 @@
 						</li>
 	{/exp:weblog:entries}
 					</ul>
+				</nav>
+				
 {/if}
 
 {!-- general archive --}
@@ -81,12 +88,13 @@
 
 {!-- single entry --}
 {if:else}
-	            <h2>Spread the word</h2>
-	            <section id="bookmark">
-	                <p class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="EasyDesigns">Tweet</a></p>
-	                <!-- http://www.facebook.com/sharer.php?u=http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?> -->
-	                <p class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?app_id=217768048280447&amp;href&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe></p>
-	                <p class="google_plus"><div class="g-plusone" data-annotation="none"></div></p>
+
+<?php $page = urlencode( "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ); ?>
+				<h2>Spread the word</h2>
+				<section id="bookmark">
+	      			<p class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="EasyDesigns"><img src="{css_images}/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="http://www.facebook.com/sharer.php?u=<?php echo $page; ?>"><img src="{css_images}/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+<?php	/*                <p class="google_plus"><a href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=<?php echo $page; ?>&amp;referer=<?php echo $page; ?>" class="g-plusone" data-annotation="none" data-size="small">+1</a><!--div class="g-plusone" data-annotation="none"></div--></p> */ ?>
 	            </section>
 	
 	{exp:weblog:entries entry_id="{embed:entry_id}" rdf="off"
@@ -112,31 +120,33 @@
 				</nav>
 
 		{if entry_related}
-		    <h2>Related entries</h2>
-			<nav role="navigation">
-				<ul class="browse also">
-				  {entry_related}
-					<li><a href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/">{title}</a></li>
-					{/entry_related}
-				</ul>
-			</nav>
-    {/if} 
+				<h2>Related entries</h2>
+				<nav role="navigation">
+					<ul class="browse also">
+				  		{entry_related}
+						<li><a href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/">{title}</a></li>
+						{/entry_related}
+					</ul>
+				</nav>
+    	{/if}
 
 		{reverse_related_entries weblog="translations"}
 		  {if count=="1"}
-		    <h2>Available translations</h2>
-		    <nav role="navigation">
-				<ul class="also">
+				<h2>Available translations</h2>
+				<nav role="navigation">
+					<ul class="also">
 		  {/if}
-					<li class="offsite">
-						<a href="{translation_link}" hreflang="{translation_language code='yes'}">{translation_language}</a>
-					</li>
+						<li class="offsite">
+							<a href="{translation_link}" hreflang="{translation_language code='yes'}">{translation_language}</a>
+						</li>
 		  {if count==total_results}
-		    	</ul>
-			</nav>
+	    			</ul>
+				</nav>
 		  {/if}
 		{/reverse_related_entries}
+		
 	{/exp:weblog:entries}
+	
 {/if}
 
-		</div></section>{!-- end sidebar --}
+			</div></section>{!-- end sidebar --}

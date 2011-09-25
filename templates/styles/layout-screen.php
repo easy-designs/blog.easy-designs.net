@@ -41,6 +41,21 @@
 	margin: 0 0 1em;
 	padding: 0;
 }
+article.focal figure {
+	width: 520px;
+}
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe {
+	width: 500px;
+}
+article.focal .gist-meta {
+	display: block;
+}
 
 
 /* =Comments */
@@ -58,6 +73,9 @@
 	padding-left: 20px;
 	padding-right: 45px;
 	position: static;
+}
+#comments .meta {
+	left: 0;
 }
 #comments .hentry .meta .vcard {
 	margin-top: 0;
