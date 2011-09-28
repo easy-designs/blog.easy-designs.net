@@ -52,6 +52,8 @@
 					{/exp:allow_eecode}
 				{/exp:replace}{/exp:typogrify}
 
+				{embed="inc/.share"}
+
 			</article>
 
 {embed="inc/.sidebar" entry_id="{entry_id}" author="{username}"}
