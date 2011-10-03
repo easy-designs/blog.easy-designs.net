@@ -99,7 +99,7 @@ a:hover .frame b {
 	margin:  0 0 4em;
 }
 #single-entry article.focal {
-	padding: 1% 4%;
+	padding: 3px 10px;
 }
 .focal header {
 	margin: 0;
@@ -180,17 +180,32 @@ article.focal .gist-meta {
 }
 
 
+/* =Sharing Options */
+#bookmark {
+	overflow: hidden;
+}
+#bookmark p {
+	float: left;
+	margin-right: 10px;
+}
+
+
 /* =Comments */
 #comments {
 	margin: 0;
-	padding: 15px 20px 20px;
+	padding: 15px 10px 20px;
 }
 #comments p:last-child {
 	margin-bottom: 0;
 }
+#comment-loader {
+	display: block;
+	margin: -15px -10px -20px;
+	padding: 15px 10px;
+}
 #comments .hfeed {
 	list-style: none;
-	margin-bottom: -20px;
+	margin: 0 0 -10px;
 	padding: 0;
 	overflow: hidden;
 }
@@ -301,15 +316,6 @@ article.focal .gist-meta {
 /* =Sidebars */
 .sidebar .inner > * {
 	display: none;
-}
-.sidebar #bookmark {
-	display: block;
-	padding: 0 20px;
-	overflow: hidden;
-}
-#bookmark p {
-	float: left;
-	margin-right: 10px;
 }
 /* .sidebar {
 	position: absolute;
@@ -435,17 +441,17 @@ article.focal .gist-meta {
 
 /* =Footer Content */
 #about-us {
-	padding: 20px 20px 0;
+	padding: 20px 10px 0;
 }
 #more {
-	padding: 0 20px;
+	padding: 0 10px;
 }
 #page-footer {
 	clear: both;
 }
 #page-footer p {
 	margin: 0 auto;
-	padding: 10px 20px;
+	padding: 10px;
 }
 
 
@@ -454,8 +460,8 @@ ul#pagination {
 	height: 32px;
 	margin: 1em 0 0;
 	position: absolute;
-	left: 20px;
-	right: 20px;
+	left: 10px;
+	right: 10px;
 	bottom: -3.8em;
 }
 ul#pagination li {
@@ -533,7 +539,7 @@ ul#pagination li {
 }
 #search-form p {
 	margin: 0;
-	padding: 20px 0 0 20px;
+	padding: 20px 0 10px 10px;
 	overflow: hidden;
 }
 #search-form input,

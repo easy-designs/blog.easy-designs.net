@@ -4,8 +4,8 @@ RewriteEngine on
 RewriteBase /
 
 # compress the code
-php_value auto_prepend_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/prepend.php
-php_value auto_append_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/append.php
+#php_value auto_prepend_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/prepend.php
+#php_value auto_append_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/append.php
 
 # redirect old easy-reader.net URL to blog.easy-design.net
 RewriteCond %{HTTP_HOST} ^dev\.easy-reader\.net$ [NC]
@@ -38,13 +38,15 @@ RewriteRule ^img\/(.*)\/(.*)$ /assets/$1/$2 [L]
 RewriteRule ^img\/(.*)$ /assets/general/$1 [L]
 RewriteRule ^js\/(.*)\.js$ /javascripts/$1 [L]
 
-# Pages - New
+# Pages
 RewriteRule ^archives\/(\d{4})\/?(\d{2})?\/?(\d{2})?\/?(P\d+\/?)?$ /pages/archives/date/$1/$2/$3/$4 [L]
 RewriteRule ^archives\/\d{4}\/\d{2}\/\d{2}\/(.*)$ /pages/single-post/$1 [L]
 RewriteRule ^archives\/by-(category|author|tag)\/(.*)$ /pages/archives/$1/$2 [L]
 RewriteRule ^archives\/(.*)$ /pages/archives/$1 [L]
+RewriteRule ^comments\/(.*)$ /pages/comments/$1 [L]
 
-# RSS - New
+
+# RSS
 RewriteRule ^rss\/by-(category|author|tag)\/(.*)\.rss$ /rss/$1/$2/ [L]
 
 # rewrite out the index.php page

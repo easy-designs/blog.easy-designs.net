@@ -281,6 +281,11 @@ ul.inline li {
 
 
 /* =Comments */
+#comment-loader {
+	font: 400 1em/1 {sans};
+	text-align: center;
+	text-decoration: none;
+}
 #comments .entry-content > :last-child {
 	margin-bottom: 0;
 }
