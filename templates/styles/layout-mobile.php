@@ -94,7 +94,6 @@ a:hover .frame b {
 
 
 /* =Main Content */
-#archive .hfeed,
 #single-entry #main {
 	margin:  0 0 4em;
 }
@@ -244,73 +243,30 @@ article.focal .gist-meta {
 }
 
 
-/* =Archives
+/* =Archives */
 #archive #main {
-	min-height: 900px;
-	padding-bottom: 60px;
+	padding-bottom: 3.2em;
+}
+#archive h1 {
+	padding: 0 10px;
+}
+#archive .focal {
+	position: relative;
 }
 #archive .hfeed {
 	list-style: none;
-	margin: 0 -20px;
+	margin: 0;
 	padding: 0;
 }
 #archive .hentry {
 	margin: 0 0 15px 0;
 }
-#archive .hentry article {
-	display: table-row;
-}
-#archive .hentry .meta,
-#archive .hentry .body {
-	display: table-cell;
-	vertical-align: top;
-}
 #archive .hentry .meta {
-	border-radius: 0 30px 30px 0;
-	list-style: none;
-	margin: 0;
-	padding: 20px;
-	position: relative;
-	width: 85px;
-}
-#archive .hentry .vcard {
-	margin-bottom: 5px;
-}
-#archive .hentry .vcard a {
-	display: block;
-	position: relative;
-	padding-top: 50px;
-}
-#archive .hentry .vcard img {
-	display: block;
-	margin-bottom: 5px;
-}
-#archive .hentry .vcard img,
-#archive .hentry .vcard .frame {
-	width: 65px;
-	height: 45px;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-#archive .hentry .vcard .frame {
-	background-image: url({cdn}/css/frame-author-wide.png);
+	display: none;
 }
 #archive .hentry .body {
-	border-radius: 30px 0 0 30px;
-	padding: 20px 25px 20px 20px;
-	width: 460px;
+	padding: 10px 10px 15px;
 }
-#archive .hentry:first-child .meta,
-#archive .hentry:first-child .body {
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-#archive .hentry.last .meta,
-#archive .hentry.last .body {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-} */
 
 
 /* =Sidebars */
@@ -533,6 +489,7 @@ ul#pagination li {
 	left: -80%;
 }
 
+
 /* =Search */
 #search-form {
 	margin: 0;
@@ -714,11 +671,6 @@ section#extras, aside#about, article#about-us {
 }
 
 
-#archive #main {
-	min-height: 100px;
-	padding-bottom: 1em;
-}
-
 article ul#pagination,
 #single-entry ul#pagination,
 .search ul#pagination {
@@ -730,6 +682,11 @@ article ul#pagination,
 .search ul#pagination {
 	bottom: 1em;
 }
+#archive #main {
+	min-height: 100px;
+	padding-bottom: 1em;
+}
+
 #archive .hentry .meta {
 	font-size: 1em;
 	width: 12%;

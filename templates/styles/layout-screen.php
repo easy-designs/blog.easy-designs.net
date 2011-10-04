@@ -116,7 +116,17 @@ li.submit {
 }
 
 
+/* =Archives */
+#archive #main {
+	min-height: 900px;
+	padding-bottom: 60px;
+}
+#archive .hfeed {
+	margin: 0 -20px;
+}
 
+
+ 
 /* =Pagination */
 ul#pagination {
 	position: absolute;
