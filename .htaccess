@@ -45,7 +45,6 @@ RewriteRule ^archives\/by-(category|author|tag)\/(.*)$ /pages/archives/$1/$2 [L]
 RewriteRule ^archives\/(.*)$ /pages/archives/$1 [L]
 RewriteRule ^comments\/(.*)$ /pages/comments/$1 [L]
 
-
 # RSS
 RewriteRule ^rss\/by-(category|author|tag)\/(.*)\.rss$ /rss/$1/$2/ [L]
 

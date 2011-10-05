@@ -19,7 +19,7 @@
 	{exp:comment:entries sort="asc" url_title="{embed:url_title}"}
 	   	{if no_results}
 		        <h2>Comments</h2>
-    			<p id="no-comments">No comments have been left on this entry. {comment_link}</p>
+    			<p id="no-comments">No comments have been left on this entry.</p>
 	   	{/if}
 		{if count=="1"}
         		<h2>Comments</h2>
