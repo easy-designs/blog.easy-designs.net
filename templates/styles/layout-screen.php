@@ -13,29 +13,24 @@
 #logo img {
 	margin-left: 0;
 	left: 30px;
-	top: 51px;
+	top: 55px;
 }
 
 
 /* =Search */
-#search-form	{
-	position: absolute;
-	top: 32px;
+#search-form {
+	top: 45px;
 	right: 50%;
-	margin: 0 -410px 0 0;
+	margin: 0 -400px 0 0;
 }
 
 
 /* =Body */
-#main {
+#main, #single-entry #main {
+	margin: 0 auto;
 	padding: 20px 250px 70px 20px;
-	min-height: 700px;
 	width: 590px;
 	position: static;
-}
-.focal {
-	position: relative;
-	z-index: 3;
 }
 .focal header {
 	margin: 0 0 1em;
@@ -52,6 +47,7 @@ article.focal figure embed,
 article.focal figure canvas,
 article.focal figure iframe {
 	width: 500px;
+	margin-left: 0;
 }
 article.focal .gist-meta {
 	display: block;
@@ -61,8 +57,12 @@ article.focal .gist-meta {
 /* =Comments */
 #comments {
 	left: 6px;
-	margin: 0 0 20px -10000px;
+	margin: 0 0 0 -10000px;
 	padding: 15px 0 10px 9992px;
+}
+#comments .hentry {
+	margin-bottom: 20px;
+	padding-top: 20px;
 }
 #comments .entry-content {
 	margin-bottom: 15px;
@@ -70,12 +70,12 @@ article.focal .gist-meta {
 	-o-border-radius: 0;
 	-webkit-border-radius: 0;
 	border-radius: 0;
-	padding-left: 20px;
-	padding-right: 45px;
+	padding: 0 45px 0 20px;
 	position: static;
 }
 #comments .meta {
 	left: 0;
+	width: auto;
 }
 #comments .hentry .meta .vcard {
 	margin-top: 0;
@@ -121,25 +121,45 @@ li.submit {
 	min-height: 900px;
 	padding-bottom: 60px;
 }
+#archive h1 {
+	padding: 0 10px;
+}
 #archive .hfeed {
 	margin: 0 -20px;
 }
+#archive .hentry .meta {
+	padding-left: 30px;
+}
+#archive .hentry .body {
+	padding-right: 30px;
+}
 
 
- 
 /* =Pagination */
-ul#pagination {
+ul#pagination,
+#single-entry #pagination {
 	position: absolute;
-	width: 580px;
 	bottom: 20px;
-	height: 32px;
-	z-index: 10;
+	left: auto;
+	right: auto;
+	width: 580px;
 }
 article ul#pagination {
 	bottom: -50px;
 }
 .search ul#pagination {
 	bottom: 20px;
+}
+
+
+/* =Sidebars */
+.sidebar, #single-entry .sidebar {
+	position: absolute;
+	left: 50%;
+	width: auto;
+}
+.sidebar .inner, #single-entry .sidebar .inner {
+	left: 200px;
 }
 
 
@@ -165,15 +185,8 @@ aside.promo .inner {
 aside.promo h2 {
 	margin-bottom: 3px;
 }
-#software,
-#retreats,
-#events {
-	float: left;
-	padding: 22px 20px 2px 40px;
-	width: 220px;
-}
 #about-us {
-	width: 580px;
+	width: 570px;
 }
 #more {
 	margin-left: 20px;
@@ -183,22 +196,33 @@ aside.promo h2 {
 #about-us,
 #more {
 	float: left;
-	padding: 22px 0 2px;
+	padding: 22px 0 22px;
 }
 #about-us h2,
 #about-us p {
-	padding-left: 80px;
+	padding-left: 100px;
+}
+#elsewhere {
+	display: block;
+}
+#software,
+#retreats,
+#events {
+	float: left;
+	padding: 22px 20px 2px 30px;
+	width: 230px;
 }
 #page-footer p {
 	margin: 0 auto;
-	padding: 10px 20px;
-	width: 820px;
+	padding: 10px 30px;
+	width: 800px;
 }
 
 
 /* =Easy Network */
 #easy-network {
-    width: 860px;
+    display: block;
+	width: 860px;
     margin: 0 0 0 -430px;
     position: absolute;
     top: 0;

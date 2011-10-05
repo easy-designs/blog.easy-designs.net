@@ -248,6 +248,16 @@ article.focal figure:before {
     background-image: url({cdn}/css/en-r4g.png);
 }
 
+@media screen and (min-width:570px) {
+	#search-form,
+	#search-form p {
+		background: transparent;
+	}
+	.sidebar .inner {
+	  background-color: {background_blue_blue};
+	  background-color: {background_blue_alpha};
+	}
+}
 
 @media screen and (min-width:860px) {
     
@@ -263,18 +273,14 @@ article.focal figure:before {
 		#comments .meta {
 			background-position: 0 0;
 		}
-		.sidebar .inner {
-		  background-color: {background_blue_blue};
-		  background-color: {background_blue_alpha};
-		}
-		#extras {
+	#extras {
       background: {background_white_alpha} url({cdn}/css/star-2.png) center top no-repeat;
     }
     #about {
       background: {background_green_alpha} url({cdn}/css/star-2.png) center -231px no-repeat;
     }
 		#about-us {
-		  background: url({cdn}/css/orange-stars.png) no-repeat 11px 19px;
+		  background: url({cdn}/css/orange-stars.png) no-repeat 31px 19px;
 		}
 		
 }

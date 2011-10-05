@@ -204,7 +204,7 @@ article.focal .gist-meta {
 }
 #comments .hfeed {
 	list-style: none;
-	margin: 0 0 -10px;
+	margin: 20px 0 -10px;
 	padding: 0;
 	overflow: hidden;
 }
@@ -270,77 +270,9 @@ article.focal .gist-meta {
 
 
 /* =Sidebars */
-.sidebar .inner > * {
+.sidebar .inner {
 	display: none;
 }
-/* .sidebar {
-	position: absolute;
-	left: 50%;
-	right: 0;
-	top: 20px;
-	bottom: 20px;
-	z-index: 2;
-}
-.sidebar .inner {
-	position: absolute;
-	padding: 18px 0 16px 18px;
-	left: 200px;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-.sidebar .inner > * {
-	width: 184px;
-}
-.sidebar figure {
-	margin-bottom: .75em;
-}
-.sidebar ul.author {
-	margin: -1em 0 1.5em;
-}
-.sidebar ul.author li {
-	margin-bottom: .5em;
-}
-.sidebar .vcard img,
-.sidebar .vcard .frame,
-.sidebar .vcard img,
-.sidebar .vcard .frame {
-	height: 122px;
-	width: 122px;
-}
-.sidebar .vcard .frame {
-	background: url({cdn}/css/frame-author.png)
-}
-.easy-writers {
-	overflow: hidden;
-}
-.easy-writers .vcard {
-	float: left;
-}
-.easy-writers .vcard a {
-	display: block;
-	margin: 0 8px 8px 0;
-	height: 48px;
-	width: 48px;
-	position: relative;
-	overflow: hidden;
-}
-.easy-writers .vcard img {
-	width: 48px;
-	height: 48px;
-}
-.easy-writers .vcard img,
-.easy-writers .vcard span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
-}
-.easy-writers .vcard .fn {
-	z-index: 0;
-} */
 
 
 /* =Home
@@ -415,10 +347,12 @@ article.focal .gist-meta {
 ul#pagination {
 	height: 32px;
 	margin: 1em 0 0;
+	padding: 0;
 	position: absolute;
 	left: 10px;
 	right: 10px;
 	bottom: -3.8em;
+	z-index: 10;
 }
 ul#pagination li {
 	text-indent: -999em;
@@ -525,6 +459,7 @@ ul#pagination li {
 	left: -999em;
 	z-index: 1;
 }
+
 
 /* =Social Links */
 #social-links {
