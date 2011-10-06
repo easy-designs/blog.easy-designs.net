@@ -4,6 +4,9 @@
 	#archive h1 {
 		padding: 0 20px;
 	}
+	#archive.search .focal > p {
+		padding: 0 20px;
+	}
 	#archive .hentry article {
 		display: table;
 		width: 100%;

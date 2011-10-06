@@ -1,3 +1,4 @@
+{assign_variable:easy_css_images="http://cdn1.easy-designs.net"}
 {assign_variable:sans="'ratio-1', 'ratio-2', 'Myriad Pro', 'Trebuchet MS', sans-serif"}
 {assign_variable:serif="Georgia, Times, 'Times New Roman', serif"}
 {assign_variable:italic="'apolline-1', 'apolline-2'"}
@@ -218,7 +219,7 @@ a[rel=feed]:after {
 	margin-left: .5em;
 }
 .focal ul {
-	list-style: url({cdn}/css/bullet.png);
+	list-style: url({easy_css_images}/css/bullet.png);
 }
 .focal .meta {
 	list-style: none;
@@ -303,15 +304,6 @@ ul.inline li {
 /* =Comment Form */
 #comment-form label {
 	font-size: 1.07692308em;
-	line-height: 2.8;
-	text-align: right;
-}
-#comment-form .checkbox label,
-#comment-form .radio label {
-	line-height: 1.5;
-}
-#comment-form .textarea label {
-	line-height: 2.5;
 }
 
 

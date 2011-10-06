@@ -6,20 +6,20 @@
 }
 #logo {
 	margin: -30px 0 0 -430px;
-	padding-top: 50px;
+	padding-top: 40px;
 	left: 50%;
 	width: 860px;
 }
 #logo img {
 	margin-left: 0;
 	left: 30px;
-	top: 55px;
+	top: 52px;
 }
 
 
 /* =Search */
 #search-form {
-	top: 45px;
+	top: 42px;
 	right: 50%;
 	margin: 0 -400px 0 0;
 }
@@ -83,10 +83,20 @@ article.focal .gist-meta {
 
 
 /* =Comment Form */
-label {
+#comment-form label {
 	float: left;
+	text-align: right;
+	line-height: 2.8;
 	width:	100px;
 	margin: 0 10px 0 0;
+}
+#comment-form .checkbox label,
+#comment-form .radio label {
+	line-height: 1.5;
+	width: auto;
+}
+#comment-form .textarea label {
+	line-height: 2.5;
 }
 input, textarea {
 	width: 450px;
@@ -122,6 +132,9 @@ li.submit {
 	padding-bottom: 60px;
 }
 #archive h1 {
+	padding: 0 10px;
+}
+#archive.search .focal > p {
 	padding: 0 10px;
 }
 #archive .hfeed {

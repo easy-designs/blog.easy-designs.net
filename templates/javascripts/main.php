@@ -59,8 +59,8 @@ Note:					 If you change or improve on this script, please let us know by
 			if ( url && method )
 			{
 				$.get( url, function( data ){
-					$targetEl[ method ]( data );
 					$el.trigger( 'ajaxInclude', [$targetEl, data] );
+					$targetEl[ method ]( data );
 				});
 			}
 		});
@@ -117,62 +117,75 @@ FunctionHandler.register(
 	'single-entry',
 	function()
 	{
-		$("[data-append],[data-replace],[data-after],[data-before]").ajaxInclude();
-
-		if ( !! $('#comment-form').length )
-		{
-			$.getScript('/js/jquery.textile.js',function(){
-				var
-				$comments	= $('#comments .hfeed'),
-				$name		= $('#comments-name'),
-				$text		= $('#comments-comment'),
-				$preview	= $('<li class="preview hentry">' +
-								'<div class="entry-content"></div>' + // this needed to be a div for IE
-								'<ul class="meta"><li>' + 
-								'<img class="photo" src="/img/gravitar.png" alt=""/><span></span>' + 
-								'</li><li>This is a preview</li></ul>' + 
-								'</li>').hide(),
-				$comment	= $preview.find('.entry-content');
-				function updatePreview()
+		$('body')
+			.bind( 'ajaxInclude', function(){
+				
+				// only if a large screen
+				if ( $(window).width() > 700 )
 				{
-					if ( $text.val() )
-					{
-						if ( $preview.is(':hidden') )
-						{
-							if ( $comments.length < 1 )
+					// only run the form thing once
+					$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){
+						// remove this delegation
+						$('body').undelegate('#comment_form input, #comment_form textarea');
+						// load the stuff
+						$.getScript('/js/jquery.textile.js',function(){
+							var
+							$comments	= $('#comments .hfeed'),
+							$name		= $('#comments-name'),
+							$text		= $('#comments-comment'),
+							$preview	= $('<li class="preview hentry">' +
+											'<div class="entry-content"></div>' + // this needed to be a div for IE
+											'<ul class="meta"><li>' + 
+											'<img class="photo" src="/img/gravitar.png" alt=""/><span></span>' + 
+											'</li><li>This is a preview</li></ul>' + 
+											'</li>').hide(),
+							$comment	= $preview.find('.entry-content');
+							function updatePreview()
 							{
-								$comments = $('<ol class="hfeed" id="comments"></ol>');
-								$('#no-comments').replaceWith($comments);
+								if ( $text.val() )
+								{
+									if ( $preview.is(':hidden') )
+									{
+										if ( $comments.length < 1 )
+										{
+											$comments = $('<ol class="hfeed" id="comments"></ol>');
+											$('#no-comments').replaceWith($comments);
+										}
+										$preview.appendTo($comments)
+														.animate({height:'show',opacity:'show'},'fast');
+									}
+									updatePreview = function()
+									{
+										if ( $name.val() )
+										{
+											$preview.find('.meta span').text($name.val())
+										}
+										$comment.html( $.textile( $text.val() ) );
+									};
+									updatePreview();
+								}
 							}
-							$preview.appendTo($comments)
-											.animate({height:'show',opacity:'show'},'fast');
-						}
-						updatePreview = function()
-						{
-							if ( $name.val() )
-							{
-								$preview.find('.meta span').text($name.val())
-							}
-							$comment.html( $.textile( $text.val() ) );
-						};
-						updatePreview();
-					}
+							updatePreview();
+							$name.bind('keyup blur change',updatePreview);
+							$text.bind('keyup blur change',updatePreview);
+						});
+					});
+					
+					$('#bookmark a').click(function(e){
+						e.preventDefault();
+						window.open(this.href,'share-this','height=300,width=500,status=no,toolbar=no');
+					});
 				}
-				updatePreview();
-				$name
-					.keyup(updatePreview)
-					.blur(updatePreview)
-					.change(updatePreview);
-				$text
-					.keyup(updatePreview)
-					.blur(updatePreview)
-					.change(updatePreview);
+				
 			});
-		}
 		
-		// Twitter
-		//$.getScript('http://platform.twitter.com/widgets.js');
-		//
+		
+		$("[data-append],[data-replace],[data-after],[data-before]")
+			.ajaxInclude();
+
+		
+		
+		//if ( $(window).width() >  )
 		// Google+
 		//(function() {
 		//	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

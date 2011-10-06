@@ -267,6 +267,9 @@ article.focal .gist-meta {
 #archive .hentry .body {
 	padding: 10px 10px 15px;
 }
+#archive.search .focal > p {
+	padding: 0 10px;
+}
 
 
 /* =Sidebars */

@@ -1,4 +1,4 @@
-{assign_variable:easy_images="http://images.easy-designs.net/global"}
+{assign_variable:easy_images="http://cdn1.easy-designs.net/global"}
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/"}
 
 {embed="inc/.head"}

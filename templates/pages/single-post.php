@@ -52,7 +52,7 @@
 					{/exp:allow_eecode}
 				{/exp:replace}{/exp:typogrify}
 
-				{embed="inc/.share"}
+				{embed="inc/.share" title="{title}"}
 
 			</article>
 
