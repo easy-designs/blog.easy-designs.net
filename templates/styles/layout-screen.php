@@ -148,6 +148,21 @@ li.submit {
 }
 
 
+/* =Home */
+#home #main {
+	width: 820px;
+}
+#home .hfeed {
+	border-spacing: 20px 0;
+	margin: 0 -20px;
+}
+#home .hentry {
+	border-radius: 50px 50px 0 0;
+	padding: 136px 20px 20px;
+}
+
+
+
 /* =Pagination */
 ul#pagination,
 #single-entry #pagination {

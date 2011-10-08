@@ -379,9 +379,6 @@ ul.inline li {
 #home .hentry .meta li {
 	display: inline;
 }
-#home .hentry {
-	border-radius: 50px 50px 0 0;
-}
 #home .hentry h2,
 #home .hentry h3 {
 	font-size: 1.38461538em;

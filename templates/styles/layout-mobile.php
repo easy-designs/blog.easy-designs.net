@@ -91,6 +91,10 @@ a:hover .frame b {
 	top: 25px;
 	z-index: 1;
 }
+#tagline {
+	font-size: 1.3em;
+	padding: 14px 10px 0;
+}
 
 
 /* =Main Content */
@@ -278,56 +282,44 @@ article.focal .gist-meta {
 }
 
 
-/* =Home
-#home #main {
-	padding: 20px 20px 0;
-	min-height: 0;
-	width: 820px;
-}
+/* =Home */
 #home .hfeed {
-	border-spacing: 20px 0;
-	display: table;
-	margin: 0 0 0 -20px;
+	display: block;
+	margin: 0;
+	padding: 21px 0 1px;
 }
 #home .hentry {
-	display: table-cell;
-	vertical-align: top;
-	padding: 20px;
-	width: 180px;
+	margin: 0 0 3em;
+	padding: 0 10px 10px;
+}
+#potpourri.hentry {
+	margin-bottom: 1.5em;
 }
 #home .hentry h3 {
-	background: transparent url({cdn}/css/banner-bg.png) no-repeat 100% 100%;
-	position: relative;
-	height: 126px;
+	background: transparent url({cdn}/css/banner-bg.png) no-repeat 50% 100%;
 	width: 226px;
-	margin: 0 -3px;
+	height: 31px;
+	margin: 0 auto -28px;
+	padding-top: 5px;
+	position: relative;
+	top: -21px;
+	text-align: center;
 }
-#teasers .hentry h3:hover {
-	background-position: 0 0;
+.wf-active #home .hentry h3,
+.wf-inactive #home .hentry h3 {
+	height: 34px;
+	padding-top: 2px;
+}
+#home .hentry h3:hover {
+	background-position: 50% -90px;
 }
 #home .hentry h3 a {
-	position: absolute;
-	padding-top: 95px;
 	display: block;
-	width: 100%;
 }
-#home .hentry img {
-	display: block;
-	position: absolute;
-	left: 50%;
+#home .hentry p {
+	margin: 0;
 }
-#programming.hentry img {
-	margin-left: -71px;
-	top: -17px;
-}
-#process.hentry img {
-	margin-left: -60px;
-	top: -16px;
-}
-#potpourri.hentry img {
-	margin-left: -85px;
-	top: -8px;
-} */
+
 
 
 /* =Footer Content */
@@ -530,51 +522,6 @@ ul#pagination li {
 }
 #content {
 	position: static;
-}
-#tagline {
-	font-size: 1.3em;
-	padding-top: 14px;
-}
-#home .hfeed {
-	display: block;
-	margin: 0;
-	padding-bottom: 10px;
-}
-#home .hentry,
-aside.promo .inner,
-#about-us,
-#more,
-#software, #retreats, #events,
-#page-footer p {
-	width: auto;
-}
-#home .hentry {
-	-moz-border-radius: 30px;
-	-webkit-border-radius: 30px;
-	-o-border-radius: 30px;
-	border-radius: 30px;
-	display: block;
-	margin-bottom: 2em;
-	padding: 1.5em 2em 2.5em;
-}
-#home .hentry img {
-	display: none;
-}
-#home .hentry h3 {
-	height: 36px;
-	margin: 0 auto;
-}
-#teasers {
-	margin: 0 1em;
-}
-#teasers .hentry h3:hover {
-	background-position: 100% 100%;
-}
-#home .hentry h3 a {
-	padding-top: 5px;
-	position: relative;
-	text-align: center;
-	width: auto;
 }
 aside.promo .inner,
 #more {

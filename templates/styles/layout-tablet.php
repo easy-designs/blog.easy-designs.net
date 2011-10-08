@@ -198,6 +198,8 @@
 		z-index: 10;
 	}
 	
+	
+	
 }
 
 @media screen and (min-width:700px) {
@@ -234,5 +236,65 @@
 		top: 0;
 		bottom: 0;
 	}
+	
+	
+	/* =Home */
+	#tagline {
+		font-size: 2.25em;
+	}
+	#home #main {
+		padding: 20px 20px 0;
+		min-height: 0;
+	}
+	#home .hfeed {
+		border-spacing: 10px 0;
+		display: table;
+		margin: 0 -10px;
+	}
+	#home .hentry {
+		border-radius: 50px 50px 0 0;
+		display: table-cell;
+		vertical-align: top;
+		position: relative;
+		padding: 136px 10px 10px;
+		width: 34%;
+	}
+	#home #teasers .hentry h3 {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		height: 126px;
+		margin: 0 0 0 -113px;
+		padding: 0;
+	}
+	#home #teasers .hentry h3:hover {
+		background-position: 0 0;
+	}
+	#home .hentry h3 a {
+		background: center top no-repeat;
+		padding-top: 108px;
+		position: relative;
+		top: -13px;
+	}
+	.wf-active #home .hentry h3 a,
+	.wf-inactive #home .hentry h3 a {
+		padding-top: 105px;
+	}
+	#programming.hentry h3 a {
+		background-image: url({cdn}/general/programming-icon.png);
+	}
+	#process.hentry h3 a {
+		background-image: url({cdn}/general/process-icon.png);
+	}
+	#potpourri.hentry h3 a {
+		background-image: url({cdn}/general/potpourri-icon.png);
+		padding-top: 105px;
+		top: -10px;
+	}
+	.wf-active #potpourri.hentry h3 a,
+	.wf-inactive #potpourri.hentry h3 a {
+		padding-top: 102px;
+	}
+	
 
 }

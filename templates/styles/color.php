@@ -172,7 +172,11 @@ article.focal figure:before {
 
 /* =Home */
 #teasers h3 a {
+	text-shadow: {dark_green} 0 0 8px;
   color: {white};
+}
+#teasers h3:hover a {
+	text-shadow: {orange} 0 0 8px;
 }
 #home .hentry h2 {
   color: {dark_green};
