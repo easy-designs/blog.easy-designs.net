@@ -4,8 +4,8 @@ RewriteEngine on
 RewriteBase /
 
 # compress the code
-#php_value auto_prepend_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/prepend.php
-#php_value auto_append_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/append.php
+php_value auto_prepend_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/prepend.php
+php_value auto_append_file /var/www/cms.easy-designs.net/prod/scripts/output_compression/append.php
 
 # redirect old easy-reader.net URL to blog.easy-design.net
 RewriteCond %{HTTP_HOST} ^dev\.easy-reader\.net$ [NC]
