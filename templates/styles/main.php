@@ -12,7 +12,9 @@
     {embed="styles/layout-mobile"}
 }
 
+
 {embed="styles/layout-tablet"}
+
 
 @media screen and (min-width:860px) { 
     {embed="styles/layout-screen"}
