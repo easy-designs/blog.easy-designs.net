@@ -18,7 +18,10 @@
 	<link rel="home" href="/"/>
 	<link rel="copyright" href="#copyright"/>
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
-	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="/js/respond.js"></script>
+	<![endif]-->
 
 {embed="styles/.html"}
 {embed="rss/.html" title="{embed:title}"}
