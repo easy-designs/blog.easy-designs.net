@@ -11,13 +11,13 @@
 {exp:weblog:categories show="151|184|183" weblog="blog" disable="category_fields" style="linear"}
   {exp:weblog:entries weblog="blog" category="{category_id}"
                       orderby="date" sort="desc" limit="1" rdf="off"}
-              <li class="hentry" id="{category_url_title}" data-img="{category_image}">
+              <li class="hentry" id="{category_url_title}" data-img="{category_image}"><article>
                 <h3><a rel="tag" href="/archives/by-category/{category_url_title}/">{category_name}</a></h3>
                 <h2><a class="entry-title" rel="bookmark permalink" href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/">{title}</a></h2>
                 <div class="entry-summary">
 									{entry_excerpt}
 								</div>
-              </li>
+              </article></li>
   {/exp:weblog:entries}
 {/exp:weblog:categories}
           </ul>

@@ -434,6 +434,11 @@ ul#pagination li {
 	margin: 0;
 }
 #search-form input {
+	-khtml-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
 	border-radius: 3px 0 0 3px;
 	border-width: 1px 0 1px 1px;
 	font-size: 12px
@@ -443,6 +448,11 @@ ul#pagination li {
 }
 #search-form button {
 	font-size: 12px;
+	-khtml-border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-o-border-radius: 0 5px 5px 0;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
 	border-radius: 0 5px 5px 0;
 	border-width: 2px;
 	height: 25px;
@@ -469,7 +479,6 @@ ul#pagination li {
 #social-links li a {
 	background: top left no-repeat;
 	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;

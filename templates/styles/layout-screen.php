@@ -90,6 +90,10 @@ article.focal .gist-meta {
 	width:	100px;
 	margin: 0 10px 0 0;
 }
+#comment-form .radio label,
+#comment-form .checkbox label {
+	float: none;
+}
 #comment-form .checkbox label,
 #comment-form .radio label {
 	line-height: 1.5;
@@ -155,10 +159,6 @@ li.submit {
 #home .hfeed {
 	border-spacing: 20px 0;
 	margin: 0 -20px;
-}
-#home .hentry {
-	border-radius: 50px 50px 0 0;
-	padding: 136px 20px 20px;
 }
 
 

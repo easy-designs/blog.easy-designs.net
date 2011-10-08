@@ -17,6 +17,10 @@
 		vertical-align: top;
 	}
 	#archive .hentry .meta {
+		-moz-border-radius: 0 30px 30px 0;
+		-o-border-radius: 0 30px 30px 0;
+		-webkit-border-top-right-radius: 30px;
+		-webkit-border-bottom-right-radius: 30px;
 		border-radius: 0 30px 30px 0;
 		list-style: none;
 		margin: 0;
@@ -48,16 +52,32 @@
 		background-image: url({cdn}/css/frame-author-wide.png);
 	}
 	#archive .hentry .body {
+		-moz-border-radius: 30px 0 0 30px;
+		-o-border-radius: 30px 0 0 30px;
+		-webkit-border-top-left-radius: 30px;
+		-webkit-border-top-right-radius: 30px;
 		border-radius: 30px 0 0 30px;
 		padding: 20px 25px 20px 20px;
 	}
 	#archive .hentry:first-child .meta,
 	#archive .hentry:first-child .body {
+		-moz-border-radius-topleft: 0;
+		-moz-border-radius-topright: 0;
+		-o-border-top-left-radius: 0;
+		-o-border-top-right-radius: 0;
+		-webkit-border-top-left-radius: 0;
+		-webkit-border-top-right-radius: 0;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
 	#archive .hentry.last .meta,
 	#archive .hentry.last .body {
+		-moz-border-radius-bottomleft: 0;
+		-moz-border-radius-bottomright: 0;
+		-o-border-bottom-left-radius: 0;
+		-o-border-bottom-right-radius: 0;
+		-webkit-border-bottom-left-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
@@ -252,12 +272,19 @@
 		margin: 0 -10px;
 	}
 	#home .hentry {
+		-moz-border-radius: 50px 50px 0 0;
+		-o-border-radius: 50px 50px 0 0;
+		-webkit-border-top-left-radius: 50px;
+		-webkit-border-top-right-radius: 50px;
 		border-radius: 50px 50px 0 0;
 		display: table-cell;
 		vertical-align: top;
+		padding: 0;
+		width: 34%;
+	}
+	#home .hentry article {
 		position: relative;
 		padding: 136px 10px 10px;
-		width: 34%;
 	}
 	#home #teasers .hentry h3 {
 		position: absolute;
