@@ -1,4 +1,3 @@
-{assign_variable:easy_css_images="http://cdn1.easy-designs.net"}
 {assign_variable:sans="'ratio-1', 'ratio-2', 'Myriad Pro', 'Trebuchet MS', sans-serif"}
 {assign_variable:serif="Georgia, Times, 'Times New Roman', serif"}
 {assign_variable:italic="'apolline-1', 'apolline-2'"}
@@ -219,7 +218,7 @@ a[rel=feed]:after {
 	margin-left: .5em;
 }
 .focal ul {
-	list-style: url({easy_css_images}/css/bullet.png);
+	list-style: url(http://cdn1.easy-designs.net/css/bullet.png);
 }
 .focal .meta {
 	list-style: none;
