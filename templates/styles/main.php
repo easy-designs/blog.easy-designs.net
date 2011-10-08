@@ -17,7 +17,9 @@
 
 
 @media screen and (min-width:860px) { 
+
     {embed="styles/layout-screen"}
+
 }
 
 @media print { 

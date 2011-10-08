@@ -433,6 +433,7 @@ ul.inline li {
 	text-decoration: underline;
 }
 
+
 @media screen and (min-width:860px) {
 
     h1 {
