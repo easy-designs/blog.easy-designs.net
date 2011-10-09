@@ -228,7 +228,7 @@
 	#main {
 		margin: 0;
 		padding: 0 240px 70px 0;
-		min-height: 700px;
+		min-height: 900px;
 		width: auto;
 		position: relative;
 	}
