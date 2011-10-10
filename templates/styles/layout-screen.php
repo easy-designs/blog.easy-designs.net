@@ -233,13 +233,6 @@ aside.promo h2 {
 #elsewhere {
 	display: block;
 }
-#software,
-#retreats,
-#events {
-	float: left;
-	padding: 22px 20px 2px 30px;
-	width: 230px;
-}
 #page-footer p {
 	margin: 0 auto;
 	padding: 10px 30px;

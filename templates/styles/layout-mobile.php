@@ -323,6 +323,13 @@ article.focal .gist-meta {
 #more {
 	padding: 0 10px;
 }
+#software,
+#retreats,
+#events {
+	float: left;
+	padding: 22px 20px 2px 30px;
+	width: 230px;
+}
 #page-footer {
 	clear: both;
 }
@@ -437,6 +444,7 @@ ul#pagination li {
 	border-width: 1px 0 1px 1px;
 	font-size: 12px
 	height: 24px;
+	line-height: 12px;
 	padding: 4px 5px;
 	width: 191px;
 }

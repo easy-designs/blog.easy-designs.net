@@ -1,5 +1,14 @@
 @media screen and (min-width:481px) { 
 
+	body {
+		font-size: 120%;
+	}
+	
+	/* =Home */
+	#teasers .hentry h3 {
+		font-size: 1.125em; /* 18px */
+	}
+	
 	/* =Archives */
 	#archive h1 {
 		padding: 0 20px;
@@ -125,6 +134,13 @@
 	
 @media screen and (min-width:650px) {
 
+	body {
+		font-size: 100%;
+	}
+	body#home {
+		font-size: 120%;
+	}
+	
 	/* =Main */
 	#single-entry #main {
 		margin: 0;
@@ -224,6 +240,13 @@
 
 @media screen and (min-width:700px) {
 
+	body#home {
+		font-size: 100%;
+	}
+	#teasers .hentry h3 {
+		font-size: 1.385em; /* 18px */
+	}
+	
 	/* =Main */
 	#main {
 		margin: 0;

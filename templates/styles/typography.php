@@ -380,7 +380,7 @@ ul.inline li {
 }
 #home .hentry h2,
 #home .hentry h3 {
-	font-size: 1.38461538em;
+	font-size: 1.385em;
 }
 #home .hentry h2 {
 	font-family: {serif};
