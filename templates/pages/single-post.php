@@ -26,7 +26,7 @@
 
 		{!-- end variables for insertion elsewhere --}
 
-		{embed="inc/.head" entry_id="{entry_id}"
+		{embed="inc/.head" entry_id="{entry_id}" post="Y"
 		                   title="{title}" canonical_url="{the_permalink}"
 						   description="{exp:ee_typography formatting="none"}{entry_excerpt}{/exp:ee_typography}" author="{screen_name}"}
 		{embed="inc/.header" body_id="single-entry" body_class="hentry"}

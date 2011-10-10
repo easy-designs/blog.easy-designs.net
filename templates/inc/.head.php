@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="{lang}" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog">
+<html lang="{lang}" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 
 	<meta charset="{charset}"/>
 	<meta http-equiv="Content-Language" content="{lang}"/>
 
-{exp:lg_better_meta_pl:template entry_id="{embed:entry}" title="{embed:title}"
-								description="{embed:description}" canonical_url="{embed:canonical_url}"}
-
+{exp:lg_better_meta_pl:template}
+	
+{if "{embed:post}"=="Y"}
+	<meta property="og:site_name" content="{site_name}" />
+	<meta property="og:title" content="{embed:title}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="{embed:canonical_url}" />
+	<meta property="og:description" content="{embed:description}" />
+	<meta property="fb:admins" content="aaronmgustafson,1010367716,117286581705101" />
+	<meta name="medium" content="blog" />
+{/if}
+	
 	<meta name="MSSmartTagsPreventParsing" content="true"/>
 	<meta name="Copyright" content="(c) Copyright {copyright_year}. All rights reserved unless otherwise indicated."/>
 	<meta http-equiv="imagetoolbar" content="no"/>
