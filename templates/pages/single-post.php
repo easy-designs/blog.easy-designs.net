@@ -29,28 +29,32 @@
 		{embed="inc/.head" entry_id="{entry_id}"
 		                   title="{title}" canonical_url="{the_permalink}"
 						   description="{exp:ee_typography formatting="none"}{entry_excerpt}{/exp:ee_typography}" author="{screen_name}"}
-		{embed="inc/.header" body_id="single-entry"}
+		{embed="inc/.header" body_id="single-entry" body_class="hentry"}
 
 		<section role="main" id="main">
 			<article role="article" class="focal">
 
 				<header>
-					<h1 itemprop="name">{exp:typogrify}{title}{/exp:typogrify}</h1>
+					<h1 itemprop="name" class="entry-title">{exp:typogrify}{title}{/exp:typogrify}</h1>
                     {exp:query sql="SELECT `url_title` AS `author_url_title`
                                     FROM   `exp_weblog_titles` AS `t`
                                     INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
                                     WHERE  `m`.`username` = '{username}'
                                         AND  `t`.`weblog_id` = 8"}
-					<h3 class="meta">Posted by <a href="/archives/by-author/{author_url_title}/">{author}</a> on 
-					    <time class="published" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/{author_url_title}/">{author}</a> on 
+					    <time class="published updated" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
   					    <a rel="bookmark" href="{the_permalink}">Permalink</a></h3>
                     {/exp:query}
 				</header>
+				<div class="entry-content">
+
 		  	    {exp:typogrify}{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
 					{exp:allow_eecode embed="y"}
 						{entry_body}
 					{/exp:allow_eecode}
 				{/exp:replace}{/exp:typogrify}
+
+				</div>
 
 				{embed="inc/.share" title="{title}"}
 

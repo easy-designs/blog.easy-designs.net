@@ -8,8 +8,9 @@
 
 	{embed="search/.form"}
 
-  <footer role="contentinfo" id="page-footer">
-    <p><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> Easy Designs LLC. All rights reserved unless otherwise indicated.</span>
+  <footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+    <p><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> 
+		<span class="org fn">Easy Designs LLC</span>. All rights reserved unless otherwise indicated.</span>
     <!--a href="http://easy-designs.net/about/standards/">Got Standards?</a--></p>
   </footer>
   
