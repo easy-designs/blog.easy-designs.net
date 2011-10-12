@@ -48,11 +48,15 @@
 				</header>
 				<div class="entry-content">
 
-		  	    {exp:typogrify}{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
-					{exp:allow_eecode embed="y"}
-						{entry_body}
-					{/exp:allow_eecode}
-				{/exp:replace}{/exp:typogrify}
+				{exp:easy_src_sencha_io}
+					{exp:typogrify}
+						{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
+							{exp:allow_eecode embed="y"}
+								{entry_body}
+							{/exp:allow_eecode}
+						{/exp:replace}
+					{/exp:typogrify}
+				{/exp:easy_src_sencha_io}
 
 				</div>
 
