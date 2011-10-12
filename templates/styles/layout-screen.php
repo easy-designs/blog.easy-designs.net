@@ -48,7 +48,8 @@ article.focal figure audio,
 article.focal figure object,
 article.focal figure embed,
 article.focal figure canvas,
-article.focal figure iframe {
+article.focal figure iframe,
+article.focal figure figcaption {
 	width: 500px;
 	margin-left: 0;
 }

@@ -130,6 +130,7 @@ article.focal figure iframe {
 article.focal figure figcaption {
 	background: #fff;
 	padding: 0px 10px 10px;
+	margin: 0 -10px;
 	text-align: center;
 }
 article.focal figure:after { 
