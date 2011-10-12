@@ -32,6 +32,9 @@
 	width: 590px;
 	position: static;
 }
+#single-entry article.focal {
+	padding: 3px 10px;
+}
 .focal header {
 	margin: 0 0 1em;
 	padding: 0;
@@ -58,7 +61,7 @@ article.focal .gist-meta {
 #comments {
 	left: 6px;
 	margin: 0 0 0 -10000px;
-	padding: 15px 0 10px 9992px;
+	padding: 15px 0 10px 10000px;
 }
 #comments .hentry {
 	margin-bottom: 20px;
@@ -103,7 +106,7 @@ article.focal .gist-meta {
 	line-height: 2.5;
 }
 input, textarea {
-	width: 450px;
+	width: 440px;
 	margin-right: -10px;
 	padding: 7px;
 }
@@ -160,7 +163,6 @@ li.submit {
 	border-spacing: 20px 0;
 	margin: 0 -20px;
 }
-
 
 
 /* =Pagination */

@@ -4,7 +4,20 @@
 		font-size: 120%;
 	}
 	
+	/* =Post */
+	#single-entry article.focal {
+		padding: 3px 20px;
+	}
+	
+	/* =Comments */
+	#comments {
+		padding: 0 20px 20px;
+	}
+		
 	/* =Home */
+	#home .hentry {
+		padding: 0px 20px 20px;
+	}
 	#teasers .hentry h3 {
 		font-size: 1.125em; /* 18px */
 	}
@@ -307,7 +320,7 @@
 	}
 	#home .hentry article {
 		position: relative;
-		padding: 136px 10px 10px;
+		padding: 136px 20px 20px;
 	}
 	#home #teasers .hentry h3 {
 		position: absolute;
