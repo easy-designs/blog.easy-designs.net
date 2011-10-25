@@ -119,8 +119,7 @@ article.focal figure video,
 article.focal figure audio,
 article.focal figure object,
 article.focal figure embed,
-article.focal figure canvas,
-article.focal figure iframe {
+article.focal figure canvas {
 	background: #fff;
 	border: 10px solid;
 	margin-left: -10px;
@@ -128,7 +127,10 @@ article.focal figure iframe {
 	height: auto;
 }
 article.focal figure iframe {
-	height: 100%;
+	background: #fff;
+	border: 10px solid;
+	margin-left: -10px;
+	max-width: 100%;
 }
 article.focal figure figcaption {
 	background: #fff;
