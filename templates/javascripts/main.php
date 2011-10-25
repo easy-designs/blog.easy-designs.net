@@ -135,18 +135,21 @@ jQuery.getScripts = function(scripts, onComplete)
 							});
 						});
 
-						$('#bookmark a').click(function(e){
-							e.preventDefault();
-							WIN.open(this.href,'share-this','height=300,width=500,status=no,toolbar=no');
-						});
 					}
 
 				});
-
-
+			
 			$("[data-append],[data-replace],[data-after],[data-before]")
 				.ajaxInclude();
 
+			$('#bookmark').delegate('a','click',function(e){
+				if ( $(WIN).width() > 700 )
+				{
+					e.preventDefault();
+					WIN.open(this.href,'share-this','height=300,width=500,status=no,toolbar=no');
+				}
+			});
+			
 			function adjustIframes()
 			{
 				$('iframe').each(function(){
