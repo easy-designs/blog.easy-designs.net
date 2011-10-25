@@ -127,6 +127,9 @@ article.focal figure iframe {
 	width: 100%;
 	height: auto;
 }
+article.focal figure iframe {
+	height: 100%;
+}
 article.focal figure figcaption {
 	background: #fff;
 	padding: 0px 10px 10px;
