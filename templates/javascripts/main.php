@@ -44,7 +44,7 @@ jQuery.getScripts = function(scripts, onComplete)
 	}
 };
 
-(function($){
+(function($, WIN){
 	
 	FunctionHandler.register(
 		'*',
@@ -52,9 +52,9 @@ jQuery.getScripts = function(scripts, onComplete)
 		{
 
 			// for iOS (remove the toolbar)
-			if ( window.location.hash == '' )
+			if ( WIN.location.hash == '' )
 			{
-	  			window.scrollTo(0, 1);
+	  			WIN.scrollTo(0, 1);
 			}
 
 			// Typekit
@@ -85,7 +85,7 @@ jQuery.getScripts = function(scripts, onComplete)
 				.bind( 'ajaxInclude', function(){
 
 					// only if a large screen
-					if ( $(window).width() > 700 )
+					if ( $(WIN).width() > 700 )
 					{
 						// only run the form thing once
 						$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){
@@ -137,7 +137,7 @@ jQuery.getScripts = function(scripts, onComplete)
 
 						$('#bookmark a').click(function(e){
 							e.preventDefault();
-							window.open(this.href,'share-this','height=300,width=500,status=no,toolbar=no');
+							WIN.open(this.href,'share-this','height=300,width=500,status=no,toolbar=no');
 						});
 					}
 
@@ -147,7 +147,28 @@ jQuery.getScripts = function(scripts, onComplete)
 			$("[data-append],[data-replace],[data-after],[data-before]")
 				.ajaxInclude();
 
+			function adjustIframes()
+			{
+				$('iframe').each(function(){
+					var
+					$this		= $(this),
+					proportion	= $this.data( 'proportion' ),
+					w			= $this.attr('width'),
+					actual_w	= $this.width();
+					
+					if ( ! proportion )
+					{
+						proportion = $this.attr('height') / w;
+						$this.data( 'proportion', proportion );
+					}
 
+					if ( actual_w != w )
+					{
+						$this.css( 'height', Math.round( actual_w * proportion ) + 'px' );
+					}
+				});
+			}
+			$(WIN).bind('resize load',adjustIframes);
 
 			//if ( $(window).width() >  )
 			// Google+
@@ -158,4 +179,4 @@ jQuery.getScripts = function(scripts, onComplete)
 			//})();
 		});
 			
-})(jQuery);
+})(jQuery,window);
