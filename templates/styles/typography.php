@@ -65,6 +65,11 @@ cite, em, dfn, .notes {
 	font-style: italic;
 	font-size: 100%; 
 }
+.wf-apolline1apolline2-i4-active cite,
+.wf-apolline1apolline2-i4-active em, 
+.wf-apolline1apolline2-i4-active dfn {
+	font-size: 120%;
+}
 .notes {
 	font-size: 0.92307692em;
 }
