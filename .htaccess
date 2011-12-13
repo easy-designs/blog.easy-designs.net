@@ -37,6 +37,7 @@ RewriteRule ^img\/avatars\/(.*)$ /images/avatars/uploads/$1 [L]
 RewriteRule ^img\/(.*)\/(.*)$ /assets/$1/$2 [L]
 RewriteRule ^img\/(.*)$ /assets/general/$1 [L]
 RewriteRule ^js\/(.*)\.js$ /javascripts/$1 [L]
+RewriteRule ^docs\/(.*)$ /assets/docs/$1 [L]
 
 # Pages
 RewriteRule ^archives\/(\d{4})\/?(\d{2})?\/?(\d{2})?\/?(P\d+\/?)?$ /pages/archives/date/$1/$2/$3/$4 [L]
