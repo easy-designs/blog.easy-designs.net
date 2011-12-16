@@ -11,9 +11,10 @@
               <li><a href="/archives/">View all Entries</a></li>
             </ul>
             <ul id="social-links">
-              <li class="twitter"><a href="http://twitter.com/EasyDesigns" title="Follow us on Twitter">Follow us on Twitter</a></li>
-              <li class="facebook"><a href="http://www.facebook.com/pages/Easy-Designs-LLC/117286581705101" title="Like us on Facebook">Like us on Facebook</a></li>
-              <li class="github"><a href="https://github.com/easy-designs/" title="Fork us on Github">Fork us on Github</a></li>
+              <li class="twitter"><a href="http://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+              <li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+              <li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+              <li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
             </ul>
           </article>
       </div></aside>

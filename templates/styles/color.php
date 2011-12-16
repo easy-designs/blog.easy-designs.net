@@ -230,6 +230,9 @@ article.focal figure:before {
 #social-links li.facebook a {
 	background-image: url({cdn}/css/facebook.png);
 }
+#social-links li.google a {
+	background-image: url({cdn}/css/google.png);
+}
 #social-links li.github a {
 	background-image: url({cdn}/css/github.png);
 }
