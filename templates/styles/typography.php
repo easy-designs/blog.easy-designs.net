@@ -5,7 +5,7 @@
 
 /* =General */
 body {
-	text-rendering: optimizeLegibility;
+	/* text-rendering: optimizeLegibility; WebOS can’t handle it */
 }
 
 /* =Text */

@@ -25,14 +25,14 @@ body > header, #main, #elsewhere {
 }
 
 #home .hfeed {
-  display: normal;
+  display: static;
   margin-bottom: -20px;
   margin-left: 0;
 }
 
 #home .hentry {
   background: #fff;
-  display: normal;
+  display: static;
   float: left;
   min-height: 450px;
   margin: 0 20px -20px 0;

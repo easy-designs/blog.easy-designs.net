@@ -8,8 +8,9 @@
   margin-bottom: 20px;
 }
 
-#home .hentry {
+body#home .hentry {
   margin: 0 10px 0 0;
+  width: 32%;
 }
 
 #single-entry .hfeed li {
