@@ -11,7 +11,7 @@
 	<meta property="og:site_name" content="{site_name}" />
 	<meta property="og:title" content="{embed:title}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="{site_url}img/facebook-icon.png" />
+	<meta property="og:image" content="{site_url}img/facebook-icon.png?20111216" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 	<meta property="og:description" content="{embed:description}" />
 	<meta property="fb:admins" content="EasyDesignsLLC" />
