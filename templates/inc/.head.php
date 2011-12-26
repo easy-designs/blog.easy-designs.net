@@ -14,7 +14,7 @@
 	<meta property="og:image" content="{site_url}img/facebook-icon.png?20111216" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 	<meta property="og:description" content="{embed:description}" />
-	<meta property="fb:admins" content="117286581705101" />
+	<meta property="fb:admins" content="aaronmgustafson" />
 	<meta name="medium" content="blog" />
 {/if}
 	
