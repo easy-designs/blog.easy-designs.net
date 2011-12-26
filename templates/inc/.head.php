@@ -8,7 +8,7 @@
 {exp:lg_better_meta_pl:template}
 	
 	<meta property="og:site_name" content="The Easy Designs Blog" />
-	<meta property="og:image" content="{site_url}img/facebook-icon.png" />
+	<meta property="og:image" content="{site_url}img/facebook-icon.png?v=20111226" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="fb:admins" content="aaronmgustafson" />
 {if "{embed:post}"=="Y"}
