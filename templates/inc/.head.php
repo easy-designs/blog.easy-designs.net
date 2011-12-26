@@ -7,16 +7,22 @@
 
 {exp:lg_better_meta_pl:template}
 	
-{if "{embed:post}"=="Y"}
 	<meta property="og:site_name" content="The Easy Designs Blog" />
-	<meta property="og:title" content="{embed:title}" />
-	<meta property="og:type" content="article" />
-	<meta property="og:image" content="{site_url}img/facebook-icon.png?20111216" />
-	<meta property="og:url" content="{embed:canonical_url}" />
-	<meta property="og:description" content="{embed:description}" />
+	<meta property="og:image" content="{site_url}img/facebook-icon.png" />
+	<meta property="og:locale" content="en_US" />
 	<meta property="fb:admins" content="aaronmgustafson" />
-	<meta name="medium" content="blog" />
+{if "{embed:post}"=="Y"}
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{embed:title}" />
+	<meta property="og:description" content="{embed:description}" />
+	<meta property="og:url" content="{embed:canonical_url}" />
+{if:else}
+	<meta property="og:type" content="blog" />
+	<meta property="og:title" content="The Easy Designs Blog" />
+	<meta property="og:description" content="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog." />
+	<meta property="og:url" content="{site_url}" />
 {/if}
+	<meta name="medium" content="blog" />
 	
 	<meta name="MSSmartTagsPreventParsing" content="true"/>
 	<meta name="Copyright" content="(c) Copyright {copyright_year}. All rights reserved unless otherwise indicated."/>
