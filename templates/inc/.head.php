@@ -8,13 +8,13 @@
 {exp:lg_better_meta_pl:template}
 	
 {if "{embed:post}"=="Y"}
-	<meta property="og:site_name" content="{site_name}" />
+	<meta property="og:site_name" content="The Easy Designs Blog" />
 	<meta property="og:title" content="{embed:title}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="{site_url}img/facebook-icon.png?20111216" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 	<meta property="og:description" content="{embed:description}" />
-	<meta property="fb:admins" content="EasyDesignsLLC" />
+	<meta property="fb:admins" content="117286581705101" />
 	<meta name="medium" content="blog" />
 {/if}
 	
