@@ -11,10 +11,10 @@
 	<meta property="og:site_name" content="{site_name}" />
 	<meta property="og:title" content="{embed:title}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="/img/facebook-icon.png" />
+	<meta property="og:image" content="{site_url}img/facebook-icon.png" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 	<meta property="og:description" content="{embed:description}" />
-	<meta property="fb:admins" content="aaronmgustafson,1010367716,117286581705101" />
+	<meta property="fb:admins" content="EasyDesignsLLC" />
 	<meta name="medium" content="blog" />
 {/if}
 	
