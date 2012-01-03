@@ -69,6 +69,7 @@ cite, em, dfn, .notes {
 .wf-apolline1apolline2-i4-active em, 
 .wf-apolline1apolline2-i4-active dfn {
 	font-size: 120%;
+	line-height: .8;
 }
 .notes {
 	font-size: 0.92307692em;
