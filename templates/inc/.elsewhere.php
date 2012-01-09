@@ -54,7 +54,8 @@
               <p class="when">{exp:daterange microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
               <h3 class="summary">
 	{if event_url OR upcoming_id}
-								<a rel="external" href="{if event_url}{exp:ee_typography formatting="none" auto_link="n" allowed_html="none"}{event_url}{/exp:ee_typography}{if:else}http://upcoming.yahoo.com/event/{upcoming_id}/{/if}">{event_series}</a>
+		{assign_variable:the_url="{if event_url}{exp:html_strip convert='y'}{event_url}{/exp:html_strip}{if:else}http://upcoming.yahoo.com/event/{upcoming_id}/{/if}"}
+								<a rel="external" href="{the_url}">{event_series}</a>
 	{if:else}
 								{title}
 	{/if}
