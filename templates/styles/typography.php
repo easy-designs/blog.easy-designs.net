@@ -90,6 +90,16 @@ article .gist .gist-file .gist-meta {
 article .gist pre {
 	font-size: 0.75em;
 }
+sup, sub {
+	font-size: .7em;
+	line-height: 1;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
 object, embed, audio, video, iframe {
 	display: block;
 	margin: 1.5em 0;
