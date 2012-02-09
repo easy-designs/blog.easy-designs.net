@@ -48,7 +48,7 @@ img {
 }
 p, ul, ol, dl, table, pre,
 figure, canvas, object, embed, video, audio {
-	font: 1em/1.5 {serif};
+	font: 0.8125em/1.5 {serif};
 	margin: 0 0 1.5em;
 }
 figcaption {
