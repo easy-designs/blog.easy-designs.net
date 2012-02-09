@@ -48,7 +48,7 @@ img {
 }
 p, ul, ol, dl, table, pre,
 figure, canvas, object, embed, video, audio {
-	font: 0.8125em/1.5 {serif};
+	font: 1em/1.5 {serif};
 	margin: 0 0 1.5em;
 }
 figcaption {
@@ -99,6 +99,9 @@ sup {
 }
 sub {
 	vertical-align: sub;
+}
+strong {
+	font-weight: bold;
 }
 object, embed, audio, video, iframe {
 	display: block;
