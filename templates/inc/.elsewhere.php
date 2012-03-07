@@ -15,15 +15,26 @@
             </section>
             
             <section id="retreats">
+                <h2>Win something!</h2>
+                <h3 class="figure featured">
+                    <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">
+                        <img title="The I ♥	Adaptive Web Design Poster Contest" src="{cdn}/general/i-love-awd-contest.jpg" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a> and you could snag some sweet prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab. Entries are due March&nbsp;16th!</p>
+            </section>
+
+            <!--section id="retreats">
                 <h2>Learn with us</h2>
                 <h3 class="figure featured">
                     <a href="http://retreats4geeks.com/">
-                        <img title="eCSStender" src="{cdn}/general/r4g-logo.png" alt="" />
+                        <img title="Retreats 4 Geeks" src="{cdn}/general/r4g-logo.png" alt="" />
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
                 <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
-            </section>
+            </section-->
         
 <?php global $DB;
 
