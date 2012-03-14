@@ -2,6 +2,7 @@
 {assign_variable:serif="Georgia, Times, 'Times New Roman', serif"}
 {assign_variable:italic="'apolline-1', 'apolline-2'"}
 {assign_variable:mono="Monaco, Courier, 'Courier New', 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', monospace, serif"}
+{assign_variable:easy_css_images="http://cdn1.easy-designs.net"}
 
 /* =General */
 body {
@@ -102,6 +103,12 @@ sub {
 }
 strong {
 	font-weight: bold;
+}
+hr {
+	border: 0;
+	height: 20px;
+	background: url({cdn}/css/hr.png) center center no-repeat;
+	margin: 1.5em 0;
 }
 object, embed, audio, video, iframe {
 	display: block;
