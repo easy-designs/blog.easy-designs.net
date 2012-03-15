@@ -195,7 +195,7 @@
 	.sidebar ul.author {
 		margin: -1em 0 1.5em;
 	}
-	.sidebar ul.author li {
+	.sidebar li {
 		margin-bottom: .5em;
 	}
 	.sidebar .vcard img,
