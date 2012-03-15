@@ -22,7 +22,7 @@
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
-                <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a> and you could snag some sweet prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab. Entries are due March&nbsp;16th!</p>
+                <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a> and you could snag some sweet prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab. Entries are due March&nbsp;31st!</p>
             </section>
 
             <!--section id="retreats">
