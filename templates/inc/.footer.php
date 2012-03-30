@@ -9,9 +9,10 @@
 	{embed="search/.form"}
 
   <footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
-    <p><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> 
+    <p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> 
 		<span class="org fn">Easy Designs LLC</span>. All rights reserved unless otherwise indicated.</span>
-    <!--a href="http://easy-designs.net/about/standards/">Got Standards?</a--></p>
+    <!--a href="http://easy-designs.net/about/standards/">Got Standards?</a-->
+	<a href="http://flow.mixpanel.com/f/partner"><img src="http://mixpanel.com/site_media/images/partner/badge_blue.png" alt="MixPanel: Mobile and Web Analytics" style="float:right;vertical-align:middle;" /></a></p>
   </footer>
   
   <nav id="easy-network">
