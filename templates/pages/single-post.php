@@ -23,12 +23,13 @@
 			</section>
 			{/if}
 		{/exp:lg_replace:replacement}
-
+		
 		{!-- end variables for insertion elsewhere --}
 
 		{embed="inc/.head" entry_id="{entry_id}" post="Y"
 		                   title="{title}" canonical_url="{the_permalink}"
-						   description="{exp:html_strip}{entry_excerpt}{/exp:html_strip}" author="{screen_name}"}
+						   description="{exp:html_strip}{exp:word_limit_plus if_exceeds="200" stop_after="160"}{entry_excerpt}{/exp:word_limit_plus}{/exp:html_strip}"
+						   author="{screen_name}" username="{username}"}
 		{embed="inc/.header" body_id="single-entry" body_class="hentry"}
 
 		<section role="main" id="main">

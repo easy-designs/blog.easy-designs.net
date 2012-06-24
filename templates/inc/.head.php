@@ -11,13 +11,25 @@
 	<meta property="og:image" content="{site_url}img/facebook-icon.png?v=20111226" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" value="@EasyDesigns">
 {if "{embed:post}"=="Y"}
+    {!-- Twitter Card --}
+    {exp:weblog:entries site="easy-designs" weblog="staff" username="{embed:username}"
+                        limit="1" status="open|closed" dynamic="off" rdf="off"
+                        disable="categories|category_fields|member_data|pagination|trackbacks"}
+    <meta name="twitter:creator" value="@{staff_twitter}">
+    {/exp:weblog:entries}
+    {!-- Open Graph --}
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{embed:title}" />
 	<meta property="og:description" content="{embed:description}" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 {if:else}
-	<meta property="og:type" content="blog" />
+    {!-- Twitter Card --}
+    <meta name="twitter:creator" value="@EasyDesigns">
+	{!-- Open Graph --}
+    <meta property="og:type" content="blog" />
 	<meta property="og:title" content="The Easy Designs Blog" />
 	<meta property="og:description" content="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog." />
 	<meta property="og:url" content="{site_url}" />
