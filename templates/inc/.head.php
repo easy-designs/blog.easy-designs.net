@@ -35,7 +35,6 @@
 	<meta property="og:url" content="{site_url}" />
 {/if}
 	<meta name="medium" content="blog" />
-	<meta name="readability-verification" content="hZuWXd47SsNtJX3bhRNYJRjtMznZD2fsaD62bp73"/>
 	
 	<meta name="MSSmartTagsPreventParsing" content="true"/>
 	<meta name="Copyright" content="(c) Copyright {copyright_year}. All rights reserved unless otherwise indicated."/>
