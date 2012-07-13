@@ -11,8 +11,8 @@
 	<meta property="og:image" content="{site_url}img/facebook-icon.png?v=20111226" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="fb:admins" content="aaronmgustafson" />
-    <meta name="twitter:card" value="summary">
-    <meta name="twitter:site" value="@EasyDesigns">
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
 {if "{embed:post}"=="Y"}
     {!-- Twitter Card --}
     {exp:weblog:entries site="easy-designs" weblog="staff" username="{embed:username}"
@@ -27,7 +27,7 @@
 	<meta property="og:url" content="{embed:canonical_url}" />
 {if:else}
     {!-- Twitter Card --}
-    <meta name="twitter:creator" value="@EasyDesigns">
+    <meta name="twitter:creator" value="@EasyDesigns"/>
 	{!-- Open Graph --}
     <meta property="og:type" content="blog" />
 	<meta property="og:title" content="The Easy Designs Blog" />
@@ -35,6 +35,7 @@
 	<meta property="og:url" content="{site_url}" />
 {/if}
 	<meta name="medium" content="blog" />
+	<meta name="readability-verification" content="hZuWXd47SsNtJX3bhRNYJRjtMznZD2fsaD62bp73"/>
 	
 	<meta name="MSSmartTagsPreventParsing" content="true"/>
 	<meta name="Copyright" content="(c) Copyright {copyright_year}. All rights reserved unless otherwise indicated."/>
