@@ -1,3 +1,8 @@
+<?php
+
+header("HTTP/1.0 404 Not Found");
+
+?>
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
 {embed=inc/.head}
 {embed=inc/.header body_id="errors"}
