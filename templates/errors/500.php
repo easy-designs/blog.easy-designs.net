@@ -1,6 +1,8 @@
 <?php
 
-header("HTTP/1.0 500 Internal Server Error");
+global $TMPL, $OUT;
+$OUT->out_type = '500';
+$TMPL->template_type = '500';
 
 ?>
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}

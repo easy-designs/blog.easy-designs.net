@@ -1,6 +1,8 @@
 <?php
 
-header("HTTP/1.0 404 Not Found");
+global $TMPL, $OUT;
+$OUT->out_type = '404';
+$TMPL->template_type = '404';
 
 ?>
 {assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
