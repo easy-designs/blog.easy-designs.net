@@ -15,7 +15,7 @@
             </section>
             
             <section id="retreats">
-                <h2>Win something!</h2>
+                <h2>You made this</h2>
                 <h3 class="figure featured">
                     <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">
                         <img title="The I ♥	Adaptive Web Design Poster Contest" src="{cdn}/general/i-love-awd-contest.jpg" alt="" />
