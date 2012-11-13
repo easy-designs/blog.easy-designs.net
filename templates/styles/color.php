@@ -269,7 +269,7 @@ article.focal figure:before {
 @media screen and (min-width:860px) {
     
     body {
-      background: {background_white_alpha} url({cdn}/css/star.png) center 0 no-repeat;
+      background: {white} url({cdn}/css/star.png) center 0 no-repeat;
     }
     #comments .hentry {
 		  background: transparent url({cdn}/css/bubble-top.png) no-repeat 0 0;
