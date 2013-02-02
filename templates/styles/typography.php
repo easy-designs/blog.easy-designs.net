@@ -89,7 +89,7 @@ article .gist .gist-file .gist-meta {
 	font-size: 0.625em;
 }
 article .gist pre {
-	font-size: 0.75em;
+	font-size: 1em;
 }
 sup, sub {
 	font-size: .7em;
