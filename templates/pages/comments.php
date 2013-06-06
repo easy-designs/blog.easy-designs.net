@@ -1,1 +1,0 @@
-{embed="inc/.comments" url_title="{segment_3}"}

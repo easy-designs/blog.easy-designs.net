@@ -1,124 +1,192 @@
 <?php
+date_default_timezone_set('America/New_York');
+/**
+ * ExpressionEngine - by EllisLab
+ *
+ * @package		ExpressionEngine
+ * @author		EllisLab Dev Team
+ * @copyright	Copyright (c) 2003 - 2013, EllisLab, Inc.
+ * @license		http://ellislab.com/expressionengine/user-guide/license.html
+ * @link		http://ellislab.com
+ * @since		Version 2.0
+ */
+
 /*
-=====================================================
- ExpressionEngine - by EllisLab
------------------------------------------------------
- http://expressionengine.com/
------------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
-=====================================================
- THIS IS COPYRIGHTED SOFTWARE
- PLEASE READ THE LICENSE AGREEMENT
- http://expressionengine.com/docs/license.html
-=====================================================
- File: index.php
------------------------------------------------------
- Purpose: Triggers the main engine
-=====================================================
-*/
-
-// URI Type
-// This variable allows you to hard-code the URI type.
-// For most servers, 0 works fine.
-// 0 = auto  
-// 1 = path_info  
-// 2 = query_string
-
-$qtype = 0; 
+ * --------------------------------------------------------------------
+ *  System Path
+ * --------------------------------------------------------------------
+ *
+ * The following variable contains the server path to your
+ * ExpressionEngine "system" folder.  By default the folder is named
+ * "system" but it can be renamed or moved for increased security.
+ * Indicate the new name and/or path here. The path can be relative
+ * or it can be a full server path.
+ *
+ * http://ellislab.com/expressionengine/user-guide/installation/best_practices.html
+ * 
+ */
+	$system_path = './__ee_admin';
 
 
-// DO NOT EDIT BELOW THIS!!! 
+/*
+ * --------------------------------------------------------------------
+ *  Multiple Site Manager
+ * --------------------------------------------------------------------
+ *
+ * Uncomment the following variables if you are using the Multiple
+ * Site Manager: http://ellislab.com/expressionengine/user-guide/cp/sites
+ *
+ * Set the Short Name of the site this file will display, the URL of
+ * this site's admin.php file, and the main URL of the site (without
+ * index.php) 
+ *
+ */
+ //  $assign_to_config['site_name']  = 'domain2_short_name'; 
+ //  $assign_to_config['cp_url'] = 'http://domain2.com/admin.php'; 
+ //  $assign_to_config['site_url'] = 'http://domain2.com'; 
 
-error_reporting(0);
 
-if (isset($_GET['URL'])) 
-{ 
-	/** ---------------------------------
-	/**  URL Redirect for CP and Links in Comments
-	/** ---------------------------------*/
+/*
+ * --------------------------------------------------------------------
+ *  Error Reporting
+ * --------------------------------------------------------------------
+ *
+ * PHP and database errors are normally displayed dynamically based
+ * on the authorization level of each user accessing your site.  
+ * This variable allows the error reporting system to be overridden, 
+ * which can be useful for low level debugging during site development, 
+ * since errors happening before a user is authenticated will not normally 
+ * be shown.  Options:
+ *
+ *	$debug = 0;  Default setting. Errors shown based on authorization level
+ *
+ *	$debug = 1;  All errors shown regardless of authorization
+ *
+ * NOTE: Enabling this override can have security implications.
+ * Enable it only if you have a good reason to.
+ * 
+ */
+	$debug = 0;
 
-	$_GET['URL'] = str_replace(array("\r", "\r\n", "\n", '%3A','%3a','%2F','%2f', '%0D', '%0A', '%09', 'document.cookie'), 
-							   array('', '', '', ':', ':', '/', '/', '', '', '', ''), 
-							   $_GET['URL']);
-	
-	if (substr($_GET['URL'], 0, 4) != "http" AND ! ereg('://', $_GET['URL']) AND substr($_GET['URL'], 0, 1) != '/') 
-		$_GET['URL'] = "http://".$_GET['URL']; 
-		
-	$_GET['URL'] = str_replace( array('"', "'", ')', '(', ';', '}', '{', 'script%', 'script&', '&#40', '&#41', '<'), 
-								'', 
-								strip_tags($_GET['URL']));
-	
-	$host = ( ! isset($_SERVER['HTTP_HOST'])) ? '' : (substr($_SERVER['HTTP_HOST'],0,4) == 'www.' ? substr($_SERVER['HTTP_HOST'], 4) : $_SERVER['HTTP_HOST']);
-	
-	if ( ! isset($_SERVER['HTTP_REFERER']) OR ! stristr($_SERVER['HTTP_REFERER'], $host))
+/*
+ * --------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * --------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class. This allows you to set custom config items or override
+ * any default config values found in the config.php file.  This can
+ * be handy as it permits you to share one application between more then
+ * one front controller file, with each file containing different 
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ * NOTE: This feature can be used to run multiple EE "sites" using
+ * the old style method.  Instead of individual variables you'll
+ * set array indexes corresponding to them.
+ *
+ */
+//	$assign_to_config['template_group'] = '';
+//	$assign_to_config['template'] = '';
+//	$assign_to_config['site_index'] = '';
+//	$assign_to_config['site_404'] = '';
+//	$assign_to_config['global_vars'] = array(); // This array must be associative
+
+
+/*
+ * --------------------------------------------------------------------
+ *  END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+ * --------------------------------------------------------------------
+ */
+
+
+/*
+ * ---------------------------------------------------------------
+ *  Disable all routing, send everything to the frontend
+ * ---------------------------------------------------------------
+ */
+	$routing['directory'] = '';
+	$routing['controller'] = 'ee';
+	$routing['function'] = 'index';
+
+/*
+ * --------------------------------------------------------------------
+ *  Mandatory config overrides
+ * --------------------------------------------------------------------
+ */
+	$assign_to_config['subclass_prefix'] = 'EE_';
+
+/*
+ * --------------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * --------------------------------------------------------------------
+ */
+
+	if (realpath($system_path) !== FALSE)
 	{
-		// Possibly not from our site, so we give the user the option
-		// Of clicking the link or not
-		
-		$str = "<html>\n<head>\n<title>Redirect</title>\n</head>\n<body>".
-				"<p>To proceed to the URL you have requested, click the link below:</p>".
-				"<p><a href='".$_GET['URL']."'>".$_GET['URL']."</a></p>\n</body>\n</html>";
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the sytsem path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * --------------------------------------------------------------------
+ *  Now that we know the path, set the main constants
+ * --------------------------------------------------------------------
+ */	
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	define('EXT', '.php');
+
+ 	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path.'codeigniter/system/'));
+	
+	// Path to the "application" folder
+	define('APPPATH', $system_path.'expressionengine/');
+	
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+	
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(str_replace("\\", "/", $system_path), '/'), '/'), '/'));
+
+	// The $debug value as a constant for global access
+	define('DEBUG', $debug);  unset($debug);
+
+/*
+ * --------------------------------------------------------------------
+ *  Set the error reporting level
+ * --------------------------------------------------------------------
+ */	
+	if (DEBUG == 1)
+	{
+		error_reporting(E_ALL);
+		@ini_set('display_errors', 1);
 	}
 	else
 	{
-		$str = "<html>\n<head>\n<title>Redirect</title>\n".
-			   '<meta http-equiv="refresh" content="0; URL='.$_GET['URL'].'">'.
-			   "\n</head>\n<body>\n</body>\n</html>";
+		error_reporting(0);	
 	}
-	
-	exit($str);
-}
 
-$uri  = '';
-$pathinfo = pathinfo(__FILE__);
-$ext  = ( ! isset($pathinfo['extension'])) ? '.php' : '.'.$pathinfo['extension'];
-$self = ( ! isset($pathinfo['basename'])) ? 'index'.$ext : $pathinfo['basename'];
+/*
+ *---------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ *---------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+	require_once BASEPATH.'core/CodeIgniter'.EXT;
 
-$path_info = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : @getenv('PATH_INFO');
-$query_str = (isset($_SERVER['QUERY_STRING'])) ? $_SERVER['QUERY_STRING'] : @getenv('QUERY_STRING');
-
-switch ($qtype)
-{
-	case 0 :	$uri = ($path_info != '' AND $path_info != "/".$self) ? $path_info : $query_str;
-		break;
-	case 1 :	$uri = $path_info; 	
-		break;
-	case 2 :	$uri = $query_str; 
-		break;
-}
-
-unset($system_path);
-unset($config_file);
-unset($path_info);
-unset($query_str);
-unset($qstr);
-
-require 'path'.$ext;
-
-if ((isset($template_group) AND isset($template)) && $uri != '' && $uri != '/')
-{
-	$template_group = '';
-	$template = '';
-}
-
-if ( ! isset($system_path))
-{
-	if (file_exists('install'.$ext))
-	{
-		header("location: install".$ext); 
-		exit;
-	}
-	else
-	{
-        exit("The system does not appear to be installed. Click <a href='install.php'>here</a> to install it.");	
-	}
-}
-
-if ( ! ereg("/$", $system_path)) $system_path .= '/';
-
-if ( ! @include($system_path.'core/core.system'.$ext))
-{
-	exit("The system path does not appear to be set correctly.  Please open your path.php file and correct the path.");	
-}
-
-?>
+/* End of file index.php */
+/* Location: ./index.php */
