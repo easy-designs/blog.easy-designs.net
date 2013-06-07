@@ -1,0 +1,17 @@
+/* line 1, ../source/sass/ie7-mobile.scss */
+#home .focal ul, #home .focal ul li {
+  list-style-image: none;
+}
+
+/* line 5, ../source/sass/ie7-mobile.scss */
+body ul#pagination {
+  bottom: -2.2em;
+}
+
+/* line 9, ../source/sass/ie7-mobile.scss */
+body #search-form button {
+  display: inline-block;
+  line-height: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}

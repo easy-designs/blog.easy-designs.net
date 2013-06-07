@@ -1,0 +1,37 @@
+/* line 1, ../source/sass/ie8.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+}
+
+/* This gets rid of the arbitrary, default textarea scrollbar */
+/* line 6, ../source/sass/ie8.scss */
+textarea {
+  overflow: auto;
+}
+
+/* Bottom of the speech bubble needs an extra 5px nudge */
+/* line 11, ../source/sass/ie8.scss */
+#comments .meta {
+  top: -20px;
+}
+
+/* Colors */
+/* line 16, ../source/sass/ie8.scss */
+.sidebar {
+  background-color: #e0fbfd;
+}
+
+/* line 19, ../source/sass/ie8.scss */
+.sidebar .inner {
+  background-color: #c2f8f9;
+}
+
+/* line 22, ../source/sass/ie8.scss */
+#about .inner {
+  background-color: #79da8d;
+}
+
+/* line 25, ../source/sass/ie8.scss */
+#easy-network {
+  background-color: #79da8d;
+}

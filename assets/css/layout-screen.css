@@ -1,0 +1,366 @@
+/* =Header */
+/* line 2, ../source/sass/layout-screen.scss */
+#page-header {
+  border-top-width: 30px;
+}
+
+/* line 5, ../source/sass/layout-screen.scss */
+#logo {
+  margin: -30px 0 0 -430px;
+  padding-top: 40px;
+  left: 50%;
+  width: 860px;
+}
+
+/* line 11, ../source/sass/layout-screen.scss */
+#logo img {
+  margin-left: 0;
+  left: 30px;
+  top: 52px;
+}
+
+/* =Search */
+/* line 19, ../source/sass/layout-screen.scss */
+#search-form {
+  top: 42px;
+  right: 50%;
+  margin: 0 -400px 0 0;
+}
+
+/* line 24, ../source/sass/layout-screen.scss */
+#search-form input, #search-form label {
+  font-size: 0.92307692em;
+}
+
+/* =Body */
+/* line 29, ../source/sass/layout-screen.scss */
+#main, #single-entry #main {
+  margin: 0 auto;
+  padding: 20px 250px 70px 20px;
+  width: 590px;
+  position: static;
+}
+
+/* line 35, ../source/sass/layout-screen.scss */
+#single-entry article.focal {
+  padding: 3px 10px;
+}
+
+/* line 38, ../source/sass/layout-screen.scss */
+.focal header {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+/* line 42, ../source/sass/layout-screen.scss */
+article.focal figure {
+  width: 520px;
+}
+
+/* line 52, ../source/sass/layout-screen.scss */
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe,
+article.focal figure figcaption {
+  width: 500px;
+  margin-left: 0;
+}
+
+/* line 56, ../source/sass/layout-screen.scss */
+article.focal .gist-meta {
+  display: block;
+}
+
+/* =Comments */
+/* line 62, ../source/sass/layout-screen.scss */
+#comments {
+  left: 6px;
+  margin: 0 0 0 -10000px;
+  padding: 15px 0 10px 10000px;
+}
+
+/* line 67, ../source/sass/layout-screen.scss */
+#comments .hentry {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* line 71, ../source/sass/layout-screen.scss */
+#comments .entry-content {
+  margin-bottom: 15px;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0 45px 0 20px;
+  position: static;
+}
+
+/* line 80, ../source/sass/layout-screen.scss */
+#comments .meta {
+  left: 0;
+  width: auto;
+}
+
+/* line 84, ../source/sass/layout-screen.scss */
+#comments .hentry .meta .vcard {
+  margin-top: 0;
+}
+
+/* =Comment Form */
+/* line 90, ../source/sass/layout-screen.scss */
+#comment-form label {
+  float: left;
+  text-align: right;
+  line-height: 2.8;
+  width: 100px;
+  margin: 0 10px 0 0;
+}
+
+/* line 98, ../source/sass/layout-screen.scss */
+#comment-form .radio label,
+#comment-form .checkbox label {
+  float: none;
+}
+
+/* line 102, ../source/sass/layout-screen.scss */
+#comment-form .checkbox label,
+#comment-form .radio label {
+  line-height: 1.5;
+  width: auto;
+}
+
+/* line 106, ../source/sass/layout-screen.scss */
+#comment-form .textarea label {
+  line-height: 2.5;
+}
+
+/* line 109, ../source/sass/layout-screen.scss */
+input, textarea {
+  width: 440px;
+  margin-right: -10px;
+  padding: 7px;
+}
+
+/* line 114, ../source/sass/layout-screen.scss */
+textarea {
+  height: 200px;
+}
+
+/* line 117, ../source/sass/layout-screen.scss */
+li.submit, li.checkbox {
+  margin-left: 110px;
+}
+
+/* line 120, ../source/sass/layout-screen.scss */
+li.submit {
+  margin-top: 1.5em;
+}
+
+/* line 123, ../source/sass/layout-screen.scss */
+.checkbox label {
+  float: none;
+  width: auto;
+}
+
+/* line 127, ../source/sass/layout-screen.scss */
+.checkbox input {
+  float: none;
+  margin-right: 0;
+  width: auto;
+}
+
+/* line 132, ../source/sass/layout-screen.scss */
+.captcha {
+  padding-top: 20px;
+}
+
+/* =Archives */
+/* line 138, ../source/sass/layout-screen.scss */
+#archive #main {
+  min-height: 900px;
+  padding-bottom: 60px;
+}
+
+/* line 142, ../source/sass/layout-screen.scss */
+#archive h1 {
+  padding: 0 10px;
+}
+
+/* line 145, ../source/sass/layout-screen.scss */
+#archive.search .focal > p {
+  padding: 0 10px;
+}
+
+/* line 148, ../source/sass/layout-screen.scss */
+#archive .hfeed {
+  margin: 0 -20px;
+}
+
+/* line 151, ../source/sass/layout-screen.scss */
+#archive .hentry .meta {
+  padding-left: 30px;
+}
+
+/* line 154, ../source/sass/layout-screen.scss */
+#archive .hentry .body {
+  padding-right: 30px;
+}
+
+/* =Home */
+/* line 160, ../source/sass/layout-screen.scss */
+#home #main {
+  width: 820px;
+}
+
+/* line 163, ../source/sass/layout-screen.scss */
+#home .hfeed {
+  border-spacing: 20px 0;
+  margin: 0 -20px;
+}
+
+/* =Pagination */
+/* line 171, ../source/sass/layout-screen.scss */
+ul#pagination,
+#single-entry #pagination {
+  position: absolute;
+  bottom: 20px;
+  left: auto;
+  right: auto;
+  width: 580px;
+}
+
+/* line 178, ../source/sass/layout-screen.scss */
+article ul#pagination {
+  bottom: -50px;
+}
+
+/* line 181, ../source/sass/layout-screen.scss */
+.search ul#pagination {
+  bottom: 20px;
+}
+
+/* =Sidebars */
+/* line 187, ../source/sass/layout-screen.scss */
+.sidebar, #single-entry .sidebar {
+  position: absolute;
+  left: 50%;
+  width: auto;
+}
+
+/* line 192, ../source/sass/layout-screen.scss */
+.sidebar .inner, #single-entry .sidebar .inner {
+  left: 200px;
+}
+
+/* =Footer */
+/* line 198, ../source/sass/layout-screen.scss */
+#extras {
+  float: left;
+  width: 100%;
+  margin-top: -231px;
+  padding-top: 231px;
+  z-index: 0;
+}
+
+/* line 205, ../source/sass/layout-screen.scss */
+aside.promo {
+  float: left;
+}
+
+/* line 208, ../source/sass/layout-screen.scss */
+aside.promo .inner {
+  float: left;
+  min-height: 100px;
+  position: relative;
+  left: 50%;
+  margin-left: -430px;
+  width: 860px;
+}
+
+/* line 216, ../source/sass/layout-screen.scss */
+aside.promo h2 {
+  margin-bottom: 3px;
+}
+
+/* line 219, ../source/sass/layout-screen.scss */
+#about-us {
+  width: 570px;
+}
+
+/* line 222, ../source/sass/layout-screen.scss */
+#more {
+  margin-left: 20px;
+  padding-right: 20px;
+  width: 240px;
+}
+
+/* line 228, ../source/sass/layout-screen.scss */
+#about-us,
+#more {
+  float: left;
+  padding: 22px 0 22px;
+}
+
+/* line 233, ../source/sass/layout-screen.scss */
+#about-us h2,
+#about-us p {
+  padding-left: 100px;
+}
+
+/* line 236, ../source/sass/layout-screen.scss */
+#elsewhere {
+  display: block;
+}
+
+/* line 239, ../source/sass/layout-screen.scss */
+#page-footer p {
+  margin: 0 auto;
+  padding: 10px 30px;
+  width: 800px;
+}
+
+/* =Easy Network */
+/* line 247, ../source/sass/layout-screen.scss */
+#easy-network {
+  display: block;
+  width: 860px;
+  margin: 0 0 0 -430px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1000;
+}
+
+/* line 256, ../source/sass/layout-screen.scss */
+#easy-network ul {
+  margin: 0;
+  padding: 0 20px;
+  text-align: right;
+}
+
+/* line 261, ../source/sass/layout-screen.scss */
+#easy-network li {
+  display: inline;
+}
+
+/* line 264, ../source/sass/layout-screen.scss */
+#easy-network a {
+  background: center left no-repeat;
+  line-height: 30px;
+  padding: 0 20px 0 27px;
+}
+
+/* line 269, ../source/sass/layout-screen.scss */
+#easy-network .r4g a {
+  padding-left: 16px;
+}
+
+/* line 272, ../source/sass/layout-screen.scss */
+#easy-network .easy-readers a {
+  padding-right: 0;
+}
