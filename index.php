@@ -41,7 +41,7 @@ date_default_timezone_set('America/New_York');
  * index.php) 
  *
  */
- //  $assign_to_config['site_name']  = 'domain2_short_name'; 
+ $assign_to_config['site_name']  = 'easy-reader'; 
  //  $assign_to_config['cp_url'] = 'http://domain2.com/admin.php'; 
  //  $assign_to_config['site_url'] = 'http://domain2.com'; 
 

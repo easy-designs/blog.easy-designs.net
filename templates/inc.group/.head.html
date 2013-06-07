@@ -15,7 +15,7 @@
 {if "{embed:post}"=="Y"}
     {!-- Twitter Card --}
     {exp:channel:entries site="easy-designs" channel="staff" username="{embed:username}"
-                        limit="1" status="open|closed" dynamic="off" rdf="off"
+                        limit="1" status="open|closed" dynamic="no" rdf="off"
                         disable="categories|category_fields|member_data|pagination|trackbacks"}
     <meta name="twitter:creator" value="@{staff_twitter}">
     {/exp:channel:entries}

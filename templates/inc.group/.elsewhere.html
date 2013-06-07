@@ -1,8 +1,7 @@
-{assign_variable:my_weblog="blog"}
-{assign_variable:my_template_group="blog"}
-{assign_variable:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
+{preload_replace:my_weblog="blog"}
+{preload_replace:my_template_group="blog"}
+{preload_replace:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
         <aside id="elsewhere" class="promo"><div class="inner">
-        
             <section id="software">
                 <h2>We made this</h2>
                 <h3 class="figure featured">
@@ -34,44 +33,39 @@
                     </a>
                 </h3>
                 <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
-            </section-->
-        
-<?php global $DB;
+            </section-->        
+<?php
 
-      $future = (bool)$DB->query(
-        "SELECT count(`title`) AS `count`
-         FROM   `exp_weblog_titles`
-         WHERE  `weblog_id` = 6
-           AND  `entry_date` > UNIX_TIMESTAMP()"
-      )->row['count'];
-      
-      $block = $future ? '366' : '367'; ?>
+$EE =& get_instance();
+
+$future = (bool)$EE->db->query(
+  "SELECT count(`title`) AS `count`
+   FROM   `exp_channel_titles`
+   WHERE  `channel_id` = 6
+     AND  `entry_date` > UNIX_TIMESTAMP()"
+)->row('count');     
+$block = $future ? '366' : '367';
+
+?>
         <section id="events">
-{exp:channel:entries site="easy-designs" channel="blocks" entry_id="<?php echo $block; ?>" dynamic="off"
+{exp:channel:entries site="easy-designs" channel="blocks" entry_id="<?php echo $block; ?>" dynamic="no"
                     disable="categories|category_fields|custom_fields|member_data|pagination|trackbacks"}
 					<h2>{title}</h2>
 {/exp:channel:entries}
 					<ol class="hcalendar">
-{exp:channel:entries site="easy-designs" channel="events"
-										dynamic="off" category="not 131"
+{!--exp:channel:entries site="easy-designs" channel="events"
+										dynamic="no" category="not 131"
 <?php if ( $future ): ?>
 										show_expired="no" show_future_entries="yes" 
 <?php else: ?>
 										show_expired="yes" show_future_entries="no" 
 <?php endif; ?>
                     orderby="entry_date" sort="<?php echo $future ? 'asc' : 'desc'; ?>" limit="5"
-                    disable="categories|category_fields|member_data|pagination|trackbacks"}
-            <li class="vevent">
-              <p class="when">{exp:daterange microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
-              <h3 class="summary">
-	{if event_url OR upcoming_id}
-		{assign_variable:the_url="{if event_url}{exp:html_strip convert='y'}{event_url}{/exp:html_strip}{if:else}http://upcoming.yahoo.com/event/{upcoming_id}/{/if}"}
-								<a rel="external" href="{the_url}">{event_series}</a>
-	{if:else}
-								{title}
-	{/if}
-							</h3>
-            </li>
+                    disable="categories|category_fields|member_data|pagination|trackbacks"--}
+ <li class="vevent">
+              <p class="when">{!--exp:daterange microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"--}</p>
+              <h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
+            </li> 
 {/exp:channel:entries}
           </ol>
         </section>
@@ -127,5 +121,6 @@
 {/exp:channel:entries}
           </ul>
         </section>
-				# ending the comment --}
+				# ending the comment  --}
       </div></aside>
+<!--?php exit; ?-->
