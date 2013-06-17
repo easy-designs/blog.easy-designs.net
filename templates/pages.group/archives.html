@@ -117,11 +117,13 @@ if ( $show == 'not found' )
 				<li class="hentry{if count=='10' OR count==total_results} last{/if}">
 					<article>
 						<ul class="meta">
-    {exp:query sql="SELECT `url_title` AS `author_url_title`
-                    FROM   `exp_weblog_titles` AS `t`
-                    INNER JOIN `<?php echo $db_prefix; ?>_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
-                    WHERE  `m`.`username` = '{username}'
-                        AND  `t`.`weblog_id` = 8"}
+    {exp:query
+		sql="SELECT `url_title` AS `author_url_title`
+			 FROM   `exp_weblog_titles` AS `t`
+			 INNER JOIN `<?php echo $db_prefix; ?>_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
+			 WHERE  `m`.`username` = '{username}'
+			   AND  `t`.`weblog_id` = 8"
+	}
 							<li class="author vcard">
 								<a href="/archives/by-author/{author_url_title}/">
 									<img src="{easy_images}/{author_url_title}-wide.jpg" alt=""/>
