@@ -1,7 +1,13 @@
 {exp:lg_replace:haystack needles="the_entry_id|the_permalink|comment_loader"}
 
-	{exp:channel:entries channel="blog" limit="1" require_entry="yes" rdf="off"
-	                    track_views="one" disable="categories|pagination|trackbacks"}
+	{exp:channel:entries
+		channel="blog"
+		limit="1"
+		require_entry="yes"
+		rdf="off"
+		track_views="one"
+		disable="categories|pagination|trackbacks"
+		}
 		{if no_results}
 			{redirect="errors/404"}
 		{/if}
@@ -26,22 +32,32 @@
 		
 		{!-- end variables for insertion elsewhere --}
 
-		{embed="inc/.head" entry_id="{entry_id}" post="Y"
-		                   title="{title}" canonical_url="{the_permalink}"
-						   description="{exp:html_strip}{exp:word_limit_plus if_exceeds="200" stop_after="160"}{entry_excerpt}{/exp:word_limit_plus}{/exp:html_strip}"
-						   author="{screen_name}" username="{username}"}
-		{embed="inc/.header" body_id="single-entry" body_class="hentry"}
+		{embed="inc/.head"
+			entry_id="{entry_id}"
+			post="Y"
+		    title="{title}"
+			canonical_url="{the_permalink}"
+			description='{exp:html_strip}{exp:word_limit_plus if_exceeds="200" stop_after="160"}{entry_excerpt}{/exp:word_limit_plus}{/exp:html_strip}'
+			author="{screen_name}"
+			username="{username}"
+			}
+		{embed="inc/.header"
+			body_id="single-entry"
+			body_class="hentry"
+			}
 
 		<section role="main" id="main">
 			<article role="article" class="focal">
 
 				<header>
 					<h1 itemprop="name" class="entry-title">{exp:typogrify}{title}{/exp:typogrify}</h1>
-                    {exp:query sql="SELECT `url_title` AS `author_url_title`
-                                    FROM   `exp_channel_titles` AS `t`
-                                    INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
-                                    WHERE  `m`.`username` = '{username}'
-                                        AND  `t`.`channel_id` = 8"}
+                    {exp:query
+	 					sql="SELECT `url_title` AS `author_url_title`
+							 FROM   `exp_channel_titles` AS `t`
+							 INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
+							 WHERE  `m`.`username` = '{username}'
+							 AND  `t`.`channel_id` = 8"
+						}
 					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/{author_url_title}/">{author}</a> on 
 					    <time class="published updated" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
   					    <a rel="bookmark" href="{the_permalink}">Permalink</a></h3>
