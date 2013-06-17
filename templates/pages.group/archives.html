@@ -9,6 +9,7 @@ $sub_archive	= $EE->uri->segment(4);
 $username		= $category = $day = $month = $year = '';
 $title			= 'Post Archive';
 $base			= '/archives/';
+$show = "archive";
 
 if ( ! empty( $archive ) &&
      in_array( $archive, $archives ) &&
@@ -23,7 +24,7 @@ if ( ! empty( $archive ) &&
 			  "SELECT `m`.`screen_name`,
 			          `m`.`username`
 			   FROM   `{$db_prefix}_members` AS `m`
-			     INNER JOIN `exp_weblog_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
+			     INNER JOIN `exp_channel_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
 				 WHERE  `t`.`url_title` = '{$sub_archive}'"
 			);
 			if ( $query->num_rows() > 0 )
@@ -119,10 +120,10 @@ if ( $show == 'not found' )
 						<ul class="meta">
     {exp:query
 		sql="SELECT `url_title` AS `author_url_title`
-			 FROM   `exp_weblog_titles` AS `t`
-			 INNER JOIN `<?php echo $db_prefix; ?>_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
+			 FROM   `exp_channel_titles` AS `t`
+			 INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
 			 WHERE  `m`.`username` = '{username}'
-			   AND  `t`.`weblog_id` = 8"
+			   AND  `t`.`channel_id` = 8"
 	}
 							<li class="author vcard">
 								<a href="/archives/by-author/{author_url_title}/">

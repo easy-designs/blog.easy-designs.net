@@ -1,6 +1,6 @@
-{assign_variable:easy_images="http://cdn1.easy-designs.net/global"}
-{assign_variable:my_weblog="blog"}
-{assign_variable:team="{exp:structure:child_ids entry_id='388'}"}
+{preload_replace:easy_images="http://cdn1.easy-designs.net/global"}
+{preload_replace:my_weblog="blog"}
+{preload_replace:team="{exp:structure:child_ids entry_id='388'}"}
 
 			<section class="sidebar" role="complementary"><div class="inner">
 
@@ -77,8 +77,8 @@
 				<nav role="navigation">
 					<ul class="browse">
 	{exp:query sql="SELECT DISTINCT YEAR( FROM_UNIXTIME( `entry_date` ) ) AS `year` 
-									FROM	 `exp_weblog_titles`
-									WHERE	 `weblog_id` = 1
+									FROM	 `exp_channel_titles`
+									WHERE	 `channel_id` = 1
 									ORDER BY `year` DESC"}
 						<li><a href="/archives/{year}/">{year}</a></li>
 	{/exp:query}
@@ -121,7 +121,7 @@
 				</nav>
     	{/if}
 
-		{reverse_related_entries channel="translations"}
+		{!--reverse_related_entries channel="translations"}
 		  {if count=="1"}
 				<h2>Available translations</h2>
 				<nav role="navigation">
@@ -134,7 +134,7 @@
 	    			</ul>
 				</nav>
 		  {/if}
-		{/reverse_related_entries}
+		{/reverse_related_entries--}
 		
 	{/exp:channel:entries}
 	
