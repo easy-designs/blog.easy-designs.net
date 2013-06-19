@@ -1,6 +1,7 @@
 {preload_replace:my_weblog="blog"}
 {preload_replace:my_template_group="blog"}
 {preload_replace:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
+
         <aside id="elsewhere" class="promo"><div class="inner">
             <section id="software">
                 <h2>We made this</h2>
@@ -53,18 +54,25 @@ $block = $future ? '366' : '367';
 					<h2>{title}</h2>
 {/exp:channel:entries}
 					<ol class="hcalendar">
-{!--exp:channel:entries site="easy-designs" channel="events"
-										dynamic="no" category="not 131"
+{!--exp:channel:entries site="easy-designs"
+	channel="events"
+	dynamic="no"
+	category="not 131"
 <?php if ( $future ): ?>
-										show_expired="no" show_future_entries="yes" 
+	show_expired="no"
+	show_future_entries="yes" 
 <?php else: ?>
-										show_expired="yes" show_future_entries="no" 
+	show_expired="yes"
+	show_future_entries="no" 
 <?php endif; ?>
-                    orderby="entry_date" sort="<?php echo $future ? 'asc' : 'desc'; ?>" limit="5"
-                    disable="categories|category_fields|member_data|pagination|trackbacks"--}
+    orderby="entry_date"
+    sort="<?php echo $future ? 'asc' : 'desc'; ?>"
+    limit="5"
+    disable="categories|category_fields|member_data|pagination|trackbacks"
+    --}
  <li class="vevent">
               <p class="when">{!--exp:daterange microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"--}</p>
-              <h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
+              <h3 class="summary">{if event_url}<a rel="external" href="{easy_daterange}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
             </li> 
 {/exp:channel:entries}
           </ol>

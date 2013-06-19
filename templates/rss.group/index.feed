@@ -94,7 +94,7 @@ if ( $not_found )
 		<item>
 			<title>{exp:xml_encode}{title}{/exp:xml_encode}</title>
 			<author>{screen_name}</author>
-			<description>{exp:xml_encode}{entry_excerpt}{/exp:xml_encode}</description>
+			<description>{exp:xml_encode}{entry_body}{/exp:xml_encode}</description>
 		{if categories}
 			<dc:subject>{exp:xml_encode}{categories backspace="2"}{category_name}, {/categories}{/exp:xml_encode}</dc:subject> 
 		{/if}

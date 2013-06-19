@@ -124,7 +124,7 @@ if ( $show == 'not found' )
 			 INNER JOIN `exp_members` AS `m` ON `t`.`author_id` = `m`.`member_id`
 			 WHERE  `m`.`username` = '{username}'
 			   AND  `t`.`channel_id` = 8"
-	}
+		}
 							<li class="author vcard">
 								<a href="/archives/by-author/{author_url_title}/">
 									<img src="{easy_images}/{author_url_title}-wide.jpg" alt=""/>
@@ -162,7 +162,10 @@ if ( $show == 'not found' )
 {/exp:channel:entries}
 	</article>
 
-{embed="inc/.sidebar" version="archive"<?php echo $archive=='author' ? "author='{$username}'" : ''; ?>}
+{embed="inc/.sidebar"
+	version="archive"
+	<?php echo $archive=='author' ? "author='{$username}'" : ''; ?>
+	}
       
     </section>{!-- #main --}
 

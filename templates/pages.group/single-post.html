@@ -1,5 +1,5 @@
-{exp:lg_replace:haystack needles="the_entry_id|the_permalink|comment_loader"}
-
+{!-- variables for insertion elsewhere --}
+{exp:nsm_transplant:body}
 	{exp:channel:entries
 		channel="blog"
 		limit="1"
@@ -8,16 +8,12 @@
 		track_views="one"
 		disable="categories|pagination|trackbacks"
 		}
-		{if no_results}
-			{redirect="errors/404"}
-		{/if}
-
-		{!-- variables for insertion elsewhere --}
-		{exp:lg_replace:replacement needle="the_entry_id"}{entry_id}{/exp:lg_replace:replacement}
+		
+		{exp:nsm_transplant:content id="the_entry_id"}{entry_id}{/exp:nsm_transplant:content}
 	
-		{exp:lg_replace:replacement needle="the_permalink"}{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/{/exp:lg_replace:replacement}
+		{exp:nsm_transplant:content id="the_permalink"}{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/{/exp:nsm_transplant:content}
 
-		{exp:lg_replace:replacement needle="comment_loader"}
+		{exp:nsm_transplant:content id="comment_loader"}
 		    {if allow_comments}
 			<section id="comments" class="focal">
 				<a id="comment-loader" data-replace="/comments/{url_title}/" href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/comments/#comments">View comments on this entry and add your own</a>
@@ -28,23 +24,37 @@
 				<a id="comment-loader" data-replace="/comments/{url_title}/" href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/comments/#comments">View comments on this entry</a>
 			</section>
 			{/if}
-		{/exp:lg_replace:replacement}
+		{/exp:nsm_transplant:content}
 		
-		{!-- end variables for insertion elsewhere --}
+	{/exp:channel:entries}
+{/exp:nsm_transplant:body}
+{!-- end variables for insertion elsewhere --}
 
-		{embed="inc/.head"
-			entry_id="{entry_id}"
-			post="Y"
-		    title="{title}"
-			canonical_url="{the_permalink}"
-			description='{exp:html_strip}{exp:word_limit_plus if_exceeds="200" stop_after="160"}{entry_excerpt}{/exp:word_limit_plus}{/exp:html_strip}'
-			author="{screen_name}"
-			username="{username}"
-			}
-		{embed="inc/.header"
-			body_id="single-entry"
-			body_class="hentry"
-			}
+{exp:channel:entries
+	channel="blog"
+	limit="1"
+	require_entry="yes"
+	rdf="off"
+	track_views="one"
+	disable="categories|pagination|trackbacks"
+	}
+	{if no_results}
+		{redirect="errors/404"}
+	{/if}
+
+	{embed="inc/.head"
+		entry_id="{exp:nsm_transplant:output id='entry_id'}"
+		post="Y"
+	    title="{title}"
+		canonical_url="{the_permalink}"
+		description='{exp:tagstripper:stripAllTags}{entry_excerpt}{/exp:tagstripper:stripAllTags}'
+		author="{screen_name}"
+		username="{username}"
+		}
+	{embed="inc/.header"
+		body_id="single-entry"
+		body_class="hentry"
+		}
 
 		<section role="main" id="main">
 			<article role="article" class="focal">
@@ -60,18 +70,18 @@
 						}
 					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/{author_url_title}/">{author}</a> on 
 					    <time class="published updated" datetime="{entry_date format='%Y-%m-%dT%H:%i:%s'}" pubdate="pudate">{entry_date format='%d %F %Y'}</time> | 
-  					    <a rel="bookmark" href="{the_permalink}">Permalink</a></h3>
+  					    <a rel="bookmark" href="{exp:nsm_transplant:output id='the_permalink'}">Permalink</a></h3>
                     {/exp:query}
 				</header>
 				<div class="entry-content">
 
 				{exp:easy_src_sencha_io}
 					{exp:typogrify}
-						{exp:replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
+						{exp:low_replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
 							{exp:allow_eecode embed="y"}
 								{entry_body}
 							{/exp:allow_eecode}
-						{/exp:replace}
+						{/exp:low_replace}
 					{/exp:typogrify}
 				{/exp:easy_src_sencha_io}
 
@@ -81,21 +91,19 @@
 
 			</article>
 
-		{embed="inc/.sidebar" entry_id="{entry_id}" author="{username}"}
+	{embed="inc/.sidebar" entry_id="{entry_id}" author="{username}"}
 
-		{if segment_4=="comments"}
+	{if segment_4=="comments"}
 			<section id="comments" class="focal">
 			{embed="inc/.comments" url_title="{url_title}"}
 			</section>
-		{if:else}
-			{comment_loader}
-		{/if}
+	{if:else}
+		{exp:nsm_transplant:output id="comment_loader"}
+	{/if}
 
-		{embed="inc/.pagination" entry_id="{entry_id}"}{!-- comes from LG Replace (above) --}
+	{embed="inc/.pagination" entry_id="{exp:nsm_transplant:output id='the_entry_id'}"}
 
-	{/exp:channel:entries}
-
-{/exp:lg_replace:haystack}
+{/exp:channel:entries}
 
 		</section>{!-- #main --}
 		
