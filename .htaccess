@@ -42,10 +42,7 @@ RewriteRule ^js\/(.*)\.js$ /javascripts/$1 [L]
 RewriteRule ^docs\/(.*)$ /assets/docs/$1 [L]
 
 # Pages
-RewriteRule ^archives\/(\d{4})\/?(\d{2})?\/?(\d{2})?\/?(P\d+\/?)?$ /pages/archives/date/$1/$2/$3/$4 [L]
 RewriteRule ^archives\/\d{4}\/\d{2}\/\d{2}\/(.*)$ /pages/single-post/$1 [L]
-RewriteRule ^archives\/by-(category|author|tag)\/(.*)$ /pages/archives/$1/$2 [L]
-RewriteRule ^archives\/(.*)$ /pages/archives/$1 [L]
 RewriteRule ^comments\/(.*)$ /pages/comments/$1 [L]
 
 # RSS
