@@ -54,7 +54,7 @@ $block = $future ? '366' : '367';
 					<h2>{title}</h2>
 {/exp:channel:entries}
 					<ol class="hcalendar">
-{!--exp:channel:entries site="easy-designs"
+{exp:channel:entries site="easy-designs"
 	channel="events"
 	dynamic="no"
 	category="not 131"
@@ -69,10 +69,10 @@ $block = $future ? '366' : '367';
     sort="<?php echo $future ? 'asc' : 'desc'; ?>"
     limit="5"
     disable="categories|category_fields|member_data|pagination|trackbacks"
-    --}
+    }
  <li class="vevent">
-              <p class="when">{!--exp:daterange microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"--}</p>
-              <h3 class="summary">{if event_url}<a rel="external" href="{easy_daterange}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
+              <p class="when">{exp:easy_date_range microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
+              <h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
             </li> 
 {/exp:channel:entries}
           </ol>
