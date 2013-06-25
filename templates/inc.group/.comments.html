@@ -1,17 +1,17 @@
-{exp:lg_replace:haystack needles="the_permalink|comment_form"}
+{exp:nsm_transplant:body}
 
 	{exp:channel:entries channel="blog" url_title="{embed:url_title}" cache="yes" refresh="360"}
 
-		{exp:lg_replace:replacement needle="the_permalink"}{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/{/exp:lg_replace:replacement}
+		{exp:nsm_transplant:content id="the_permalink"}{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/{/exp:nsm_transplant:content}
 
-		{exp:lg_replace:replacement needle="comment_form"}
+		{exp:nsm_transplant:content id="comment_form"}
 		    {if allow_comments}
 		<section id="comment-form" class="focal">
 			<h2>Post a Comment</h2>
 			{embed="inc/.comment-form" entry_id="{entry_id}" return="{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/#comments"}
 		</section>
 			{/if}
-		{/exp:lg_replace:replacement}
+		{/exp:nsm_transplant:content}
 		{!-- end variables for insertion elsewhere --}
 
 	{/exp:channel:entries}
@@ -48,6 +48,6 @@
 		{/if}
 	{/exp:comment:entries}
 
-	{comment_form}{!-- comes from LG Replace (above) --}
-
-{/exp:lg_replace:haystack}
+	{comment_form}{!-- comes from NSM Transplant (above) --}
+	
+{/exp:nsm_transplant:body}
