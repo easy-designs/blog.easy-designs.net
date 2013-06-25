@@ -5,6 +5,7 @@ $EE =& get_instance();
 $archives		= array( 'author', 'category', 'tag', 'date' );
 $archive		= ee()->uri->segment(2);
 $sub_archive	= ee()->uri->segment(3);
+$article		= ee()->uri->segment(5);
 $username		= $category = $day = $month = $year = '';
 $title			= 'Post Archive';
 $base			= '/archives/';
@@ -14,85 +15,112 @@ if ( is_numeric( $archive ) )
 {
 	$sub_archive = $archive;
 	$archive = 'date';
+	
+	# simplifying URLs
+	if ( $article )
+	{
+		header( 'HTTP/1.1 301 Moved Permanently' );
+		header( "Location: http://{$_SERVER['SERVER_NAME']}/archives/{$article}/" );
+		exit;
+	}
 }
-elseif ( strpos( $archive,  'by-' ) !== NULL )
+elseif ( strpos( $archive,  'by-' ) !== FALSE )
 {
 	$archive = str_replace( 'by-', '', $archive );
 }
-
-if ( ! empty( $archive ) &&
-     in_array( $archive, $archives ) &&
-     ! empty( $sub_archive ) )
+# make sure there’s an archive, but not a page
+elseif ( $archive &&
+ 		 strpos( $archive,  'P' ) !== 0 )
 {
-	$show = 'not found';
-	switch ( $archive )
+	$show = 'single';
+}
+
+if ( $show != 'single' )
+{
+
+	if ( ! empty( $archive ) &&
+	     in_array( $archive, $archives ) &&
+	     ! empty( $sub_archive ) )
 	{
-		case 'author':
-			$base .= "by-{$archive}/{$sub_archive}/";
-			$query = $EE->db->query(
-				"SELECT `m`.`screen_name`,
-				        `m`.`username`
-				 FROM   `exp_members` AS `m`
-				   INNER JOIN `exp_channel_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
-				   WHERE  `t`.`url_title` = '{$sub_archive}'"
-			);
-			if ( $query->num_rows() > 0 )
-			{
-				$show     = $archive;
-				$username = $query->row('username');
-				$title    = 'Posts by ' . $query->row('screen_name');
-			}
-			break;
-		case 'date':
-			$show = $archive;  
-			$year  = $sub_archive;
-			$month = ee()->uri->segment(3);
-			$day   = ee()->uri->segment(4);
-			if ( ! empty( $day ) && is_numeric( $day ) )
-			{
-			  	$base .= "{$year}/{$month}/{$day}/";
-			  	$title = 'Posts from ' . date( 'd F Y', strtotime("{$year}-{$month}-{$day}") );
-			}
-			elseif ( ! empty( $month ) && is_numeric( $month ) )
-			{
-			  	$base .= "{$year}/{$month}/";
-			  	$title = 'Posts from ' . date( 'F Y', strtotime("{$year}-{$month}") );
-			}
-			else
-			{
-			    $base .= "{$year}/";
-			  	$title = "Posts from {$year}";
-			}
-			break;
-		default:
-			$base .= "by-{$archive}/{$sub_archive}/";
-			$query = $EE->db->query(
-				"SELECT `cat_id`,
-						`cat_name`
-				 FROM   `exp_categories`
-				 WHERE  `cat_url_title` = '{$sub_archive}'"
-			);
-			if ( $query->num_rows > 0 )
-			{
-				$show     = $archive;
-				$category = $query->row('cat_name');
-				$title    = ( $archive=='tag' ? "Posts tagged &#8220;{$category}&#8221;"
-											  : "Posts filed under &#8220;{$category}&#8221;" );
-				$category = $query->row('cat_id');
-			}
-			break;
+		$show = 'not found';
+		switch ( $archive )
+		{
+			case 'author':
+				$base .= "by-{$archive}/{$sub_archive}/";
+				$query = $EE->db->query(
+					"SELECT `m`.`screen_name`,
+					        `m`.`username`
+					 FROM   `exp_members` AS `m`
+					   INNER JOIN `exp_channel_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
+					   WHERE  `t`.`url_title` = '{$sub_archive}'"
+				);
+				if ( $query->num_rows() > 0 )
+				{
+					$show     = $archive;
+					$username = $query->row('username');
+					$title    = 'Posts by ' . $query->row('screen_name');
+				}
+				break;
+			case 'date':
+				$show = $archive;  
+				$year  = $sub_archive;
+				$month = ee()->uri->segment(3);
+				$day   = ee()->uri->segment(4);
+				if ( ! empty( $day ) && is_numeric( $day ) )
+				{
+				  	$base .= "{$year}/{$month}/{$day}/";
+				  	$title = 'Posts from ' . date( 'd F Y', strtotime("{$year}-{$month}-{$day}") );
+				}
+				elseif ( ! empty( $month ) && is_numeric( $month ) )
+				{
+				  	$base .= "{$year}/{$month}/";
+				  	$title = 'Posts from ' . date( 'F Y', strtotime("{$year}-{$month}") );
+				}
+				else
+				{
+				    $base .= "{$year}/";
+				  	$title = "Posts from {$year}";
+				}
+				break;
+			default:
+				$base .= "by-{$archive}/{$sub_archive}/";
+				$query = $EE->db->query(
+					"SELECT `cat_id`,
+							`cat_name`
+					 FROM   `exp_categories`
+					 WHERE  `cat_url_title` = '{$sub_archive}'"
+				);
+				if ( $query->num_rows > 0 )
+				{
+					$show     = $archive;
+					$category = $query->row('cat_name');
+					$title    = ( $archive=='tag' ? "Posts tagged &#8220;{$category}&#8221;"
+												  : "Posts filed under &#8220;{$category}&#8221;" );
+					$category = $query->row('cat_id');
+				}
+				break;
+		}
 	}
+
+	if ( $show == 'not found' )
+	{
+		header('Location: /archives/');
+		exit;
+	}
+
 }
 
-if ( $show == 'not found' )
-{
-	header('Location: /archives/');
-	exit;
-}
+		# Single Post
+		if ( $show == 'single' ): ?>
 
-?>
+{embed="pages/single-post"
+	}
+
+<?php	# archives
+		else: ?>
+
 {preload_replace:easy_images="http://cdn1.easy-designs.net/global"}
-{preload_replace:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/"}
+{preload_replace:permalink="/archives/{url_title}/"}
 
 {embed="inc/.head" title="<?php echo $title; ?>"}
 {embed="inc/.header" body_id="archive"}
@@ -186,6 +214,9 @@ if ( $show == 'not found' )
 	version="archive"
 	<?php echo $archive=='author' ? "author='{$username}'" : ''; ?>
 	}
+
+<?php	# end
+		endif; ?>
       
     </section>{!-- #main --}
 

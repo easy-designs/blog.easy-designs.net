@@ -1,3 +1,4 @@
+
 /*------------------------------------------------------------------------------
 Function:			 FunctionHandler()
 Author:				 Aaron Gustafson (aaron at easy-designs dot net)
@@ -59,10 +60,7 @@ jQuery.getScripts = function(scripts, onComplete)
 
 			// Typekit
 			$.getScript('http://use.typekit.com/tjo5hgd.js',function(){
-				try {
-					Typekit.load();
-				} catch( e ) { }
-			});
+				try {Typekit.load();} catch( e ) {}});
 
 			// Google Analytics
 			window._gaq = window._gaq || [];

@@ -61,8 +61,7 @@ $ids = implode( '|', $ids );
 {if:else}
 
 				<h2>Easy writers</h2>
-				<nav role="navigation">
-					<ul class="easy-writers">
+				<ul class="easy-writers">
 	{exp:channel:entries
 		site="easy-designs"
 		entry_id="<?php echo $ids; ?>"
@@ -74,50 +73,49 @@ $ids = implode( '|', $ids );
 		cache="yes"
 		refresh="1440"
 		}
-						<li class="vcard">
-							<a title="{title}" href="/archives/by-author/{url_title}/">
-								<img style="background-image: url({easy_images}/{url_title}-sm.jpg);" src="{cdn}/css/frame-author-sm.png" alt=""/>
-								<span class="fn">{title}</span>
-							</a>
-						</li>
+					<li class="vcard">
+						<a title="{title}" href="/archives/by-author/{url_title}/">
+							<img style="background-image: url({easy_images}/{url_title}-sm.jpg);" src="{cdn}/css/frame-author-sm.png" alt=""/>
+							<span class="fn">{title}</span>
+						</a>
+					</li>
 	{/exp:channel:entries}
-					</ul>
-				</nav>
-				
+				</ul>
+			
 {/if}
 
 {!-- general archive --}
 {if embed:version=="archive"}
 
 				<h2>Browse by category</h2>
-				<nav role="navigation">
-					<ul class="browse">
+				<ul class="browse">
 	{exp:channel:categories
 		channel="{my_weblog}"
 		show="151|184|183"
 		parent_only="yes"
+		show_empty="no"
 		style="none"
 		}
-						<li><a href="/archives/by-category/{category_url_title}/">{category_name}</a></li>
+					<li><a href="/archives/by-category/{category_url_title}/">{category_name}</a></li>
 	{/exp:channel:categories}
-					</ul>
-				</nav>
+				</ul>
 
 				<h2>Browse by tag</h2>
-				<nav role="navigation">
-					<ul class="browse inline">
+				<ul class="browse inline">
 	{exp:channel:categories
 		channel="{my_weblog}"
 		show="not 151|184|183"
+		show_empty="no"
 		style="none"
 		}
 		{if category_name!='personal' AND category_name!='Programming' AND category_name!='Process' AND category_name!='Potpourri' AND category_name!='Tags'}
-						<li><a href="/archives/by-tag/{category_url_title}/">{category_name}</a></li>
+					<li><a href="/archives/by-tag/{category_url_title}/">{category_name}</a></li>
 		{/if}
 	{/exp:channel:categories}
-					</ul>
-				</nav>
+				</ul>
 
+	{!-- Removing this for now
+				
 				<h2>Browse by year</h2>
 				<nav role="navigation">
 					<ul class="browse">
@@ -130,6 +128,8 @@ $ids = implode( '|', $ids );
 					</ul>
 				</nav>
 
+	--}
+
 {!-- single entry --}
 {if:else}
 
@@ -139,50 +139,44 @@ $ids = implode( '|', $ids );
 		disable="category_fields|member_data|pagination|trackbacks"
 		}
 				<h2>Filed under</h2>
-				<nav role="navigation">
-					<ul class="browse">
+				<ul class="browse">
 		{categories show="151|184|183"}
-						<li><a rel="tag" href="/archives/by-category/{category_url_title}/">{category_name}</a></li>
+					<li><a rel="tag" href="/archives/by-category/{category_url_title}/">{category_name}</a></li>
 		{/categories}
-					</ul>
-				</nav>
+				</ul>
 
 				<h2>Tagged</h2>
-				<nav role="navigation">
-					<ul class="browse inline">
+				<ul class="browse inline">
 		{categories show="not 151|184|183"}
 			{if category_name!='personal' AND category_name!='Programming' AND category_name!='Process' AND category_name!='Potpourri' AND category_name!='Tags'}
-						<li><a rel="tag" href="/archives/by-tag/{category_url_title}/">{category_name}</a></li>
+					<li><a rel="tag" href="/archives/by-tag/{category_url_title}/">{category_name}</a></li>
 			{/if}
 		{/categories}
-					</ul>
-				</nav>
+				</ul>
 
 		{if entry_related}
 				<h2>Related entries</h2>
-				<nav role="navigation">
-					<ul class="browse also">
-				  		{entry_related}
-						<li><a href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/">{title}</a></li>
-						{/entry_related}
-					</ul>
-				</nav>
+				<ul class="browse also">
+			  		{entry_related}
+					<li><a href="/archives/{entry_date format='%Y/%m/%d'}/{url_title}/">{title}</a></li>
+					{/entry_related}
+				</ul>
     	{/if}
 
-		{!--reverse_related_entries channel="translations"}
-		  {if count=="1"}
+		{exp:playa:parents
+			channel="translations"
+			orderby="translation_language"
+			sort="asc"
+			}
+			{if count=="1"}
 				<h2>Available translations</h2>
-				<nav role="navigation">
-					<ul class="also">
-		  {/if}
-						<li class="offsite">
-							<a href="{translation_link}" hreflang="{translation_language code='yes'}">{translation_language}</a>
-						</li>
-		  {if count==total_results}
-	    			</ul>
-				</nav>
-		  {/if}
-		{/reverse_related_entries--}
+				<ul class="also">
+			{/if}
+					<li class="offsite"><a href="{translation_link}" hreflang="{translation_language code='yes'}">{translation_language}</a></li>
+			{if count==total_results}
+    			</ul>
+			{/if}
+		{/exp:playa:parents}
 		
 	{/exp:channel:entries}
 	

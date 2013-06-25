@@ -1,3 +1,4 @@
+@import 'utils';
 $sans:'ratio-1', 'ratio-2', 'Myriad Pro', 'Trebuchet MS', sans-serif;
 $serif:Georgia, Times, 'Times New Roman', serif;
 $italic:'apolline-1', 'apolline-2';
@@ -106,7 +107,7 @@ strong {
 hr {
 	border: 0;
 	height: 20px;
-	background: url({cdn}/css/hr.png) center center no-repeat;
+	background: url(#{$cdn}/css/hr.png) center center no-repeat;
 	margin: 1.5em 0;
 }
 object, embed, audio, video, iframe {
@@ -200,7 +201,7 @@ time, .date, .phone {
 	white-space: nowrap;
 }
 a[rel=feed]:after {
-	content: url({cdn}/general/rss-icon.png);
+	content: url(#{$cdn}/general/rss-icon.png);
 	position: absolute;
 	padding-left: 5px;
 }
@@ -243,7 +244,7 @@ a[rel=feed]:after {
 	margin-left: .5em;
 }
 .focal ul {
-	list-style: url(http://cdn1.easy-designs.net/css/bullet.png);
+	list-style: url(#{$easy_css_images}/css/bullet.png);
 }
 .focal .meta {
 	list-style: none;
