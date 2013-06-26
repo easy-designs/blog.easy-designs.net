@@ -95,7 +95,7 @@
 
 	{if segment_3=="comments"}
 			<section id="comments" class="focal">
-			{embed="inc/.comments" url_title="{url_title}"}
+				{embed="inc/.comments" url_title="{url_title}"}
 			</section>
 	{if:else}
 		{exp:nsm_transplant:output id="comment_loader"}
@@ -104,7 +104,3 @@
 	{embed="inc/.pagination" entry_id="{exp:nsm_transplant:output id='the_entry_id'}"}
 
 {/exp:channel:entries}
-
-		</section>{!-- #main --}
-		
-{embed="inc/.footer"}

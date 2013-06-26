@@ -211,6 +211,7 @@ article.focal .gist-meta {
 	margin: 20px 0 -10px;
 	padding: 0;
 	overflow: hidden;
+	max-width: 581px;
 }
 #comments .entry-content {
 	background-color: #f4fdfe;
@@ -324,7 +325,7 @@ article.focal .gist-meta {
 
 /* =Footer Content */
 #about-us {
-	padding: 20px 10px 0;
+	padding: 20px px-to-ems(10px) 0;
 }
 #more {
 	padding: 0 10px;
@@ -333,8 +334,8 @@ article.focal .gist-meta {
 #retreats,
 #events {
 	float: left;
-	padding: 22px 20px 2px 30px;
-	width: 230px;
+	padding: 22px px-to-ems(20px) 2px px-to-ems(30px);
+	width: px-to-ems(230px);
 }
 #page-footer {
 	clear: both;

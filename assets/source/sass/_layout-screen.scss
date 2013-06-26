@@ -5,14 +5,15 @@
 	border-top-width: 30px;
 }
 #logo {
-	margin: -30px 0 0 -430px;
+	font-size: 1em;
+	margin: -30px 0 0 px-to-ems(-430px);
 	padding-top: 40px;
 	left: 50%;
-	width: 860px;
+	width: px-to-ems(860px);
 }
 #logo img {
 	margin-left: 0;
-	left: 30px;
+	left: px-to-ems(30px);
 	top: 52px;
 }
 
@@ -21,7 +22,7 @@
 #search-form {
 	top: 42px;
 	right: 50%;
-	margin: 0 -400px 0 0;
+	margin: 0 px-to-ems(-400px) 0 0;
 }
 #search-form input, #search-form label {
 	font-size: 0.92307692em;
@@ -30,19 +31,19 @@
 /* =Body */
 #main, #single-entry #main {
 	margin: 0 auto;
-	padding: 20px 250px 70px 20px;
-	width: 590px;
+	padding: 20px px-to-ems(250px) 70px px-to-ems(20px);
+	width: px-to-ems(590px);
 	position: static;
 }
 #single-entry article.focal {
-	padding: 3px 10px;
+	padding: 3px px-to-ems(10px);
 }
 .focal header {
 	margin: 0 0 1em;
 	padding: 0;
 }
 article.focal figure {
-	width: 520px;
+	width: px-to-ems(520px);
 }
 article.focal figure img,
 article.focal figure video,
@@ -52,7 +53,7 @@ article.focal figure embed,
 article.focal figure canvas,
 article.focal figure iframe,
 article.focal figure figcaption {
-	width: 500px;
+	width: px-to-ems(500px);
 	margin-left: 0;
 }
 article.focal .gist-meta {
@@ -63,8 +64,8 @@ article.focal .gist-meta {
 /* =Comments */
 #comments {
 	left: 6px;
-	margin: 0 0 0 -10000px;
-	padding: 15px 0 10px 10000px;
+	margin: 0 0 0 px-to-ems(-10000px);
+	padding: 15px 0 10px px-to-ems(10000px);
 }
 #comments .hentry {
 	margin-bottom: 20px;
@@ -76,7 +77,7 @@ article.focal .gist-meta {
 	-o-border-radius: 0;
 	-webkit-border-radius: 0;
 	border-radius: 0;
-	padding: 0 45px 0 20px;
+	padding: 0 px-to-ems(45px) 0 px-to-ems(20px);
 	position: static;
 }
 #comments .meta {
@@ -93,8 +94,8 @@ article.focal .gist-meta {
 	float: left;
 	text-align: right;
 	line-height: 2.8;
-	width:	100px;
-	margin: 0 10px 0 0;
+	width:	px-to-ems(100px);
+	margin: 0 px-to-ems(10px) 0 0;
 }
 #comment-form .radio label,
 #comment-form .checkbox label {
@@ -109,7 +110,7 @@ article.focal .gist-meta {
 	line-height: 2.5;
 }
 input, textarea {
-	width: 440px;
+	width: px-to-ems(440px);
 	margin-right: -10px;
 	padding: 7px;
 }
@@ -117,7 +118,7 @@ textarea {
 	height: 200px;
 }
 li.submit, li.checkbox {
-	margin-left: 110px;
+	margin-left: px-to-ems(110px);
 }
 li.submit {
 	margin-top: 1.5em;
@@ -142,40 +143,41 @@ li.submit {
 	padding-bottom: 60px;
 }
 #archive h1 {
-	padding: 0 10px;
+	padding: 0 px-to-ems(10px);
 }
 #archive.search .focal > p {
-	padding: 0 10px;
+	padding: 0 px-to-ems(10px);
 }
 #archive .hfeed {
-	margin: 0 -20px;
+	margin: 0 px-to-ems(-26px);
 }
 #archive .hentry .meta {
-	padding-left: 30px;
+	padding-left: px-to-ems(30px);
 }
 #archive .hentry .body {
-	padding-right: 30px;
+	padding-right: px-to-ems(35px);
 }
 
 
 /* =Home */
 #home #main {
-	width: 820px;
+	width: px-to-ems(820px);
 }
 #home .hfeed {
-	border-spacing: 20px 0;
-	margin: 0 -20px;
+	border-spacing: px-to-ems(20px) 0;
+	margin: 0 px-to-ems(-20px);
 }
 
 
 /* =Pagination */
 ul#pagination,
 #single-entry #pagination {
+	font-size: 1em;
 	position: absolute;
 	bottom: 20px;
 	left: auto;
 	right: auto;
-	width: 580px;
+	width: px-to-ems(580px);
 }
 article ul#pagination {
 	bottom: -50px;
@@ -192,7 +194,7 @@ article ul#pagination {
 	width: auto;
 }
 .sidebar .inner, #single-entry .sidebar .inner {
-	left: 200px;
+	left: px-to-ems(200px);
 }
 
 
@@ -212,19 +214,19 @@ aside.promo .inner {
 	min-height: 100px;
 	position: relative;
 	left: 50%;
-	margin-left: -430px;
-	width: 860px;
+	margin-left: px-to-ems(-430px);
+	width: px-to-ems(860px);
 }
 aside.promo h2 {
 	margin-bottom: 3px;
 }
 #about-us {
-	width: 570px;
+	width: px-to-ems(570px);
 }
 #more {
 	margin-left: 20px;
 	padding-right: 20px;
-	width: 240px;
+	width: px-to-ems(240px);
 }
 #about-us,
 #more {
@@ -240,16 +242,16 @@ aside.promo h2 {
 }
 #page-footer p {
 	margin: 0 auto;
-	padding: 10px 30px;
-	width: 800px;
+	padding: 10px px-to-ems(30px);
+	width: px-to-ems(800px);
 }
 
 
 /* =Easy Network */
 #easy-network {
     display: block;
-	width: 860px;
-    margin: 0 0 0 -430px;
+	width: px-to-ems(860px);
+    margin: 0 0 0 px-to-ems(-430px);
     position: absolute;
     top: 0;
     left: 50%;

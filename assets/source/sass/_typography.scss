@@ -7,6 +7,7 @@ $mono:Monaco, Courier, 'Courier New', 'Andale Mono', 'Lucida Console', 'Bitstrea
 /* =General */
 body {
 	/* text-rendering: optimizeLegibility; WebOS can’t handle it */
+	font-size: 120%;
 }
 
 /* =Text */
@@ -361,7 +362,10 @@ ul.inline li {
 	margin-bottom: 5px;
 }
 #page-footer p {
-	font-size: 0.6875em;
+	font-size: 1em;
+	span {
+		font-size: 0.6875em;
+	}
 }
 #about-us h2,
 #more h2 {
@@ -412,6 +416,14 @@ ul.inline li {
 	font-family: $serif;
 	font-weight: 400;
 	margin: 16px 0 10px;
+}
+#home #teasers .hentry h3 {
+	font-size: 1.1em;
+	line-height: 1.3;
+}
+.wf-ratio1ratio2-n4-active #home #teasers .hentry h3 {
+	font-size: 1em;
+	line-height: 1.4;
 }
 
 
@@ -464,7 +476,7 @@ ul.inline li {
 }
 
 
-@media screen and (min-width:860px) {
+@media screen and (min-width: px-to-ems(860px)) {
 
     h1 {
         font-size: 2.25em;
