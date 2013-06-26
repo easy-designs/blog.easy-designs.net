@@ -1,30 +1,32 @@
-    <section id="extras">
+		<section id="extras">
 
-{embed="inc/.about"}		
-{embed="inc/.elsewhere"}
+			{embed="inc/.about"}		
+			{embed="inc/.elsewhere"}
 
-    </section>{!-- #extras --}
-  </section>{!-- #content --}
+		</section>{!-- #extras --}
+	</section>{!-- #content --}
 
 	{embed="search/.form"}
 
-  <footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
-    <p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> 
-		<a class="org fn url" href="http://easy-designs.net">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
-    	<!--a href="http://easy-designs.net/about/standards/">Got Standards?</a-->
-	</p>
-  </footer>
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005<?php if(date('Y') !== '2005') { echo "&ndash;" . date('Y'); } ?> 
+			<a class="org fn url" href="http://easy-designs.net">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="http://easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
   
-  <nav id="easy-network">
-  	<ul>
-  		<li class="easy-designs"><a href="http://easy-designs.net/">Easy Designs</a></li>
-  		<li class="r4g"><a href="http://retreats4geeks.com/">Retreats 4 Geeks</a></li>
-        <li class="easy-readers"><a href="http://easy-readers.net/">Easy Readers</a></li>
-  	</ul>
-  </nav>
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="http://easy-designs.net/">Easy Designs</a></li>
+			<li class="r4g"><a href="http://retreats4geeks.com/">Retreats 4 Geeks</a></li>
+	    	<li class="easy-readers"><a href="http://easy-readers.net/">Easy Readers</a></li>
+		</ul>
+	</nav>
   
-{embed="javascripts/.html"}
-{exp:easy_google_analytics:tracker account="UA-176472-10"}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
+	<script src="/js/main.js"></script>
+	{exp:easy_google_analytics:tracker account="UA-176472-10"}
 
 </body>
 </html>
