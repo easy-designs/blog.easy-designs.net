@@ -981,10 +981,9 @@ ul.inline li {
     margin: 20px 0 -10px;
     padding: 0;
     overflow: hidden;
-    max-width: 581px;
   }
 
-  /* line 216, ../source/sass/_layout-mobile.scss */
+  /* line 215, ../source/sass/_layout-mobile.scss */
   #comments .entry-content {
     background-color: #f4fdfe;
     -moz-border-radius: 15px;
@@ -997,7 +996,7 @@ ul.inline li {
     z-index: 2;
   }
 
-  /* line 227, ../source/sass/_layout-mobile.scss */
+  /* line 226, ../source/sass/_layout-mobile.scss */
   #comments .meta {
     margin: 0;
     padding: 30px 0 0 150px;
@@ -1007,93 +1006,93 @@ ul.inline li {
     z-index: 1;
   }
 
-  /* line 235, ../source/sass/_layout-mobile.scss */
+  /* line 234, ../source/sass/_layout-mobile.scss */
   #comments .hentry .meta .vcard {
     margin-top: -4px;
   }
 
-  /* line 238, ../source/sass/_layout-mobile.scss */
+  /* line 237, ../source/sass/_layout-mobile.scss */
   #comments .meta img {
     float: left;
     margin-right: 5px;
   }
 
   /*= Comment Form */
-  /* line 245, ../source/sass/_layout-mobile.scss */
+  /* line 244, ../source/sass/_layout-mobile.scss */
   #main form ol {
     margin: 0;
     padding: 0;
   }
 
   /* =Archives */
-  /* line 252, ../source/sass/_layout-mobile.scss */
+  /* line 251, ../source/sass/_layout-mobile.scss */
   #archive #main {
     padding-bottom: 3.2em;
   }
 
-  /* line 255, ../source/sass/_layout-mobile.scss */
+  /* line 254, ../source/sass/_layout-mobile.scss */
   #archive h1 {
     padding: 0 10px;
   }
 
-  /* line 258, ../source/sass/_layout-mobile.scss */
+  /* line 257, ../source/sass/_layout-mobile.scss */
   #archive .focal {
     position: relative;
   }
 
-  /* line 261, ../source/sass/_layout-mobile.scss */
+  /* line 260, ../source/sass/_layout-mobile.scss */
   #archive .hfeed {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  /* line 266, ../source/sass/_layout-mobile.scss */
+  /* line 265, ../source/sass/_layout-mobile.scss */
   #archive .hentry {
     margin: 0 0 15px 0;
   }
 
-  /* line 269, ../source/sass/_layout-mobile.scss */
+  /* line 268, ../source/sass/_layout-mobile.scss */
   #archive .hentry .meta {
     display: none;
   }
 
-  /* line 272, ../source/sass/_layout-mobile.scss */
+  /* line 271, ../source/sass/_layout-mobile.scss */
   #archive .hentry .body {
     padding: 10px 10px 15px;
   }
 
-  /* line 275, ../source/sass/_layout-mobile.scss */
+  /* line 274, ../source/sass/_layout-mobile.scss */
   #archive.search .focal > p {
     padding: 0 10px;
   }
 
   /* =Sidebars */
-  /* line 281, ../source/sass/_layout-mobile.scss */
+  /* line 280, ../source/sass/_layout-mobile.scss */
   .sidebar .inner {
     display: none;
   }
 
   /* =Home */
-  /* line 287, ../source/sass/_layout-mobile.scss */
+  /* line 286, ../source/sass/_layout-mobile.scss */
   #home .hfeed {
     display: block;
     margin: 0;
     padding: 21px 0 1px;
   }
 
-  /* line 292, ../source/sass/_layout-mobile.scss */
+  /* line 291, ../source/sass/_layout-mobile.scss */
   #home .hentry {
     margin: 0 0 3em;
     padding: 0 10px 10px;
   }
 
-  /* line 296, ../source/sass/_layout-mobile.scss */
+  /* line 295, ../source/sass/_layout-mobile.scss */
   #potpourri.hentry {
     margin-bottom: 1.5em;
   }
 
-  /* line 299, ../source/sass/_layout-mobile.scss */
+  /* line 298, ../source/sass/_layout-mobile.scss */
   #home .hentry h3 {
     background: transparent url(http://cdn3.easy-designs.net/css/banner-bg.png) no-repeat 50% 100%;
     width: 226px;
@@ -1105,40 +1104,40 @@ ul.inline li {
     text-align: center;
   }
 
-  /* line 310, ../source/sass/_layout-mobile.scss */
+  /* line 309, ../source/sass/_layout-mobile.scss */
   .wf-active #home .hentry h3,
   .wf-inactive #home .hentry h3 {
     height: 34px;
     padding-top: 2px;
   }
 
-  /* line 314, ../source/sass/_layout-mobile.scss */
+  /* line 313, ../source/sass/_layout-mobile.scss */
   #home .hentry h3:hover {
     background-position: 50% -90px;
   }
 
-  /* line 317, ../source/sass/_layout-mobile.scss */
+  /* line 316, ../source/sass/_layout-mobile.scss */
   #home .hentry h3 a {
     display: block;
   }
 
-  /* line 320, ../source/sass/_layout-mobile.scss */
+  /* line 319, ../source/sass/_layout-mobile.scss */
   #home .hentry p {
     margin: 0;
   }
 
   /* =Footer Content */
-  /* line 327, ../source/sass/_layout-mobile.scss */
+  /* line 326, ../source/sass/_layout-mobile.scss */
   #about-us {
     padding: 20px 0.625em 0;
   }
 
-  /* line 330, ../source/sass/_layout-mobile.scss */
+  /* line 329, ../source/sass/_layout-mobile.scss */
   #more {
     padding: 0 10px;
   }
 
-  /* line 335, ../source/sass/_layout-mobile.scss */
+  /* line 334, ../source/sass/_layout-mobile.scss */
   #software,
   #retreats,
   #events {
@@ -1147,19 +1146,19 @@ ul.inline li {
     width: 14.375em;
   }
 
-  /* line 340, ../source/sass/_layout-mobile.scss */
+  /* line 339, ../source/sass/_layout-mobile.scss */
   #page-footer {
     clear: both;
   }
 
-  /* line 343, ../source/sass/_layout-mobile.scss */
+  /* line 342, ../source/sass/_layout-mobile.scss */
   #page-footer p {
     margin: 0 auto;
     padding: 10px;
   }
 
   /* =Pagination */
-  /* line 350, ../source/sass/_layout-mobile.scss */
+  /* line 349, ../source/sass/_layout-mobile.scss */
   ul#pagination {
     height: 32px;
     margin: 1em 0 0;
@@ -1171,7 +1170,7 @@ ul.inline li {
     z-index: 10;
   }
 
-  /* line 360, ../source/sass/_layout-mobile.scss */
+  /* line 359, ../source/sass/_layout-mobile.scss */
   ul#pagination li {
     text-indent: -999em;
     width: 50%;
@@ -1181,23 +1180,23 @@ ul.inline li {
     z-index: 0;
   }
 
-  /* line 368, ../source/sass/_layout-mobile.scss */
+  /* line 367, ../source/sass/_layout-mobile.scss */
   #pagination .prev {
     left: 0;
   }
 
-  /* line 371, ../source/sass/_layout-mobile.scss */
+  /* line 370, ../source/sass/_layout-mobile.scss */
   #pagination .next {
     right: 0;
   }
 
-  /* line 375, ../source/sass/_layout-mobile.scss */
+  /* line 374, ../source/sass/_layout-mobile.scss */
   #main #pagination .prev:hover,
   #main #pagination .next:hover {
     z-index: 1;
   }
 
-  /* line 378, ../source/sass/_layout-mobile.scss */
+  /* line 377, ../source/sass/_layout-mobile.scss */
   #pagination li a {
     display: block;
     text-indent: -999em;
@@ -1207,45 +1206,45 @@ ul.inline li {
     left: 0;
   }
 
-  /* line 386, ../source/sass/_layout-mobile.scss */
+  /* line 385, ../source/sass/_layout-mobile.scss */
   #pagination .prev a {
     background: url(http://cdn1.easy-designs.net/css/icon-prev.png) 0 -32px no-repeat;
     right: 0;
   }
 
-  /* line 390, ../source/sass/_layout-mobile.scss */
+  /* line 389, ../source/sass/_layout-mobile.scss */
   #pagination .prev {
     background: 1px 0 no-repeat;
   }
 
-  /* line 393, ../source/sass/_layout-mobile.scss */
+  /* line 392, ../source/sass/_layout-mobile.scss */
   #pagination .prev:hover {
     background-image: url(http://cdn1.easy-designs.net/css/icon-prev.png);
   }
 
-  /* line 396, ../source/sass/_layout-mobile.scss */
+  /* line 395, ../source/sass/_layout-mobile.scss */
   #pagination .next a {
     background: url(http://cdn1.easy-designs.net/css/icon-next.png) 100% -32px no-repeat;
     right: 0;
   }
 
-  /* line 400, ../source/sass/_layout-mobile.scss */
+  /* line 399, ../source/sass/_layout-mobile.scss */
   #pagination .next {
     background: 100% 0 no-repeat;
   }
 
-  /* line 403, ../source/sass/_layout-mobile.scss */
+  /* line 402, ../source/sass/_layout-mobile.scss */
   #pagination .next:hover {
     background-image: url(http://cdn1.easy-designs.net/css/icon-next.png);
   }
 
-  /* line 407, ../source/sass/_layout-mobile.scss */
+  /* line 406, ../source/sass/_layout-mobile.scss */
   #pagination .prev a:hover,
   #pagination .next a:hover {
     background-image: none;
   }
 
-  /* line 411, ../source/sass/_layout-mobile.scss */
+  /* line 410, ../source/sass/_layout-mobile.scss */
   #pagination .prev a em,
   #pagination .next a em {
     opacity: 0;
@@ -1255,14 +1254,14 @@ ul.inline li {
     position: absolute;
   }
 
-  /* line 418, ../source/sass/_layout-mobile.scss */
+  /* line 417, ../source/sass/_layout-mobile.scss */
   #pagination .prev a:hover em {
     opacity: 1;
     left: 20%;
     right: -80%;
   }
 
-  /* line 423, ../source/sass/_layout-mobile.scss */
+  /* line 422, ../source/sass/_layout-mobile.scss */
   #pagination .next a:hover em {
     opacity: 1;
     right: 20%;
@@ -1270,26 +1269,26 @@ ul.inline li {
   }
 
   /* =Search */
-  /* line 431, ../source/sass/_layout-mobile.scss */
+  /* line 430, ../source/sass/_layout-mobile.scss */
   #search-form {
     margin: 0;
   }
 
-  /* line 434, ../source/sass/_layout-mobile.scss */
+  /* line 433, ../source/sass/_layout-mobile.scss */
   #search-form p {
     margin: 0;
     padding: 20px 0 10px 10px;
     overflow: hidden;
   }
 
-  /* line 440, ../source/sass/_layout-mobile.scss */
+  /* line 439, ../source/sass/_layout-mobile.scss */
   #search-form input,
   #search-form button {
     float: left;
     margin: 0;
   }
 
-  /* line 444, ../source/sass/_layout-mobile.scss */
+  /* line 443, ../source/sass/_layout-mobile.scss */
   #search-form input {
     -khtml-border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
@@ -1305,7 +1304,7 @@ ul.inline li {
     width: 191px;
   }
 
-  /* line 458, ../source/sass/_layout-mobile.scss */
+  /* line 457, ../source/sass/_layout-mobile.scss */
   #search-form button {
     font-size: 12px;
     -khtml-border-radius: 0 5px 5px 0;
@@ -1319,7 +1318,7 @@ ul.inline li {
     padding: 5px 7px;
   }
 
-  /* line 470, ../source/sass/_layout-mobile.scss */
+  /* line 469, ../source/sass/_layout-mobile.scss */
   #search-form label {
     line-height: 2;
     position: absolute;
@@ -1328,20 +1327,20 @@ ul.inline li {
   }
 
   /* =Social Links */
-  /* line 479, ../source/sass/_layout-mobile.scss */
+  /* line 478, ../source/sass/_layout-mobile.scss */
   #social-links {
     overflow: hidden;
     margin: 0;
   }
 
-  /* line 483, ../source/sass/_layout-mobile.scss */
+  /* line 482, ../source/sass/_layout-mobile.scss */
   #social-links li {
     float: left;
     margin: 0 10px 0 0;
     padding: 0;
   }
 
-  /* line 488, ../source/sass/_layout-mobile.scss */
+  /* line 487, ../source/sass/_layout-mobile.scss */
   #social-links li a {
     background: top left no-repeat;
     -moz-border-radius: 4px;
@@ -1356,7 +1355,7 @@ ul.inline li {
   }
 
   /* =Hide non-essentials */
-  /* line 503, ../source/sass/_layout-mobile.scss */
+  /* line 502, ../source/sass/_layout-mobile.scss */
   #elsewhere,
   #easy-network {
     display: none;
@@ -1880,35 +1879,17 @@ ul.inline li {
   }
 
   /* line 70, ../source/sass/_layout-screen.scss */
+  #comments .hfeed {
+    padding: 0 1.875em 0 0;
+  }
+
+  /* line 73, ../source/sass/_layout-screen.scss */
   #comments .hentry {
     margin-bottom: 20px;
-    padding-top: 20px;
-  }
-
-  /* line 74, ../source/sass/_layout-screen.scss */
-  #comments .entry-content {
-    margin-bottom: 15px;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    padding: 0 2.8125em 0 1.25em;
-    position: static;
-  }
-
-  /* line 83, ../source/sass/_layout-screen.scss */
-  #comments .meta {
-    left: 0;
-    width: auto;
-  }
-
-  /* line 87, ../source/sass/_layout-screen.scss */
-  #comments .hentry .meta .vcard {
-    margin-top: 0;
   }
 
   /* =Comment Form */
-  /* line 93, ../source/sass/_layout-screen.scss */
+  /* line 95, ../source/sass/_layout-screen.scss */
   #comment-form label {
     float: left;
     text-align: right;
@@ -1917,110 +1898,110 @@ ul.inline li {
     margin: 0 0.625em 0 0;
   }
 
-  /* line 101, ../source/sass/_layout-screen.scss */
+  /* line 103, ../source/sass/_layout-screen.scss */
   #comment-form .radio label,
   #comment-form .checkbox label {
     float: none;
   }
 
-  /* line 105, ../source/sass/_layout-screen.scss */
+  /* line 107, ../source/sass/_layout-screen.scss */
   #comment-form .checkbox label,
   #comment-form .radio label {
     line-height: 1.5;
     width: auto;
   }
 
-  /* line 109, ../source/sass/_layout-screen.scss */
+  /* line 111, ../source/sass/_layout-screen.scss */
   #comment-form .textarea label {
     line-height: 2.5;
   }
 
-  /* line 112, ../source/sass/_layout-screen.scss */
+  /* line 114, ../source/sass/_layout-screen.scss */
   input, textarea {
     width: 27.5em;
     margin-right: -10px;
     padding: 7px;
   }
 
-  /* line 117, ../source/sass/_layout-screen.scss */
+  /* line 119, ../source/sass/_layout-screen.scss */
   textarea {
     height: 200px;
   }
 
-  /* line 120, ../source/sass/_layout-screen.scss */
+  /* line 122, ../source/sass/_layout-screen.scss */
   li.submit, li.checkbox {
     margin-left: 6.875em;
   }
 
-  /* line 123, ../source/sass/_layout-screen.scss */
+  /* line 125, ../source/sass/_layout-screen.scss */
   li.submit {
     margin-top: 1.5em;
   }
 
-  /* line 126, ../source/sass/_layout-screen.scss */
+  /* line 128, ../source/sass/_layout-screen.scss */
   .checkbox label {
     float: none;
     width: auto;
   }
 
-  /* line 130, ../source/sass/_layout-screen.scss */
+  /* line 132, ../source/sass/_layout-screen.scss */
   .checkbox input {
     float: none;
     margin-right: 0;
     width: auto;
   }
 
-  /* line 135, ../source/sass/_layout-screen.scss */
+  /* line 137, ../source/sass/_layout-screen.scss */
   .captcha {
     padding-top: 20px;
   }
 
   /* =Archives */
-  /* line 141, ../source/sass/_layout-screen.scss */
+  /* line 143, ../source/sass/_layout-screen.scss */
   #archive #main {
     min-height: 900px;
     padding-bottom: 60px;
   }
 
-  /* line 145, ../source/sass/_layout-screen.scss */
+  /* line 147, ../source/sass/_layout-screen.scss */
   #archive h1 {
     padding: 0 0.625em 0 0;
   }
 
-  /* line 148, ../source/sass/_layout-screen.scss */
+  /* line 150, ../source/sass/_layout-screen.scss */
   #archive.search .focal > p {
     padding: 0 0.625em;
   }
 
-  /* line 151, ../source/sass/_layout-screen.scss */
+  /* line 153, ../source/sass/_layout-screen.scss */
   #archive .hfeed {
     margin: 0 -1.625em;
   }
 
-  /* line 154, ../source/sass/_layout-screen.scss */
+  /* line 156, ../source/sass/_layout-screen.scss */
   #archive .hentry .meta {
     padding-left: 1.875em;
   }
 
-  /* line 157, ../source/sass/_layout-screen.scss */
+  /* line 159, ../source/sass/_layout-screen.scss */
   #archive .hentry .body {
     padding-right: 2.1875em;
   }
 
   /* =Home */
-  /* line 163, ../source/sass/_layout-screen.scss */
+  /* line 165, ../source/sass/_layout-screen.scss */
   #home #main {
     width: 51.25em;
   }
 
-  /* line 166, ../source/sass/_layout-screen.scss */
+  /* line 168, ../source/sass/_layout-screen.scss */
   #home .hfeed {
     border-spacing: 1.25em 0;
     margin: 0 -1.25em;
   }
 
   /* =Pagination */
-  /* line 174, ../source/sass/_layout-screen.scss */
+  /* line 176, ../source/sass/_layout-screen.scss */
   ul#pagination,
   #single-entry #pagination {
     font-size: 1em;
@@ -2031,31 +2012,31 @@ ul.inline li {
     width: 36.25em;
   }
 
-  /* line 182, ../source/sass/_layout-screen.scss */
+  /* line 184, ../source/sass/_layout-screen.scss */
   article ul#pagination {
     bottom: -50px;
   }
 
-  /* line 185, ../source/sass/_layout-screen.scss */
+  /* line 187, ../source/sass/_layout-screen.scss */
   .search ul#pagination {
     bottom: 20px;
   }
 
   /* =Sidebars */
-  /* line 191, ../source/sass/_layout-screen.scss */
+  /* line 193, ../source/sass/_layout-screen.scss */
   .sidebar, #single-entry .sidebar {
     position: absolute;
     left: 50%;
     width: auto;
   }
 
-  /* line 196, ../source/sass/_layout-screen.scss */
+  /* line 198, ../source/sass/_layout-screen.scss */
   .sidebar .inner, #single-entry .sidebar .inner {
     left: 12.5em;
   }
 
   /* =Footer */
-  /* line 202, ../source/sass/_layout-screen.scss */
+  /* line 204, ../source/sass/_layout-screen.scss */
   #extras {
     float: left;
     width: 100%;
@@ -2064,12 +2045,12 @@ ul.inline li {
     z-index: 0;
   }
 
-  /* line 209, ../source/sass/_layout-screen.scss */
+  /* line 211, ../source/sass/_layout-screen.scss */
   aside.promo {
     float: left;
   }
 
-  /* line 212, ../source/sass/_layout-screen.scss */
+  /* line 214, ../source/sass/_layout-screen.scss */
   aside.promo .inner {
     float: left;
     min-height: 100px;
@@ -2079,42 +2060,42 @@ ul.inline li {
     width: 53.75em;
   }
 
-  /* line 220, ../source/sass/_layout-screen.scss */
+  /* line 222, ../source/sass/_layout-screen.scss */
   aside.promo h2 {
     margin-bottom: 3px;
   }
 
-  /* line 223, ../source/sass/_layout-screen.scss */
+  /* line 225, ../source/sass/_layout-screen.scss */
   #about-us {
     width: 35.625em;
   }
 
-  /* line 226, ../source/sass/_layout-screen.scss */
+  /* line 228, ../source/sass/_layout-screen.scss */
   #more {
     margin-left: 20px;
     padding-right: 20px;
     width: 15em;
   }
 
-  /* line 232, ../source/sass/_layout-screen.scss */
+  /* line 234, ../source/sass/_layout-screen.scss */
   #about-us,
   #more {
     float: left;
     padding: 22px 0 22px;
   }
 
-  /* line 237, ../source/sass/_layout-screen.scss */
+  /* line 239, ../source/sass/_layout-screen.scss */
   #about-us h2,
   #about-us p {
     padding-left: 100px;
   }
 
-  /* line 240, ../source/sass/_layout-screen.scss */
+  /* line 242, ../source/sass/_layout-screen.scss */
   #elsewhere {
     display: block;
   }
 
-  /* line 243, ../source/sass/_layout-screen.scss */
+  /* line 245, ../source/sass/_layout-screen.scss */
   #page-footer p {
     margin: 0 auto;
     padding: 10px 1.875em;
@@ -2122,7 +2103,7 @@ ul.inline li {
   }
 
   /* =Easy Network */
-  /* line 251, ../source/sass/_layout-screen.scss */
+  /* line 253, ../source/sass/_layout-screen.scss */
   #easy-network {
     display: block;
     width: 53.75em;
@@ -2133,31 +2114,32 @@ ul.inline li {
     z-index: 1000;
   }
 
-  /* line 260, ../source/sass/_layout-screen.scss */
+  /* line 262, ../source/sass/_layout-screen.scss */
   #easy-network ul {
+    font-size: 0.7em;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 2.5em;
     text-align: right;
   }
 
-  /* line 265, ../source/sass/_layout-screen.scss */
+  /* line 268, ../source/sass/_layout-screen.scss */
   #easy-network li {
     display: inline;
   }
 
-  /* line 268, ../source/sass/_layout-screen.scss */
+  /* line 271, ../source/sass/_layout-screen.scss */
   #easy-network a {
     background: center left no-repeat;
     line-height: 30px;
-    padding: 0 20px 0 27px;
-  }
-
-  /* line 273, ../source/sass/_layout-screen.scss */
-  #easy-network .r4g a {
-    padding-left: 16px;
+    padding: 0 1.5625em 0 2.125em;
   }
 
   /* line 276, ../source/sass/_layout-screen.scss */
+  #easy-network .r4g a {
+    padding-left: 1.3125em;
+  }
+
+  /* line 279, ../source/sass/_layout-screen.scss */
   #easy-network .easy-readers a {
     padding-right: 0;
   }
@@ -2562,21 +2544,6 @@ article.focal figure:before {
   /* line 272, ../source/sass/_color.scss */
   body {
     background: white url(http://cdn3.easy-designs.net/css/star.png) center 0 no-repeat;
-  }
-
-  /* line 275, ../source/sass/_color.scss */
-  #comments .hentry {
-    background: transparent url(http://cdn3.easy-designs.net/css/bubble-top.png) no-repeat 0 0;
-  }
-
-  /* line 278, ../source/sass/_color.scss */
-  #comments .entry-content {
-    background: transparent url(http://cdn3.easy-designs.net/css/bubble-mid.png) repeat-y;
-  }
-
-  /* line 281, ../source/sass/_color.scss */
-  #comments .meta {
-    background-position: 0 0;
   }
 
   /* line 284, ../source/sass/_color.scss */

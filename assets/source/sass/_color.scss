@@ -272,23 +272,23 @@ article.focal figure:before {
     body {
       background: $color-white url(#{$cdn}/css/star.png) center 0 no-repeat;
     }
-    #comments .hentry {
-		  background: transparent url(#{$cdn}/css/bubble-top.png) no-repeat 0 0;
-		}
-		#comments .entry-content {
-		  background: transparent url(#{$cdn}/css/bubble-mid.png) repeat-y;
-		}
-		#comments .meta {
-			background-position: 0 0;
-		}
+    //#comments .hentry {
+	//	background: transparent url(#{$cdn}/css/bubble-top.png) no-repeat 0 0;
+	//}
+	//#comments .entry-content {
+	//	background: transparent url(#{$cdn}/css/bubble-mid.png) repeat-y;
+	//}
+	//#comments .meta {
+	//	background-position: 0 0;
+	//}
 	#extras {
-      background: $color-background_white_alpha url(#{$cdn}/css/star-2.png) center top no-repeat;
+    	background: $color-background_white_alpha url(#{$cdn}/css/star-2.png) center top no-repeat;
     }
     #about {
-      background: $color-background_green_alpha url(#{$cdn}/css/star-2.png) center -231px no-repeat;
+    	background: $color-background_green_alpha url(#{$cdn}/css/star-2.png) center -231px no-repeat;
     }
-		#about-us {
-		  background: url(#{$cdn}/css/orange-stars.png) no-repeat 31px 19px;
-		}
+	#about-us {
+		background: url(#{$cdn}/css/orange-stars.png) no-repeat 31px 19px;
+	}
 		
 }
