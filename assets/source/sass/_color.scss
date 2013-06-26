@@ -1,4 +1,5 @@
 @import 'utils';
+@import 'compass';
  
 $color-white:rgb(255, 255, 255);
 $color-white_alpha:rgba(255, 255, 255, .43);
@@ -225,19 +226,17 @@ article.focal figure:before {
 /* =RGBa Enhancements */
 #social-links li {
     background: transparent;
+	@each $service in twitter, facebook, google, github {
+		&.#{$service} a {
+			background-image: url(#{$cdn}/css/#{$service}.png);
+			.has-svg & {
+				background-image: url(#{$cdn}/css/#{$service}.svg);
+				@include background-size(contain);
+			}
+		}
+	}
 }
-#social-links li.twitter a {
-	background-image: url(#{$cdn}/css/twitter.png);
-}
-#social-links li.facebook a {
-	background-image: url(#{$cdn}/css/facebook.png);
-}
-#social-links li.google a {
-	background-image: url(#{$cdn}/css/google.png);
-}
-#social-links li.github a {
-	background-image: url(#{$cdn}/css/github.png);
-}
+
 
 #easy-network a {
     color: inherit;

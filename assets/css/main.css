@@ -2203,34 +2203,34 @@ ul.inline li {
   }
 }
 /* =Elements */
-/* line 29, ../source/sass/_color.scss */
+/* line 30, ../source/sass/_color.scss */
 body {
   background-color: white;
   color: #414141;
 }
 
-/* line 33, ../source/sass/_color.scss */
+/* line 34, ../source/sass/_color.scss */
 a:link, a:visited, a:active {
   color: #167f35;
 }
 
-/* line 37, ../source/sass/_color.scss */
+/* line 38, ../source/sass/_color.scss */
 a:hover,
 #more a:hover {
   color: #f2622a;
 }
 
-/* line 40, ../source/sass/_color.scss */
+/* line 41, ../source/sass/_color.scss */
 blockquote {
   border-color: #b4f6f8;
 }
 
-/* line 43, ../source/sass/_color.scss */
+/* line 44, ../source/sass/_color.scss */
 input, select, textarea {
   border-color: #b4b4b4;
 }
 
-/* line 51, ../source/sass/_color.scss */
+/* line 52, ../source/sass/_color.scss */
 input:hover,
 select:hover,
 textarea:hover,
@@ -2240,52 +2240,52 @@ textarea:focus {
   border-color: #414141;
 }
 
-/* line 54, ../source/sass/_color.scss */
+/* line 55, ../source/sass/_color.scss */
 button {
   background-color: #54ad44;
   border-color: #117e3f;
   color: white;
 }
 
-/* line 59, ../source/sass/_color.scss */
+/* line 60, ../source/sass/_color.scss */
 button:hover {
   background-color: #f2622a;
   border-color: #de4e16;
   color: white;
 }
 
-/* line 64, ../source/sass/_color.scss */
+/* line 65, ../source/sass/_color.scss */
 code {
   color: #de4e16;
 }
 
-/* line 67, ../source/sass/_color.scss */
+/* line 68, ../source/sass/_color.scss */
 pre.shell {
   background-color: #1e1e1e;
   color: #c8c8c8;
 }
 
 /* =Classes */
-/* line 73, ../source/sass/_color.scss */
+/* line 74, ../source/sass/_color.scss */
 .notice {
   background-color: #54ad44;
   border-color: #117e3f;
   color: white;
 }
 
-/* line 78, ../source/sass/_color.scss */
+/* line 79, ../source/sass/_color.scss */
 .notice.failure {
   background-color: #d72229;
   border-color: #ba2025;
   color: white;
 }
 
-/* line 83, ../source/sass/_color.scss */
+/* line 84, ../source/sass/_color.scss */
 .error label {
   color: #ba2025;
 }
 
-/* line 88, ../source/sass/_color.scss */
+/* line 89, ../source/sass/_color.scss */
 .error input,
 .error select,
 .error textarea {
@@ -2294,54 +2294,54 @@ pre.shell {
 }
 
 /* =Layout */
-/* line 94, ../source/sass/_color.scss */
+/* line 95, ../source/sass/_color.scss */
 #page-header {
   border-top-color: #68cd5b;
   border-bottom-color: #b4f6f8;
 }
 
-/* line 99, ../source/sass/_color.scss */
+/* line 100, ../source/sass/_color.scss */
 #search-form input,
 #search-form label {
   color: #414141;
 }
 
-/* line 102, ../source/sass/_color.scss */
+/* line 103, ../source/sass/_color.scss */
 #page-header, #main, #elsewhere {
   background-color: #e0fbfd;
   background-color: rgba(180, 246, 248, 0.43);
 }
 
-/* line 106, ../source/sass/_color.scss */
+/* line 107, ../source/sass/_color.scss */
 #logo {
   background-color: #ccf9fb;
   background-color: rgba(180, 246, 248, 0.43);
 }
 
-/* line 110, ../source/sass/_color.scss */
+/* line 111, ../source/sass/_color.scss */
 .promo, #page-footer, #search-form {
   background-color: #68cd5b;
 }
 
-/* line 113, ../source/sass/_color.scss */
+/* line 114, ../source/sass/_color.scss */
 .inner {
   background-color: #ccf9fb;
   background-color: rgba(180, 246, 248, 0.43);
 }
 
-/* line 117, ../source/sass/_color.scss */
+/* line 118, ../source/sass/_color.scss */
 .sidebar .inner {
   background: transparent;
 }
 
-/* line 120, ../source/sass/_color.scss */
+/* line 121, ../source/sass/_color.scss */
 #page-footer p, #search-form p {
   background-color: #89e0a0;
   background-color: rgba(180, 246, 248, 0.43);
 }
 
 /* =Figures */
-/* line 134, ../source/sass/_color.scss */
+/* line 135, ../source/sass/_color.scss */
 article.focal figure,
 article.focal figure img,
 article.focal figure video,
@@ -2355,213 +2355,241 @@ article.focal figure figcaption {
   border-color: white;
 }
 
-/* line 139, ../source/sass/_color.scss */
+/* line 140, ../source/sass/_color.scss */
 article.focal figure:after,
 article.focal figure:before {
   background: transparent;
 }
 
 /* =Sidebars */
-/* line 145, ../source/sass/_color.scss */
+/* line 146, ../source/sass/_color.scss */
 .sidebar h2, .sidebar h3 {
   color: #414141;
 }
 
 /* =Archives */
-/* line 152, ../source/sass/_color.scss */
+/* line 153, ../source/sass/_color.scss */
 #archive .hentry .body,
 #archive .hentry .meta {
   background-color: #f2fdfe;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* line 157, ../source/sass/_color.scss */
+/* line 158, ../source/sass/_color.scss */
 #archive .hentry:hover .body,
 #archive .hentry:hover .meta {
   background-color: white;
 }
 
-/* line 160, ../source/sass/_color.scss */
+/* line 161, ../source/sass/_color.scss */
 #archive .hentry h2 {
   color: #117e3f;
 }
 
 /* =Comments */
-/* line 166, ../source/sass/_color.scss */
+/* line 167, ../source/sass/_color.scss */
 #comments {
   background-color: #f2fdfe;
   background-color: rgba(180, 246, 248, 0.43);
 }
 
-/* line 170, ../source/sass/_color.scss */
+/* line 171, ../source/sass/_color.scss */
 #comments .meta {
   background: transparent url(http://cdn3.easy-designs.net/css/bubble-bottom.png) 0 -5px no-repeat;
 }
 
 /* =Home */
-/* line 176, ../source/sass/_color.scss */
+/* line 177, ../source/sass/_color.scss */
 #teasers h3 a {
   text-shadow: #117e3f 0 0 8px;
   color: white;
 }
 
-/* line 180, ../source/sass/_color.scss */
+/* line 181, ../source/sass/_color.scss */
 #teasers h3:hover a {
   text-shadow: #f2622a 0 0 8px;
 }
 
-/* line 183, ../source/sass/_color.scss */
+/* line 184, ../source/sass/_color.scss */
 #home .hentry h2 {
   color: #117e3f;
 }
 
-/* line 186, ../source/sass/_color.scss */
+/* line 187, ../source/sass/_color.scss */
 #teasers .hentry {
   background-color: #f2fdfe;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* line 190, ../source/sass/_color.scss */
+/* line 191, ../source/sass/_color.scss */
 #teasers .hentry:hover {
   background-color: white;
 }
 
-/* line 193, ../source/sass/_color.scss */
+/* line 194, ../source/sass/_color.scss */
 #teasers .hentry h2:hover {
   color: #f2622a;
 }
 
 /* =Search */
-/* line 199, ../source/sass/_color.scss */
+/* line 200, ../source/sass/_color.scss */
 #search-results .term {
   background-color: #fbe02c;
 }
 
 /* =Footer Content */
-/* line 205, ../source/sass/_color.scss */
+/* line 206, ../source/sass/_color.scss */
 #more li {
   background: url(http://cdn3.easy-designs.net/css/all-entries.png) no-repeat 0 50%;
 }
 
-/* line 208, ../source/sass/_color.scss */
+/* line 209, ../source/sass/_color.scss */
 #more li:first-child {
   background: url(http://cdn3.easy-designs.net/general/rss-icon.png) no-repeat 0 50%;
 }
 
-/* line 211, ../source/sass/_color.scss */
+/* line 212, ../source/sass/_color.scss */
 #more a {
   color: #414141;
 }
 
-/* line 214, ../source/sass/_color.scss */
+/* line 215, ../source/sass/_color.scss */
 #elsewhere h2 {
   color: #414141;
 }
 
 /* =Pagination */
-/* line 220, ../source/sass/_color.scss */
+/* line 221, ../source/sass/_color.scss */
 #pagination a {
   color: #414141;
 }
 
 /* =RGBa Enhancements */
-/* line 226, ../source/sass/_color.scss */
+/* line 227, ../source/sass/_color.scss */
 #social-links li {
   background: transparent;
 }
-
-/* line 229, ../source/sass/_color.scss */
+/* line 230, ../source/sass/_color.scss */
 #social-links li.twitter a {
   background-image: url(http://cdn3.easy-designs.net/css/twitter.png);
 }
-
 /* line 232, ../source/sass/_color.scss */
+.has-svg #social-links li.twitter a {
+  background-image: url(http://cdn3.easy-designs.net/css/twitter.svg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+/* line 230, ../source/sass/_color.scss */
 #social-links li.facebook a {
   background-image: url(http://cdn3.easy-designs.net/css/facebook.png);
 }
-
-/* line 235, ../source/sass/_color.scss */
+/* line 232, ../source/sass/_color.scss */
+.has-svg #social-links li.facebook a {
+  background-image: url(http://cdn3.easy-designs.net/css/facebook.svg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+/* line 230, ../source/sass/_color.scss */
 #social-links li.google a {
   background-image: url(http://cdn3.easy-designs.net/css/google.png);
 }
-
-/* line 238, ../source/sass/_color.scss */
+/* line 232, ../source/sass/_color.scss */
+.has-svg #social-links li.google a {
+  background-image: url(http://cdn3.easy-designs.net/css/google.svg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+/* line 230, ../source/sass/_color.scss */
 #social-links li.github a {
   background-image: url(http://cdn3.easy-designs.net/css/github.png);
 }
+/* line 232, ../source/sass/_color.scss */
+.has-svg #social-links li.github a {
+  background-image: url(http://cdn3.easy-designs.net/css/github.svg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
 
-/* line 242, ../source/sass/_color.scss */
+/* line 241, ../source/sass/_color.scss */
 #easy-network a {
   color: inherit;
   opacity: 0.5;
 }
 
-/* line 247, ../source/sass/_color.scss */
+/* line 246, ../source/sass/_color.scss */
 #easy-network a:hover,
 #easy-network a:focus {
   opacity: 0.99;
 }
 
-/* line 250, ../source/sass/_color.scss */
+/* line 249, ../source/sass/_color.scss */
 #easy-network .easy-designs a {
   background-image: url(http://cdn3.easy-designs.net/css/en-easy-designs.png);
 }
 
-/* line 253, ../source/sass/_color.scss */
+/* line 252, ../source/sass/_color.scss */
 #easy-network .easy-readers a {
   background-image: url(http://cdn3.easy-designs.net/css/en-easy-readers.png);
 }
 
-/* line 256, ../source/sass/_color.scss */
+/* line 255, ../source/sass/_color.scss */
 #easy-network .r4g a {
   background-image: url(http://cdn3.easy-designs.net/css/en-r4g.png);
 }
 
 @media screen and (min-width: 570px) {
-  /* line 262, ../source/sass/_color.scss */
+  /* line 261, ../source/sass/_color.scss */
   #search-form,
   #search-form p {
     background: transparent;
   }
 
-  /* line 265, ../source/sass/_color.scss */
+  /* line 264, ../source/sass/_color.scss */
   .sidebar .inner {
     background-color: #ccf9fb;
     background-color: rgba(180, 246, 248, 0.43);
   }
 }
 @media screen and (min-width: 860px) {
-  /* line 273, ../source/sass/_color.scss */
+  /* line 272, ../source/sass/_color.scss */
   body {
     background: white url(http://cdn3.easy-designs.net/css/star.png) center 0 no-repeat;
   }
 
-  /* line 276, ../source/sass/_color.scss */
+  /* line 275, ../source/sass/_color.scss */
   #comments .hentry {
     background: transparent url(http://cdn3.easy-designs.net/css/bubble-top.png) no-repeat 0 0;
   }
 
-  /* line 279, ../source/sass/_color.scss */
+  /* line 278, ../source/sass/_color.scss */
   #comments .entry-content {
     background: transparent url(http://cdn3.easy-designs.net/css/bubble-mid.png) repeat-y;
   }
 
-  /* line 282, ../source/sass/_color.scss */
+  /* line 281, ../source/sass/_color.scss */
   #comments .meta {
     background-position: 0 0;
   }
 
-  /* line 285, ../source/sass/_color.scss */
+  /* line 284, ../source/sass/_color.scss */
   #extras {
     background: rgba(255, 255, 255, 0) url(http://cdn3.easy-designs.net/css/star-2.png) center top no-repeat;
   }
 
-  /* line 288, ../source/sass/_color.scss */
+  /* line 287, ../source/sass/_color.scss */
   #about {
     background: #68cd5b url(http://cdn3.easy-designs.net/css/star-2.png) center -231px no-repeat;
   }
 
-  /* line 291, ../source/sass/_color.scss */
+  /* line 290, ../source/sass/_color.scss */
   #about-us {
     background: url(http://cdn3.easy-designs.net/css/orange-stars.png) no-repeat 31px 19px;
   }
