@@ -22,9 +22,10 @@
 	
 	/* =Archives */
 	#archive h1 {
-		padding: 0 px-to-ems(20px);
+		padding: 0 px-to-ems(20px,29px);
 	}
-	#archive.search .focal > p {
+	#archive.search .focal header > p {
+		margin-bottom: 0;
 		padding: 0 px-to-ems(20px);
 	}
 	#archive .hentry article {
@@ -108,8 +109,10 @@
 		left: 20px;
 		right: 20px;
 	}
-	
-	
+	/* =Sidebar Content */
+	.sidebar .inner {
+		padding: 20px px-to-ems(20px);
+	}
 	/* =Footer Content */
 	#about-us {
 		padding: 20px px-to-ems(20px) 0;
@@ -179,35 +182,7 @@
 	.sidebar .inner > * {
 		width: px-to-ems(184px);
 	}
-	.easy-writers .vcard {
-		float: left;
-	}
-	.easy-writers .vcard a {
-		display: block;
-		margin: 0 px-to-ems(8px) 8px 0;
-		height: 48px;
-		width: 48px;
-		position: relative;
-		overflow: hidden;
-	}
-	.easy-writers .vcard img {
-		width: 48px;
-		height: 48px;
-	}
-	.easy-writers .vcard img,
-	.easy-writers .vcard span {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 1;
-	}
-	.easy-writers .vcard .fn {
-		z-index: 0;
-	}
-
-
+	
 	/* = Pagination */
 	#single-entry #pagination {
 		bottom: 20px;
@@ -336,6 +311,10 @@
 	.wf-active #potpourri.hentry h3 a,
 	.wf-inactive #potpourri.hentry h3 a {
 		padding-top: 102px;
+	}
+	/* =Archive */
+	#archive h1 {
+		padding: 0 px-to-ems(20px,43px);
 	}
 	/* =Easy Network */
 	#easy-network {

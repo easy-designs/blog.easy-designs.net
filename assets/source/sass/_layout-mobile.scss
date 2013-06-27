@@ -257,6 +257,7 @@ article.focal .gist-meta {
 #archive .focal {
 	position: relative;
 }
+
 #archive .hfeed {
 	list-style: none;
 	margin: 0;
@@ -279,7 +280,7 @@ article.focal .gist-meta {
 /* =Sidebars */
 .sidebar .inner {
 /*	display: none; */
-	padding:0 10px;
+	padding:0 .625em;
 }
 .sidebar .vcard img,
 .sidebar .vcard .frame,
@@ -303,6 +304,35 @@ article.focal .gist-meta {
 .easy-writers {
 	overflow: hidden;
 }
+.easy-writers .vcard {
+	float: left;
+}
+.easy-writers .vcard a {
+	display: block;
+	margin: 0 px-to-ems(8px) 8px 0;
+	height: 48px;
+	width: 48px;
+	position: relative;
+	overflow: hidden;
+}
+.easy-writers .vcard img {
+	width: 48px;
+	height: 48px;
+}
+.easy-writers .vcard img,
+.easy-writers .vcard span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+.easy-writers .vcard .fn {
+	z-index: 0;
+}
+
+
 /* =Home */
 #home .hfeed {
 	display: block;
