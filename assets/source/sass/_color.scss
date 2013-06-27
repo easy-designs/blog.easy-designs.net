@@ -240,37 +240,29 @@ article.focal figure:before {
 
 #easy-network a {
     color: inherit;
-    opacity: 0.5;
 }
-#easy-network a:hover,
-#easy-network a:focus {
-    opacity: 0.99;
-}
-/*#easy-network .easy-designs a {
-    background-image: url(#{$cdn}/css/en-easy-designs.png);
-}
-#easy-network .easy-readers a {
-    background-image: url(#{$cdn}/css/en-easy-readers.png);
-}
-#easy-network .r4g a {
-    background-image: url(#{$cdn}/css/en-r4g.png);
-}*/
-[data-icon]:before {
-	font-family: 'Easy-Designs';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	margin-right:3px;
-	-webkit-font-smoothing: antialiased;
-}
-#easy-network a:hover {
-	text-decoration: none;
-}
-#easy-network a:hover [data-icon] + span {
-	text-decoration: underline;
+@media screen and (min-width:px-to-ems(868px)) {
+	#easy-network a {
+		opacity: 0.5;
+	}
+	#easy-network a:hover,
+	#easy-network a:focus {
+	    opacity: 0.99;
+	}
+	#easy-network [data-icon]:before {
+		font-family: 'Easy-Designs';
+		content: attr(data-icon);
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		margin-right:3px;
+		-webkit-font-smoothing: antialiased;
+	}
+	#easy-network a:hover [data-icon] + span {
+		text-decoration: underline;
+	}
 }
 @media screen and (min-width:px-to-ems(570px)) {
 	#search-form,
@@ -283,10 +275,10 @@ article.focal figure:before {
 	}
 }
 
-@media screen and (min-width:px-to-ems(860px)) {
+@media screen and (min-width:px-to-ems(1000px)) {
     
     body {
-      background: $color-white url(#{$cdn}/css/star.png) center 0 no-repeat;
+      background: $color-white url(#{$cdn}/css/star.png) right 0 no-repeat;
     }
     //#comments .hentry {
 	//	background: transparent url(#{$cdn}/css/bubble-top.png) no-repeat 0 0;
@@ -298,10 +290,10 @@ article.focal figure:before {
 	//	background-position: 0 0;
 	//}
 	#extras {
-    	background: $color-background_white_alpha url(#{$cdn}/css/star-2.png) center top no-repeat;
+    	background: $color-background_white_alpha url(#{$cdn}/css/star-2.png) -27px top no-repeat;
     }
     #about {
-    	background: $color-background_green_alpha url(#{$cdn}/css/star-2.png) center -231px no-repeat;
+    	background: $color-background_green_alpha url(#{$cdn}/css/star-2.png) -27px -231px no-repeat;
     }
 	#about-us {
 		background: url(#{$cdn}/css/orange-stars.png) no-repeat 31px 19px;

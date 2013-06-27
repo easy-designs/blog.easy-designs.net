@@ -22,9 +22,10 @@
 	
 	/* =Archives */
 	#archive h1 {
-		padding: 0 px-to-ems(20px);
+		padding: 0 px-to-ems(20px,29px);
 	}
-	#archive.search .focal > p {
+	#archive.search .focal header > p {
+		margin-bottom: 0;
 		padding: 0 px-to-ems(20px);
 	}
 	#archive .hentry article {
@@ -108,8 +109,10 @@
 		left: 20px;
 		right: 20px;
 	}
-	
-	
+	/* =Sidebar Content */
+	.sidebar .inner {
+		padding: 20px px-to-ems(20px);
+	}
 	/* =Footer Content */
 	#about-us {
 		padding: 20px px-to-ems(20px) 0;
@@ -143,7 +146,7 @@
 }
 	
 	
-@media screen and (min-width:px-to-ems(650px)) {
+@media screen and (min-width:px-to-ems(868px)) {
 	/* =Main */
 	#single-entry #main {
 		margin: 0;
@@ -179,61 +182,12 @@
 	.sidebar .inner > * {
 		width: px-to-ems(184px);
 	}
-	.sidebar figure {
-		margin-bottom: .75em;
-	}
-	.sidebar ul.author {
-		margin: -1em 0 1.5em;
-	}
-	.sidebar li {
-		margin-bottom: .5em;
-	}
-	.sidebar .vcard img,
-	.sidebar .vcard .frame,
-	.sidebar .vcard img,
-	.sidebar .vcard .frame {
-		height: 122px;
-		width: 122px;
-	}
-	.sidebar .vcard .frame {
-		background: url(#{$cdn}/css/frame-author.png)
-	}
-	.easy-writers {
-		overflow: hidden;
-	}
-	.easy-writers .vcard {
-		float: left;
-	}
-	.easy-writers .vcard a {
-		display: block;
-		margin: 0 px-to-ems(8px) 8px 0;
-		height: 48px;
-		width: 48px;
-		position: relative;
-		overflow: hidden;
-	}
-	.easy-writers .vcard img {
-		width: 48px;
-		height: 48px;
-	}
-	.easy-writers .vcard img,
-	.easy-writers .vcard span {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 1;
-	}
-	.easy-writers .vcard .fn {
-		z-index: 0;
-	}
-
-
+	
 	/* = Pagination */
 	#single-entry #pagination {
 		bottom: 20px;
-		right: px-to-ems(260px);
+		left:1.25em;
+		right: px-to-ems(334px);
 		z-index: 10;
 	}
 	
@@ -241,8 +195,21 @@
 	
 }
 
-@media screen and (min-width:px-to-ems(700px)) {
+@media screen and (min-width:px-to-ems(868px)) {
 
+	#page-header {
+		border-top-width:30px;
+	}
+	#logo {
+		margin-top:-30px;
+		padding-top:40px;
+		img {
+			top:52px;
+		}
+	}
+	#search-form {
+		top:40px;
+	}
 	#teasers .hentry h3 {
 		font-size: 1.385em; /* 18px */
 	}
@@ -345,6 +312,41 @@
 	.wf-inactive #potpourri.hentry h3 a {
 		padding-top: 102px;
 	}
-	
-
+	/* =Archive */
+	#archive h1 {
+		padding: 0 px-to-ems(20px,43px);
+	}
+	/* =Easy Network */
+	#easy-network {
+	    display: block;
+		width: px-to-ems(860px);
+	    margin: 0 0 0 px-to-ems(-430px);
+	    position: absolute;
+	    top: 0;
+	    right:20px;
+	    z-index: 1000;
+	}
+	#easy-network ul {
+		font-size: 0.7em;
+	    margin: 0;
+	    padding: 0 0 0 px-to-ems(40px);
+	    text-align: right;
+	}
+	#easy-network li {
+	    display: inline;
+	}
+	#easy-network a {
+	    background: center left no-repeat;
+	    line-height: 30px;
+	    padding: 0 px-to-ems(25px) 0 px-to-ems(34px);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	#easy-network .r4g a {
+	    padding-left: px-to-ems(21px);
+	}
+	#easy-network .easy-readers a {
+	    padding-right: 0;
+	}
 }

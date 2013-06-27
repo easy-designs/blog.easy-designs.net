@@ -257,6 +257,7 @@ article.focal .gist-meta {
 #archive .focal {
 	position: relative;
 }
+
 #archive .hfeed {
 	list-style: none;
 	margin: 0;
@@ -278,7 +279,57 @@ article.focal .gist-meta {
 
 /* =Sidebars */
 .sidebar .inner {
-	display: none;
+/*	display: none; */
+	padding:0 .625em;
+}
+.sidebar .vcard img,
+.sidebar .vcard .frame,
+.sidebar .vcard img,
+.sidebar .vcard .frame {
+	height: 122px;
+	width: 122px;
+}
+.sidebar .vcard .frame {
+	background: url(#{$cdn}/css/frame-author.png)
+}
+.sidebar figure {
+	margin-bottom: .75em;
+}
+.sidebar ul.author {
+	margin: -1em 0 1.5em;
+}
+.sidebar li {
+	margin-bottom: .5em;
+}
+.easy-writers {
+	overflow: hidden;
+}
+.easy-writers .vcard {
+	float: left;
+}
+.easy-writers .vcard a {
+	display: block;
+	margin: 0 px-to-ems(8px) 8px 0;
+	height: 48px;
+	width: 48px;
+	position: relative;
+	overflow: hidden;
+}
+.easy-writers .vcard img {
+	width: 48px;
+	height: 48px;
+}
+.easy-writers .vcard img,
+.easy-writers .vcard span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+.easy-writers .vcard .fn {
+	z-index: 0;
 }
 
 
@@ -498,7 +549,54 @@ ul#pagination li {
 }
 
 /* =Hide non-essentials */
-#elsewhere,
-#easy-network {
+#elsewhere {
 	display: none;
+}
+@media (max-width:px-to-ems(867px)) {
+	#easy-network {
+		overflow: hidden;
+		padding:1.5em 1.25em;
+	}
+	#easy-network li {
+		float:left;
+		margin-left:4.5%;
+		width: 30%;
+		&:first-child {
+			margin-left:0;
+		}
+	}
+	#easy-network a {
+		display: block;
+		font-size: .75em;
+		line-height: 1.25;
+		text-align: center;
+		padding-top:70%;
+		&:hover {
+			opacity: .80;
+		}
+	}
+	#easy-network .easy-designs a {
+		background: transparent url(/css/easy-designs.png) no-repeat center top;
+		html.has-svg & {
+	        background-image: url(/css/easy-designs.svg);
+        }
+		@include background-size(contain);
+		color: #459F36;
+	}
+	#easy-network .r4g a {
+		background: transparent url(/css/r4g.png) no-repeat center top;
+		html.has-svg & {
+		    background-image: url(/css/r4g.svg);
+		}
+		@include background-size(contain);
+		color: #E12827;
+	}
+	#easy-network .easy-readers a {
+		background: transparent url(/css/readers.png) no-repeat center top;
+		html.has-svg & {
+		    background-image: url(/css/readers.svg);
+		}
+		@include background-size(contain);
+		color: #166183;
+	}
 }

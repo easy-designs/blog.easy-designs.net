@@ -9,10 +9,10 @@
 
     <div id="main">
 		<article class="focal">
-			<h1>{exp:typogrify}Search Results{/exp:typogrify}</h1>
-			
-			<p>You searched for <em class="term">{exp:search:keywords}</em>. Your search returned {exp:search:total_results} results.</p>
-			
+			<header>
+				<h1>{exp:typogrify}Search Results{/exp:typogrify}</h1>
+				<p>You searched for <em class="term">{exp:search:keywords}</em>. Your search returned {exp:search:total_results} results.</p>
+			</header>
 			<ol class="hfeed" id="search-results" class="focal">
 {exp:search:search_results
 	rdf="off"
