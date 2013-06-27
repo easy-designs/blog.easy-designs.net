@@ -117,8 +117,35 @@ jQuery.getScripts = function(scripts, onComplete)
 			$('body')
 				.bind( 'ajaxInclude', function(){
 
+					function getMQ()
+					{
+						var computed = window.getComputedStyle;
+					    if ( document.documentElement.currentStyle )
+					    {
+							getMQ = function()
+							{
+								return document.documentElement.currentStyle["fontFamily"];
+							};
+					    }
+					    else if ( computed )
+					    {
+							getMQ = function()
+							{
+								return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
+							};
+					    }
+					    else
+					    {
+							getMQ = function()
+							{
+								return '';
+							};
+					    }
+						return getMQ();
+					}
+					
 					// only if a large screen
-					if ( window.getComputedStyle(document.body,':after').getPropertyValue('content') == 'large' )
+					if ( getMQ == 'large' )
 					{
 						// only run the form thing once
 						$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){

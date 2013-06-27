@@ -67,7 +67,7 @@
 				callback.size = curr_size;
 			}
 		}
-		window.addEventListener('resize', function(){
+		$(window).on('resize', function(){
 			if ( resizing )
 			{
 				clearTimeout( resizing );
@@ -128,6 +128,33 @@
 				
 			}
 			
+			function getMQ()
+			{
+				var computed = window.getComputedStyle;
+			    if ( document.documentElement.currentStyle )
+			    {
+					getMQ = function()
+					{
+						return document.documentElement.currentStyle["fontFamily"];
+					};
+			    }
+			    else if ( computed )
+			    {
+					getMQ = function()
+					{
+						return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
+					};
+			    }
+			    else
+			    {
+					getMQ = function()
+					{
+						return '';
+					};
+			    }
+				return getMQ();
+			}
+			
 			// manage link or button clicks
 			if ( $el.is('[data-include-on-tap]') )
 			{
@@ -143,7 +170,7 @@
 			watchResize(function(){
 				
 				// get the current size and match it against the test value (sans quotes)
-				var MQ = window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');
+				var MQ = getMQ();
 				
 				if ( size != UNDEFINED &&
 					 size != MQ )
