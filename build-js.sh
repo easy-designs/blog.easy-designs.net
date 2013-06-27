@@ -12,14 +12,14 @@ FINAL_FILE="${BUILD_FOLDER}/main.js"
 
 # compressed
 find $SOURCE_FOLDER -iname "*.js" -exec cat "{}" \; > $CONCAT_FILE
-java -jar /Applications/yuicompressor.jar --type js $CONCAT_FILE -o $FINAL_FILE
+java -jar /Applications/yuicompressor.jar $CONCAT_FILE -o $FINAL_FILE
 rm -f $CONCAT_FILE
 
 # One off builds
-for FOLDER in `find $SOURCE_FOLDER -type d`
-do
-    FOLDER_NAME=`basename ${FOLDER}`
-    if [ $FOLDER_NAME != 'javascript' ]; then
-        find $FOLDER -iname "*.js" -exec cat "{}" \; > "${BUILD_FOLDER}/${FOLDER_NAME}.js"
-    fi
-done
+#for FOLDER in `find $SOURCE_FOLDER -type d`
+#do
+#    FOLDER_NAME=`basename ${FOLDER}`
+#    if [ $FOLDER_NAME != 'javascript' ]; then
+#        find $FOLDER -iname "*.js" -exec cat "{}" \; > "${BUILD_FOLDER}/${FOLDER_NAME}.js"
+#    fi
+#done

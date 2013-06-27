@@ -17,6 +17,11 @@
 
 @media screen and (min-width:860px) { 
 
+	body:after {
+		content: 'large';
+		display: none;
+	}
+	
     @import 'layout-screen';
 
 }
