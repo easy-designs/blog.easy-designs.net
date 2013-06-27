@@ -18,6 +18,11 @@
 
 @media screen and (min-width:px-to-ems(1000px)) { 
 
+	body:after {
+		content: 'large';
+		display: none;
+	}
+	
     @import 'layout-screen';
 
 }

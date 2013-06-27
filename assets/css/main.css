@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ---------------------------------
  * Core Stylesheet
  * Created by Easy! Designs, LLC
@@ -249,7 +250,7 @@ form {
 /* line 132, ../source/sass/_typography.scss */
 form li {
   clear: both;
-  margin: 0 0 0.5em;
+  margin: 0 0 .5em;
 }
 
 /* line 136, ../source/sass/_typography.scss */
@@ -456,7 +457,7 @@ a[rel=feed]:after {
 
 /* line 289, ../source/sass/_typography.scss */
 #bookmark p, #bookmark iframe {
-  margin: 0 0 0.5em;
+  margin: 0 0 .5em;
 }
 
 /* =Inline lists */
@@ -1940,7 +1941,17 @@ ul.inline li {
     padding-right: 0;
   }
 }
+<<<<<<< HEAD
+@media screen and (min-width: 860px) {
+  /* line 20, ../source/sass/main.scss */
+  body:after {
+    content: 'large';
+    display: none;
+  }
+
+=======
 @media screen and (min-width: 62.5em) {
+>>>>>>> 4df3bacaecf6ad64eae72e098f7abf7edf72c73e
   /* =Header */
   /* line 4, ../source/sass/_layout-screen.scss */
   #logo {
