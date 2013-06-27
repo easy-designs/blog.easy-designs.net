@@ -469,16 +469,10 @@ ul.inline li {
 	text-align: center;
 	text-indent: 0;
 }
-
-
 #easy-network a {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-}
-#easy-network a:focus,
-#easy-network a:hover {
-	text-decoration: underline;
 }
 
 // Github
@@ -493,4 +487,10 @@ ul.inline li {
         font-size: 2.25em;
     }
 	
+}
+@media screen and (min-width: px-to-ems(868px)) {
+	#easy-network a:focus,
+	#easy-network a:hover {
+		text-decoration: underline;
+	}
 }
