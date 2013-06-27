@@ -34,6 +34,7 @@ RewriteRule ^feed\/?.*$ /rss/ [R=301,L]
 
 # rewrite css, img & js
 RewriteRule ^css\/(.*)$ /assets/css/$1 [L]
+RewriteRule ^fonts\/(.*)$ /assets/fonts/$1 [L]
 RewriteRule ^js\/(.*)$ /assets/js/$1 [L]
 RewriteRule ^img\/captchas\/(.*)$ /images/captchas/$1 [L]
 RewriteRule ^img\/avatars\/(.*)$ /images/avatars/uploads/$1 [L]

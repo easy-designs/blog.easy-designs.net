@@ -1,4 +1,15 @@
 @import 'utils';
+/* @font-face */
+@font-face {
+	font-family: 'Easy-Designs';
+	src:url('/fonts/Easy-Designs.eot');
+	src:url('/fonts/Easy-Designs.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Easy-Designs.woff') format('woff'),
+		url('/fonts/Easy-Designs.ttf') format('truetype'),
+		url('/fonts/Easy-Designs.svg#Easy-Designs') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 $sans:'ratio-1', 'ratio-2', 'Myriad Pro', 'Trebuchet MS', sans-serif;
 $serif:Georgia, Times, 'Times New Roman', serif;
 $italic:'apolline-1', 'apolline-2';

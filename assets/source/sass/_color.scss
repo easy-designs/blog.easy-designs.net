@@ -246,7 +246,7 @@ article.focal figure:before {
 #easy-network a:focus {
     opacity: 0.99;
 }
-#easy-network .easy-designs a {
+/*#easy-network .easy-designs a {
     background-image: url(#{$cdn}/css/en-easy-designs.png);
 }
 #easy-network .easy-readers a {
@@ -254,8 +254,24 @@ article.focal figure:before {
 }
 #easy-network .r4g a {
     background-image: url(#{$cdn}/css/en-r4g.png);
+}*/
+[data-icon]:before {
+	font-family: 'Easy-Designs';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	margin-right:3px;
+	-webkit-font-smoothing: antialiased;
 }
-
+#easy-network a:hover {
+	text-decoration: none;
+}
+#easy-network a:hover [data-icon] + span {
+	text-decoration: underline;
+}
 @media screen and (min-width:570px) {
 	#search-form,
 	#search-form p {
