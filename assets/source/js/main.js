@@ -60,6 +60,27 @@ jQuery.getScripts = function(scripts, onComplete)
 }( jQuery, document, window.navigator.userAgent ));
 
 
+(function($){
+	
+	var $field = $('#search'),
+		val = '',
+		empty = '';
+	
+	$field
+		.on( 'focus', function(){
+			val = $field.val();
+			$field.val( empty );
+		})
+		.on( 'blur', function(){
+			if ( $field.val() == empty )
+			{
+				$field.val( val );
+			}
+		});
+	
+}(jQuery));
+
+
 (function($, WIN){
 	
 	FunctionHandler.register(

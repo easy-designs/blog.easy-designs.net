@@ -25,7 +25,7 @@
                 <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a>. We gave away great prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab and collected several hundred dollars for charities around the world.</p>
             </section>
 
-            <!--section id="retreats">
+            {!--<section id="retreats">
                 <h2>Learn with us</h2>
                 <h3 class="figure featured">
                     <a href="http://retreats4geeks.com/">
@@ -34,7 +34,7 @@
                     </a>
                 </h3>
                 <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
-            </section-->        
+            </section>--}
 <?php
 
 $EE =& get_instance();
@@ -48,9 +48,14 @@ $future = (bool)$EE->db->query(
 $block = $future ? '366' : '367';
 
 ?>
-        <section id="events">
-{exp:channel:entries site="easy-designs" channel="blocks" entry_id="<?php echo $block; ?>" dynamic="no"
-                    disable="categories|category_fields|custom_fields|member_data|pagination|trackbacks"}
+				<section id="events">
+{exp:channel:entries
+	site="easy-designs"
+	channel="blocks"
+	entry_id="<?php echo $block; ?>"
+	dynamic="no"
+	disable="categories|category_fields|custom_fields|member_data|pagination|trackbacks"
+	}
 					<h2>{title}</h2>
 {/exp:channel:entries}
 					<ol class="hcalendar">
@@ -70,13 +75,13 @@ $block = $future ? '366' : '367';
     limit="5"
     disable="categories|category_fields|member_data|pagination|trackbacks"
     }
- <li class="vevent">
-              <p class="when">{exp:easy_date_range microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
-              <h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
-            </li> 
+						<li class="vevent">
+							<p class="when">{exp:easy_date_range microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
+							<h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
+						</li> 
 {/exp:channel:entries}
-          </ol>
-        </section>
+					</ol>
+				</section>
 	 			
 	 			
 	 			
@@ -129,6 +134,5 @@ $block = $future ? '366' : '367';
 {/exp:channel:entries}
           </ul>
         </section>
-				# ending the comment  --}
+		# ending the comment  --}
       </div></aside>
-<!--?php exit; ?-->
