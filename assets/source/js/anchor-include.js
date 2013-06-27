@@ -1,16 +1,40 @@
+/*! Dependent Anchor Include Pattern */
 /*
- * anchor-include pattern for already-functional links that work as a client-side include
- * Copyright 2011, Scott Jehl, scottjehl.com
+ * Copyright 2011, Scott Jehl (scottjehl.com), Emil Bjorklund (thatemil.com),
+ * and Aaron Gustafson (aaron-gustafson.com)
+ * 
  * Dual licensed under the MIT
  * Idea from Scott Gonzalez
+ * 
  * to use, place attributes on an already-functional anchor pointing to content
  * that should either replace, or insert before or after that anchor
  * after the page has loaded
- * Replace:	<a href="..." data-replace="articles/latest/fragment">Latest Articles</a>
- * Before:	<a href="..." data-before="articles/latest/fragment">Latest Articles</a>
- * After:	<a href="..." data-after="articles/latest/fragment">Latest Articles</a>
+ * 
+ * Replace:	<a href="…" data-replace="articles/latest/fragment">Latest Articles</a>
+ * Before:	<a href="…" data-before="articles/latest/fragment">Latest Articles</a>
+ * After:	<a href="…" data-after="articles/latest/fragment">Latest Articles</a>
+ * 
  * On domready, you can use it like this: 
-	 $("[data-append],[data-replace],[data-after],[data-before]").ajaxInclude();
+ * 
+ *	$("[data-append],[data-replace],[data-after],[data-before]").ajaxInclude();
+ * 
+ * To set certain elements to lazy load based on specific CSS-based breakpoint
+ * indicators, set the indicator in your CSS like this:
+ * 
+ * 	body:after {
+ *		content: 'large';
+ *		display: none;
+ *	}
+ * 
+ * Then add a corresponding attribute to the lazy-loading element:
+ * 
+ *   <a href="…" data-include-size="large" data-replace="articles/latest/fragment">Latest Articles</a>
+ * 
+ * If you would like the element to insert the fragment when the user taps it,
+ * add the data-include-on-tap attribute:
+ * 
+ *   <a href="…" data-include-on-tap data-replace="articles/latest/fragment">Comments</a>
+ * 
  */
 (function( $, window, document, UNDEFINED ){
 	
@@ -18,6 +42,13 @@
 	{ 
 		throw new Error('jQuery 1.4.3 or higher is required');
 		return;
+	}
+	
+	var tap_evt = 'click';
+	if ( 'ontouchstart' in window ||
+		 'createTouch' in document )
+	{
+		tap_evt = 'touchend';
 	}
 	
 	function watchResize( callback )
@@ -61,18 +92,15 @@
 				loaded		= false,
 				method,
 				url;
-
-			watchResize(function(){
-				
-				var MQ = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-				
-				if ( loaded ||
-					 ( size != UNDEFINED &&
-					   size != MQ ) )
+			
+			// Lazy loader function
+			function lazyLoad()
+			{
+				if ( loaded )
 				{
 					return;
 				}
-
+				
 				while ( ml-- )
 				{
 					method	= methods[ ml ];
@@ -98,8 +126,37 @@
 				
 				loaded = true;
 				
+			}
+			
+			// manage link or button clicks
+			if ( $el.is('[data-include-on-tap]') )
+			{
+				$el.on( tap_evt, function(e){
+					
+					e.preventDefault();
+					lazyLoad();
+					
+				});
+			}
+
+			// watch resizing of the browser
+			watchResize(function(){
+				
+				// get the current size and match it against the test value (sans quotes)
+				var MQ = window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');
+				
+				if ( size != UNDEFINED &&
+					 size != MQ )
+				{
+					return;
+				}
+				
+				lazyLoad();
+				
 			});
 
 		});
+		
 	};
+	
 })( jQuery, window, document );

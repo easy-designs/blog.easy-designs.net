@@ -1800,17 +1800,13 @@ ul.inline li {
     padding-top: 102px;
   }
 }
-<<<<<<< HEAD
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 62.5em) {
   /* line 20, ../source/sass/main.scss */
   body:after {
     content: 'large';
     display: none;
   }
 
-=======
-@media screen and (min-width: 62.5em) {
->>>>>>> 4df3bacaecf6ad64eae72e098f7abf7edf72c73e
   /* =Header */
   /* line 4, ../source/sass/_layout-screen.scss */
   #page-header {

@@ -66,6 +66,13 @@ jQuery.getScripts = function(scripts, onComplete)
 
 (function($, WIN){
 	
+	var tap_evt = 'click';
+	if ( 'ontouchstart' in window ||
+		 'createTouch' in document )
+	{
+		tap_evt = 'touchend';
+	}
+	
 	FunctionHandler.register(
 		'*',
 		function()
@@ -75,6 +82,12 @@ jQuery.getScripts = function(scripts, onComplete)
 			if ( WIN.location.hash == '' )
 			{
 	  			WIN.scrollTo(0, 1);
+			}
+
+			/*! Make labels clickable in touch (looking at you iOS) */
+			if ( tap_evt != 'click' )
+			{
+				$('label').attr('onclick','');
 			}
 
 			// Typekit
@@ -159,7 +172,7 @@ jQuery.getScripts = function(scripts, onComplete)
 
 				});
 			
-			$('#bookmark').delegate('a','click',function(e){
+			$('#bookmark').on( tap_evt, 'a', function(e){
 				if ( $(WIN).width() > 700 )
 				{
 					e.preventDefault();
