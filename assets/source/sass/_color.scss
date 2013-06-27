@@ -272,7 +272,7 @@ article.focal figure:before {
 #easy-network a:hover [data-icon] + span {
 	text-decoration: underline;
 }
-@media screen and (min-width:570px) {
+@media screen and (min-width:px-to-ems(570px)) {
 	#search-form,
 	#search-form p {
 		background: transparent;
@@ -283,7 +283,7 @@ article.focal figure:before {
 	}
 }
 
-@media screen and (min-width:860px) {
+@media screen and (min-width:px-to-ems(860px)) {
     
     body {
       background: $color-white url(#{$cdn}/css/star.png) center 0 no-repeat;

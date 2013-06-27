@@ -15,7 +15,7 @@
 @import 'layout-tablet';
 
 
-@media screen and (min-width:860px) { 
+@media screen and (min-width:px-to-ems(1000px)) { 
 
 	body:after {
 		content: 'large';

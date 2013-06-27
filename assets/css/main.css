@@ -1543,18 +1543,8 @@ ul.inline li {
   }
 }
 @media screen and (min-width: 40.625em) {
-  /* line 147, ../source/sass/_layout-tablet.scss */
-  body {
-    font-size: 100%;
-  }
-
-  /* line 150, ../source/sass/_layout-tablet.scss */
-  p, ul, ol, dl, table, pre, figure, canvas, object, embed, video, audio {
-    font-size: 1em;
-  }
-
   /* =Main */
-  /* line 154, ../source/sass/_layout-tablet.scss */
+  /* line 148, ../source/sass/_layout-tablet.scss */
   #single-entry #main {
     margin: 0;
     padding: 0 15.625em 70px 0;
@@ -1563,14 +1553,14 @@ ul.inline li {
     position: relative;
   }
 
-  /* line 161, ../source/sass/_layout-tablet.scss */
+  /* line 155, ../source/sass/_layout-tablet.scss */
   #single-entry .focal {
     position: relative;
     z-index: 3;
   }
 
   /* =Sidebar */
-  /* line 168, ../source/sass/_layout-tablet.scss */
+  /* line 162, ../source/sass/_layout-tablet.scss */
   #single-entry .sidebar {
     width: 15em;
     position: absolute;
@@ -1580,7 +1570,7 @@ ul.inline li {
     z-index: 2;
   }
 
-  /* line 176, ../source/sass/_layout-tablet.scss */
+  /* line 170, ../source/sass/_layout-tablet.scss */
   #single-entry .sidebar .inner {
     display: block;
     position: absolute;
@@ -1591,27 +1581,27 @@ ul.inline li {
     bottom: 0;
   }
 
-  /* line 185, ../source/sass/_layout-tablet.scss */
+  /* line 179, ../source/sass/_layout-tablet.scss */
   .sidebar .inner > * {
     width: 11.5em;
   }
 
-  /* line 188, ../source/sass/_layout-tablet.scss */
+  /* line 182, ../source/sass/_layout-tablet.scss */
   .sidebar figure {
     margin-bottom: .75em;
   }
 
-  /* line 191, ../source/sass/_layout-tablet.scss */
+  /* line 185, ../source/sass/_layout-tablet.scss */
   .sidebar ul.author {
     margin: -1em 0 1.5em;
   }
 
-  /* line 194, ../source/sass/_layout-tablet.scss */
+  /* line 188, ../source/sass/_layout-tablet.scss */
   .sidebar li {
     margin-bottom: .5em;
   }
 
-  /* line 200, ../source/sass/_layout-tablet.scss */
+  /* line 194, ../source/sass/_layout-tablet.scss */
   .sidebar .vcard img,
   .sidebar .vcard .frame,
   .sidebar .vcard img,
@@ -1620,22 +1610,22 @@ ul.inline li {
     width: 122px;
   }
 
-  /* line 204, ../source/sass/_layout-tablet.scss */
+  /* line 198, ../source/sass/_layout-tablet.scss */
   .sidebar .vcard .frame {
     background: url(http://cdn3.easy-designs.net/css/frame-author.png);
   }
 
-  /* line 207, ../source/sass/_layout-tablet.scss */
+  /* line 201, ../source/sass/_layout-tablet.scss */
   .easy-writers {
     overflow: hidden;
   }
 
-  /* line 210, ../source/sass/_layout-tablet.scss */
+  /* line 204, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard {
     float: left;
   }
 
-  /* line 213, ../source/sass/_layout-tablet.scss */
+  /* line 207, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard a {
     display: block;
     margin: 0 0.5em 8px 0;
@@ -1645,13 +1635,13 @@ ul.inline li {
     overflow: hidden;
   }
 
-  /* line 221, ../source/sass/_layout-tablet.scss */
+  /* line 215, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard img {
     width: 48px;
     height: 48px;
   }
 
-  /* line 226, ../source/sass/_layout-tablet.scss */
+  /* line 220, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard img,
   .easy-writers .vcard span {
     position: absolute;
@@ -1662,13 +1652,13 @@ ul.inline li {
     z-index: 1;
   }
 
-  /* line 234, ../source/sass/_layout-tablet.scss */
+  /* line 228, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard .fn {
     z-index: 0;
   }
 
   /* = Pagination */
-  /* line 240, ../source/sass/_layout-tablet.scss */
+  /* line 234, ../source/sass/_layout-tablet.scss */
   #single-entry #pagination {
     bottom: 20px;
     right: 16.25em;
@@ -1676,14 +1666,14 @@ ul.inline li {
   }
 }
 @media screen and (min-width: 43.75em) {
-  /* line 252, ../source/sass/_layout-tablet.scss */
+  /* line 246, ../source/sass/_layout-tablet.scss */
   #teasers .hentry h3 {
     font-size: 1.385em;
     /* 18px */
   }
 
   /* =Main */
-  /* line 257, ../source/sass/_layout-tablet.scss */
+  /* line 251, ../source/sass/_layout-tablet.scss */
   #main {
     margin: 0;
     padding: 0 15em 70px 0;
@@ -1692,14 +1682,14 @@ ul.inline li {
     position: relative;
   }
 
-  /* line 264, ../source/sass/_layout-tablet.scss */
+  /* line 258, ../source/sass/_layout-tablet.scss */
   .focal {
     position: relative;
     z-index: 3;
   }
 
   /* =Sidebar */
-  /* line 271, ../source/sass/_layout-tablet.scss */
+  /* line 265, ../source/sass/_layout-tablet.scss */
   .sidebar {
     width: 15em;
     position: absolute;
@@ -1709,7 +1699,7 @@ ul.inline li {
     z-index: 2;
   }
 
-  /* line 279, ../source/sass/_layout-tablet.scss */
+  /* line 273, ../source/sass/_layout-tablet.scss */
   .sidebar .inner {
     display: block;
     position: absolute;
@@ -1721,25 +1711,25 @@ ul.inline li {
   }
 
   /* =Home */
-  /* line 291, ../source/sass/_layout-tablet.scss */
+  /* line 285, ../source/sass/_layout-tablet.scss */
   #tagline {
     font-size: 2.25em;
   }
 
-  /* line 294, ../source/sass/_layout-tablet.scss */
+  /* line 288, ../source/sass/_layout-tablet.scss */
   #home #main {
     padding: 20px 1.25em 0;
     min-height: 0;
   }
 
-  /* line 298, ../source/sass/_layout-tablet.scss */
+  /* line 292, ../source/sass/_layout-tablet.scss */
   #home .hfeed {
     border-spacing: 10px 0;
     display: table;
     margin: 0 -10px;
   }
 
-  /* line 303, ../source/sass/_layout-tablet.scss */
+  /* line 297, ../source/sass/_layout-tablet.scss */
   #home .hentry {
     -moz-border-radius: 50px 50px 0 0;
     -o-border-radius: 50px 50px 0 0;
@@ -1752,13 +1742,13 @@ ul.inline li {
     width: 34%;
   }
 
-  /* line 314, ../source/sass/_layout-tablet.scss */
+  /* line 308, ../source/sass/_layout-tablet.scss */
   #home .hentry article {
     position: relative;
     padding: 136px 1.25em 20px;
   }
 
-  /* line 318, ../source/sass/_layout-tablet.scss */
+  /* line 312, ../source/sass/_layout-tablet.scss */
   #home #teasers .hentry h3 {
     position: absolute;
     top: 10px;
@@ -1768,12 +1758,12 @@ ul.inline li {
     padding: 0;
   }
 
-  /* line 326, ../source/sass/_layout-tablet.scss */
+  /* line 320, ../source/sass/_layout-tablet.scss */
   #home #teasers .hentry h3:hover {
     background-position: 0 0;
   }
 
-  /* line 329, ../source/sass/_layout-tablet.scss */
+  /* line 323, ../source/sass/_layout-tablet.scss */
   #home .hentry h3 a {
     background: center top no-repeat;
     padding-top: 108px;
@@ -1781,35 +1771,36 @@ ul.inline li {
     top: -13px;
   }
 
-  /* line 336, ../source/sass/_layout-tablet.scss */
+  /* line 330, ../source/sass/_layout-tablet.scss */
   .wf-active #home .hentry h3 a,
   .wf-inactive #home .hentry h3 a {
     padding-top: 105px;
   }
 
-  /* line 339, ../source/sass/_layout-tablet.scss */
+  /* line 333, ../source/sass/_layout-tablet.scss */
   #programming.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/programming-icon.png);
   }
 
-  /* line 342, ../source/sass/_layout-tablet.scss */
+  /* line 336, ../source/sass/_layout-tablet.scss */
   #process.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/process-icon.png);
   }
 
-  /* line 345, ../source/sass/_layout-tablet.scss */
+  /* line 339, ../source/sass/_layout-tablet.scss */
   #potpourri.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/potpourri-icon.png);
     padding-top: 105px;
     top: -10px;
   }
 
-  /* line 351, ../source/sass/_layout-tablet.scss */
+  /* line 345, ../source/sass/_layout-tablet.scss */
   .wf-active #potpourri.hentry h3 a,
   .wf-inactive #potpourri.hentry h3 a {
     padding-top: 102px;
   }
 }
+<<<<<<< HEAD
 @media screen and (min-width: 860px) {
   /* line 20, ../source/sass/main.scss */
   body:after {
@@ -1817,6 +1808,9 @@ ul.inline li {
     display: none;
   }
 
+=======
+@media screen and (min-width: 62.5em) {
+>>>>>>> 4df3bacaecf6ad64eae72e098f7abf7edf72c73e
   /* =Header */
   /* line 4, ../source/sass/_layout-screen.scss */
   #page-header {
@@ -2569,7 +2563,7 @@ article.focal figure:before {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 570px) {
+@media screen and (min-width: 35.625em) {
   /* line 277, ../source/sass/_color.scss */
   #search-form,
   #search-form p {
@@ -2582,7 +2576,7 @@ article.focal figure:before {
     background-color: rgba(180, 246, 248, 0.43);
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 53.75em) {
   /* line 288, ../source/sass/_color.scss */
   body {
     background: white url(http://cdn3.easy-designs.net/css/star.png) center 0 no-repeat;
