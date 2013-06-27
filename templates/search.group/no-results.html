@@ -1,15 +1,21 @@
 {embed="inc/.head"}
-{embed="inc/.header" body_id="archive" body_class="search"}
+{embed="inc/.header"
+	body_id="archive"
+	body_class="search"
+	}
 
-    <section id="main">
-      <article class="focal">    
-        <header>
-          <h1>{exp:typogrify}Search Results{/exp:typogrify}</h1>
-				</header>
+	<div id="main">
+		<article class="focal">    
+			<h1>{exp:typogrify}Search Results{/exp:typogrify}</h1>
+			
+			<p>No results were found for <em>{exp:search:keywords}</em>. Please try again.</p>
 				
-				<p>No results were found for <em>{exp:search:keywords}</em>. Please try again.</p>
-      </article>
-      {embed="inc/.sidebar" version="archive"}
-  </section>
+   		</article>
+
+{embed="inc/.sidebar"
+	version="archive"
+	}
+	
+	</div>
 
 {embed="inc/.footer"}
