@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ---------------------------------
  * Core Stylesheet
  * Created by Easy! Designs, LLC
@@ -65,101 +64,110 @@ table {
   border-spacing: 0;
 }
 
+/* @font-face */
+@font-face {
+  font-family: 'Easy-Designs';
+  src: url("/fonts/Easy-Designs.eot");
+  src: url("/fonts/Easy-Designs.eot?#iefix") format("embedded-opentype"), url("/fonts/Easy-Designs.woff") format("woff"), url("/fonts/Easy-Designs.ttf") format("truetype"), url("/fonts/Easy-Designs.svg#Easy-Designs") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* =General */
-/* line 8, ../source/sass/_typography.scss */
+/* line 19, ../source/sass/_typography.scss */
 body {
   /* text-rendering: optimizeLegibility; WebOS can’t handle it */
   font-size: 120%;
 }
 
 /* =Text */
-/* line 14, ../source/sass/_typography.scss */
+/* line 25, ../source/sass/_typography.scss */
 h1, h2, h3, h4, h5, h6, legend {
   font-family: "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
   line-height: 1.25;
 }
 
-/* line 18, ../source/sass/_typography.scss */
+/* line 29, ../source/sass/_typography.scss */
 h1 {
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.15;
 }
 
-/* line 23, ../source/sass/_typography.scss */
+/* line 34, ../source/sass/_typography.scss */
 h2, fieldset legend {
   font-size: 1.5em;
   font-weight: 400;
 }
 
-/* line 27, ../source/sass/_typography.scss */
+/* line 38, ../source/sass/_typography.scss */
 h2 {
   margin-bottom: 5px;
 }
 
-/* line 30, ../source/sass/_typography.scss */
+/* line 41, ../source/sass/_typography.scss */
 h3 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 0.875em;
 }
 
-/* line 34, ../source/sass/_typography.scss */
+/* line 45, ../source/sass/_typography.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   display: inline-block;
 }
 
-/* line 37, ../source/sass/_typography.scss */
+/* line 48, ../source/sass/_typography.scss */
 blockquote {
   border-left: 10px solid;
   padding-left: 10px;
   margin: 1.5em 0;
 }
 
-/* line 42, ../source/sass/_typography.scss */
+/* line 53, ../source/sass/_typography.scss */
 blockquote:first-child {
   margin-top: 0;
 }
 
-/* line 45, ../source/sass/_typography.scss */
+/* line 56, ../source/sass/_typography.scss */
 blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* line 48, ../source/sass/_typography.scss */
+/* line 59, ../source/sass/_typography.scss */
 img {
   max-width: 100%;
 }
 
-/* line 52, ../source/sass/_typography.scss */
+/* line 63, ../source/sass/_typography.scss */
 p, ul, ol, dl, table, pre,
 figure, canvas, object, embed, video, audio {
   font: 0.8125em/1.5 Georgia, Times, "Times New Roman", serif;
   margin: 0 0 1.5em;
 }
 
-/* line 56, ../source/sass/_typography.scss */
+/* line 67, ../source/sass/_typography.scss */
 figcaption {
   font: inherit;
 }
 
-/* line 59, ../source/sass/_typography.scss */
+/* line 70, ../source/sass/_typography.scss */
 figure figcaption a, .figure figcaption a {
   display: inline;
 }
 
-/* line 62, ../source/sass/_typography.scss */
+/* line 73, ../source/sass/_typography.scss */
 li p, li table, li pre, li ul {
   font-size: 1em;
 }
 
-/* line 65, ../source/sass/_typography.scss */
+/* line 76, ../source/sass/_typography.scss */
 cite, em, dfn, .notes {
   font-family: "apolline-1", "apolline-2", Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   font-size: 100%;
 }
 
-/* line 72, ../source/sass/_typography.scss */
+/* line 83, ../source/sass/_typography.scss */
 .wf-apolline1apolline2-i4-active cite,
 .wf-apolline1apolline2-i4-active em,
 .wf-apolline1apolline2-i4-active dfn {
@@ -167,59 +175,59 @@ cite, em, dfn, .notes {
   line-height: .8;
 }
 
-/* line 76, ../source/sass/_typography.scss */
+/* line 87, ../source/sass/_typography.scss */
 .notes {
   font-size: 0.92307692em;
 }
 
-/* line 80, ../source/sass/_typography.scss */
+/* line 91, ../source/sass/_typography.scss */
 cite.publisher,
 cite.publication {
   white-space: nowrap;
 }
 
-/* line 83, ../source/sass/_typography.scss */
+/* line 94, ../source/sass/_typography.scss */
 cite.publisher {
   font: inherit;
 }
 
-/* line 86, ../source/sass/_typography.scss */
+/* line 97, ../source/sass/_typography.scss */
 pre, code {
   font: 0.92307692em/1.5 Monaco, Courier, "Courier New", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", monospace, serif;
 }
 
-/* line 89, ../source/sass/_typography.scss */
+/* line 100, ../source/sass/_typography.scss */
 article .gist .gist-file .gist-meta {
   font-size: 0.625em;
 }
 
-/* line 92, ../source/sass/_typography.scss */
+/* line 103, ../source/sass/_typography.scss */
 article .gist pre {
   font-size: 1em;
 }
 
-/* line 95, ../source/sass/_typography.scss */
+/* line 106, ../source/sass/_typography.scss */
 sup, sub {
   font-size: .7em;
   line-height: 1;
 }
 
-/* line 99, ../source/sass/_typography.scss */
+/* line 110, ../source/sass/_typography.scss */
 sup {
   vertical-align: super;
 }
 
-/* line 102, ../source/sass/_typography.scss */
+/* line 113, ../source/sass/_typography.scss */
 sub {
   vertical-align: sub;
 }
 
-/* line 105, ../source/sass/_typography.scss */
+/* line 116, ../source/sass/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 108, ../source/sass/_typography.scss */
+/* line 119, ../source/sass/_typography.scss */
 hr {
   border: 0;
   height: 20px;
@@ -227,34 +235,34 @@ hr {
   margin: 1.5em 0;
 }
 
-/* line 114, ../source/sass/_typography.scss */
+/* line 125, ../source/sass/_typography.scss */
 object, embed, audio, video, iframe {
   display: block;
   margin: 1.5em 0;
 }
 
-/* line 118, ../source/sass/_typography.scss */
+/* line 129, ../source/sass/_typography.scss */
 form {
   margin-top: 8px;
 }
 
-/* line 121, ../source/sass/_typography.scss */
+/* line 132, ../source/sass/_typography.scss */
 form li {
   clear: both;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 
-/* line 125, ../source/sass/_typography.scss */
+/* line 136, ../source/sass/_typography.scss */
 fieldset {
   margin-bottom: 16px;
 }
 
-/* line 128, ../source/sass/_typography.scss */
+/* line 139, ../source/sass/_typography.scss */
 fieldset legend {
   padding: 5px 0 2px;
 }
 
-/* line 131, ../source/sass/_typography.scss */
+/* line 142, ../source/sass/_typography.scss */
 input, select, textarea {
   border: 1px solid;
   border-radius: 3px;
@@ -262,7 +270,7 @@ input, select, textarea {
   width: 95%;
 }
 
-/* line 139, ../source/sass/_typography.scss */
+/* line 150, ../source/sass/_typography.scss */
 input[type=file],
 input[type=radio],
 input[type=checkbox] {
@@ -271,18 +279,18 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
-/* line 144, ../source/sass/_typography.scss */
+/* line 155, ../source/sass/_typography.scss */
 label {
   font-weight: bold;
   display: block;
 }
 
-/* line 148, ../source/sass/_typography.scss */
+/* line 159, ../source/sass/_typography.scss */
 select {
   cursor: pointer;
 }
 
-/* line 151, ../source/sass/_typography.scss */
+/* line 162, ../source/sass/_typography.scss */
 button {
   border: 2px solid #117f40;
   border-radius: 5px;
@@ -293,69 +301,69 @@ button {
   vertical-align: middle;
 }
 
-/* line 160, ../source/sass/_typography.scss */
+/* line 171, ../source/sass/_typography.scss */
 form li {
   list-style: none;
   margin-bottom: 10px;
 }
 
-/* line 165, ../source/sass/_typography.scss */
+/* line 176, ../source/sass/_typography.scss */
 fieldset.radio,
 fieldset.checkbox {
   margin-bottom: 10px;
 }
 
-/* line 169, ../source/sass/_typography.scss */
+/* line 180, ../source/sass/_typography.scss */
 fieldset.radio legend,
 fieldset.checkbox legend {
   font: inherit;
   font-weight: bold;
 }
 
-/* line 174, ../source/sass/_typography.scss */
+/* line 185, ../source/sass/_typography.scss */
 .radio label,
 .checkbox label {
   font-weight: normal;
   display: inline;
 }
 
-/* line 179, ../source/sass/_typography.scss */
+/* line 190, ../source/sass/_typography.scss */
 .radio ul,
 .checkbox ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 184, ../source/sass/_typography.scss */
+/* line 195, ../source/sass/_typography.scss */
 .radio li,
 .checkbox li {
   display: inline;
   margin-right: 10px;
 }
 
-/* line 188, ../source/sass/_typography.scss */
+/* line 199, ../source/sass/_typography.scss */
 .textarea label {
   margin-bottom: 2px;
 }
 
-/* line 192, ../source/sass/_typography.scss */
+/* line 203, ../source/sass/_typography.scss */
 .radio input,
 .checkbox input {
   width: auto;
 }
 
 /* =Generic */
-/* line 198, ../source/sass/_typography.scss */
+/* line 209, ../source/sass/_typography.scss */
 .more {
   margin: -1.5em 0 0;
 }
 
-/* line 201, ../source/sass/_typography.scss */
+/* line 212, ../source/sass/_typography.scss */
 time, .date, .phone {
   white-space: nowrap;
 }
 
-/* line 204, ../source/sass/_typography.scss */
+/* line 215, ../source/sass/_typography.scss */
 a[rel=feed]:after {
   content: url(http://cdn3.easy-designs.net/general/rss-icon.png);
   position: absolute;
@@ -363,7 +371,7 @@ a[rel=feed]:after {
 }
 
 /* =Microformats */
-/* line 216, ../source/sass/_typography.scss */
+/* line 227, ../source/sass/_typography.scss */
 .adr,
 .post-office-box,
 .street-address,
@@ -373,7 +381,7 @@ a[rel=feed]:after {
 }
 
 /* =Header */
-/* line 222, ../source/sass/_typography.scss */
+/* line 233, ../source/sass/_typography.scss */
 #tagline {
   font-size: 2.25em;
   line-height: 1.2;
@@ -381,37 +389,37 @@ a[rel=feed]:after {
   text-align: center;
 }
 
-/* line 228, ../source/sass/_typography.scss */
+/* line 239, ../source/sass/_typography.scss */
 #tagline em {
   font-family: "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
 }
 
 /* =Main */
-/* line 235, ../source/sass/_typography.scss */
+/* line 246, ../source/sass/_typography.scss */
 .focal ul,
 .focal ol {
   margin: 0 0 1.5em;
   padding-left: 1em;
 }
 
-/* line 239, ../source/sass/_typography.scss */
+/* line 250, ../source/sass/_typography.scss */
 .focal .also li {
   margin: 0;
 }
 
-/* line 242, ../source/sass/_typography.scss */
+/* line 253, ../source/sass/_typography.scss */
 .focal ol {
   list-style-type: decimal;
   padding-left: .75em;
   margin-left: .5em;
 }
 
-/* line 247, ../source/sass/_typography.scss */
+/* line 258, ../source/sass/_typography.scss */
 .focal ul {
   list-style: url(http://cdn1.easy-designs.net/css/bullet.png);
 }
 
-/* line 250, ../source/sass/_typography.scss */
+/* line 261, ../source/sass/_typography.scss */
 .focal .meta {
   list-style: none;
   margin-bottom: 0;
@@ -420,7 +428,7 @@ a[rel=feed]:after {
 }
 
 /* =Notices */
-/* line 259, ../source/sass/_typography.scss */
+/* line 270, ../source/sass/_typography.scss */
 .notice {
   border: 1px solid;
   margin-bottom: 1.5em;
@@ -428,12 +436,12 @@ a[rel=feed]:after {
 }
 
 /* =Sidebars */
-/* line 266, ../source/sass/_typography.scss */
+/* line 277, ../source/sass/_typography.scss */
 .sidebar h2 {
   font: 400 1.25em/1.2 "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
 }
 
-/* line 272, ../source/sass/_typography.scss */
+/* line 283, ../source/sass/_typography.scss */
 .sidebar p,
 .sidebar ul,
 .sidebar ol,
@@ -441,248 +449,248 @@ a[rel=feed]:after {
   font: 0.75em/1.5 Georgia, Times, "Times New Roman", serif;
 }
 
-/* line 275, ../source/sass/_typography.scss */
+/* line 286, ../source/sass/_typography.scss */
 #bookmark {
   margin-bottom: 1em;
 }
 
-/* line 278, ../source/sass/_typography.scss */
+/* line 289, ../source/sass/_typography.scss */
 #bookmark p, #bookmark iframe {
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 
 /* =Inline lists */
-/* line 283, ../source/sass/_typography.scss */
+/* line 294, ../source/sass/_typography.scss */
 ul.inline {
   margin-left: 0;
   padding-left: 0;
 }
 
-/* line 287, ../source/sass/_typography.scss */
+/* line 298, ../source/sass/_typography.scss */
 ul.inline li {
   display: inline;
   margin: 0;
 }
 
-/* line 291, ../source/sass/_typography.scss */
+/* line 302, ../source/sass/_typography.scss */
 .inline li:after {
   content: ", ";
 }
 
-/* line 294, ../source/sass/_typography.scss */
+/* line 305, ../source/sass/_typography.scss */
 .inline li:last-child:before {
   content: 'and ';
 }
 
-/* line 298, ../source/sass/_typography.scss */
+/* line 309, ../source/sass/_typography.scss */
 .inline li:only-child:before,
 .inline li:last-child:after {
   content: '';
 }
 
 /* =Blog */
-/* line 304, ../source/sass/_typography.scss */
+/* line 315, ../source/sass/_typography.scss */
 #single-entry h1 {
   font-weight: 400;
   margin-bottom: 10px;
 }
 
 /* =Comments */
-/* line 311, ../source/sass/_typography.scss */
+/* line 322, ../source/sass/_typography.scss */
 #comment-loader {
   font: 400 1em/1 "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
   text-align: center;
   text-decoration: none;
 }
 
-/* line 316, ../source/sass/_typography.scss */
+/* line 327, ../source/sass/_typography.scss */
 #comments .entry-content > :last-child {
   margin-bottom: 0;
 }
 
-/* line 319, ../source/sass/_typography.scss */
+/* line 330, ../source/sass/_typography.scss */
 #comments .hentry .meta {
   list-style: none;
 }
 
-/* line 322, ../source/sass/_typography.scss */
+/* line 333, ../source/sass/_typography.scss */
 #comments .meta li {
   line-height: 1.3;
 }
 
-/* line 325, ../source/sass/_typography.scss */
+/* line 336, ../source/sass/_typography.scss */
 #comments .meta li:last-child {
   font-size: 0.84615385em;
 }
 
 /* =Comment Form */
-/* line 331, ../source/sass/_typography.scss */
+/* line 342, ../source/sass/_typography.scss */
 #comment-form label {
   font-size: 1.07692308em;
 }
 
 /* =Archives */
-/* line 337, ../source/sass/_typography.scss */
+/* line 348, ../source/sass/_typography.scss */
 #archive .hentry h2 {
   font-size: 1.38461538em;
   font-weight: 400;
   padding-right: 20px;
 }
 
-/* line 342, ../source/sass/_typography.scss */
+/* line 353, ../source/sass/_typography.scss */
 #archive .hentry h2 a {
   text-decoration: none;
 }
 
-/* line 345, ../source/sass/_typography.scss */
+/* line 356, ../source/sass/_typography.scss */
 #archive .hentry .meta {
   font-size: 0.84615385em;
   list-style: none;
 }
 
 /* =Footer Content */
-/* line 352, ../source/sass/_typography.scss */
+/* line 363, ../source/sass/_typography.scss */
 #events .when {
   margin: 0;
 }
 
-/* line 355, ../source/sass/_typography.scss */
+/* line 366, ../source/sass/_typography.scss */
 #events .summary {
   font: 1.0769em/1.2 Georgia, Times, "Times New Roman", serif;
   margin: 0 0 7px;
 }
 
-/* line 359, ../source/sass/_typography.scss */
+/* line 370, ../source/sass/_typography.scss */
 .promo h2 {
   font-size: 1.25em;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
-/* line 364, ../source/sass/_typography.scss */
+/* line 375, ../source/sass/_typography.scss */
 #page-footer p {
   font-size: 1em;
 }
-/* line 366, ../source/sass/_typography.scss */
+/* line 377, ../source/sass/_typography.scss */
 #page-footer p span {
   font-size: 0.6875em;
 }
 
-/* line 371, ../source/sass/_typography.scss */
+/* line 382, ../source/sass/_typography.scss */
 #about-us h2,
 #more h2 {
   font-size: 1.125em;
   font-weight: normal;
 }
 
-/* line 375, ../source/sass/_typography.scss */
+/* line 386, ../source/sass/_typography.scss */
 #more ul {
   font-size: 14px;
   list-style: none;
 }
 
-/* line 379, ../source/sass/_typography.scss */
+/* line 390, ../source/sass/_typography.scss */
 #more li {
   line-height: 22px;
   margin-bottom: 5px;
   padding-left: 25px;
 }
 
-/* line 384, ../source/sass/_typography.scss */
+/* line 395, ../source/sass/_typography.scss */
 #elsewhere section h3 {
   margin-bottom: 5px;
 }
 
 /* =Home */
-/* line 390, ../source/sass/_typography.scss */
+/* line 401, ../source/sass/_typography.scss */
 #home .hfeed {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-/* line 395, ../source/sass/_typography.scss */
+/* line 406, ../source/sass/_typography.scss */
 #home .hentry h3 {
   font-weight: 400;
   font-family: "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
 }
 
-/* line 399, ../source/sass/_typography.scss */
+/* line 410, ../source/sass/_typography.scss */
 #home .hentry h3 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-/* line 404, ../source/sass/_typography.scss */
+/* line 415, ../source/sass/_typography.scss */
 .front-n-center em {
   font-style: normal;
   font-weight: 700;
 }
 
-/* line 408, ../source/sass/_typography.scss */
+/* line 419, ../source/sass/_typography.scss */
 #home .hentry .meta li {
   display: inline;
 }
 
-/* line 412, ../source/sass/_typography.scss */
+/* line 423, ../source/sass/_typography.scss */
 #home .hentry h2,
 #home .hentry h3 {
   font-size: 1.385em;
 }
 
-/* line 415, ../source/sass/_typography.scss */
+/* line 426, ../source/sass/_typography.scss */
 #home .hentry h2 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 400;
   margin: 16px 0 10px;
 }
 
-/* line 420, ../source/sass/_typography.scss */
+/* line 431, ../source/sass/_typography.scss */
 #home #teasers .hentry h3 {
   font-size: 1.1em;
   line-height: 1.3;
 }
 
-/* line 424, ../source/sass/_typography.scss */
+/* line 435, ../source/sass/_typography.scss */
 .wf-ratio1ratio2-n4-active #home #teasers .hentry h3 {
   font-size: 1em;
   line-height: 1.4;
 }
 
 /* =Search */
-/* line 432, ../source/sass/_typography.scss */
+/* line 443, ../source/sass/_typography.scss */
 #search-form input,
 #search-form label {
   font-size: 0.92307692em;
   padding: 3px 7px 4px;
 }
 
-/* line 436, ../source/sass/_typography.scss */
+/* line 447, ../source/sass/_typography.scss */
 #search-form label {
   font-weight: normal;
 }
 
-/* line 439, ../source/sass/_typography.scss */
+/* line 450, ../source/sass/_typography.scss */
 #search-form button {
   font-size: 0.92307692em;
   padding: 4px 3px 2px;
 }
 
 /* =Pagination */
-/* line 446, ../source/sass/_typography.scss */
+/* line 457, ../source/sass/_typography.scss */
 #pagination li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 451, ../source/sass/_typography.scss */
+/* line 462, ../source/sass/_typography.scss */
 #pagination a {
   text-decoration: none;
 }
 
-/* line 454, ../source/sass/_typography.scss */
+/* line 465, ../source/sass/_typography.scss */
 #pagination a em {
   font-family: "ratio-1", "ratio-2", "Myriad Pro", "Trebuchet MS", sans-serif;
   font-weight: 500;
@@ -691,26 +699,26 @@ ul.inline li {
   text-indent: 0;
 }
 
-/* line 463, ../source/sass/_typography.scss */
+/* line 474, ../source/sass/_typography.scss */
 #easy-network a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-/* line 469, ../source/sass/_typography.scss */
+/* line 480, ../source/sass/_typography.scss */
 #easy-network a:focus,
 #easy-network a:hover {
   text-decoration: underline;
 }
 
-/* line 474, ../source/sass/_typography.scss */
+/* line 485, ../source/sass/_typography.scss */
 .gist table {
   margin: 0;
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 481, ../source/sass/_typography.scss */
+  /* line 492, ../source/sass/_typography.scss */
   h1 {
     font-size: 2.25em;
   }
@@ -1534,8 +1542,18 @@ ul.inline li {
   }
 }
 @media screen and (min-width: 40.625em) {
+  /* line 147, ../source/sass/_layout-tablet.scss */
+  body {
+    font-size: 100%;
+  }
+
+  /* line 150, ../source/sass/_layout-tablet.scss */
+  p, ul, ol, dl, table, pre, figure, canvas, object, embed, video, audio {
+    font-size: 1em;
+  }
+
   /* =Main */
-  /* line 149, ../source/sass/_layout-tablet.scss */
+  /* line 154, ../source/sass/_layout-tablet.scss */
   #single-entry #main {
     margin: 0;
     padding: 0 15.625em 70px 0;
@@ -1544,14 +1562,14 @@ ul.inline li {
     position: relative;
   }
 
-  /* line 156, ../source/sass/_layout-tablet.scss */
+  /* line 161, ../source/sass/_layout-tablet.scss */
   #single-entry .focal {
     position: relative;
     z-index: 3;
   }
 
   /* =Sidebar */
-  /* line 163, ../source/sass/_layout-tablet.scss */
+  /* line 168, ../source/sass/_layout-tablet.scss */
   #single-entry .sidebar {
     width: 15em;
     position: absolute;
@@ -1561,7 +1579,7 @@ ul.inline li {
     z-index: 2;
   }
 
-  /* line 171, ../source/sass/_layout-tablet.scss */
+  /* line 176, ../source/sass/_layout-tablet.scss */
   #single-entry .sidebar .inner {
     display: block;
     position: absolute;
@@ -1572,27 +1590,27 @@ ul.inline li {
     bottom: 0;
   }
 
-  /* line 180, ../source/sass/_layout-tablet.scss */
+  /* line 185, ../source/sass/_layout-tablet.scss */
   .sidebar .inner > * {
     width: 11.5em;
   }
 
-  /* line 183, ../source/sass/_layout-tablet.scss */
+  /* line 188, ../source/sass/_layout-tablet.scss */
   .sidebar figure {
     margin-bottom: .75em;
   }
 
-  /* line 186, ../source/sass/_layout-tablet.scss */
+  /* line 191, ../source/sass/_layout-tablet.scss */
   .sidebar ul.author {
     margin: -1em 0 1.5em;
   }
 
-  /* line 189, ../source/sass/_layout-tablet.scss */
+  /* line 194, ../source/sass/_layout-tablet.scss */
   .sidebar li {
     margin-bottom: .5em;
   }
 
-  /* line 195, ../source/sass/_layout-tablet.scss */
+  /* line 200, ../source/sass/_layout-tablet.scss */
   .sidebar .vcard img,
   .sidebar .vcard .frame,
   .sidebar .vcard img,
@@ -1601,22 +1619,22 @@ ul.inline li {
     width: 122px;
   }
 
-  /* line 199, ../source/sass/_layout-tablet.scss */
+  /* line 204, ../source/sass/_layout-tablet.scss */
   .sidebar .vcard .frame {
     background: url(http://cdn3.easy-designs.net/css/frame-author.png);
   }
 
-  /* line 202, ../source/sass/_layout-tablet.scss */
+  /* line 207, ../source/sass/_layout-tablet.scss */
   .easy-writers {
     overflow: hidden;
   }
 
-  /* line 205, ../source/sass/_layout-tablet.scss */
+  /* line 210, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard {
     float: left;
   }
 
-  /* line 208, ../source/sass/_layout-tablet.scss */
+  /* line 213, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard a {
     display: block;
     margin: 0 0.5em 8px 0;
@@ -1626,13 +1644,13 @@ ul.inline li {
     overflow: hidden;
   }
 
-  /* line 216, ../source/sass/_layout-tablet.scss */
+  /* line 221, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard img {
     width: 48px;
     height: 48px;
   }
 
-  /* line 221, ../source/sass/_layout-tablet.scss */
+  /* line 226, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard img,
   .easy-writers .vcard span {
     position: absolute;
@@ -1643,13 +1661,13 @@ ul.inline li {
     z-index: 1;
   }
 
-  /* line 229, ../source/sass/_layout-tablet.scss */
+  /* line 234, ../source/sass/_layout-tablet.scss */
   .easy-writers .vcard .fn {
     z-index: 0;
   }
 
   /* = Pagination */
-  /* line 235, ../source/sass/_layout-tablet.scss */
+  /* line 240, ../source/sass/_layout-tablet.scss */
   #single-entry #pagination {
     bottom: 20px;
     right: 16.25em;
@@ -1657,14 +1675,14 @@ ul.inline li {
   }
 }
 @media screen and (min-width: 43.75em) {
-  /* line 247, ../source/sass/_layout-tablet.scss */
+  /* line 252, ../source/sass/_layout-tablet.scss */
   #teasers .hentry h3 {
     font-size: 1.385em;
     /* 18px */
   }
 
   /* =Main */
-  /* line 252, ../source/sass/_layout-tablet.scss */
+  /* line 257, ../source/sass/_layout-tablet.scss */
   #main {
     margin: 0;
     padding: 0 15em 70px 0;
@@ -1673,14 +1691,14 @@ ul.inline li {
     position: relative;
   }
 
-  /* line 259, ../source/sass/_layout-tablet.scss */
+  /* line 264, ../source/sass/_layout-tablet.scss */
   .focal {
     position: relative;
     z-index: 3;
   }
 
   /* =Sidebar */
-  /* line 266, ../source/sass/_layout-tablet.scss */
+  /* line 271, ../source/sass/_layout-tablet.scss */
   .sidebar {
     width: 15em;
     position: absolute;
@@ -1690,7 +1708,7 @@ ul.inline li {
     z-index: 2;
   }
 
-  /* line 274, ../source/sass/_layout-tablet.scss */
+  /* line 279, ../source/sass/_layout-tablet.scss */
   .sidebar .inner {
     display: block;
     position: absolute;
@@ -1702,25 +1720,25 @@ ul.inline li {
   }
 
   /* =Home */
-  /* line 286, ../source/sass/_layout-tablet.scss */
+  /* line 291, ../source/sass/_layout-tablet.scss */
   #tagline {
     font-size: 2.25em;
   }
 
-  /* line 289, ../source/sass/_layout-tablet.scss */
+  /* line 294, ../source/sass/_layout-tablet.scss */
   #home #main {
     padding: 20px 1.25em 0;
     min-height: 0;
   }
 
-  /* line 293, ../source/sass/_layout-tablet.scss */
+  /* line 298, ../source/sass/_layout-tablet.scss */
   #home .hfeed {
     border-spacing: 10px 0;
     display: table;
     margin: 0 -10px;
   }
 
-  /* line 298, ../source/sass/_layout-tablet.scss */
+  /* line 303, ../source/sass/_layout-tablet.scss */
   #home .hentry {
     -moz-border-radius: 50px 50px 0 0;
     -o-border-radius: 50px 50px 0 0;
@@ -1733,13 +1751,13 @@ ul.inline li {
     width: 34%;
   }
 
-  /* line 309, ../source/sass/_layout-tablet.scss */
+  /* line 314, ../source/sass/_layout-tablet.scss */
   #home .hentry article {
     position: relative;
     padding: 136px 1.25em 20px;
   }
 
-  /* line 313, ../source/sass/_layout-tablet.scss */
+  /* line 318, ../source/sass/_layout-tablet.scss */
   #home #teasers .hentry h3 {
     position: absolute;
     top: 10px;
@@ -1749,12 +1767,12 @@ ul.inline li {
     padding: 0;
   }
 
-  /* line 321, ../source/sass/_layout-tablet.scss */
+  /* line 326, ../source/sass/_layout-tablet.scss */
   #home #teasers .hentry h3:hover {
     background-position: 0 0;
   }
 
-  /* line 324, ../source/sass/_layout-tablet.scss */
+  /* line 329, ../source/sass/_layout-tablet.scss */
   #home .hentry h3 a {
     background: center top no-repeat;
     padding-top: 108px;
@@ -1762,30 +1780,30 @@ ul.inline li {
     top: -13px;
   }
 
-  /* line 331, ../source/sass/_layout-tablet.scss */
+  /* line 336, ../source/sass/_layout-tablet.scss */
   .wf-active #home .hentry h3 a,
   .wf-inactive #home .hentry h3 a {
     padding-top: 105px;
   }
 
-  /* line 334, ../source/sass/_layout-tablet.scss */
+  /* line 339, ../source/sass/_layout-tablet.scss */
   #programming.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/programming-icon.png);
   }
 
-  /* line 337, ../source/sass/_layout-tablet.scss */
+  /* line 342, ../source/sass/_layout-tablet.scss */
   #process.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/process-icon.png);
   }
 
-  /* line 340, ../source/sass/_layout-tablet.scss */
+  /* line 345, ../source/sass/_layout-tablet.scss */
   #potpourri.hentry h3 a {
     background-image: url(http://cdn3.easy-designs.net/general/potpourri-icon.png);
     padding-top: 105px;
     top: -10px;
   }
 
-  /* line 346, ../source/sass/_layout-tablet.scss */
+  /* line 351, ../source/sass/_layout-tablet.scss */
   .wf-active #potpourri.hentry h3 a,
   .wf-inactive #potpourri.hentry h3 a {
     padding-top: 102px;
@@ -2512,51 +2530,68 @@ article.focal figure:before {
   opacity: 0.99;
 }
 
-/* line 249, ../source/sass/_color.scss */
-#easy-network .easy-designs a {
-  background-image: url(http://cdn3.easy-designs.net/css/en-easy-designs.png);
+/*#easy-network .easy-designs a {
+    background-image: url(http://cdn3.easy-designs.net/css/en-easy-designs.png);
 }
-
-/* line 252, ../source/sass/_color.scss */
 #easy-network .easy-readers a {
-  background-image: url(http://cdn3.easy-designs.net/css/en-easy-readers.png);
+    background-image: url(http://cdn3.easy-designs.net/css/en-easy-readers.png);
+}
+#easy-network .r4g a {
+    background-image: url(http://cdn3.easy-designs.net/css/en-r4g.png);
+}*/
+/* line 258, ../source/sass/_color.scss */
+[data-icon]:before {
+  font-family: 'Easy-Designs';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 3px;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 255, ../source/sass/_color.scss */
-#easy-network .r4g a {
-  background-image: url(http://cdn3.easy-designs.net/css/en-r4g.png);
+/* line 269, ../source/sass/_color.scss */
+#easy-network a:hover {
+  text-decoration: none;
+}
+
+/* line 272, ../source/sass/_color.scss */
+#easy-network a:hover [data-icon] + span {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 570px) {
-  /* line 261, ../source/sass/_color.scss */
+  /* line 277, ../source/sass/_color.scss */
   #search-form,
   #search-form p {
     background: transparent;
   }
 
-  /* line 264, ../source/sass/_color.scss */
+  /* line 280, ../source/sass/_color.scss */
   .sidebar .inner {
     background-color: #ccf9fb;
     background-color: rgba(180, 246, 248, 0.43);
   }
 }
 @media screen and (min-width: 860px) {
-  /* line 272, ../source/sass/_color.scss */
+  /* line 288, ../source/sass/_color.scss */
   body {
     background: white url(http://cdn3.easy-designs.net/css/star.png) center 0 no-repeat;
   }
 
-  /* line 284, ../source/sass/_color.scss */
+  /* line 300, ../source/sass/_color.scss */
   #extras {
     background: rgba(255, 255, 255, 0) url(http://cdn3.easy-designs.net/css/star-2.png) center top no-repeat;
   }
 
-  /* line 287, ../source/sass/_color.scss */
+  /* line 303, ../source/sass/_color.scss */
   #about {
     background: #68cd5b url(http://cdn3.easy-designs.net/css/star-2.png) center -231px no-repeat;
   }
 
-  /* line 290, ../source/sass/_color.scss */
+  /* line 306, ../source/sass/_color.scss */
   #about-us {
     background: url(http://cdn3.easy-designs.net/css/orange-stars.png) no-repeat 31px 19px;
   }
