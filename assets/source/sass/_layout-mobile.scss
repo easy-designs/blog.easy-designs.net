@@ -255,6 +255,7 @@ article.focal .gist-meta {
 	padding: 0 10px;
 }
 #archive .focal {
+	padding-bottom: 64px;
 	position: relative;
 }
 
@@ -406,6 +407,9 @@ ul#pagination {
 	right: 10px;
 	bottom: -3.8em;
 	z-index: 10;
+}
+#archive ul#pagination {
+	bottom:2em;
 }
 ul#pagination li {
 	text-indent: -999em;

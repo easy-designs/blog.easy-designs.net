@@ -154,7 +154,9 @@ li.submit {
 #archive .hentry .body {
 	padding-right: px-to-ems(35px);
 }
-
+#archive ul#pagination {
+	bottom:-2.8em;
+}
 
 /* =Home */
 #home #main {

@@ -141,7 +141,6 @@
 		top: 15px;
 		right: 20px;
 	}
-
 }
 	
 @include respond-min($breakpoint-4) {
@@ -297,6 +296,12 @@
 		left:1.25em;
 		right: px-to-ems(334px);
 		z-index: 10;
+	}
+	#archive .focal {
+		padding-bottom: 0;
+	}
+	#archive ul#pagination {
+		bottom: -3.8em;
 	}
 	/* =Easy Network */
 	#easy-network {
