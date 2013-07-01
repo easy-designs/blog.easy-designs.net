@@ -26,18 +26,13 @@ body > header, #main, #elsewhere {
 }
 
 /* line 23, ../source/sass/ie7.scss */
-#single-entry #pagination {
-  bottom: 260px;
-}
-
-/* line 27, ../source/sass/ie7.scss */
 #home .hfeed {
   display: static;
   margin-bottom: -20px;
   margin-left: 0;
 }
 
-/* line 33, ../source/sass/ie7.scss */
+/* line 29, ../source/sass/ie7.scss */
 #home .hentry {
   background: #fff;
   display: static;
@@ -45,37 +40,41 @@ body > header, #main, #elsewhere {
   min-height: 450px;
   margin: 0 20px -20px 0;
   padding-bottom: 0;
-  width: 220px;
+  width: 290px;
+}
+/* line 37, ../source/sass/ie7.scss */
+#home .hentry#potpourri {
+  margin-right: 0;
 }
 
-/* line 43, ../source/sass/ie7.scss */
+/* line 42, ../source/sass/ie7.scss */
 #home .hentry h3 a {
   padding-top: 92px;
 }
 
-/* line 47, ../source/sass/ie7.scss */
+/* line 46, ../source/sass/ie7.scss */
 #archive .hentry {
   background: #fff;
   overflow: hidden;
 }
 
-/* line 52, ../source/sass/ie7.scss */
+/* line 51, ../source/sass/ie7.scss */
 #archive .hentry article {
   clear: both;
   display: block;
 }
 
-/* line 57, ../source/sass/ie7.scss */
+/* line 56, ../source/sass/ie7.scss */
 #archive .hentry .meta, #archive .hentry .body {
   float: left;
 }
 
-/* line 61, ../source/sass/ie7.scss */
+/* line 60, ../source/sass/ie7.scss */
 #archive .hentry .meta {
   list-style-image: none;
 }
 
-/* line 65, ../source/sass/ie7.scss */
+/* line 64, ../source/sass/ie7.scss */
 #comments .entry-content {
   background-color: transparent;
   margin-right: 18px;
@@ -83,13 +82,18 @@ body > header, #main, #elsewhere {
   padding-bottom: 0;
 }
 
-/* line 72, ../source/sass/ie7.scss */
+/* line 71, ../source/sass/ie7.scss */
 #comments .meta {
   margin-top: 15px;
   z-index: 3;
 }
 
-/* line 77, ../source/sass/ie7.scss */
+/* line 76, ../source/sass/ie7.scss */
 textarea {
   overflow: auto;
+}
+
+/* line 79, ../source/sass/ie7.scss */
+#easy-network {
+  margin-left: -30em;
 }

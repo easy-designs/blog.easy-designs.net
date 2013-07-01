@@ -552,7 +552,7 @@ ul#pagination li {
 #elsewhere {
 	display: none;
 }
-@media (max-width:px-to-ems(867px)) {
+@media screen and (max-width:px-to-ems(867px)) {
 	#easy-network {
 		overflow: hidden;
 		padding:1.5em 1.25em;

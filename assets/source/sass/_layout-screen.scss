@@ -9,7 +9,7 @@
 }
 #logo img {
 	margin-left: 0;
-	left: px-to-ems(30px);
+	left: px-to-ems(24px,19.2px);
 	top: 52px;
 }
 
@@ -17,7 +17,7 @@
 #search-form {
 	top: 42px;
 	right: 50%;
-	margin: 0 px-to-ems(-400px) 0 0;
+	margin: 0 px-to-ems(-491px,19.2px) 0 0;
 }
 #search-form input, #search-form label {
 	font-size: 0.92307692em;
@@ -26,8 +26,8 @@
 /* =Body */
 #main, #single-entry #main {
 	margin: 0 auto;
-	padding: 20px px-to-ems(250px) 70px px-to-ems(20px);
-	width: px-to-ems(590px);
+	padding: 20px px-to-ems(296px,19.2px) 70px px-to-ems(24px,19.2px);
+	width: px-to-ems(712px,19.2px);
 	position: static;
 }
 #single-entry article.focal {
@@ -146,7 +146,7 @@ li.submit {
 	padding: 0;
 }
 #archive .hfeed {
-	margin: 0 px-to-ems(-26px);
+	margin: 0 0 0 px-to-ems(-26px);
 }
 #archive .hentry .meta {
 	padding-left: px-to-ems(30px);
@@ -191,7 +191,7 @@ article ul#pagination {
 	width: auto;
 }
 .sidebar .inner, #single-entry .sidebar .inner {
-	left: px-to-ems(200px);
+	left: px-to-ems(184px);
 }
 
 

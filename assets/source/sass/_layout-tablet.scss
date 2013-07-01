@@ -1,7 +1,6 @@
 @import 'utils';
  
-@media screen and (min-width:px-to-ems(481px)) { 
-
+ @include respond-min($breakpoint-2) {
 	/* =Post */
 	#single-entry article.focal {
 		padding: 3px px-to-ems(20px);
@@ -127,7 +126,7 @@
 
 }
 
-@media screen and (min-width:px-to-ems(570px)) {
+@include respond-min($breakpoint-3) {
 
 	#logo img {
 		margin-left: 0;
@@ -145,57 +144,7 @@
 
 }
 	
-	
-@media screen and (min-width:px-to-ems(868px)) {
-	/* =Main */
-	#single-entry #main {
-		margin: 0;
-		padding: 0 px-to-ems(250px) 70px 0;
-		min-height: 700px;
-		width: auto;
-		position: relative;
-	}
-	#single-entry .focal {
-		position: relative;
-		z-index: 3;
-	}
-	
-
-	/* =Sidebar */
-	#single-entry .sidebar {
-		width: px-to-ems(240px);
-		position: absolute;
-		top: 20px;
-		bottom: 20px;
-		right: 0;
-		z-index: 2;
-	}
-	#single-entry .sidebar .inner {
-		display: block;
-		position: absolute;
-		padding: 18px 0 16px px-to-ems(18px);
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-	}
-	.sidebar .inner > * {
-		width: px-to-ems(184px);
-	}
-	
-	/* = Pagination */
-	#single-entry #pagination {
-		bottom: 20px;
-		left:1.25em;
-		right: px-to-ems(334px);
-		z-index: 10;
-	}
-	
-	
-	
-}
-
-@media screen and (min-width:px-to-ems(868px)) {
+@include respond-min($breakpoint-4) {
 
 	#page-header {
 		border-top-width:30px;
@@ -209,6 +158,9 @@
 	}
 	#search-form {
 		top:40px;
+		input {
+			width:229px
+		}
 	}
 	#teasers .hentry h3 {
 		font-size: 1.385em; /* 18px */
@@ -217,8 +169,15 @@
 	/* =Main */
 	#main {
 		margin: 0;
-		padding: 0 px-to-ems(240px) 70px 0;
+		padding: 0 px-to-ems(248px) 70px 0;
 		min-height: 900px;
+		width: auto;
+		position: relative;
+	}
+	#single-entry #main {
+		margin: 0;
+		padding: 0 px-to-ems(250px) 70px 0;
+		min-height: 700px;
 		width: auto;
 		position: relative;
 	}
@@ -226,15 +185,21 @@
 		position: relative;
 		z-index: 3;
 	}
-	
-	 
 	/* =Sidebar */
 	.sidebar {
-		width: px-to-ems(240px);
+		width: px-to-ems(248px);
 		position: absolute;
 		right: 0;
 		top: 20px;
 		bottom: 20px;
+		z-index: 2;
+	}
+	#single-entry .sidebar {
+		width: px-to-ems(248px);
+		position: absolute;
+		top: 20px;
+		bottom: 20px;
+		right: 0;
 		z-index: 2;
 	}
 	.sidebar .inner {
@@ -246,8 +211,18 @@
 		top: 0;
 		bottom: 0;
 	}
-	
-	
+	#single-entry .sidebar .inner {
+		display: block;
+		position: absolute;
+		padding: 18px 0 16px px-to-ems(18px);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.sidebar .inner > * {
+		width: px-to-ems(184px);
+	}
 	/* =Home */
 	#tagline {
 		font-size: 2.25em;
@@ -315,6 +290,13 @@
 	/* =Archive */
 	#archive h1 {
 		padding: 0 px-to-ems(20px,43px);
+	}
+	/* = Pagination */
+	#single-entry #pagination {
+		bottom: 20px;
+		left:1.25em;
+		right: px-to-ems(334px);
+		z-index: 10;
 	}
 	/* =Easy Network */
 	#easy-network {

@@ -25,13 +25,3 @@ textarea {
 .sidebar .inner {
   background-color: #c2f8f9;
 }
-
-/* line 22, ../source/sass/ie8.scss */
-#about .inner {
-  background-color: #79da8d;
-}
-
-/* line 25, ../source/sass/ie8.scss */
-#easy-network {
-  background-color: #79da8d;
-}

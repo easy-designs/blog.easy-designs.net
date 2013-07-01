@@ -241,7 +241,7 @@ article.focal figure:before {
 #easy-network a {
     color: inherit;
 }
-@media screen and (min-width:px-to-ems(868px)) {
+@include respond-min($breakpoint-4) {
 	#easy-network a {
 		opacity: 0.5;
 	}
@@ -264,7 +264,7 @@ article.focal figure:before {
 		text-decoration: underline;
 	}
 }
-@media screen and (min-width:px-to-ems(570px)) {
+@include respond-min($breakpoint-2) {
 	#search-form,
 	#search-form p {
 		background: transparent;
@@ -275,10 +275,10 @@ article.focal figure:before {
 	}
 }
 
-@media screen and (min-width:px-to-ems(1000px)) {
+@include respond-min($breakpoint-5) {
     
     body {
-      background: $color-white url(#{$cdn}/css/star.png) right 0 no-repeat;
+      background: $color-white url(/css/star.png) center 0 no-repeat;
     }
     //#comments .hentry {
 	//	background: transparent url(#{$cdn}/css/bubble-top.png) no-repeat 0 0;
@@ -290,10 +290,10 @@ article.focal figure:before {
 	//	background-position: 0 0;
 	//}
 	#extras {
-    	background: $color-background_white_alpha url(#{$cdn}/css/star-2.png) -27px top no-repeat;
+    	background: $color-background_white_alpha url(/css/star-2.png) center top no-repeat;
     }
     #about {
-    	background: $color-background_green_alpha url(#{$cdn}/css/star-2.png) -27px -231px no-repeat;
+    	background: $color-background_green_alpha url(/css/star-2.png) center -231px no-repeat;
     }
 	#about-us {
 		background: url(#{$cdn}/css/orange-stars.png) no-repeat 31px 19px;

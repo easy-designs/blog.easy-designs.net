@@ -12,11 +12,10 @@
     @import 'layout-mobile';
 }
 
-
 @import 'layout-tablet';
 
 
-@media screen and (min-width:px-to-ems(1000px)) { 
+@media screen and (min-width:$breakpoint-5) { 
 
 	body:after {
 		content: 'large';
