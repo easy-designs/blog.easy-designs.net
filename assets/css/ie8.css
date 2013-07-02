@@ -9,10 +9,10 @@ textarea {
   overflow: auto;
 }
 
-/* Bottom of the speech bubble needs an extra 5px nudge */
+/* Bottom of the speech bubble needs an extra nudge */
 /* line 11, ../source/sass/ie8.scss */
 #comments .meta {
-  top: -20px;
+  top: -38px;
 }
 
 /* Colors */
