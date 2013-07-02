@@ -1,0 +1,256 @@
+@import 'utils';
+ 
+/* =Header */
+#logo {
+	font-size: 1em;
+	margin: -30px 0 0 px-to-ems(-430px);
+	left: 50%;
+	width: px-to-ems(860px);
+}
+#logo img {
+	margin-left: 0;
+	left: px-to-ems(24px,19.2px);
+	top: 52px;
+}
+
+/* =Search */
+#search-form {
+	top: 42px;
+	right: 50%;
+	margin: 0 px-to-ems(-491px,19.2px) 0 0;
+}
+#search-form input, #search-form label {
+	font-size: 0.92307692em;
+}
+
+/* =Body */
+#main, #single-entry #main {
+	margin: 0 auto;
+	padding: 20px px-to-ems(296px,19.2px) 70px px-to-ems(24px,19.2px);
+	width: px-to-ems(712px,19.2px);
+	position: static;
+}
+#single-entry article.focal {
+	padding: 3px px-to-ems(10px);
+}
+.focal header {
+	margin: 0 0 1em;
+	padding: 0;
+}
+article.focal figure {
+	width: px-to-ems(520px);
+}
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe,
+article.focal figure figcaption {
+	width: px-to-ems(500px);
+	margin-left: 0;
+}
+article.focal .gist-meta {
+	display: block;
+}
+
+
+/* =Comments */
+#comments {
+	left: 6px;
+	margin: 0 0 0 px-to-ems(-10000px);
+	padding: 15px 0 10px px-to-ems(10000px);
+}
+#comments .hfeed {
+	padding: 0 px-to-ems(30px) 0 0;
+}
+#comments .hentry {
+	margin-bottom: 20px;
+}
+//#comments .entry-content {
+//	margin-bottom: 15px;
+//	-moz-border-radius: 0;
+//	-o-border-radius: 0;
+//	-webkit-border-radius: 0;
+//	border-radius: 0;
+//	padding: 0 px-to-ems(45px) 0 px-to-ems(20px);
+//	position: static;
+//}
+//#comments .meta {
+//	left: 0;
+//	width: auto;
+//}
+//#comments .hentry .meta .vcard {
+//	margin-top: 0;
+//}
+
+
+/* =Comment Form */
+#comment-form label {
+	float: left;
+	text-align: right;
+	line-height: 2.8;
+	width:	px-to-ems(100px);
+	margin: 0 px-to-ems(10px) 0 0;
+}
+#comment-form .radio label,
+#comment-form .checkbox label {
+	float: none;
+}
+#comment-form .checkbox label,
+#comment-form .radio label {
+	line-height: 1.5;
+	width: auto;
+}
+#comment-form .textarea label {
+	line-height: 2.5;
+}
+input, textarea {
+	width: px-to-ems(440px);
+	margin-right: -10px;
+	padding: 7px;
+}
+textarea {
+	height: 200px;
+}
+li.submit, li.checkbox {
+	margin-left: px-to-ems(110px);
+}
+li.submit {
+	margin-top: 1.5em;
+}
+.checkbox label {
+	float: none;
+	width: auto;
+}
+.checkbox input {
+	float: none;
+	margin-right: 0;
+	width: auto;
+}
+.captcha {
+	padding-top: 20px;
+}
+
+
+/* =Archives */
+#archive #main {
+	min-height: 900px;
+	padding-bottom: 60px;
+}
+#archive h1 {
+	padding: 0 px-to-ems(10px) 0 0;
+}
+#archive.search .focal header > p {
+	padding: 0;
+}
+#archive .hfeed {
+	margin: 0 0 0 px-to-ems(-26px);
+}
+#archive .hentry .meta {
+	padding-left: px-to-ems(30px);
+}
+#archive .hentry .body {
+	padding-right: px-to-ems(35px);
+}
+#archive ul#pagination {
+	bottom:-2.8em;
+}
+
+/* =Home */
+#home #main {
+	width: px-to-ems(820px);
+}
+#home .hfeed {
+	border-spacing: px-to-ems(20px) 0;
+	margin: 0 px-to-ems(-20px);
+}
+
+
+/* =Pagination */
+ul#pagination,
+#single-entry #pagination {
+	font-size: 1em;
+	position: absolute;
+	bottom: 20px;
+	left: auto;
+	right: auto;
+	width: px-to-ems(580px);
+}
+article ul#pagination {
+	bottom: -50px;
+}
+.search ul#pagination {
+	bottom: 20px;
+}
+
+
+/* =Sidebars */
+.sidebar, #single-entry .sidebar {
+	position: absolute;
+	left: 50%;
+	width: auto;
+}
+.sidebar .inner, #single-entry .sidebar .inner {
+	left: px-to-ems(184px);
+}
+
+
+/* =Footer */
+#extras {
+	float: left;
+	width: 100%;
+	margin-top: -231px;
+	padding-top: 231px;
+	z-index: 0;
+}
+aside.promo {
+	float: left;
+}
+aside.promo .inner {
+	float: left;
+	min-height: 100px;
+	position: relative;
+	left: 50%;
+	margin-left: px-to-ems(-430px);
+	width: px-to-ems(860px);
+}
+aside.promo h2 {
+	margin-bottom: 3px;
+}
+#about-us {
+	width: px-to-ems(570px);
+}
+#more {
+	margin-left: 20px;
+	padding-right: 20px;
+	width: px-to-ems(240px);
+}
+#about-us,
+#more {
+	float: left;
+	padding: 22px 0 22px;
+}
+#about-us h2,
+#about-us p {
+	padding-left: 100px;
+}
+#elsewhere {
+	display: block;
+}
+#page-footer p {
+	margin: 0 auto;
+	padding: 10px px-to-ems(30px);
+	width: px-to-ems(800px);
+}
+
+
+/* =Easy Network */
+#easy-network {
+    left: 50%;
+    right:auto;
+}
+#easy-network ul {
+    padding-right:px-to-ems(40px);
+}

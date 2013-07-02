@@ -1,0 +1,91 @@
+/* line 1, ../source/sass/ie7.scss */
+body > header, #main, #elsewhere {
+  background: #e0fbfd;
+}
+
+/* line 5, ../source/sass/ie7.scss */
+#search-form button {
+  font-weight: 700;
+  padding: 3px 7px;
+}
+
+/* line 10, ../source/sass/ie7.scss */
+#main .creds {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 15, ../source/sass/ie7.scss */
+#main .sidebar h3, #main .sidebar h2 {
+  clear: left;
+}
+
+/* line 19, ../source/sass/ie7.scss */
+#archive .sidebar .vcard a img {
+  z-index: 2;
+}
+
+/* line 23, ../source/sass/ie7.scss */
+#home .hfeed {
+  display: static;
+  margin-bottom: -20px;
+  margin-left: 0;
+}
+
+/* line 29, ../source/sass/ie7.scss */
+#home .hentry {
+  background: #fff;
+  display: static;
+  float: left;
+  min-height: 450px;
+  margin: 0 20px -20px 0;
+  padding-bottom: 0;
+  width: 290px;
+}
+/* line 37, ../source/sass/ie7.scss */
+#home .hentry#potpourri {
+  margin-right: 0;
+}
+
+/* line 42, ../source/sass/ie7.scss */
+#home .hentry h3 a {
+  padding-top: 92px;
+}
+
+/* line 46, ../source/sass/ie7.scss */
+#archive .hentry {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* line 51, ../source/sass/ie7.scss */
+#archive .hentry article {
+  clear: both;
+  display: block;
+}
+
+/* line 56, ../source/sass/ie7.scss */
+#archive .hentry .meta, #archive .hentry .body {
+  float: left;
+}
+
+/* line 60, ../source/sass/ie7.scss */
+#archive .hentry .meta {
+  list-style-image: none;
+}
+
+/* line 64, ../source/sass/ie7.scss */
+#comments .entry-content {
+  margin-right: 18px;
+  margin-bottom: 0;
+}
+
+/* line 69, ../source/sass/ie7.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 72, ../source/sass/ie7.scss */
+#easy-network {
+  margin-left: -30em;
+}

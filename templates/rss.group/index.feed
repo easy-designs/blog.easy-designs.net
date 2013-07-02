@@ -1,0 +1,144 @@
+<?php
+
+$archives		= array( 'author', 'category', 'tag' );
+$archive		= ee()->uri->segment(2);
+$sub_archive	= ee()->uri->segment(3);
+$title			= 'Recent Posts';
+$base			= '{site_url}archives/';
+$limit 			= 10;
+$not_found		= FALSE;
+$username = $category = '';
+
+if ( ! empty( $archive ) &&
+	 in_array( $archive, $archives ) &&
+	 ! empty( $sub_archive ) )
+{
+	$not_found = TRUE;
+	switch ( $archive )
+	{
+		case 'author':
+		  $base .= "by-{$archive}/{$sub_archive}/";
+			$query = ee()->uri->query(
+			  "SELECT `m`.`screen_name`,
+			          `m`.`username`
+			   FROM   `exp_members` AS `m`
+			     INNER JOIN `exp_weblog_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
+				 WHERE  `t`.`url_title` = '{$sub_archive}'"
+			);
+			if ( $query->num_rows > 0 )
+			{
+        $not_found = FALSE;
+				$username  = $query->row('username');
+				$title     = 'Posts by ' . $query->row('screen_name');
+				if ( ee()->input->get( 'no-limit' ) )
+				{
+					$limit = '';
+				}
+			}
+			break;
+		default:
+			$base .= "by-{$archive}/{$sub_archive}/";
+			$query = ee()->db->query(
+				"SELECT `cat_id`,
+						`cat_name`
+				 FROM	`exp_categories`
+				 WHERE	`cat_url_title` = '{$sub_archive}'"
+			);
+			if ( $query->num_rows > 0 )
+			{
+				$not_found = FALSE;
+				$title		 = ( $archive=='tag' ? "Posts Tagged “{$query->row('cat_name')}”"
+									 			 : "Posts Filed Under “{$query->row('cat_name')}”" );
+				$category  = $query->row['cat_id'];
+				if ( ee()->input->get( 'no-limit' ) )
+				{
+					$limit = '';
+				}
+			}
+			break;
+	}
+}
+elseif ( ! empty( $archive ) &&
+		 ! in_array( $archive, $archives ) )
+{
+	$not_found = TRUE;
+}
+
+if ( $not_found )
+{
+	header('Location: /rss/');
+	exit;
+}
+
+echo '<?xml version="1.0" encoding="utf-8"?>' . "\r\n"; ?>
+{exp:rss:feed
+	channel="blog"
+	show_future_entries="no"
+	parse="inward"
+	}
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	{preload_replace:master_weblog_name="blog"}
+	{preload_replace:permalink="{site_url}archives/{entry_date format='%Y/%m/%d'}/{url_title}/"}
+	<channel>
+		<title>{exp:xml_encode}The Easy Designs Blog: <?php echo $title; ?>{/exp:xml_encode}</title>
+		<link><?php echo $base; ?></link>
+		<dc:language>{channel_language}</dc:language>
+		<description>{exp:xml_encode}{channel_description}{/exp:xml_encode}</description>
+		<dc:rights>(c) Copyright 2005–{current_time format='%Y'} Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>{exp:xml_encode}Easy! Designs, LLC{/exp:xml_encode}</dc:creator>
+		<dc:date>{gmt_date format="%Y-%m-%d"}</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="<?php echo 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" rel="self" type="application/rss+xml"/>
+	{exp:channel:entries
+		channel="{master_weblog_name}"
+		limit="<?php echo $limit; ?>"
+		rdf="off"
+<?php	if ( !empty( $category ) ): ?>
+		category="<?php echo $category; ?>"
+<?php	endif;
+ 		if ( !empty( $username ) ): ?>
+		username="<?php echo $username; ?>"
+<?php	endif; ?>
+		orderby="date"
+		sort="desc"
+		sticky="off"
+		status="open"
+		cache="yes"
+		refresh="30"
+		parse="inward"
+		disable="category_fields|member_data|pagination|trackbacks"
+		}
+		<item>
+			<title>{exp:xml_encode}{title}{/exp:xml_encode}</title>
+			<author>{email} ({screen_name})</author>
+			<description><![CDATA[
+				{exp:easy_src_sencha_io}
+					{exp:typogrify}
+						{exp:low_replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
+							{exp:tagstripper:tagsToStrip tags='iframe|link'}
+								{exp:allow_eecode embed="y"}
+									{entry_body}
+								{/exp:allow_eecode}
+							{/exp:tagstripper:tagsToStrip}
+						{/exp:low_replace}
+					{/exp:typogrify}
+				{/exp:easy_src_sencha_io}
+				{exp:easy_google_analytics:tracker account="UA-176472-10"}
+			]]></description>
+		{if categories}
+			<dc:subject>{exp:xml_encode}{categories backspace="2"}{category_name}, {/categories}{/exp:xml_encode}</dc:subject> 
+		{/if}
+			<link>{permalink}</link>
+			<guid>{permalink}</guid>
+			<dc:date>{entry_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
+		</item>
+	{/exp:channel:entries}
+	</channel>
+</rss>
+{/exp:rss:feed}

@@ -33,20 +33,14 @@ RewriteRule ^blog\/rss.*$ /rss/ [R=301,L]
 RewriteRule ^feed\/?.*$ /rss/ [R=301,L]
 
 # rewrite css, img & js
-RewriteRule ^css\/(.*)\.css$ /styles/$1 [L]
+RewriteRule ^css\/(.*)$ /assets/css/$1 [L]
+RewriteRule ^fonts\/(.*)$ /assets/fonts/$1 [L]
+RewriteRule ^js\/(.*)$ /assets/js/$1 [L]
 RewriteRule ^img\/captchas\/(.*)$ /images/captchas/$1 [L]
 RewriteRule ^img\/avatars\/(.*)$ /images/avatars/uploads/$1 [L]
 RewriteRule ^img\/(.*)\/(.*)$ /assets/$1/$2 [L]
 RewriteRule ^img\/(.*)$ /assets/general/$1 [L]
-RewriteRule ^js\/(.*)\.js$ /javascripts/$1 [L]
 RewriteRule ^docs\/(.*)$ /assets/docs/$1 [L]
-
-# Pages
-RewriteRule ^archives\/(\d{4})\/?(\d{2})?\/?(\d{2})?\/?(P\d+\/?)?$ /pages/archives/date/$1/$2/$3/$4 [L]
-RewriteRule ^archives\/\d{4}\/\d{2}\/\d{2}\/(.*)$ /pages/single-post/$1 [L]
-RewriteRule ^archives\/by-(category|author|tag)\/(.*)$ /pages/archives/$1/$2 [L]
-RewriteRule ^archives\/(.*)$ /pages/archives/$1 [L]
-RewriteRule ^comments\/(.*)$ /pages/comments/$1 [L]
 
 # RSS
 RewriteRule ^rss\/by-(category|author|tag)\/(.*)\.rss$ /rss/$1/$2/ [L]

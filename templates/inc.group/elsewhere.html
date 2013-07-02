@@ -1,0 +1,139 @@
+{preload_replace:my_weblog="blog"}
+{preload_replace:my_template_group="blog"}
+{preload_replace:permalink="/archives/{entry_date format='%Y/%m/%d'}/{url_title}"}
+
+        <div class="inner">
+            <section id="software">
+                <h2>We made this</h2>
+                <h3 class="figure featured">
+                    <a href="http://adaptivewebdesign.info">
+                        <img title="Adaptive Web Design" src="{cdn}/general/adaptive-web-design-promo.png" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>“<a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style.” — Jeremy Keith</p>
+            </section>
+            
+            <section id="retreats">
+                <h2>You made this</h2>
+                <h3 class="figure featured">
+                    <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">
+                        <img title="The I ♥	Adaptive Web Design Poster Contest" src="{cdn}/general/i-love-awd-contest.jpg" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a>. We gave away great prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab and collected several hundred dollars for charities around the world.</p>
+            </section>
+
+            {!--<section id="retreats">
+                <h2>Learn with us</h2>
+                <h3 class="figure featured">
+                    <a href="http://retreats4geeks.com/">
+                        <img title="Retreats 4 Geeks" src="{cdn}/general/r4g-logo.png" alt="" />
+                        <b class="frame"><b></b></b>
+                    </a>
+                </h3>
+                <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
+            </section>--}
+<?php
+
+$EE =& get_instance();
+
+$future = (bool)$EE->db->query(
+  "SELECT count(`title`) AS `count`
+   FROM   `exp_channel_titles`
+   WHERE  `channel_id` = 6
+     AND  `entry_date` > UNIX_TIMESTAMP()"
+)->row('count');     
+$block = $future ? '366' : '367';
+
+?>
+				<section id="events">
+{exp:channel:entries
+	site="easy-designs"
+	channel="blocks"
+	entry_id="<?php echo $block; ?>"
+	dynamic="no"
+	disable="categories|category_fields|custom_fields|member_data|pagination|trackbacks"
+	}
+					<h2>{title}</h2>
+{/exp:channel:entries}
+					<ol class="hcalendar">
+{exp:channel:entries site="easy-designs"
+	channel="events"
+	dynamic="no"
+	category="not 131"
+<?php if ( $future ): ?>
+	show_expired="no"
+	show_future_entries="yes" 
+<?php else: ?>
+	show_expired="yes"
+	show_future_entries="no" 
+<?php endif; ?>
+    orderby="entry_date"
+    sort="<?php echo $future ? 'asc' : 'desc'; ?>"
+    limit="5"
+    disable="categories|category_fields|member_data|pagination|trackbacks"
+    }
+						<li class="vevent">
+							<p class="when">{exp:easy_date_range microformatted="yes" html5="yes" start="{entry_date}" end="{expiration_date}"}</p>
+							<h3 class="summary">{if event_url}<a rel="external" href="{exp:tagstripper:stripAllTags}{event_url}{/exp:tagstripper:stripAllTags}">{event_series}</a>{if:else}{title}{/if}</h3>
+						</li> 
+{/exp:channel:entries}
+					</ol>
+				</section>
+	 			
+	 			
+	 			
+	 			
+{!--    # temporarily commenting out this content (until our site launches)
+        <section id="publications">
+          <h2>More to read</h2>
+{exp:channel:entries site="easy-designs" channel="publications" dynamic="off" rdf="off"
+                    orderby="entry_date" sort="DESC" limit="1"
+                    disable="category_fields|member_data|pagination|trackbacks"}
+          <h3><a rel="bookmark permalink" href="http://easy-designs.net/portfolio/publications/{categories}{category_url_title}s{/categories}/{url_title}/">{title}</a></h3>
+          <p class="meta">by {pub_authors}</p>
+					{pub_excerpt}
+{/exp:channel:entries}
+        </section>
+        <section id="portfolio">
+          <h2>More to see</h2>
+{exp:channel:entries site='easy-designs' channel="project_images" parse="inward"
+                    entry_id="{exp:random_sticky_entries site='easy-designs' channel='project_images' limit='1'}"
+                    dynamic="off" orderby="random" limit="1"
+                    disable="categories|category_fields|member_data|pagination|trackbacks"}
+          <h3 class="figure featured">
+  					{related_entries id="image_project"}
+            <a href="http://easy-designs.net/portfolio/projects/{url_title}/">
+  					{/related_entries}
+  		  			<img src="http://images.easy-designs.net/projects/{image_file}-md.png" alt="{image_title}" />
+  		  			<b class="frame"><b></b></b>
+  						{related_entries id="image_project"}
+              {exp:typogrify}{title}{/exp:typogrify}
+            </a>
+          </h3>
+          {exp:typogrify}
+            {exp:word_limit_plus if_exceeds="15" stop_after="10" the_link=''}
+              {project_brief}
+            {/exp:word_limit_plus}
+          {/exp:typogrify}
+  				{/related_entries}
+{/exp:channel:entries}
+        </section>
+        <section id="presentations">
+          <h2>More to learn</h2>
+          <ul>
+{exp:channel:entries channel="presentation" site="easy-designs" dynamic="off" sticky="off"
+										orderby="entry_date" sort="desc" limit="3" parse="inward"
+										disable="categories|category_fields|member_data|pagination|trackbacks"}
+            <li>
+              <h3>{related_entries id='presentation_event'}<a href="http://easy-designs.net/portfolio/education/{url_title}/">{/related_entries}{title}</a></h3>
+							<p class="meta">Presented by {presentation_by} at {related_entries id='presentation_event'}<a href="http://easy-designs.net/portfolio/education/{url_title}/">{event_series}</a> in <span class="location">{event_location}</span>{/related_entries}</p>
+            </li>
+{/exp:channel:entries}
+          </ul>
+        </section>
+		# ending the comment  --}
+		
+      </div>

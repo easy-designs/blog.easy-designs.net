@@ -1,0 +1,39 @@
+$cdn:"http://cdn3.easy-designs.net";
+$easy_css_images:"http://cdn1.easy-designs.net";
+$browser-default-font-size: 16px;
+
+//	Functions
+// 	==========================================================================
+@function px-to-ems( $pixels, $context: $browser-default-font-size ) {
+  @return #{$pixels/$context}em;
+}
+
+/* Breakpoint declarations */
+$breakpoint-2:30em; /* 480px */
+$breakpoint-3:35.625em; /* 570px */
+$breakpoint-4:54.25em; /* 868px */
+$breakpoint-5:64.5em; /* 1032px */
+
+// IE friendly mobile first
+
+$fix-mqs: false !default;
+
+@mixin respond-min($width) {
+	@if $fix-mqs {
+		@if $fix-mqs >= $width {
+			@content;	
+		}
+	}
+	@else {
+		@media screen and (min-width: $width) {
+			@content;
+		}
+	}
+}
+$old-ie: false !default;
+
+@mixin old-ie {
+	@if $old-ie {
+		@content;
+	}
+}

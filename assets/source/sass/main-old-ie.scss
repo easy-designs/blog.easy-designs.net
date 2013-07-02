@@ -1,0 +1,83 @@
+$old-ie: true;
+$fix-mqs: 60em;
+@import 'main';
+
+#page-header {
+	border-top:30px solid $color-background_green;
+}
+#logo {
+	margin:0 0 0 -480px;
+	left:50%;
+	height: 50px;
+	width:960px;
+	img {
+		top:22px;
+	}
+}
+#main, #single-entry #main {
+	padding-right: 15.625em;
+	margin:0 auto;
+	width: 34.375em;
+}
+#home #main {
+	margin:0 auto;
+	width:47.5em;
+}
+#archive .hentry {
+	width:45.1em;
+}
+.sidebar, #single-entry .sidebar {
+	position: absolute;
+	left:50%;
+	width: auto;
+}
+.sidebar .inner,
+#single-entry .sidebar .inner {
+	display: block;
+	position: absolute;
+	padding: 18px 0 16px 1.125em;
+	left: 11.5em;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#search-form {
+	margin-right:-460px;
+	right:50%;
+}
+#easy-network {
+	background-color: rgb(121, 218, 141);
+	left:50%;
+	margin-left:-25em;
+	width:50em;
+	ul {
+		padding-right: 1.25em;
+	}
+}
+.promo {
+	float: left;
+}
+#comments {
+	background-color: #e0fbfd;
+}
+#comments .meta {
+	margin: 0;
+	padding: 30px 0 0 150px;
+	position: relative;
+	top: -15px;
+	width: 45%;
+	z-index: 1;
+}
+#about .inner {
+	background-color: rgb(121, 218, 141);
+	float: left;
+	left:50%;
+	margin-left:-480px;
+	position: relative;
+	width:50em;
+}
+#page-footer p {
+	background-color: rgb(121, 218, 141);
+	margin:0 auto;
+	width:47.5em;
+}

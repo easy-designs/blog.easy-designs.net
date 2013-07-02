@@ -1,0 +1,35 @@
+/* ---------------------------------
+ * Core Stylesheet
+ * Created by Easy! Designs, LLC
+ * http://easy-designs.net
+ * --------------------------------- */
+@import 'reset';
+@import 'compass';
+@import 'utils';
+@import 'typography';
+
+@media screen { 
+    @import 'layout-mobile';
+}
+
+@import 'layout-tablet';
+
+
+@media screen and (min-width:$breakpoint-5) { 
+
+	body:after {
+		content: 'large';
+		display: none;
+	}
+	
+    @import 'layout-screen';
+
+}
+
+@media print { 
+    @import 'layout-print';
+}
+
+@import 'color';
+
+@import 'effects';
