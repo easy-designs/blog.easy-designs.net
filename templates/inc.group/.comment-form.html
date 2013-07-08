@@ -6,15 +6,15 @@
 			{if logged_out}
 					<li>
 						<label for="comments-name">Name<abbr aria-hidden="true" title="required">*</abbr></label>
-						<input type="text" id="comments-name" name="name" aria-required="true" required="required" value="{name}" />
+						<input type="text" id="comments-name" name="name" aria-required="true" required="required" value="{name}"/>
 					</li>
 					<li>
 						<label for="comments-email">Email<abbr aria-hidden="true" title="required">*</abbr></label>
-						<input type="email" id="comments-email" name="email" aria-required="true" required="required" value="{email}" />
+						<input type="email" id="comments-email" name="email" aria-required="true" required="required" value="{email}"/>
 					</li>
 					<li>
 						<label for="comments-url">URL</label>
-						<input type="url" id="comments-url" name="url" value="{url}" />
+						<input type="url" id="comments-url" name="url" placeholder="http://mydomain.com" />
 					</li>
 			{/if}
 					<li class="textarea">
@@ -24,19 +24,19 @@
 			{if logged_out}
 					<li class="checkbox">
 						<label for="comments-save-info">
-							<input type="checkbox" id="comments-save-info" name="save_info" value="yes" {save_info} />
+							<input type="checkbox" id="comments-save-info" name="save_info" value="yes" {save_info}/>
 							Remember my personal information
 						</label>
 					</li>
 			{/if}
 					<li class="checkbox">
 						<label for="comments-notify-me">
-							<input type="checkbox" id="comments-notify-me" name="notify_me" value="yes" {notify_me} />
+							<input type="checkbox" id="comments-notify-me" name="notify_me" value="yes" {notify_me}/>
 							Notify me of follow-up comments?
 						</label>
 					</li>
 					<li class="submit">
-						<input type="hidden" name="RET" value="{embed:return}" />
+						<input type="hidden" name="RET" value="{embed:return}"/>
 						<button type="submit" name="submit">Submit</button>
 					</li>
 				</ol>
