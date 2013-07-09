@@ -19,6 +19,7 @@
     {exp:channel:entries site="easy-designs" channel="staff" username="{embed:username}"
                         limit="1" status="open|closed" dynamic="no" rdf="off"
                         disable="categories|category_fields|member_data|pagination|trackbacks"}
+    <meta name="description" content="{embed:description}">
     <meta name="twitter:creator" value="@{staff_twitter}">
     {/exp:channel:entries}
     {!-- Open Graph --}
@@ -32,6 +33,7 @@
 	{!-- Open Graph --}
     <meta property="og:type" content="blog" />
 	<meta property="og:title" content="The Easy Designs Blog" />
+	<meta property="description" content="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog." />
 	<meta property="og:description" content="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog." />
 	<meta property="og:url" content="{site_url}" />
 {/if}
