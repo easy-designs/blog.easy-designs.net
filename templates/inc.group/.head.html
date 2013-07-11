@@ -1,3 +1,5 @@
+{preload_replace:default_description="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog."}
+
 <!DOCTYPE html>
 <html lang="{lang}" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
@@ -24,6 +26,7 @@
     {!-- Open Graph --}
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{embed:title}" />
+	<meta property="description" content="{embed:description}" />
 	<meta property="og:description" itemprop="description" content="{embed:description}" />
 	<meta property="og:url" content="{embed:canonical_url}" />
 {if:else}
@@ -32,7 +35,8 @@
 	{!-- Open Graph --}
     <meta property="og:type" content="blog" />
 	<meta property="og:title" content="The Easy Designs Blog" />
-	<meta property="og:description" itemprop="description" content="We are the people that power Easy Designs, a content-focused web development consultancy. We live to improve the usability, accessibility, findability, and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog." />
+	<meta property="description" content="{default_description}" />
+	<meta property="og:description" itemprop="description" content="{default_description}" />
 	<meta property="og:url" content="{site_url}" />
 {/if}
 	<meta name="medium" content="blog" />
@@ -53,11 +57,11 @@
 	<!--<![endif]-->
 	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
 	
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css?20130702"/><![endif]-->
-  <!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css?20130702"/><![endif]-->
-  <!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css?20130702"/><![endif]-->
-  <!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css?20111008"/><![endif]-->  
-
-  {exp:easy_gists:css media="all"}{embed="rss/.html" title="{embed:title}"}
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css?20130702"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css?20130702"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css?20130702"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css?20111008"/><![endif]-->  
+	
+	{embed="rss/.html" title="{embed:title}"}
 
 </head>
