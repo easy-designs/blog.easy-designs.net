@@ -10,7 +10,7 @@
 	{exp:nsm_better_meta:template}
 	
 	<meta property="og:site_name" content="The Easy Designs Blog" />
-	<meta property="og:image" content="{site_url}img/facebook-icon.png?v=20111226" />
+	<meta property="og:image" content="{cdn}/img/facebook-icon.png?v=20111226" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="fb:admins" content="aaronmgustafson" />
     <meta name="twitter:card" value="summary"/>
@@ -53,14 +53,14 @@
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
-		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="{cdn}/css/main.css{cache_buster}">
 	<!--<![endif]-->
-	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="<{cdn}/css/main-old-ie.css{cache_buster}"><![endif]-->
 	
-	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css?20130702"/><![endif]-->
-	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css?20130702"/><![endif]-->
-	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css?20130702"/><![endif]-->
-	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css?20111008"/><![endif]-->  
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="{cdn}/css/ie8.css{cache_buster}"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="{cdn}/css/ie7-mobile.css{cache_buster}"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="{cdn}/css/ie7.css{cache_buster}"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="{cdn}/css/ie6.css{cache_buster}"/><![endif]-->  
 	
 	{embed="rss/.html" title="{embed:title}"}
 
