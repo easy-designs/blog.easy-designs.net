@@ -11,6 +11,8 @@ Note:					 If you change or improve on this script, please let us know by
 ------------------------------------------------------------------------------*/
 (function($){var FunctionHandler={version:"0.2"},pages={};function initialize(){var body_id=$("body").attr("id");if(body_id!=false&&typeof(pages[body_id])!="undefined"){run(pages[body_id])}if(typeof(pages["*"])!="undefined"){run(pages["*"])}}$(document).ready(initialize);FunctionHandler.register=function(id,callback){if((typeof(id)!="string"&&!(id instanceof Array))||typeof(callback)!="function"){return false}if(typeof(id)=="string"&&id.indexOf(", ")!=-1){id=id.split(", ")}if(id instanceof Array){for(var i=id.length-1;i>=0;i--){add(id[i],callback)}}else{add(id,callback)}return true};function add(id,callback){if(typeof(pages[id])=="undefined"){pages[id]=[]}pages[id].push(callback)}function run(arr){if(!(arr instanceof Array)){return}for(var i=arr.length-1;i>=0;i--){arr[i]()}}window.FunctionHandler=FunctionHandler})(jQuery);
 
+
+// allow lazy-loading of multiple scripts
 jQuery.getScripts = function(scripts, onComplete)
 {
 	var
@@ -27,6 +29,36 @@ jQuery.getScripts = function(scripts, onComplete)
 		s--;
 	}
 };
+
+
+// Getting the active media query from CSS
+jQuery.getMQ = function()
+{
+	var computed = window.getComputedStyle;
+    if ( document.documentElement.currentStyle )
+    {
+		jQuery.getMQ = function()
+		{
+			return document.documentElement.currentStyle["fontFamily"];
+		};
+    }
+    else if ( computed )
+    {
+		jQuery.getMQ = function()
+		{
+			return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
+		};
+    }
+    else
+    {
+		jQuery.getMQ = function()
+		{
+			return '';
+		};
+    }
+	return jQuery.getMQ();
+}
+
 
 // SVG Handling
 // Adapted from Modernizr
@@ -117,35 +149,8 @@ jQuery.getScripts = function(scripts, onComplete)
 			$('body')
 				.bind( 'ajaxInclude', function(){
 
-					function getMQ()
-					{
-						var computed = window.getComputedStyle;
-					    if ( document.documentElement.currentStyle )
-					    {
-							getMQ = function()
-							{
-								return document.documentElement.currentStyle["fontFamily"];
-							};
-					    }
-					    else if ( computed )
-					    {
-							getMQ = function()
-							{
-								return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
-							};
-					    }
-					    else
-					    {
-							getMQ = function()
-							{
-								return '';
-							};
-					    }
-						return getMQ();
-					}
-					
 					// only if a large screen
-					if ( getMQ == 'large' )
+					if ( $.getMQ() == 'large' )
 					{
 						// only run the form thing once
 						$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){
