@@ -31,35 +31,6 @@ jQuery.getScripts = function(scripts, onComplete)
 };
 
 
-// Getting the active media query from CSS
-jQuery.getMQ = function()
-{
-	var computed = window.getComputedStyle;
-    if ( document.documentElement.currentStyle )
-    {
-		jQuery.getMQ = function()
-		{
-			return document.documentElement.currentStyle["fontFamily"];
-		};
-    }
-    else if ( computed )
-    {
-		jQuery.getMQ = function()
-		{
-			return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
-		};
-    }
-    else
-    {
-		jQuery.getMQ = function()
-		{
-			return '';
-		};
-    }
-	return jQuery.getMQ();
-}
-
-
 // SVG Handling
 // Adapted from Modernizr
 (function( $, document, UA ){
@@ -146,16 +117,42 @@ jQuery.getMQ = function()
 		'single-entry',
 		function()
 		{
+			function getMQ()
+			{
+				var computed = window.getComputedStyle;
+			    if ( document.documentElement.currentStyle )
+			    {
+					getMQ = function()
+					{
+						return document.documentElement.currentStyle["fontFamily"];
+					};
+			    }
+			    else if ( computed )
+			    {
+					getMQ = function()
+					{
+						return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
+					};
+			    }
+			    else
+			    {
+					getMQ = function()
+					{
+						return '';
+					};
+			    }
+				return getMQ();
+			}
+			
 			$('body')
-				.bind( 'ajaxInclude', function(){
+				.one( 'ajaxInclude', function(){
 
 					// only if a large screen
-					if ( $.getMQ() == 'large' )
+					if ( getMQ() == 'large' )
 					{
 						// only run the form thing once
-						$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){
-							// remove this delegation
-							$('body').undelegate('#comment_form input, #comment_form textarea');
+						$(this).one( 'focus', '#comment_form input, #comment_form textarea', function(){
+
 							// load the stuff
 							$.getScript('/js/jquery.textile.js',function(){
 								var
