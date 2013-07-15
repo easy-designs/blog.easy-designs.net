@@ -11,6 +11,8 @@ Note:					 If you change or improve on this script, please let us know by
 ------------------------------------------------------------------------------*/
 (function($){var FunctionHandler={version:"0.2"},pages={};function initialize(){var body_id=$("body").attr("id");if(body_id!=false&&typeof(pages[body_id])!="undefined"){run(pages[body_id])}if(typeof(pages["*"])!="undefined"){run(pages["*"])}}$(document).ready(initialize);FunctionHandler.register=function(id,callback){if((typeof(id)!="string"&&!(id instanceof Array))||typeof(callback)!="function"){return false}if(typeof(id)=="string"&&id.indexOf(", ")!=-1){id=id.split(", ")}if(id instanceof Array){for(var i=id.length-1;i>=0;i--){add(id[i],callback)}}else{add(id,callback)}return true};function add(id,callback){if(typeof(pages[id])=="undefined"){pages[id]=[]}pages[id].push(callback)}function run(arr){if(!(arr instanceof Array)){return}for(var i=arr.length-1;i>=0;i--){arr[i]()}}window.FunctionHandler=FunctionHandler})(jQuery);
 
+
+// allow lazy-loading of multiple scripts
 jQuery.getScripts = function(scripts, onComplete)
 {
 	var
@@ -27,6 +29,7 @@ jQuery.getScripts = function(scripts, onComplete)
 		s--;
 	}
 };
+
 
 // SVG Handling
 // Adapted from Modernizr
@@ -94,19 +97,19 @@ jQuery.getScripts = function(scripts, onComplete)
 			$.getScript('http://use.typekit.com/tjo5hgd.js',function(){
 				try {Typekit.load();} catch( e ) {}});
 
-			// Google Analytics
-			//window._gaq = window._gaq || [];
-			//window._gaq.push(['_setAccount', 'UA-176472-7']);
-			//window._gaq.push(['_trackPageview']);
-            //
-			//(function() {
-			//	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			//	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			//	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			//})();
-			
 			$("[data-append],[data-replace],[data-after],[data-before]")
 				.ajaxInclude();
+				
+			// Google Analytics
+			window._gaq = window._gaq || [];
+			window._gaq.push(['_setAccount', 'UA-176472-7']);
+			window._gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 
 		});
 
@@ -114,43 +117,42 @@ jQuery.getScripts = function(scripts, onComplete)
 		'single-entry',
 		function()
 		{
-			$('body')
-				.bind( 'ajaxInclude', function(){
-
-					function getMQ()
+			function getMQ()
+			{
+				var computed = window.getComputedStyle;
+			    if ( document.documentElement.currentStyle )
+			    {
+					getMQ = function()
 					{
-						var computed = window.getComputedStyle;
-					    if ( document.documentElement.currentStyle )
-					    {
-							getMQ = function()
-							{
-								return document.documentElement.currentStyle["fontFamily"];
-							};
-					    }
-					    else if ( computed )
-					    {
-							getMQ = function()
-							{
-								return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
-							};
-					    }
-					    else
-					    {
-							getMQ = function()
-							{
-								return '';
-							};
-					    }
-						return getMQ();
-					}
-					
+						return document.documentElement.currentStyle["fontFamily"];
+					};
+			    }
+			    else if ( computed )
+			    {
+					getMQ = function()
+					{
+						return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
+					};
+			    }
+			    else
+			    {
+					getMQ = function()
+					{
+						return '';
+					};
+			    }
+				return getMQ();
+			}
+			
+			$('body')
+				.one( 'ajaxInclude', function(){
+
 					// only if a large screen
-					if ( getMQ == 'large' )
+					if ( getMQ() == 'large' )
 					{
 						// only run the form thing once
-						$(this).delegate('#comment_form input, #comment_form textarea','focus',function setup(){
-							// remove this delegation
-							$('body').undelegate('#comment_form input, #comment_form textarea');
+						$(this).one( 'focus', '#comment_form input, #comment_form textarea', function(){
+
 							// load the stuff
 							$.getScript('/js/jquery.textile.js',function(){
 								var
