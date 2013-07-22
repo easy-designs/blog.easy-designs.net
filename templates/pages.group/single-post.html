@@ -74,17 +74,20 @@
                     {/exp:query}
 				</header>
 				<div class="entry-content">
-
-				{exp:easy_src_sencha_io}
-					{exp:typogrify}
-						{exp:low_replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
-							{exp:allow_eecode embed="y"}
-								{entry_body}
-							{/exp:allow_eecode}
-						{/exp:low_replace}
-					{/exp:typogrify}
-				{/exp:easy_src_sencha_io}
-
+				{exp:easy_jail:prep blank_img="/img/white.gif"}
+					{exp:easy_src_sencha_io}
+						{exp:typogrify}
+							{exp:low_replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
+								{exp:allow_eecode embed="y"}
+									{entry_body}
+								{/exp:allow_eecode}
+							{/exp:low_replace}
+						{/exp:typogrify}
+					{/exp:easy_src_sencha_io}
+				{/exp:easy_jail:prep}
+				{exp:easy_relocate:capture key="scripts"}
+					{exp:easy_jail:js config="{offset:300}"}
+				{/exp:easy_relocate:capture}
 				</div>
 
 				{embed="inc/.share" title="{title}"}

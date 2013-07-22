@@ -17,6 +17,9 @@
 
 @media screen and (min-width:$breakpoint-5) { 
 
+	html {
+		font-family: large;
+	}
 	body:after {
 		content: 'large';
 		display: none;
