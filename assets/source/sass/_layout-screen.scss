@@ -51,27 +51,6 @@ article.focal figure figcaption {
 	width: px-to-ems(500px);
 	margin-left: 0;
 }
-article.focal figure.wrap {
-	width: auto;
-	float: right;
-	margin: 0 0 1em 1em;
-}
-article.focal figure.wrap::before,
-article.focal figure.wrap::after {
-	display: none;
-}
-article.focal figure img,
-article.focal figure video,
-article.focal figure audio,
-article.focal figure object,
-article.focal figure embed,
-article.focal figure canvas,
-article.focal figure iframe,
-article.focal figure figcaption {
-	width: auto;
-	margin: 0;
-}
-
 article.focal .gist-meta {
 	display: block;
 }

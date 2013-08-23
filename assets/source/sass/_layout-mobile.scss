@@ -183,6 +183,27 @@ article.focal figure:before {
 article.focal .gist-meta {
 	display: none;
 }
+article.focal figure.wrap {
+	width: auto;
+	max-width: 150px;
+	margin: 1em auto;
+}
+article.focal figure.wrap::before,
+article.focal figure.wrap::after {
+	display: none;
+}
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe,
+article.focal figure figcaption {
+	width: auto;
+	margin: 0;
+}
+
 
 
 /* =Sharing Options */
