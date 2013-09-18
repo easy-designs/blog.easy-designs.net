@@ -92,6 +92,15 @@ pre.shell {
 }
 
 /* =Layout */
+
+#logo a {
+	background: transparent url(/assets/css/easy-blog.png) no-repeat;
+	display: block;
+	height: 45px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width:225px;
+}
 #page-header {
   border-top-color: $color-background_green;
   border-bottom-color: $color-blue;
