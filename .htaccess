@@ -22,14 +22,14 @@ RewriteCond %{HTTP_HOST} 8080$ [NC]
 RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
 
 # drop ridiculous query strings
-RewriteCond %{QUERY_STRING} !=""
-# oAuth
-RewriteCond %{QUERY_STRING} !^code=.*
-# EE Internals & CP
-RewriteCond %{QUERY_STRING} !ACT=\d+.*
-RewriteCond %{REQUEST_URI} !^/__ee_admin/.*
-RewriteCond %{QUERY_STRING} !^v=\d+
-RewriteRule ^(.*)$ /$1? [R=301,L]
+#RewriteCond %{QUERY_STRING} !=""
+## oAuth
+#RewriteCond %{QUERY_STRING} !^code=.*
+## EE Internals & CP
+#RewriteCond %{QUERY_STRING} !ACT=\d+.*
+#RewriteCond %{REQUEST_URI} !^/__ee_admin/.*
+#RewriteCond %{QUERY_STRING} !^v=\d+
+#RewriteRule ^(.*)$ /$1? [R=301,L]
 
 # old URL redirection
 RewriteRule ^blog\/rss.*$ /rss/ [R=301,L]
