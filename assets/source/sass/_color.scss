@@ -99,7 +99,11 @@ pre.shell {
 	height: 45px;
 	overflow: hidden;
 	text-indent: -9999px;
-	width:239px;
+	width:225px;
+	html.has-svg & {
+		background-image: url(#{$cdn}/css/easy-blog.svg);
+		background-size: 100%;
+	}
 }
 #page-header {
   border-top-color: $color-background_green;
@@ -259,7 +263,7 @@ article.focal figure:before {
 	    opacity: 0.99;
 	}
 	#easy-network [data-icon]:before {
-		font-family: 'Easy-Designs';
+		font-family: 'easy-designs';
 		content: attr(data-icon);
 		speak: none;
 		font-weight: normal;

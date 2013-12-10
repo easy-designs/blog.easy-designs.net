@@ -13,8 +13,46 @@
                 </h3>
                 <p>“<a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style.” — Jeremy Keith</p>
             </section>
+            <section id="code-and-creativity">
+            	<h2>Code &amp; Creativity</h2>
+            	<h3 class="figure featured">
+            		<a href="http://codeandcreativity.com">
+            			<img title="Code &amp; Creativity" src="{cdn}/general/code-&-creativity.jpg" alt="" />
+            			<b class="frame"><b></b></b>
+            		</a>
+            	</h3>
+            	<p>A social talk series created to connect designers & developers with each other and our larger community. Because your mom told you to share.</p>
+            	<h3>Next Event</h3>
+            	{exp:channel:entries
+            		site="code-and-creativity"
+					channel="events"
+					dynamic="no"
+					show_expired="no"
+					show_future_entries="yes"
+					status="open|closed"
+					sort="asc"
+					limit="1"
+					}
+					<div class="vevent">
+					{if events_talk}
+						<a href="http://codeandcreativity.com/events/{url_title}/">
+					{/if}
+						<p>
+							<time class="dtstart" datetime="{event_start_time format='%Y-%m-%d'}">
+								<span class="month">{event_start_time format='%F'}</span>
+								<span class="day">{event_start_time format='%d'}</span>, 
+								<span class="year">{event_start_time format='%Y'}</span>
+							</time><br/>
+							<b class="speakers">{ical_event_title}</b>
+						</p>
+					{if events_talk}
+						</a>
+					{/if}
+					</div>
+				{/exp:channel:entries}
+            </section>
             
-            <section id="retreats">
+<!--            <section id="retreats">
                 <h2>You made this</h2>
                 <h3 class="figure featured">
                     <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">
@@ -23,7 +61,7 @@
                     </a>
                 </h3>
                 <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a>. We gave away great prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab and collected several hundred dollars for charities around the world.</p>
-            </section>
+            </section> -->
 
             {!--<section id="retreats">
                 <h2>Learn with us</h2>

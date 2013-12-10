@@ -405,6 +405,7 @@ article.focal figure figcaption {
 	padding: 0 10px;
 }
 #software,
+#code-and-creativity,
 #retreats,
 #events {
 	float: left;
@@ -586,10 +587,15 @@ ul#pagination li {
 	}
 	#easy-network li {
 		float:left;
+		margin-bottom: 1em;
 		margin-left:4.5%;
 		width: 30%;
-		&:first-child {
+		&:first-child,
+		&.cha-device-lab {
 			margin-left:0;
+		}
+		&.cha-device-lab {
+			clear:left;
 		}
 	}
 	#easy-network a {
@@ -625,5 +631,21 @@ ul#pagination li {
 		}
 		@include background-size(contain);
 		color: #166183;
+	}
+	#easy-network .code-and-creativity a {
+		background: transparent url(/css/code-and-creativity.png) no-repeat center top;
+		html.has-svg & {
+		    background-image: url(/css/code-and-creativity.svg);
+		}
+		@include background-size(contain);
+		color: #2E8591;
+	}
+	#easy-network .cha-device-lab a {
+		background: transparent url(/css/cha-device-lab.png) no-repeat center top;
+		html.has-svg & {
+		    background-image: url(/css/cha-device-lab.svg);
+		}
+		@include background-size(contain);
+		color: #CB0012;
 	}
 }
