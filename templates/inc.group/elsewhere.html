@@ -17,11 +17,39 @@
             	<h2>Code &amp; Creativity</h2>
             	<h3 class="figure featured">
             		<a href="http://codeandcreativity.com">
-            			<img title="Code &amp; Creativity" alt="" />
+            			<img title="Code &amp; Creativity" src="{cdn}/general/code-&-creativity.jpg" alt="" />
             			<b class="frame"><b></b></b>
             		</a>
             	</h3>
             	<p>A social talk series created to connect designers & developers with each other and our larger community. Because your mom told you to share.</p>
+            	<h3>Next Event</h3>
+            	{exp:channel:entries
+            		site="code-and-creativity"
+					channel="events"
+					dynamic="no"
+					show_expired="no"
+					show_future_entries="yes"
+					status="open|closed"
+					sort="asc"
+					limit="1"
+					}
+					<div class="vevent">
+					{if events_talk}
+						<a href="http://codeandcreativity.com/events/{url_title}/">
+					{/if}
+						<p>
+							<time class="dtstart" datetime="{event_start_time format='%Y-%m-%d'}">
+								<span class="month">{event_start_time format='%F'}</span>
+								<span class="day">{event_start_time format='%d'}</span>, 
+								<span class="year">{event_start_time format='%Y'}</span>
+							</time><br/>
+							<b class="speakers">{ical_event_title}</b>
+						</p>
+					{if events_talk}
+						</a>
+					{/if}
+					</div>
+				{/exp:channel:entries}
             </section>
             
 <!--            <section id="retreats">
