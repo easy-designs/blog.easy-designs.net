@@ -37,6 +37,22 @@
 	<script src="{cdn}/js/main.js{cache_buster}"></script>
 	{exp:easy_relocate:insert key="scripts"}
 	
+	<script type="text/javascript">
+		var _gaq = [['_setAccount', 'UA-176472-10'],
+{if segment_1 == 'search' AND segment_2 != ''}
+					['_trackPageview','/search/?q=' + keywords ]];
+{if:elseif segment_1 == 'search' AND segment_2 == 'no-results'}
+					['_trackPageview','/search/no-results/?q=' + keywords ]];
+{if:else}
+					['_trackPageview']];
+{/if}
+		(function(d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.src = '//www.google-analytics.com/ga.js';
+		    s.parentNode.insertBefore(g,s);
+		}(document, 'script'));
+	</script>
 	<noscript>
 		{!--exp:easy_google_analytics:tracker account="UA-176472-10"--}
 		<img src="http://nojsstats.appspot.com/UA-176472-10/blog.easy-designs.net<?php
