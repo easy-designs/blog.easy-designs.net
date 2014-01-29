@@ -39,10 +39,10 @@
 	
 	<script type="text/javascript">
 		var _gaq = [['_setAccount', 'UA-176472-10'],
-{if segment_1 == 'search' AND segment_2 != ''}
-					['_trackPageview','/search/?q=' + keywords ]];
-{if:elseif segment_1 == 'search' AND segment_2 == 'no-results'}
-					['_trackPageview','/search/no-results/?q=' + keywords ]];
+{if "{segment_1}" == 'search' AND "{segment_2}" == 'no-results'}
+					['_trackPageview','/search/no-results/?q=' + encodeURIComponent('{exp:search:keywords}') ]];
+{if:elseif "{segment_1}" == "search" AND segment_2 != ""}
+					['_trackPageview','/search/?q=' + encodeURIComponent('{exp:search:keywords}') ]];
 {if:else}
 					['_trackPageview']];
 {/if}
