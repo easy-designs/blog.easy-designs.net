@@ -22,7 +22,7 @@ if ( ! empty( $archive ) &&
 			  "SELECT `m`.`screen_name`,
 			          `m`.`username`
 			   FROM   `exp_members` AS `m`
-			     INNER JOIN `exp_weblog_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
+			     INNER JOIN `exp_channel_titles` AS `t` ON `t`.`author_id` = `m`.`member_id`
 				 WHERE  `t`.`url_title` = '{$sub_archive}'"
 			);
 			if ( $query->num_rows > 0 )
