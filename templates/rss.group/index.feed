@@ -1,8 +1,8 @@
 <?php
 
 $archives		= array( 'author', 'category', 'tag' );
-$archive		= ee()->uri->segment(2);
-$sub_archive	= ee()->uri->segment(3);
+$archive		= str_replace( 'by-', '', ee()->uri->segment(2) );
+$sub_archive	= str_replace( '.rss', '', ee()->uri->segment(3) );
 $title			= 'Recent Posts';
 $base			= '{site_url}archives/';
 $limit 			= 10;
@@ -17,8 +17,8 @@ if ( ! empty( $archive ) &&
 	switch ( $archive )
 	{
 		case 'author':
-		  $base .= "by-{$archive}/{$sub_archive}/";
-			$query = ee()->uri->query(
+			$base .= "by-{$archive}/{$sub_archive}/";
+			$query = ee()->db->query(
 			  "SELECT `m`.`screen_name`,
 			          `m`.`username`
 			   FROM   `exp_members` AS `m`
@@ -27,7 +27,7 @@ if ( ! empty( $archive ) &&
 			);
 			if ( $query->num_rows > 0 )
 			{
-        $not_found = FALSE;
+        		$not_found = FALSE;
 				$username  = $query->row('username');
 				$title     = 'Posts by ' . $query->row('screen_name');
 				if ( ee()->input->get( 'no-limit' ) )
