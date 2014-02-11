@@ -370,7 +370,10 @@ ul.inline li {
 }
 #events .summary {
 	font: 1.0769em/1.2 $serif;
-	margin: 0 0 7px;
+	margin: 0;
+}
+#events .where {
+	margin: 0 0 1.5em;
 }
 .promo h2 {
 	font-size: 1.25em;

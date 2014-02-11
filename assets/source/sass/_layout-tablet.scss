@@ -145,6 +145,7 @@
 	article.focal figure.wrap {
 		width: auto;
 		float: right;
+		clear: both;
 		margin: 0 2em 1em;
 	}
 	article.focal figure.wrap::before,
