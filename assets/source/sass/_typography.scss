@@ -43,6 +43,10 @@ h3 {
 	font-family: $serif;
 	font-size: 0.875em;
 }
+#elsewhere h3 {
+	font-family: $sans;
+	font-weight: bold;
+}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	display: inline-block;
 }

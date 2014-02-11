@@ -5,3 +5,5 @@ themes
 scripts
 index_old.php
 path_old.php
+__ee_admin/*
+.sass-cache/*
