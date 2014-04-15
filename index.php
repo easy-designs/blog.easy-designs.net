@@ -67,7 +67,7 @@ date_default_timezone_set('America/New_York');
  * Enable it only if you have a good reason to.
  * 
  */
-	$debug = 1;
+	$debug = 0;
 
 /*
  * --------------------------------------------------------------------
