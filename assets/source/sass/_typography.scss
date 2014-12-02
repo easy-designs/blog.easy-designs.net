@@ -458,6 +458,9 @@ ul.inline li {
 #search-form label {
 	font-weight: normal;
 }
+#search-form input {
+    min-height: 25px;
+}
 #search-form button {
 	font-size: 0.92307692em;
 	padding: 4px 3px 2px;
