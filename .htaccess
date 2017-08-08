@@ -15,11 +15,11 @@ RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
 
 # remove www
 RewriteCond %{HTTP_HOST} ^www\.easy-reader\.net$ [NC]
-RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
+RewriteRule ^(.*)$ https://blog.easy-designs.net/$1 [R=301,L]
 
 # remove the port
 RewriteCond %{HTTP_HOST} 8080$ [NC]
-RewriteRule ^(.*)$ http://blog.easy-designs.net/$1 [R=301,L]
+RewriteRule ^(.*)$ https://blog.easy-designs.net/$1 [R=301,L]
 
 # drop ridiculous query strings
 #RewriteCond %{QUERY_STRING} !=""
