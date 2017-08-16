@@ -94,7 +94,7 @@ jQuery.getScripts = function(scripts, onComplete)
 			}
 
 			// Typekit
-			$.getScript('http://use.typekit.com/tjo5hgd.js',function(){
+			$.getScript('https://use.typekit.com/tjo5hgd.js',function(){
 				try {Typekit.load();} catch( e ) {}});
 
 			$("[data-append],[data-replace],[data-after],[data-before]")
