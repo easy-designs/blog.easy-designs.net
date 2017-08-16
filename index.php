@@ -44,7 +44,7 @@ date_default_timezone_set('America/New_York');
  $assign_to_config['site_name']  = 'easy-reader'; 
  $assign_to_config['protect_javascript'] = 'n';
  //  $assign_to_config['cp_url'] = 'http://domain2.com/admin.php'; 
- //  $assign_to_config['site_url'] = 'http://domain2.com'; 
+ $assign_to_config['site_url'] = 'https://blog.easy-designs.net'; 
 
 
 /*
