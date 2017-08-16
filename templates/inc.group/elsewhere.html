@@ -6,17 +6,17 @@
             <section id="software">
                 <h2>We made this</h2>
                 <h3 class="figure featured">
-                    <a href="http://adaptivewebdesign.info">
+                    <a href="//adaptivewebdesign.info">
                         <img title="Adaptive Web Design" src="{cdn}/general/adaptive-web-design-promo.png" alt="" />
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
-                <p>“<a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style.” — Jeremy Keith</p>
+                <p>“<a href="//adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style.” — Jeremy Keith</p>
             </section>
             <section id="code-and-creativity">
             	<h2>Code &amp; Creativity</h2>
             	<h3 class="figure featured">
-            		<a href="http://codeandcreativity.com">
+            		<a href="//codeandcreativity.com">
             			<img title="Code &amp; Creativity" src="{cdn}/general/code-&-creativity.jpg" alt="" />
             			<b class="frame"><b></b></b>
             		</a>
@@ -35,7 +35,7 @@
 					}
 					<div class="vevent">
 					{if status=="open"}
-						<a href="http://codeandcreativity.com/events/{url_title}/">
+						<a href="//codeandcreativity.com/events/{url_title}/">
 					{/if}
 						<p>
 							<time class="dtstart" datetime="{event_start_time format='%Y-%m-%d'}">
@@ -55,23 +55,23 @@
 <!--            <section id="retreats">
                 <h2>You made this</h2>
                 <h3 class="figure featured">
-                    <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">
+                    <a href="//easy-readers.net/contests/i-love-adaptive-web-design/">
                         <img title="The I ♥	Adaptive Web Design Poster Contest" src="{cdn}/general/i-love-awd-contest.jpg" alt="" />
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
-                <p>We partnered with <a href="http://veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="http://easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a>. We gave away great prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab and collected several hundred dollars for charities around the world.</p>
+                <p>We partnered with <a href="//veerle.duoh.com">Veerle Pieters</a> to bring you an awesome contest: <a href="//easy-readers.net/contests/i-love-adaptive-web-design/">Design a beautiful poster celebrating adaptive web design</a>. We gave away great prizes from Adobe, Microsoft, ExpressionEngine, <cite>.net Magazine</cite>, Field Notes, WonderPress, Tattly, MOO, and Fab and collected several hundred dollars for charities around the world.</p>
             </section> -->
 
             {!--<section id="retreats">
                 <h2>Learn with us</h2>
                 <h3 class="figure featured">
-                    <a href="http://retreats4geeks.com/">
+                    <a href="//retreats4geeks.com/">
                         <img title="Retreats 4 Geeks" src="{cdn}/general/r4g-logo.png" alt="" />
                         <b class="frame"><b></b></b>
                     </a>
                 </h3>
-                <p>Created as the antidote for generic and outdated web courses, <a href="http://retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
+                <p>Created as the antidote for generic and outdated web courses, <a href="//retreats4geeks.com/">Retreats 4 Geeks</a> is an on-going workshop series that focuses on training professionals in web standards and best practices to enhance their existing knowledge and improve their professional skills.</p>
             </section>--}
 <?php
 
@@ -131,7 +131,7 @@ $block = $future ? '366' : '367';
 {exp:channel:entries site="easy-designs" channel="publications" dynamic="off" rdf="off"
                     orderby="entry_date" sort="DESC" limit="1"
                     disable="category_fields|member_data|pagination|trackbacks"}
-          <h3><a rel="bookmark permalink" href="http://easy-designs.net/portfolio/publications/{categories}{category_url_title}s{/categories}/{url_title}/">{title}</a></h3>
+          <h3><a rel="bookmark permalink" href="//easy-designs.net/portfolio/publications/{categories}{category_url_title}s{/categories}/{url_title}/">{title}</a></h3>
           <p class="meta">by {pub_authors}</p>
 					{pub_excerpt}
 {/exp:channel:entries}
@@ -144,9 +144,9 @@ $block = $future ? '366' : '367';
                     disable="categories|category_fields|member_data|pagination|trackbacks"}
           <h3 class="figure featured">
   					{related_entries id="image_project"}
-            <a href="http://easy-designs.net/portfolio/projects/{url_title}/">
+            <a href="//easy-designs.net/portfolio/projects/{url_title}/">
   					{/related_entries}
-  		  			<img src="http://images.easy-designs.net/projects/{image_file}-md.png" alt="{image_title}" />
+  		  			<img src="//images.easy-designs.net/projects/{image_file}-md.png" alt="{image_title}" />
   		  			<b class="frame"><b></b></b>
   						{related_entries id="image_project"}
               {exp:typogrify}{title}{/exp:typogrify}
@@ -167,8 +167,8 @@ $block = $future ? '366' : '367';
 										orderby="entry_date" sort="desc" limit="3" parse="inward"
 										disable="categories|category_fields|member_data|pagination|trackbacks"}
             <li>
-              <h3>{related_entries id='presentation_event'}<a href="http://easy-designs.net/portfolio/education/{url_title}/">{/related_entries}{title}</a></h3>
-							<p class="meta">Presented by {presentation_by} at {related_entries id='presentation_event'}<a href="http://easy-designs.net/portfolio/education/{url_title}/">{event_series}</a> in <span class="location">{event_location}</span>{/related_entries}</p>
+              <h3>{related_entries id='presentation_event'}<a href="//easy-designs.net/portfolio/education/{url_title}/">{/related_entries}{title}</a></h3>
+							<p class="meta">Presented by {presentation_by} at {related_entries id='presentation_event'}<a href="//easy-designs.net/portfolio/education/{url_title}/">{event_series}</a> in <span class="location">{event_location}</span>{/related_entries}</p>
             </li>
 {/exp:channel:entries}
           </ul>
