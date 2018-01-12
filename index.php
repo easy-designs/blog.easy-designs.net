@@ -46,6 +46,10 @@ date_default_timezone_set('America/New_York');
  //  $assign_to_config['cp_url'] = 'http://domain2.com/admin.php'; 
  $assign_to_config['site_url'] = 'https://blog.easy-designs.net'; 
 
+ $assign_to_config['easy_cloudinary'] = array(
+		'cloud_name' => 'aarongustafson',
+		'template' => '<img src="https://res.cloudinary.com/{cloud_name}/image/fetch/f_auto,q_auto/{image_url}" {attributes}>'
+ );
 
 /*
  * --------------------------------------------------------------------
