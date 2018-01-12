@@ -79,7 +79,9 @@
 						{exp:typogrify}
 							{exp:low_replace find="<p><div|</div></p>" replace="<div|</div>" multiple="yes"}
 								{exp:allow_eecode embed="y"}
-									{entry_body}
+									{exp:easy_cloudinary}
+										{entry_body}
+									{/exp:easy_cloudinary}
 								{/exp:allow_eecode}
 							{/exp:low_replace}
 						{/exp:typogrify}
