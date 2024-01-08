@@ -1,12 +1,12 @@
 
 /*------------------------------------------------------------------------------
-Function:			 FunctionHandler()
-Author:				 Aaron Gustafson (aaron at easy-designs dot net)
+Function:				FunctionHandler()
+Author:					Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:	2009-04-02
 Version:				0.2
-Homepage:			 http://github.com/easy-designs/FunctionHandler.js
+Homepage:				http://github.com/easy-designs/FunctionHandler.js
 License:				MIT License (see homepage)
-Note:					 If you change or improve on this script, please let us know by
+Note:						If you change or improve on this script, please let us know by
 								emailing the author (above) with a link to your demo page.
 ------------------------------------------------------------------------------*/
 (function($){var FunctionHandler={version:"0.2"},pages={};function initialize(){var body_id=$("body").attr("id");if(body_id!=false&&typeof(pages[body_id])!="undefined"){run(pages[body_id])}if(typeof(pages["*"])!="undefined"){run(pages["*"])}}$(document).ready(initialize);FunctionHandler.register=function(id,callback){if((typeof(id)!="string"&&!(id instanceof Array))||typeof(callback)!="function"){return false}if(typeof(id)=="string"&&id.indexOf(", ")!=-1){id=id.split(", ")}if(id instanceof Array){for(var i=id.length-1;i>=0;i--){add(id[i],callback)}}else{add(id,callback)}return true};function add(id,callback){if(typeof(pages[id])=="undefined"){pages[id]=[]}pages[id].push(callback)}function run(arr){if(!(arr instanceof Array)){return}for(var i=arr.length-1;i>=0;i--){arr[i]()}}window.FunctionHandler=FunctionHandler})(jQuery);
@@ -84,7 +84,7 @@ jQuery.getScripts = function(scripts, onComplete)
 			// for iOS (remove the toolbar)
 			if ( WIN.location.hash == '' )
 			{
-	  			WIN.scrollTo(0, 1);
+					WIN.scrollTo(0, 1);
 			}
 
 			/*! Make labels clickable in touch (looking at you iOS) */
@@ -109,27 +109,27 @@ jQuery.getScripts = function(scripts, onComplete)
 			function getMQ()
 			{
 				var computed = window.getComputedStyle;
-			    if ( document.documentElement.currentStyle )
-			    {
+					if ( document.documentElement.currentStyle )
+					{
 					getMQ = function()
 					{
 						return document.documentElement.currentStyle["fontFamily"];
 					};
-			    }
-			    else if ( computed )
-			    {
+					}
+					else if ( computed )
+					{
 					getMQ = function()
 					{
 						return window.getComputedStyle(document.body,':after').getPropertyValue('content').replace(/"/g,'');;
 					};
-			    }
-			    else
-			    {
+					}
+					else
+					{
 					getMQ = function()
 					{
 						return '';
 					};
-			    }
+					}
 				return getMQ();
 			}
 			
