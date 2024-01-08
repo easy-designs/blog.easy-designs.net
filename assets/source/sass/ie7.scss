@@ -1,0 +1,74 @@
+body > header, #main, #elsewhere {
+  background: rgb(224, 251, 253);
+}
+
+#search-form button {
+  font-weight: 700;
+  padding: 3px 7px;
+}
+
+#main .creds {
+  list-style: none;
+  list-style-image: none;
+}
+
+#main .sidebar h3, #main .sidebar h2 {
+  clear: left;
+}
+
+#archive .sidebar .vcard a img {
+  z-index: 2;
+}
+
+#home .hfeed {
+  display: static;
+  margin-bottom: -20px;
+  margin-left: 0;
+}
+
+#home .hentry {
+  background: #fff;
+  display: static;
+  float: left;
+  min-height: 450px;
+  margin: 0 20px -20px 0;
+  padding-bottom: 0;
+  width: 290px;
+  &#potpourri {
+	  margin-right:0;
+  }
+}
+
+#home .hentry h3 a {
+  padding-top: 92px;
+}
+
+#archive .hentry {
+  background: #fff;
+  overflow: hidden;
+}
+
+#archive .hentry article {
+  clear: both;
+  display: block;
+}
+
+#archive .hentry .meta, #archive .hentry .body {
+  float: left;
+}
+
+#archive .hentry .meta {
+  list-style-image: none;
+}
+
+#comments .entry-content {
+  margin-right: 18px;
+  margin-bottom: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+#easy-network {
+	margin-left:-30em;
+}

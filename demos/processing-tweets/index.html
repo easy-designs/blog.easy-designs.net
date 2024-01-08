@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Processing Tweets</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="David Stewart">
+	<!-- Date: 2010-02-17 -->
+	
+	<script src="jquery-1.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="processing.js" type="text/javascript" charset="utf-8"></script>
+	<script src="TweetController.js" type="text/javascript" charset="utf-8"></script>
+
+	<style type="text/css">
+		body { margin: 0px; font-family: arial,verdana,helvetica; color: #fff; background: #333; }
+		.avatar { position:fixed; top:800px; left:0px; visibility:hidden; }
+		#canvas2 { position:fixed; top:560px; left:0px; }
+		img { width: 50px; height:50px; }
+    </style>
+	
+	<script type="text/javascript" charset="utf-8">
+		var searchTerm = 'Oil Spill';
+		var searchTermContext = new Array('disaster','environment','coast','shore','fish','government','dispersant','shares','failure','obama','media','hurricane','landfall','worst','anger','frustration','cleanup','fines','cost');
+		
+		
+		window.Processing.data = {};
+		window.Processing.data.updateVars = false;
+		window.Processing.data.col = {};
+		window.Processing.data.curveScale = 0;
+		window.Processing.data.max = 0;
+		/*
+		var stl = searchTermContext.length;
+		window.Processing.data.stl = searchTermContext.length;
+		window.Processing.data.searchTerm = searchTerm;
+		window.Processing.data.searchTermContext = searchTermContext;
+		window.Processing.data.update = false;
+		*/
+	</script>
+	
+</head>
+
+<body>
+	<!--
+	<form id="updateForm" action="" method="get" style="width:auto!important;text-align:center;">
+	Search Term: <input name="searchTerm" type="text" value="">
+	Sub-search Terms: <input name="searchTermContext" type="text" value="">
+	<input type="submit" value="Search Twitter" />
+	</form>
+	
+	<script type="text/javascript">
+	$('#updateForm').submit(function(){
+		searchTerm = $(this).children('input[name=searchTerm]').val();
+		var stc = $(this).children('name=searchTermContext').val();
+		searchTermContext = stc.split(",");
+		window.Processing.data.stl = searchTermContext.length;
+		window.Processing.data.searchTerm = searchTerm;
+		window.Processing.data.searchTermContext = searchTermContext;
+		window.Processing.data.update = true;
+		return false;
+	})
+    </script>
+	 -->
+<canvas id="canvas1"></canvas>    
+	<script type='text/javascript'> $(document).ready(function(){ 
+		$.ajax({type: "GET", url: "visualizer.js", 
+		async: false, cache: false, success: function(script){ Processing($('canvas#canvas1').get(0), 
+		script);}});});
+	</script>                  
+
+	<canvas id="canvas2" width="320" height="240"></canvas>    
+	<script type='text/javascript'> $(document).ready(function(){ 
+		$.ajax({type: "GET", url: "audio.js", 
+		async: false, cache: false, success: function(script){ Processing($('canvas#canvas2').get(0), 
+		script);}});});
+	</script>
+	
+	<div id='avatar' class='avatar'><img src="#" id="pic"></div>
+	<audio id="audio"></audio>
+</body>
+</html>

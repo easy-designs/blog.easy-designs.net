@@ -1,0 +1,411 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>PNG color oddities in IE - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/png-color-oddities-in-ie/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="PNG color oddities in IE" />
+	<meta property="description" content="While working on a new site, I started playing around a little more with 8-bit PNG files, comparing them to GIFs." />
+	<meta property="og:description" itemprop="description" content="While working on a new site, I started playing around a little more with 8-bit PNG files, comparing them to GIFs." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/png-color-oddities-in-ie/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title"><span class="caps">PNG</span> color oddities in <span class="caps">IE</span></h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2006-02-18T12:21:21" pubdate="pudate">18 February 2006</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>While working on a new site, I started playing around a little more with 8-bit <abbr title="Portable Network Graphics"><span class="caps">PNG</span></abbr> files, comparing them to GIFs. In a few cases the <abbr title="Portable Network Graphics"><span class="caps">PNG</span></abbr> was smaller (it didn&rsquo;t used to be that way, but perhaps Photoshop <span class="caps">CS</span>2 does a better job of compressing <abbr title="Portable Network Graphics"><span class="caps">PNG</span></abbr> files or something), so used it. All was good until I started testing the design in <abbr title="Internet Explorer"><span class="caps">IE</span></abbr>, where the colors were all off. Here&rsquo;s a breakdown of how the same graphic (placed as a <abbr title="Cascading Style Sheets"><span class="caps">CSS</span></abbr> background image against a background color equal to its own background color) rendered between the two browsers: <img src="/img/posts/png_compare.png" alt="PNG comparison between Firefox 1.5 and Internet Explorer 6/7B2" style="margin: 1em auto 0pt; display: block; width: 400px;" /></p>
+<p>I am well-aware of the issues regarding <abbr title="Internet Explorer"><span class="caps">IE</span></abbr>&rsquo;s handling of alpha transparency in 24-bit PNGs, but had not heard of any color-related issues with 8-bit PNGs in <abbr title="Internet Explorer 6"><span class="caps">IE</span>6</abbr>. I did a test in <abbr title="Internet Explorer 7 Beta 2"><span class="caps">IE</span>7B2</abbr> to see if the error was there too and it&nbsp;was.</p>
+<p>I did some searching on Google and couldn&rsquo;t seem to find any documentation on this bug, but it&rsquo;s certainly something I&rsquo;d recommend they fix for the final release of <abbr title="Internet Explorer 7"><span class="caps">IE</span>7</abbr>. For now, however, the only solutions appear to be adding color-correction to your <abbr title="Cascading Style Sheets"><span class="caps">CSS</span></abbr> for <abbr title="Internet Explorer"><span class="caps">IE</span></abbr> (if you are dead-set on using an 8-bit <abbr title="Portable Network Graphics"><span class="caps">PNG</span></abbr>) or using a <span class="caps">GIF.</span></p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F&amp;source=tweetbutton&amp;text=PNG+color+oddities+in+IE&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fpng-color-oddities-in-ie%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-184">
+						<article class="entry-content">
+							<p>Using PNGs is actually very problematic due to inconsistent gamma&nbsp;correction.</p>
+
+<p><a href="http://hsivonen.iki.fi/png-gamma/rel=nofollow">http://hsivonen.iki.fi/png-gamma/</a></p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.andybudd.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/956d39c237e759a949d5e514c83a326d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Andy Budd</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2006-02-26T15:46:00" pubdate="pudate">26 February 2006 at 3pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-184">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-185">
+						<article class="entry-content">
+							<p>Thanks for the heads-up Andy, that makes perfect sense. Dually&nbsp;noted.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://easy-designs.net">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2006-02-27T04:29:00" pubdate="pudate">27 February 2006 at 4am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-185">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-186">
+						<article class="entry-content">
+							<p>I noticed this long time ago and switched to creating .gifs for <span class="caps">IE.</span> Then Safari came and started doing the same stuff with <span class="caps">PNG</span> and that was rather disheartening. A real&nbsp;shame.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://aplus.co.yu/">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/956d39c237e759a949d5e514c83a326d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aleksandar</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2006-03-08T05:22:00" pubdate="pudate">08 March 2006 at 5am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-186">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-187">
+						<article class="entry-content">
+							<p><span class="caps">PNG</span> is always getting slated. It’s about time the superior format made formal it’s plans for World&nbsp;Domination!</p>
+
+<p>I noticed this effect comparing <span class="caps">IE</span>/firefox and thought at first I was going mad&#8230;i’m <span class="caps">SURE</span> i got the old colour-picker to that graphic and made the background the same&nbsp;colour&#8230;</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/956d39c237e759a949d5e514c83a326d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Mike</span>
+									</li>
+							<li><time class="published" datetime="2006-03-20T03:05:00" pubdate="pudate">20 March 2006 at 3am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-187">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-188">
+						<article class="entry-content">
+							<p>There is a fix for the <span class="caps">PNG</span> problem, but it’s not a long term fix. Read <strong><a href="http://www.w3.org/Graphics/PNG/platform.html%22rel=%22nofollow" rel="nofollow" title="PNG Gamma Correction Explained">http://www.w3.org/Graphics/<span class="caps">PNG</span>/platform.html</a></strong><br />
+(Please read that link before reading the rest of my&nbsp;message)</p>
+
+<p>Now, that’s pretty cool isn’t it? Well that is also where the problem lies when viewing <span class="caps">PNG</span> images in <span class="caps">IE.</span> This problem has long been blamed on Photoshop giving <span class="caps">PNG</span> images an incorrect gAMA chunk, but the problem only existed with Photoshop 5 and Photoshop 5.5. In other words, Photoshop no longer has this&nbsp;bug.</p>
+
+<p>You see, <span class="caps">IE</span> doesn’t use a correct gamut setting, thus <span class="caps">PNG</span> images will appear darker; and back when Photoshop 5.0 and 5.5 gave incorrect gAMA chunks to <span class="caps">PNG</span> images it only aggravated the problem further. But since Adobe fixed the <span class="caps">PNG</span> gAMA chunk problem in Photoshop 6.0+, the current problem lies entirely with <span class="caps">IE.</span> But there is a way to do a short term fix for&nbsp;it.</p>
+
+<p>There’s several <span class="caps">PNG</span> tools out there, but I use one called TweakPNG.<br />
+<strong><a href="http://entropymine.com/jason/tweakpng/rel=nofollow">http://entropymine.com/jason/tweakpng/</a></strong></p>
+
+<p>To fix the gAMA problem simply remove the gAMA chunk altogether. Now <span class="caps">PNG</span> images will be displayed correctly in <span class="caps">IE</span> and still work in <span class="caps">FF</span>, <span class="caps">NS</span>, O, etc. Yet you can still take advantage of <span class="caps">PNG</span> alpha transparency and the smaller file sizes. Also consider removing cHRM, iCCP, and pHYs since they aren’t needed to display a <span class="caps">PNG</span> in a web browser either, and will make the final file size even&nbsp;smaller.</p>
+
+<p>However, there is one major drawback. You can no longer take advantage of gAMA (well, duh). This means that if you made your design on a <span class="caps">PC</span>, it will look much brighter on a Mac, and if you made your design on a Mac, it will look much darker on a <span class="caps">PC.</span> Therefore it will act the same as a <span class="caps">GIF</span> or <span class="caps">JPEG</span> would, except you can still take advantage of Alpha Transparency and such. So just like a <span class="caps">GIF</span> made on a Mac will look darker on a <span class="caps">PC</span>, and a <span class="caps">GIF</span> made on a <span class="caps">PC</span> will look brighter on a Mac, thus <span class="caps">PNG</span> will now once again do the&nbsp;same.</p>
+
+<p>It’s a no-win situation really. You could keep the gAMA chunk and just use <span class="caps">CSS</span> to put a 1*1px <span class="caps">PNG</span> image for your page and content backgrounds; that way your <span class="caps">PNG</span> images won’t look out of place in <span class="caps">IE</span> and still work on <span class="caps">FF</span>, <span class="caps">NS</span>, and <span class="caps">O.</span> But the problem is, of course, now your entire page will look slightly darker in <span class="caps">IE</span> then in <span class="caps">FF</span>, <span class="caps">NS</span>, or <span class="caps">O.</span> But at least it would all be in unison. If you do this you also don’t have to worry about your design looking too bright on a Mac if you designed it on a <span class="caps">PC</span>, or looking to dark on a <span class="caps">PC</span> if you designed it on a&nbsp;Mac.</p>
+
+<p>Or, like I mentioned earlier, you could simply remove the gAMA chunk to make everything unison in all browsers again, except now, just like when you use <span class="caps">GIF</span> or <span class="caps">JPEG</span>, everything will look brighter on a Mac if you designed it on a <span class="caps">PC</span>, and darker on a <span class="caps">PC</span> if you designed it on a Mac. gAMA is one of the coolest features about <span class="caps">PNG</span> images so it’s a shame that it needs to be removed in order for a <span class="caps">PNG</span> to be displayed properly without using 1*1px PNGs for backgrounds and&nbsp;such.</p>
+
+<p>My personal preference is to remove the gAMA chunk since most people that will view my websites use PCs (and therefore I don’t have to worry much about Mac users seeing something a lot brighter). There is talk that the final version of <span class="caps">IE</span>7 that will be shipped with Windows Vista will have the gAMA bug fixed (and therefore the whole <span class="caps">PNG</span> problem will be over once and for all since <span class="caps">IE</span>7 finally supports Alpha Transparency). But as of yet the beta version of <span class="caps">IE</span>7 doesn’t have the gAMA problem fixed, so I guess we’ll just have to&nbsp;see.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/956d39c237e759a949d5e514c83a326d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Heri</span>
+									</li>
+							<li><time class="published" datetime="2006-06-20T09:39:00" pubdate="pudate">20 June 2006 at 9am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-188">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-189">
+						<article class="entry-content">
+							<p>Thanks for the extra details&nbsp;Heri.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://easy-designs.net">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2006-06-25T11:25:00" pubdate="pudate">25 June 2006 at 11am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/png-color-oddities-in-ie/#comment-189">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/leap/index.html">Previous Entry: <em>Leap.</em></a></li>
+							<li class="next"><a href="/archives/further-adventures-in-indifference/index.html">Next Entry: <em>Further adventures in indifference</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

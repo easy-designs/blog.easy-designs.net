@@ -1,0 +1,278 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>HTML Canvas &amp; Processing.js - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/html-canvas-processing.js/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="HTML Canvas &amp; Processing.js" />
+	<meta property="description" content="I&nbsp;have been experimenting with the new HTML5 canvas element and trying to get up to speed on the syntax." />
+	<meta property="og:description" itemprop="description" content="I&nbsp;have been experimenting with the new HTML5 canvas element and trying to get up to speed on the syntax." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/html-canvas-processing.js/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="../../index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="../../favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="../../rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title"><span class="caps">HTML</span> Canvas <span class="amp">&amp;</span>&nbsp;Processing.js</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/dave-stewart/index.html">Dave Stewart</a> on 
+					    <time class="published updated" datetime="2010-01-03T11:54:33" pubdate="pudate">03 January 2010</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>I&nbsp;have been experimenting with the new <span class="caps">HTML</span>5 <a href="https://developer.mozilla.org/en/Canvas_tutorial"><code class="html">canvas</code> element</a> and trying to get up to speed on the syntax. As a seasoned ActionScript developer, I find JavaScript easy to understand, but difficult to write. I find myself thinking Flash and trying to work a Flash approach. Anyhow, I have tried <code class="html">canvas</code> with raw JavaScript and <code class="html">canvas</code> with <a href="http://raphaeljs.com/">Raphael</a> and now <code class="html">canvas</code> with <a href="http://processingjs.org/">Processing.js</a>.</p>
+<p>They all have advantages and drawbacks. Processing.js is giving me the most fun for now and I can&rsquo;t wait till they finish implementing the entire set of methods, or at least what&rsquo;s left that can be implemented into <code class="html">canvas</code>.</p>
+<p>I have read some eager articles saying that <code class="html">canvas</code> will be the end of Flash. That may be true at some point in the future, but I can tell ya right now it&rsquo;s not even close. With no dedicated <span class="caps">VM</span>, it craps out if you try anything with a couple hundred worthy sprites on screen. Also, objects are painted onto the <code class="html">canvas</code> and no longer exist as objects you can have a pointer to. You basically have to paint the the <code class="html">canvas</code> each time with your updates. For example, Processing uses <code class="js">pushMatrix()</code> and <code class="js">popMatrix()</code> to store and restore stage translations. This is pissing me off and I am still trying to get my head around it. I just want to move stuff around. On the other hand, when you paint, you can have an infinite amount of detail without worrying about overhead, like when you pipe movieclips into Bitmap object in&nbsp;Flash.</p>
+<p>It&rsquo;s all good though and a step in the right direction as far as I am concerned. No plugins, no 3rd party expensive <span class="caps">IDE</span>&rsquo;s etc. It&rsquo;s all free range and organic,&nbsp;yay.</p>
+<p>As with all things animation and drawing, I like to start off with basic math and growing plants, trees, etc. Processing has no real shading, 3d or drop shadowing built in right now and it&rsquo;s kind of refreshing going back to the old way of thinking where you have to fake it&nbsp;all.</p>
+<p>Here is <a href="../../demos/processing-plants/index.html">a demo of the alien plant thing I am writing</a>. It takes about 20 mins to draw the entire 360&deg; view. The depth and dimension is all fake like I said, drawing all the highlights, shadows etc in separate passes with slight&nbsp;offsets.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F&amp;source=tweetbutton&amp;text=HTML+Canvas+&amp;+Processing.js&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fhtml-canvas-processing.js%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/dave-stewart.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Dave Stewart</h2>
+					<p>Over the years, Dave has done work on both the server and client side, but his passion remains animation.</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/dave-stewart/index.html">See all of Dave Stewart&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/dave-stewart.rss">Subscribe to Dave Stewart&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/animation/index.html">animation</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/flash-actionscript/index.html">Flash & ActionScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/projects-and-products/index.html">projects & products</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+			
+		    		    		
+	
+			<ul id="pagination">
+					<li class="prev"><a href="../charter-for-compassion/index.html">Previous Entry: <em>Charter For Compassion</em></a></li>
+							<li class="next"><a href="../logarithmic-spirals/index.html">Next Entry: <em>Logarithmic Spirals</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="../../rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="../index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<form id="search-form" method="post" action="../../index.html"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="YTo5OntzOjY6InN0YXR1cyI7czoxMDoibm90IGNsb3NlZCI7czo3OiJjaGFubmVsIjtzOjQ6ImJsb2ciO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjtzOjk6InNlYXJjaF9pbiI7czoxMDoiZXZlcnl3aGVyZSI7czo1OiJ3aGVyZSI7czozOiJhbnkiO3M6MTI6InNob3dfZXhwaXJlZCI7czozOiJ5ZXMiO3M6MTk6InNob3dfZnV0dXJlX2VudHJpZXMiO3M6MzoieWVzIjtzOjExOiJyZXN1bHRfcGFnZSI7czoxMjoic2VhcmNoL2luZGV4IjtzOjE1OiJub19yZXN1bHRzX3BhZ2UiO3M6MTc6InNlYXJjaC9uby1yZXN1bHRzIjt9ZjIzYjUzODQ0NzJhMDY3MGJkZTc2MGY5YzZiM2M2OTA=" />
+<input type="hidden" name="site_id" value="2" />
+<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
+</div>
+
+
+<p>
+	<label for="search">Search for</label>
+	<input type="search" id="search" name="keywords" value="&quot;Web Design in a&quot; xylophone" />
+	<button type="submit" value="search">Search</button>
+</p>
+</form>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

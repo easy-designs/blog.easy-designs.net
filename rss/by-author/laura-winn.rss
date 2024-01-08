@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	
+	
+	<channel>
+		<title>The Easy Designs Blog: Posts by Laura Winn</title>
+		<link>https://blog.easy-designs.net/archives/by-author/laura-winn/</link>
+		<dc:language>en</dc:language>
+		<description></description>
+		<dc:rights>(c) Copyright 2005–2023 Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>Easy! Designs, LLC</dc:creator>
+		<dc:date>2013-09-16</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="http://blog.easy-designs.net/rss/by-author/laura-winn.rss" rel="self" type="application/rss+xml"/>
+	
+		<item>
+			<title>Genius Design: Users are Humans, Too</title>
+			<author>laura@easy-designs.net (Laura Winn)</author>
+			<description><![CDATA[
+				<div>
+<p>Attending Web Directions&nbsp;<span class="caps"><span class="caps">USA</span></span>&nbsp;in Atlanta gave me a healthy dose of the open web, from <span class="caps">IA</span> to data organization to <span class="caps">HTML</span>5 <span class="amp">&amp;</span> <span class="caps">CSS</span>3, but what struck me the most were presentations about interface design&nbsp;strategies.</p>
+<p>Think about your favorite sites. What do you like most about them and why do you return to them? Are they beautiful? Effectively organized? Task-oriented?&nbsp;Engaging?</p>
+<p>I&rsquo;d heard many positive things about Aarron Walter&rsquo;s &ldquo;Learning to Love Humans&rdquo; presentation and I was glad to hear him speak in person. I&rsquo;ve already applied the insight I gained from his talk to my own work.&nbsp;Aarron notes that &ldquo;the idea that a product should be usable is like a chef aiming to make food edible.&rdquo; Generally, it&rsquo;s not a matter of &ldquo;if&rdquo; something is &ldquo;usable,&rdquo; but rather, the quality of that experience. Practicing emotional engagement is similar to using progressive enhancement to layer on technologies when building websites; everyone should get the basic experience when using a website, beyond that is where the rich experience is&nbsp;created.</p>
+<p>You&rsquo;ll often hear a person say that users are lazy. This isn&rsquo;t necessarily true. As humans, we often seek the path of least resistance, thus we should design for it. In the same light, there is emotional power in discovery. People are more satisfied with the opportunity to be surprised by relevant content than being hit over the head with it. Let interface design feel natural, like a conversation. If you had a story to tell in a conversation, would you rudely interrupt a person&rsquo;s sentence, or wait for the right time to tell&nbsp;them?</p>
+<p>I drew similar inspiration from a presentation by Ryan Freitas of Second Verse. Ryan gave an overview of balancing data-driven and &ldquo;genius&rdquo; design. To achieve this balance requires a process: the sum of intuition, heuristics, and data. Intuitive design is unexpected, elegant and compelling. Genius design is at once good and&nbsp;different.</p>
+<p>Building upon intuition, heuristics is defined as experience-based techniques for problem-solving, learning and discovery. Examples of these techniques are an educated guess, an intuitive judgment, or common sense. This is where data comes into play. Data can free us from making whimsical design decisions and hammering out the needs of the user without real facts. Gathering applicable data allows the designer to remove risk or guess-work in&nbsp;design.</p>
+<p>Consider your favorite sites again. Do you think they follow this process? How can we use these ideas to enhance our own design processes? Remember that users are humans, and humans love to be rewarded by experiences. Don&rsquo;t design in the dark: do your homework and know what your users want. Use data to support your design decisions, and work to deliver engaging experiences that delight&nbsp;users.</p>
+</div>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1337154108&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgenius-design-users-are-humans-too%2F&utmp=%2Frss%2Fby-author%2Flaura-winn.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/genius-design-users-are-humans-too/</link>
+			<guid>https://blog.easy-designs.net/archives/genius-design-users-are-humans-too/</guid>
+			<dc:date>2010-10-11T20:09:47-04:00</dc:date>
+		</item>
+	
+	</channel>
+</rss>

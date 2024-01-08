@@ -1,0 +1,380 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>The Challenges and Freedoms of Creating a Chrome App - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/the-challenges-and-freedoms-of-creating-a-chrome-app/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@dryan">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Challenges and Freedoms of Creating a Chrome App" />
+	<meta property="description" content="As Aaron mention last week, we recently developed a Chrome App for wikiHow.com; in reality though we built a modern web app that leveraged many features of HTML5 and CSS3." />
+	<meta property="og:description" itemprop="description" content="As Aaron mention last week, we recently developed a Chrome App for wikiHow.com; in reality though we built a modern web app that leveraged many features of HTML5 and CSS3." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/the-challenges-and-freedoms-of-creating-a-chrome-app/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">The Challenges and Freedoms of Creating a Chrome&nbsp;App</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/daniel-ryan/index.html">Daniel Ryan</a> on 
+					    <time class="published updated" datetime="2010-12-15T16:07:00" pubdate="pudate">15 December 2010</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>
+	As <a href="/archives/we-built-a-chrome-app/index.html" title="Read 'We Built a Chrome App'">Aaron mention last week</a>, we recently developed a Chrome App for <a href="http://wikihow.com/">wikiHow.com</a> (<a href="https://chrome.google.com/webstore/detail/ickaeddjnhfofihhibhnjemlphjmnchl">Chrome Web Store</a> or <a href="http://apps.wikihow.com/survivalkit">directly</a>). In reality though (with one small exception) we built a modern web app that leveraged many features of <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3; the exception was offline mode, but more on that shortly. As Engadget put it, <a href="http://www.engadget.com/2010/12/10/chrome-web-store-html5-and-the-ipad-symbiosis-at-its-best/">Chrome apps have a lot in common with iPad apps</a>. While many blogs have questioned the need for such a store, what is clear is that modern browsers allow developers to brake the mold of traditional websites both in terms of design and client-side&nbsp;implementation.</p>
+<figure>
+	</figure>
+<h2>
+	Designing Outside the&nbsp;Box(es)</h2>
+<p>
+	Websites are mostly, for all intents and purposes, collections of rectangles. For the wikiHow app, our design took cues from the real world, combining decks of playing cards with newspaper-esque broadsheets. To give the cards the appearance of being dealt, we used <span class="caps"><span class="caps">CSS</span></span> transitions. In fact, the first prototype we built used no JavaScript at all, but instead relied on <code>:target</code> selectors to trigger the animations and state changes. Unfortunately, however, the complexity of the application became a bit more than that implementation could&nbsp;handle.</p>
+<p>
+	The visual indication for changing from deck-to-deck was a card flip, much like the one <a href="http://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Transitions/Transitions.html">Apple demonstrates</a>. It didn&rsquo;t take long, however, to figure out that the simple markup used there wasn&rsquo;t going to work for&nbsp;us.</p>
+<p>
+	In the demo the card is made of a single &ldquo;card&rdquo; element containing two &ldquo;face&rdquo; elements: one for the front, one for the back. With a bit of <span class="caps"><span class="caps">CSS</span></span> to style the rotation and a JavaScript handler to trigger a <code>class</code> change, the card flips over to reveal its &ldquo;back&rdquo;. For us, this markup requirement was not going to work: the front face of the card was going to be in one deck and the back face would be in&nbsp;another.</p>
+<p>
+	The solution was to place both elements at the same point on the screen, with the back face pre-rotated, then rotate them both at the same time. Well, at least that&rsquo;s the solution in browsers that support 3D transforms; at the time, and still at the time of this writing, Chrome wasn&rsquo;t in that list. In 2D-only browsers, the <code>-webkit-backface-visibility</code> property used in the demo has no effect, leaving the rotated card showing it&rsquo;s supposed-to-be-hidden face visible but&nbsp;mirrored.</p>
+<p>
+	Borrowing some inspiration from <a href="http://modernizr.com">modernizr.js</a>, we detected if the browser supported 3D transforms or not and added a <code>class</code> to the <code>body</code> so we could have two sets of <span class="caps"><span class="caps">CSS</span></span> (<a href="https://gist.github.com/738720">grab the code over at Github</a>). In 2D browsers, instead of rotating both elements 180&deg;, we rotate the front face 90&deg; then rotate the back face from -90&deg; to 0&deg;. This meant adding a <code>-webkit-transition-delay</code> property on the animation for <code>-webkit-transform</code>, but only when the face is about to be revealed, and not when it needs to be hidden. It got really complex quickly (<a href="https://gist.github.com/738725">this is just the relevant <span class="caps"><span class="caps">CSS</span></span> for flipping and zooming the&nbsp;cards</a>).</p>
+<p>
+	Besides all of the cool animations that set the design apart, one of the requirements from the client was that <em>all</em> the fonts used by the app needed to be embedded fonts (using <code class="css">@font-face</code>). We used a collection from the <a href="http://code.google.com/webfonts">Google Font Directory</a> which made it easy to implement. However, we ran into a bug in Chrome on Windows where (yes, this is very specific) a web font with ligatures that has <code>text-shadow</code> applied to it causes a block of text to&nbsp;disappear.</p>
+<p>
+	You don&rsquo;t see any drop shadow on our type, you say? That&rsquo;s because it is set to <code>rgba(255,255,255,0.01)</code> in order to trigger anti-aliasing on the type. Without it, Chrome rendered these fonts with no anti-aliasing at all on Windows. Surely we could just use <code>-webkit-font-smoothing</code> like <a href="http://maxvoltar.com/archive/-webkit-font-smoothing">Tim suggests</a>, right? Unfortunately, it isn&rsquo;t supported by any production browser or we would have. So we were stuck with the <code>text-shadow</code> hack and the accompanying bug. We ended up working around the issue by detecting the <span class="caps">OS</span> and the browser (obviously running counter to our inclination toward feature-detection) to specify a different font on Chrome for&nbsp;Windows.</p>
+<p>
+	Those were just the two biggest design challenges we faced; there were dozens of smaller ones for which we found simple&nbsp;workarounds.</p>
+<p>
+	The biggest thing I learned in building this app is that <code>transform</code> as a property was never thought through to handle complex scenarios. It works great when you want to do one thing to an object at a time; it falls apart when you want to do multiple things. As I outlined in more detail for <a href="http://www.netmag.co.uk/">.net Magazine</a>, I would love to see <code>transform</code> become a shorthand property (like <code>background</code> and <code>font</code> are now) for a family of properties that could be independently manipulated: <code>transform-translate</code>, <code>transform-rotate</code>, <code>transform-scale</code>, etc. I&rsquo;d also like to see an <code>@media</code> query for 3D support so that 2D and 3D transforms could be specified without any scripting&nbsp;involved.</p>
+<h2>
+	Client-side&nbsp;Databases</h2>
+<p>
+	This app does not talk to the main wikiHow site to get its content; all 120+ articles, dozens of quiz questions and quiz responses are stored in an <span class="caps">HTML</span>5-driven client-side SQLite database. When the app loads, it grabs a <span class="caps"><span class="caps">SQL</span></span> file, parses it and loads the data in. In theory, you can give your database a version number then check against that to see if it needs updating. In practice, that only worked sporadically. What we settled on doing was loading the data at launch time, setting a session cookie to note that the database was loaded, and then reloading it if that cookie wasn&rsquo;t present. The only table we don&rsquo;t reload is the one containing that user&rsquo;s quiz results; that ensures their scores persist across database upgrades. Aside from the versioning issue, <span class="caps">HTML</span>5 databases work as the spec calls for, which was a welcome&nbsp;relief.</p>
+<p>
+	We did find it odd, however, that there was no way to provide a pre-created SQLite database as part of the Chrome installer. It would have been really nice to have that be part of the install rather than having to trigger it when the application is loaded like it does for a normal web&nbsp;app.</p>
+<h2>
+	Navigating Through a One Page&nbsp;Site</h2>
+<p>
+	There&rsquo;s only one page of <span class="caps"><span class="caps">HTML</span></span> for the app (plus a few small snippets for the About and Feedback pages). To track the user&rsquo;s state as she moves through the app, we followed the convention of updating <code>window.location.hash</code>. All of our app&rsquo;s logic for handling URLs is contained in about 400 lines of code. This single function, triggered by the <code>onHashChange</code> event, determines what content is currently showing and what content needs to be shown according to the current <code>hash</code>.</p>
+<p>
+	For our app, that meant five different possible types of content to be shown that had to transition in from one of six possible current states. While it&rsquo;s all fairly straightforward, it took a lot of testing to get right; I can&rsquo;t thank everyone on our team enough for the hours of clicking through the app and submitting bug reports that exhaustively listed every step they&rsquo;d taken from launch to the broken state they&rsquo;d found themselves in. All of this work resulted in an app that can be refreshed at any point and will get you right back to where you were, has shareable links to every piece of content, and fully supports the browser&rsquo;s back and forward&nbsp;buttons.</p>
+<p>
+	It took a lot of effort to make something that &ldquo;just works.<span class="final quote">&rdquo;</span></p>
+<h2>
+	Going&nbsp;Offline</h2>
+<p>
+	<span class="caps">HTML</span>5 has a specification for <a href="https://www.w3.org/TR/offline-webapps/">offline manifest files</a> that allows a web app to specify how it can work when no network connection is present. However, the amount of static media that we needed to cache to provide the right experience in offline mode was larger than any current browsers allow. This was where we benefited from the Chrome Web Store: Chrome apps can ask for unlimited storage (this goes beyond just the offline cache). For users that have the app installed from the store, they can access most of the app even when not connected to the Internet. The exceptions were obvious things like social network sharing and sending feedback to&nbsp;wikiHow.</p>
+<p>
+	What proved difficult here was detecting when the app was offline. The specification for <span class="caps">HTML</span>5 says that JavaScript can query <code>window.navigator.onLine</code> but that always returns true in current versions of Webkit. Instead we turned to <span class="caps"><span class="caps">AJAX</span></span> to load a page on the server and see what it contained. When the app is online, it has the normal content we expect to get back. When it&rsquo;s offline, however, we used the manifest to point the same <span class="caps"><span class="caps">URL</span></span> to an empty <span class="caps"><span class="caps">HTML</span></span> file. If the app doesn&rsquo;t detect any content from the request, it hides all the online-only&nbsp;features.</p>
+<p>
+	Another issue we ran into was the way that the spec parses URLs in the <code>FALLBACK</code> section (this is where you map online URLs to their offline counterparts). These URLs are greedy; that is to say they are a pattern match with no way to limit the match. In our case, our base <span class="caps"><span class="caps">URL</span></span> is just &ldquo;/&rdquo;. That meant that <em>any</em> <span class="caps"><span class="caps">URL</span></span> we tried to load while offline loaded the content of our index.html file. As you&rsquo;d expect, this caused some major issues. Any <span class="caps"><span class="caps">URL</span></span> that was called (and which hadn&rsquo;t been specifically dealt with in the manifest) would reload index.html and run all of its scripts, resulting in an infinite loop of loading content. To address this issue, we had to add resources to <code>FALLBACK</code> for every <span class="caps"><span class="caps">URL</span></span> we had locally and move things like our Google Analytics code into the core JavaScript file, only executing them if the app was determined to be online when it was&nbsp;launched.</p>
+<h2>
+	Final&nbsp;Thoughts</h2>
+<p>
+	It&rsquo;s easy to understand many of the critics of the Web Store when they don&rsquo;t see the point of having these apps be installable when many just point to a website. I&rsquo;m sure Google has its reasons (not the least of which is Chrome <span class="caps">OS</span>), but what I&rsquo;ve taken away from this project is that the store is a way to give developers permission to really go beyond what is normally considered a website and deliver true applications in a browser. It makes it <span class="caps">OK</span> to ignore legacy browsers and focus on the future. Like Tom Merrit said in his <a href="http://twit.tv/specials53">coverage of the store announcement</a>, many of the best iPad apps today are just wrappers around great web apps. It&rsquo;s the same with the Chrome Web&nbsp;Store: it is essentially&nbsp;a wrapper&mdash;or better&nbsp;yet, a gatekeeper&mdash;around great web apps and&nbsp;enables&nbsp;the developer to know exactly what platform they&rsquo;ll be running&nbsp;on.</p>
+<p>
+	In a few years, when <span class="caps">HTML</span>5 is more widely supported in the browsers that people are actually using, it might not be necessary to have these restrictions (or the Chrome Web Store), but for now, it lets us move forward, pushing the boundaries of new technology, and that&rsquo;s a good thing for the&nbsp;web.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F&amp;source=tweetbutton&amp;text=The+Challenges+and+Freedoms+of+Creating+a+Chrome+App&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-challenges-and-freedoms-of-creating-a-chrome-app%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/daniel-ryan.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Daniel Ryan</h2>
+					<p>Daniel Ryan has been involved with web development for more than a dozen years and has honed his skills in (X)HTML, CSS, Javascript, jQuery, Python, Django, PHP, and XML.</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/daniel-ryan/index.html">See all of Daniel Ryan&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/daniel-ryan.rss">Subscribe to Daniel Ryan&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/animation/index.html">animation</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/browsers/index.html">browsers</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/databases/index.html">databases</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/projects-and-products/index.html">projects & products</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+						<h2>Related entries</h2>
+				<ul class="browse also">
+			  		
+					<li><a href="/archives/we-built-a-chrome-app/index.html">We Built a Chrome App</a></li>
+					
+				</ul>
+    	
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-529">
+						<article class="entry-content">
+							<p>Thankyouthankyouthankyou! for a robust, straightforward explanation of some potentially confusing, often misused topics.&nbsp; <span class="caps">HTML</span>5 may not be here fully yet, but so long as there are developers like you all who want to help pull the rest of up by <em>your</em> bootstraps (:-)) it shouldn&#8217;t be too far off.<br />
+It really helped to have mile-high view of the creative process for making an offline-usable web application for chrome. <br />
+(Especially as I embark on a similar journey&nbsp;myself!)</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/dd4bf175574be5610ccfc7f51a1aff3a?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Michael</span>
+									</li>
+							<li><time class="published" datetime="2011-01-12T16:00:53" pubdate="pudate">12 January 2011 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/the-challenges-and-freedoms-of-creating-a-chrome-app/#comment-529">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/we-built-a-chrome-app/index.html">Previous Entry: <em>We Built a Chrome App</em></a></li>
+							<li class="next"><a href="/archives/thank-you-for-a-wonderful-2010/index.html">Next Entry: <em>Thank you for a wonderful 2010!</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

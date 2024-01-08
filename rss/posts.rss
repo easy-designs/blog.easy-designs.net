@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	
+	
+	<channel>
+		<title>The Easy Designs Blog: Recent Posts</title>
+		<link>https://blog.easy-designs.net/archives/</link>
+		<dc:language>en</dc:language>
+		<description></description>
+		<dc:rights>(c) Copyright 2005–2023 Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>Easy! Designs, LLC</dc:creator>
+		<dc:date>2013-09-16</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="http://blog.easy-designs.net/rss/" rel="self" type="application/rss+xml"/>
+	
+		<item>
+			<title>Responsive Typography</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	I&rsquo;m incredibly excited to see that <a href="https://twitter.com/jpamental">Jason Pamental</a>&rsquo;s fantastic <a href="http://www.amazon.com/gp/product/1491907096/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1491907096&amp;linkCode=as2&amp;tag=easydesign-20&amp;linkId=JC6INFXF3DHODKEM"><cite>Responsive Typography</cite></a> is finally available. I had the great pleasure of reviewing an early galley and I can honestly say that it&rsquo;s a book well worth reading. Jason&rsquo;s natural and friendly style makes for an easy read and it&rsquo;s chock-full of actionable recommendations and tips you&rsquo;ll want to start using right&nbsp;away.</p>
+<p>
+	In fact, I think <cite>Responsive Typography</cite> is such an invaluable book, I offered to write the Foreword and Jason (and O&rsquo;Reilly) have been kind enough to let me reprint it&nbsp;here:</p>
+<blockquote>
+	<p>
+		Back in my day, all we had was the <code>font</code>&nbsp;element.</p>
+	<p>
+		I fully realize that makes me sound like an old man, but I&rsquo;m not ready to chase young whippersnappers off my lawn quite yet. But the fact remains that when I taught myself how to build web pages back in the mid-&rsquo;90s, our design options were fairly limited. Heck, my first experience on the Web was on a text-based browser that provided me access to page upon glorious page of stark, blocky Courier. White text. Black background. 100%&nbsp;responsive.</p>
+	<p>
+		When visual browsers finally hit the scene, ushering in images and the <code>font</code> element, we web designers finally had the opportunity to move out of monospace. I&rsquo;ll leave it to Jason to delve into the history of typography on the Web, but the advent of visual browsers opened the floodgates for use (and abuse) of type online. It was the desktop publishing revolution all over again: a direct assault on the sensibilities of anyone with even the slightest understanding of&nbsp;typography.</p>
+	<p>
+		Over the years, we&rsquo;ve made a lot of mistakes with web type: Fonts embedded in images. Fonts embedded in Flash. Fonts embedded in JavaScript. Many of those were attempts to bypass the gridlock created by browser makers, type foundries, and the W3C, who couldn&rsquo;t come to a consensus on how to balance a desire for more type options on the Web while ensuring typographers got paid for all of their hard work. While they bickered, we soldiered on, looking for more accessible and maintainable ways to use more&nbsp;typefaces.</p>
+	<p>
+		And while we were busy tinkering with sIFR and Cuf&oacute;n, eagerly awaiting the day we could abandon those hacks and have real browser support for actual font formats, an army of little black rectangles had caught a whiff of the awesome content we were serving up to desktop&nbsp;browsers.</p>
+	<p>
+		Like ants at a Sunday picnic, these little black rectangles initially appeared one or two at a time. They were easily ignored, a nuisance. Nothing to take too seriously. But before we knew what was happening, that trickle turned into a flood and those little rectangles were hungry. Instead of taking a crumb here and there&mdash;which we tossed to them with a great sense of self-satisfaction&mdash;these ambitious ants were carrying off whole deli trays and the friggin&rsquo; <cite>New York Times</cite>.</p>
+	<p id="scroll_to_here">
+		These little black rectangles are, of course, the surge of handheld (or at least hand-holdable) devices that have been redefining our concept of &ldquo;the Web&rdquo; almost daily. They exhibit widely variable screen sizes: from about the size of a matchbook, to ones that are bigger than an extra large pizza. They sport a plethora of pixel densities, new interaction methods, unpredictable network connection speeds, and low-powered processors that can&rsquo;t possibly compete with traditional laptop and desktop CPUs (not to mention a handful of different operating systems and browsers). All of these factors affect how&mdash;and even whether&mdash;your typographic choices will make it to your customers, and it&rsquo;s a lot to take&nbsp;in.</p>
+	<p>
+		Thankfully, Jason has your back. The book you&rsquo;re now reading is invaluable: it&rsquo;s chock-full of useful approaches, practical code samples, and advice for dealing with typography in the age of responsive web&nbsp;design.</p>
+	<p>
+		By the time you finish this brief book, you&rsquo;ll be ready to handle pretty much any device someone may throw at you. But hopefully they won&rsquo;t. Devices are hard. And&nbsp;expensive.</p>
+	<p>
+		&mdash; Aaron Gustafson<br />
+		&nbsp;&nbsp;&nbsp;Author, <cite>Adaptive Web Design</cite></p>
+</blockquote>
+<p>
+	By the way, if you&rsquo;re on a typography kick, I&rsquo;ll also recommend an excellent new book by another Jason I respect greatly: <a href="http://jasonsantamaria.com">Jason Santa Maria</a>&rsquo;s <a href="http://www.abookapart.com/products/on-web-typography"><cite>On Web Typography</cite></a>. The two books books compliment each other perfectly, with very little overlap. They&rsquo;d make an awesome&nbsp;bundle.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/responsive-typography/</link>
+			<guid>https://blog.easy-designs.net/archives/responsive-typography/</guid>
+			<dc:date>2014-09-22T10:19:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>The &#8220;Native&#8221; vs. &#8220;Stylable&#8221; Tug of War</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	In his astute post <a href="//www.brucelawson.co.uk/2014/native-experience-vs-styling-select-boxes/"><span class="initial quote">&ldquo;</span>&lsquo;Native experience&rsquo; vs styling select boxes<span class="final quote">&rdquo;</span></a>, Bruce Lawson correctly identified a common tension in the web&nbsp;world:</p>
+<blockquote>
+	<p>
+		But why this urge to re-style page elements that end-users are familiar with? &hellip; Or is it that we love native look and feel, except when we&nbsp;don&rsquo;t?</p>
+</blockquote>
+<p>
+	Speaking as the guy who not only wrote JavaScript to help me create an accessible <code>select</code> element alternative, but who also made it <a href="http://d1b14unh5d6w7g.cloudfront.net/1590598563.01.S0ER.LXXXXXXX.jpg?Expires=1405686346&amp;Signature=DCT4Z0l75JQESDNyP0PVGVonuJYwY9XYtaTI3grX/RhdlLcXGRAVADJCB/N/fAj7GxLhEVzuXqstMebJIJ9Ip5I6kE7IKYt2F20F5EGD+1ghua9zKwyjS1e4KBgumMKzQytbcfIVX4dMr7XFzj26mScFKz9bSKtZT5jU1LU6hWM=&amp;Key-Pair-Id=APKAIUO27P366FGALUMQ">the focus of a case study (image)</a> in <a href="http://amzn.to/TaoffD">AdvancED <span class="caps">DOM</span> Scripting</a>, I am fully aware of the desire to have it both ways. I have not often seen the desire for both in a single individual, but it does happen in one particular instance&nbsp;occasionally.</p>
+<p>
+	Based on my own experience, I see the following arguments in favor of changing the display of a native control quite&nbsp;often:</p>
+<ol>
+	<li>
+		It doesn&rsquo;t look good to&nbsp;me.</li>
+	<li>
+		It is not &ldquo;on&nbsp;brand&rdquo;.</li>
+	<li>
+		It clashes with our brand&rsquo;s color&nbsp;scheme.</li>
+	<li>
+		We want the web experience to feel like a native&nbsp;app.</li>
+	<li>
+		It doesn&rsquo;t behave how we think it&nbsp;should.</li>
+</ol>
+<p>
+	<em>(<abbr lang="it" title="nota bene: please note">n.b.</abbr> Browsers have done a pretty good job reducing the amount of color and the overall visual strength used in native controls to help them better blend in with a wide variety of designs, so clashes as mentioned in #3 happen far less often than they did nearly a decade&nbsp;ago.)</em></p>
+<p>
+	As the weathered, battle tested (and, admittedly, somewhat jaded) front-end dev that I am, I typically push back with one or more of the&nbsp;following:</p>
+<h2>
+	In Addressing Desired Design&nbsp;Changes</h2>
+<p>
+	In terms of aesthetics (addressing arguments 1, 2, and 3), I understand where you&rsquo;re coming from. Native controls are not the most appealing things, but they are familiar to your users. A <code>select</code> box they see on your site that looks like the one they see on Wikipedia or their banking site will be immediately recognizable. Sure, the looks and feel may differ from browser to browser, but most people use only a small number of browsers throughout the day&mdash;at work, at home, on their device&mdash;and if you want to ensure the design of a form control feels &ldquo;right&rdquo; in the browser they are using, sometimes it&rsquo;s best to let go of that&nbsp;control.</p>
+<h2>
+	In Addressing <span class="caps">OS</span>&nbsp;Parity</h2>
+<p>
+	I can understand the desire to have a form control in a web page look and feel like the same (or a similar) control within the native operating system (argument 4), but I am not sure that&rsquo;s a rabbit hole you want to go down. Here&rsquo;s why: Achieving exact design and functional parity between a native control and a web control quite often requires extra markup, a bunch of <span class="caps">CSS</span>, and a bit of JavaScript. Anything is achievable with unlimited time and budget, so it&rsquo;s completely doable, but it would be good to estimate the cost to see if you still think it is a worthwhile&nbsp;endeavor.</p>
+<p>
+	Assuming it is, we then have the question of which operating system to model the control after. Or maybe you want to offer a different take on the control based on the operating system your user is using. In that case, we may need to multiply the original estimate by the number of operating systems you want to support. But it&rsquo;s worth noting that, in the Android world, different device manufacturers often &ldquo;skin&rdquo; the operating system to look different from other ones. Sometimes they even do it on a device-by-device basis. We&rsquo;ll need to figure out which ones you want to include in your native control matrix and multiply the estimate&nbsp;accordingly.</p>
+<p>
+	Then there&rsquo;s maintenance. We&rsquo;ll need to test these native-like controls on each of their corresponding platforms and test the script that determines which experience gets delivered to which device to make sure we&rsquo;re not accidentally sending the wrong experience. We&rsquo;ll also need to test the delivery script on every other browser in our test matrix to ensure it is not causing issues&nbsp;there.</p>
+<p>
+	What should we do when a new operating system version is rolled out? iOS, for example, has made radical shifts in the design of their native controls in each major release. We&rsquo;ll probably want to create unique versions of the control for each version of each <span class="caps">OS</span> we support and we&rsquo;ll need to keep tabs on upgrades so we don&rsquo;t end up confusing our users if they visit our site in iOS 7 and have a control that looks like it&rsquo;s from iOS 6. We&rsquo;ll need to add the number of <span class="caps">OS</span> versions into the multiplier as&nbsp;well.</p>
+<p>
+	Ok, and finally: How many controls did you want to apply this approach to&nbsp;again?</p>
+<p>
+	Or we could use the native form control and it will just&nbsp;work.</p>
+<h2>
+	In Addressing Altered&nbsp;Behavior</h2>
+<p>
+	I completely agree that not all native controls work exactly how I would like, but there are several risks in changing the expected behavior of a native&nbsp;control.</p>
+<p>
+	First of all, there&rsquo;s the possibility we could actually end up making the interface more confusing or that the change in behavior might not be exactly what our user&rsquo;s wanted (either based on what they are used to or our mental model not aligning with theirs). In order to rule out these issues, we should run a few rounds of usability tests. These could be quick caf&eacute; tests or more formal studies depending on the&nbsp;budget.</p>
+<p>
+	Assuming our tests go well, we will need to maintain this code and do all of the requisite browser testing. And potentially upgrade our code as new browsers and browser versions come out. Depending on the complexity of the code, this could become a large requirement, but if it is ultimately in the service of making the web a better, more usable interaction environment, it could be worth&nbsp;it.</p>
+<p>
+	For what it&rsquo;s worth, if we go this route and are successful, we should consider getting involved in the spec-writing process at the <a href="http://w3.org">W3C</a> or&nbsp;<a href="http://whatwg.org">WhatWG</a>. We should contribute our recommended changes back to the community and share what we learned. If we make a compelling argument, perhaps our idea will become part of some future standard and we can taper off our browser testing when the change goes&nbsp;native.</p>
+<hr />
+<p>
+	As you can probably tell, I&rsquo;m not a really big fan of changing existing controls as I feel it can amount to a wasted effort. That said, if there are design improvements to be made&mdash;&ldquo;design&rdquo; in the true sense: being about how usable something is, not just how aesthetically-pleasing it is to someone (e.g. improving contrast, making the control more intuitive, etc.)&mdash;I&rsquo;m willing to accept the change as something we <em>should</em> do and then work to make sure that change has been vetted and, if successful, given away for inclusion in other projects. If it solves a major issue on the web, I want to give that change every opportunity to make it into the appropriate spec by talking to the appropriate folks about it both in-person, in blog posts, and on the appropriate mailing list. If the change solves a problem in a specific browser, I want to see it incorporated into said browser and will file a bug report and try to build momentum around it by engaging the&nbsp;community.</p>
+<p>
+	Anyway, that&rsquo;s my general position on augmenting native controls. What are your thoughts on the&nbsp;topic?</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/the-native-vs-stylable-tug-of-war/</link>
+			<guid>https://blog.easy-designs.net/archives/the-native-vs-stylable-tug-of-war/</guid>
+			<dc:date>2014-07-20T08:14:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Beyond Responsive Workshops this May</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	A lot fo my work lately has been consulting and working with teams to help them to establish or improve upon their responsive&nbsp;strategies.</p>
+<p>
+	I love this sort of work and I live for helping teams and individuals tackle the thorny issues (in code or processes) that make responsive projects a challenge. For a lot of small companies, it can be a challenge to pull ogether enough budget to fly me in for a few days of private working sessions, which is why I am such a huge fan of running public workshops&hellip; especially &uuml;ber-affordable ones like I am leading this&nbsp;May.</p>
+<p>
+	The first will be on my home turf in Chattanooga, Tennessee on May 2nd and I will be co-leadiing the workshop with my esteemed colleague&nbsp;<a href="http://bradfrostweb.com">Brad Frost</a>. It&rsquo;s the first workshop from our successful <a href="http://codeandcreativity.com">Code <span class="amp">&amp;</span> Creativity</a> event series and should be a heck of a lot of fun. There are a few tickets left for <a href="http://www.eventbrite.com/e/responsive-design-and-beyond-registration-11005454611">$399 each on&nbsp;Eventbrite</a>.</p>
+<p>
+	The second workshop will be in D&uuml;sseldorf, Germany on May 21st. There are a handful of <a href="https://ti.to/beyondtellerrand/2014/">tickets still available for&nbsp;&euro;349 (<span class="caps">VAT</span> included)</a> and a ticket also gets you into the incredible <a href="http://2014.beyondtellerrand.com/">Beyond Tellerrand</a> conference which runs on the 19th <span class="amp">&amp;</span> 20th. I&rsquo;ve spoken at this conference twice before and it is one of only a handful of events in the world I enthusiatically recommend&nbsp;attending.</p>
+<p>
+	Here&rsquo;s a rough idea of what I&rsquo;ll be covering in the two&nbsp;workshops:</p>
+<blockquote>
+	<p>
+		Responsive web design has taken our industry by storm and with good reason: it helps us improve our reach with less effort. But incorporating responsive design is not the goal, meeting our user&rsquo;s needs is. Responsive design is not an end in itself&hellip; it&rsquo;s just the&nbsp;beginning.</p>
+	<p>
+		We need to embrace the heterogenous nature of the web&mdash;myriad web-enabled devices with vastly different dimensions, screen sizes, networks, and capabilities in use by countless individuals, each with their own special needs&mdash;and craft experiences that will work anywhere at any time. We need to build robust systems that adapt in ways far beyond&nbsp;aesthetics.</p>
+	<p>
+		Each workshop with a discussion of a number of considerations that we should be aware of, beyond screen size and pixel density, and provide examples of how to adapt our interfaces so they rise to meet our customers&rsquo; needs. Then he&rsquo;ll turn it over to you to propose gnarly design and/or interface challenges you are struggling with. Once everyone&rsquo;s challenges are collected, attendees will be given the opportunity to form small groups around each and you will spend a portion of the day working on solutions while Aaron mentors each group and pushes you to think more about accessibility, alternate interaction methods, slow networks, and other&nbsp;considerations.</p>
+	<p>
+		The workshop will wrap up with brief presentations from each group followed by a an open question and answer&nbsp;session.</p>
+</blockquote>
+<p>
+	I hope you&rsquo;ll join me in Chattanooga or D&uuml;sseldorf next month. Bring your questions and your challenges and let&rsquo;s dig&nbsp;in.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/beyond-responsive-workshops-this-may/</link>
+			<guid>https://blog.easy-designs.net/archives/beyond-responsive-workshops-this-may/</guid>
+			<dc:date>2014-04-15T14:39:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Adaptive Design, Empathy &amp;amp; Beating Creative Block</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	Lately I&rsquo;ve been doing a few more podcasts, local events, and interviews. Here&rsquo;s a round-up of a few that posted in the last week or&nbsp;so:</p>
+<p>
+	<strong><a href="http://www.modern.ie/en-us/podcast/modernie-podcast-with-aaron-gustafson">The modern.<span class="caps">IE</span> Podcast</a></strong><br />
+	Josh Holmes interviewed me about adaptive design, progressive enhancement, and a wide range of other&nbsp;things.</p>
+<p>
+	<a href="http://www.pechakucha.org/cities/chattanooga/events/526e68fc4f5c29f968000004"><strong><span class="caps">PKNCHA</span>#15</strong></a><br />
+	I did a PechaKucha talk on empathy and the golden rule last December. <a href="https://www.youtube.com/watch?v=6QlAj4_6m5s">The video is now on&nbsp;YouTube.</a></p>
+<figure>
+	</figure>
+<p>
+	<a href="http://www.creativebloq.com/creativity/15-pro-techniques-beating-creative-block-3145683"><strong>15 Pro Techniques for Beating Creative Block</strong></a><br />
+	I give my thoughts on the topic, but you can also read the fantastic thoughts of Dan Rubin, Trent Walton, Derek Featherstone, and Rachel&nbsp;Shillcock.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/adaptive-design-empathy-and-beating-creative-block/</link>
+			<guid>https://blog.easy-designs.net/archives/adaptive-design-empathy-and-beating-creative-block/</guid>
+			<dc:date>2014-04-01T14:33:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Paper Dolls</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	<a href="http://hicksdesign.co.uk">Jon Hicks</a> came to <span class="caps">SXSW</span> in 2005 and made quite an impression on many of us. It&rsquo;s no surprise, he&rsquo;s an incredibly nice&nbsp;chap.</p>
+<p>
+	Well, when Jon could not make it to the festival in 2006, <a href="http://glendathegood.com">Glenda Sims</a> filled the void with a paper doll named <a href="http://www.hicksdesign.co.uk/journal/the-adventures-of-flat-hicks">Flathicks</a>. The idea was that, through Flathicks, Jon would be able to be photographed at parties, talks, and the like, so it&rsquo;d be like he was&nbsp;there.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/http://farm1.staticflickr.com/152/422373546_3c76924ab8.jpg" alt=""/> <figcaption>
+	<p>
+		Shaun Inman, Flathicks and Jason Santa Maria.<br />
+		<em>Photo credit: <a href="http://www.flickr.com/photos/vistamonster/">Brian&nbsp;Warren</a></em></p>
+	</figcaption></figure>
+<p>
+	Flathicks quickly took on a life of his own and his adventures went far beyond <span class="caps">SXSW.</span> We handed him off, from person to person, as we traveled around the world, back to our homes, to other conferences, etc. In fact, he joined Kelly <span class="amp">&amp;</span> me in Sydney, Australia in late 2007 at Web Directions South and then flew back with us to San Francisco to attend An Event Apart. You can <a href="http://www.flickr.com/photos/tags/flathicks">follow his adventures on Flickr</a>&nbsp;or even check out <a href="http://www.flickr.com/photos/flathicks">his personal Flickr&nbsp;account</a>.</p>
+<hr />
+<p>
+	Kelly has had a bit of bad luck when it comes to <span class="caps">SXSW.</span></p>
+<p>
+	The first year she went, 2006, she got food poisoning just as we boarded the plane to go to the festival. She ended up spending the majority of her time in our hotel room, recovering, and missed most of the festivities. She did manage to muster enough strength to attend the conference for a bit to see <a href="http://adactio.com">Jeremy Keith</a> <span class="amp">&amp;</span> me deliver &ldquo;<a href="http://domscripting.com/presentations/sxsw2006/slides/">How to Bluff Your Way in <span class="caps">DOM</span> Scripting</a>&rdquo;, attend <a href="http://www.flickr.com/photos/72043907@N00/112505959/in/photolist-aWC6V">the first Web Standards Project meeting</a>, and then attend a party or two, so the trip was not a complete bust for her. But it wasn&rsquo;t nearly as enjoyable as it should have&nbsp;been.</p>
+<p>
+	Kelly planned to return with me in 2007, but caught the flu about a week before and had to cancel. <span class="caps">SXSW</span> is a well-renown incubator of illness (&ldquo;Southby Scurvy&rdquo; as we affectionately call it) and Kelly did not want to be patient zero that year, so she bowed&nbsp;out.</p>
+<p>
+	Coincidentally, Jeremy&rsquo;s wife Jessica was unable to make it in 2007 either. So Glenda, being the incredibly sweet woman that she is, made us paper dolls of Kelly and Jessica. She dubbed them &ldquo;Kellydoll&rdquo; and &ldquo;Jessidoll&rdquo; as she didn&rsquo;t feel &ldquo;flat&rdquo; was appropriate as part of a woman&rsquo;s&nbsp;nickname.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/http://farm1.staticflickr.com/129/420681341_3064a271bb.jpg" alt=""/> <figcaption>
+	<p>
+		Kellydoll and Jessidoll attending the appropriately-named &ldquo;Flatstock&rdquo; (a poster&nbsp;festival).</p>
+	</figcaption></figure>
+<p>
+	As with Flathicks, Kellydoll <span class="amp">&amp;</span> Jessidoll had amazing adventures at the festival and <a href="http://www.flickr.com/search/?w=86537625@N00&amp;q=kellydoll">had their photo taken with everyone who missed&nbsp;them</a>.</p>
+<p>
+	I carried Kellydoll with me everywhere, her head poking out of my backpack. This turned out to be a bad idea however as it facilitated her escape. I must have been boring&nbsp;her.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/http://farm1.staticflickr.com/129/420683446_071bcfd67b.jpg" alt=""/> <figcaption>
+	<p>
+		Kellydoll enjoying a rib plate at&nbsp;Ironworks.</p>
+	</figcaption></figure>
+<p>
+	I realized Kellydoll was missing on the last night of <span class="caps">SXSW</span>, on the way back from dinner at Ironworks, where she had been the subject of a few photos. It was raining, so I had been rushing back to my hotel room when I saw another potential opportunity to photograph her. When I reached back to get her, I realized she was&nbsp;gone.</p>
+<p>
+	I spent the next hour and a half combing Ironworks, Red River Road, First Street and a few of the other lanes around the Convention Center, retracing my steps, looking for any sign of Kellydoll. I came up empty-handed <span class="amp">&amp;</span> sulked back to the hotel, depressed that I&rsquo;d lost my little paper&nbsp;wife.</p>
+<p>
+	I never did find Kellydoll, so she and the real Kelly never got to meet. Maybe she&rsquo;s still out there having adventures. Or maybe she ran off with Flathicks when my back was&nbsp;turned.</p>
+<p>
+	I never trusted that&nbsp;guy.</p>
+<hr />
+<p>
+	<em>It&rsquo;s hard to believe that <span class="caps"><span class="caps">SXSW</span></span> Interactive is 20 years old. Reading through the remarks and stories in <a href="http://www.fastcompany.com/3026402/oral-history-sex-drugs-apps-and-sxswi">this awesome piece from Fast Company</a>, I felt inspired to share some of my <span class="caps"><span class="caps">SXSW</span></span> stories. This is the&nbsp;third.</em></p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/paper-dolls/</link>
+			<guid>https://blog.easy-designs.net/archives/paper-dolls/</guid>
+			<dc:date>2014-03-02T10:15:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>The Hampton</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	For a few years in the late aughts, <em>the</em>&nbsp;place to stay during <span class="caps">SXSW</span> Interactive was the Hampton Inn at San Jacinto and 2nd. There were 3 main reasons for this: 1) proximity to the Convention Center, 2) free breakfast, and 3) happy hour and a spacious veranda on which to enjoy&nbsp;it.</p>
+<p>
+	I&rsquo;m sure a handful of the other nearby hotels offered similar amenities (though perhaps not the veranda), but for whatever reason we all seemed to gravitate to the&nbsp;Hampton.</p>
+<p>
+	Over the years, I had a the pleasure of meeting and enjoying both company and conversation with dozens of the web&rsquo;s brightest minds, but my favorite memories from that particular hotel revolved around&nbsp;food.</p>
+<p>
+	Breakfast was always a big draw and quickly began to take on an almost tailgating-esque significance. We&rsquo;d meet in the breakfast area, load up on breakfast meats, eggs, and pastries and then compare notes and plan out our day. And if nothing interesting was on deck for a bit, we&rsquo;d pull out our DSes and engage in some pretty epic races in Mario Kart. <a href="http://shauninman.com">Shaun Inman</a> usually won, but <a href="http://simplebits.com">Dan Cederholm</a>, <a href="http://jasonsantamaria.com">Jason Santa Maria</a>, and <a href="http://robweychert.com">Rob Weychert</a> were pretty good too. I rarely&nbsp;placed.</p>
+<p>
+	We didn&rsquo;t compete for anything but bragging rights. And occasionally&nbsp;bacon.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/http://farm1.staticflickr.com/56/110503016_6ffba12458.jpg" alt=""/> <figcaption>
+	<p>
+		Molly Holzschlag, Faruk Ate&#351;, Jeremy Keith, and Jessica Spengler preparing to take on the day.<br />
+		<em>Photo credit: <a href="http://www.flickr.com/photos/msjen/111134496/">Jenifer&nbsp;Hanen</a>.</em></p>
+	</figcaption></figure>
+<hr />
+<p>
+	On particularly awesome Hampton institution was wine <span class="amp">&amp;</span> cheese. But before I get into what it was and its significance, let me first talk about its lovely&nbsp;host.</p>
+<p>
+	When I attended <span class="caps">SXSW</span> 2005, I didn&rsquo;t know anyone. Sure, I followed a bunch of people&rsquo;s blogs and articles, but I didn&rsquo;t really <em>know</em>&nbsp;any of them. I went to <span class="caps">SXSW</span> hoping to change that and was successful beyond my wildest dreams. One of the most amazing people I met at <span class="caps">SXSW</span> has never been a household name even though she was wildly ahead of her time: <a href="http://blackphoebe.com/">Jenifer Hanen</a> (or Ms. Jen as she&rsquo;s affectionately&nbsp;known).</p>
+<p>
+	When I first saw Me. Jen, I stopped dead in my tracks. The woman who stood before me looked remarkably familiar, but I could not for the life of me figure out why. She looked back at me with what I can only imagine was a perfect mirror of the perplexed expression I was&nbsp;wearing.</p>
+<p>
+	<span class="initial quote">&ldquo;</span>I know you. But why?&rdquo; we asked in near&nbsp;unison.</p>
+<p>
+	After rooting around in our past lives a bit, we realized that we had met at <span class="caps">SXSW</span> nearly a decade earlier when we were both journalists covering the music festival. Not only that, but we had met through a mutual friend&hellip; <a href="http://reybee.com">Rey Roldan</a> (a pivotal figure in <a href="http://blog.easy-designs.net/archives/filemaker/">my first&nbsp;story</a>).</p>
+<p>
+	Mystery solved, we filled each other in on what we&rsquo;d been up to since we&rsquo;d last met and how it was we both had come to work on the web. Ms. Jen was incredibly interested in the future of mobile photography. In 2005, she was running around snapping photos on her <a href="http://www.gsmarena.com/nokia_7610-703.php">Nokia 7610</a>. She was always ahead of the curve, realizing the latent potential of mobile while most of us were still grumbling about <span class="caps">IE</span>6.</p>
+<p>
+	Ms. Jen had been coming to <span class="caps">SXSW</span> for quite some time and got to know the staff at the Hampton, who routinely hooked her up with one of the suites meaning she had a couch, a coffee table, and a &rsquo;fridge&hellip; three important facilities if you plan on hosting a wine <span class="amp">&amp;</span> cheese party. Which is exactly what she and some friends decided to do in&nbsp;2006.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/http://farm1.staticflickr.com/36/111134496_f30274bf27.jpg" alt=""/> <figcaption>
+	<p>
+		Jon Hicks, Veerle Pieters, and Kenneth Himschoot at the inaugural wine <span class="amp">&amp;</span> cheese party.<br />
+		<em>Photo credit: <a href="http://www.flickr.com/photos/msjen/111134496/">Jenifer&nbsp;Hanen</a>.</em></p>
+	</figcaption></figure>
+<p>
+	When I arrived at the party, I was greeted by Ms. Jen playing the attentive hostess. I was given a glass of wine and plopped myself down on the floor and introduced myself to the little group Jen had gathered. It was a small group, but the conversations were fantastic and I met a number of amazing individuals whose friendships I value tremendously: <a href="https://twitter.com/khimscho">Kenneth Himschoot</a>, <a href="http://theadnostic.com/">Lauren Isaacson</a>, <a href="https://twitter.com/chrisdavidmills">Chris Mills</a>,&nbsp;<a href="http://veerle.duoh.com/">Veerle Pieters</a>,&nbsp;<a href="http://wordridden.com/">Jessica Spengler</a>, and <a href="http://stephanietroeth.com/">Steph&nbsp;Troeth</a>.</p>
+<p>
+	Ms. Jen&rsquo;s wine <span class="amp">&amp;</span> cheese parties quickly became a staple of our annual pilgrimage to <span class="caps">SXSW</span> Interactive. Each year, more people came until the crowd got so large you literally could not fit another human being in the room. Standing room only&hellip; including on top of the bed and some of the other pieces of furniture. The room would be filled with incredible people you wanted to see and interact with, but was also overcrowded and&nbsp;uncomfortable.</p>
+<p>
+	In a lot of ways, Ms. Jen&rsquo;s wine <span class="amp">&amp;</span> cheese parties were mirroring what was happening with the festival as a whole. But that&rsquo;s another story for another&nbsp;day.</p>
+<hr />
+<p>
+	<em>It&rsquo;s hard to believe that <span class="caps"><span class="caps">SXSW</span></span> Interactive is 20 years old. Reading through the remarks and stories in <a href="http://www.fastcompany.com/3026402/oral-history-sex-drugs-apps-and-sxswi">this awesome piece from Fast Company</a>, I felt inspired to share some of my <span class="caps"><span class="caps">SXSW</span></span> stories. This is the&nbsp;third.</em></p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/the-hampton/</link>
+			<guid>https://blog.easy-designs.net/archives/the-hampton/</guid>
+			<dc:date>2014-02-28T10:19:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Hallways</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	I stopped attending <span class="caps">SXSW</span> as a journalist in 2000. I&rsquo;d gotten pretty burned out running the magazine, so I decided to take a break and focus on my web work. Little did I know, 5 years later I&rsquo;d be back because a site I built was a finalist in the Interactive&nbsp;Awards.</p>
+<p>
+	At the time, the panels for Interactive occupied roughly 3-4 rooms upstairs, in the far corner of the Convention Center. We were the <span class="caps">AV</span> club to Music <span class="amp">&amp;</span> Film&rsquo;s jocks and cool kids in the high school cafeteria. But, to me, walking into that corner was like swimming up to a coral reef teeming with schools of incredible fish. I recognized so many of our industry&rsquo;s luminaries as I floated through: <a href="http://meyerweb.com">Eric Meyer</a> &hellip; <a href="http://zeldman.com">Jeffrey Zeldman</a> &hellip; <a href="https://signalvnoise.com/writers/jf">Jason Fried</a> &hellip; <a href="http://tantek.com">Tantek &Ccedil;elik</a> &hellip; These were people whose blog posts and articles had helped me solve issues I was having, people that helped me hone my craft, people that were indirectly responsible for me being there as a finalist in the awards. And unlike the reef fish, they didn&rsquo;t spook when I saddled up to them and said&nbsp;hello.</p>
+<figure>
+	<img src="http://src.sencha.io/x100/https://blog.easy-designs.net/img/posts/hallways.jpg" alt=""/> <figcaption>
+	<p>
+		Younger versions of ourselves: Ian Lloyd, Ethan Marcotte, Andy Clarke, Andy Budd, Glenda Sims, Jeffrey Zeldman, Richard Rutter, Shaun Inman, Rob Weychert,&nbsp;Faruk Ate&#351;, Jon Hicks, and more sprawled on the floor.<br />
+		<em>Photo credit: <a href="http://www.flickr.com/photos/jflint/6460626/">Jeremy&nbsp;Flint</a>.</em></p>
+	</figcaption></figure>
+<p>
+	Everyone was incredibly friendly and I was amazed when they invited me to join them as they sat on the floor and leaned against the walls between and during some of the sessions. The hallway became our meeting place and I began to meet more amazing people, many of whom were just starting to make a splash in our then-young industry: <a href="http://adactio.com">Jeremy Keith</a>, <a href="http://andybudd.com">Andy Budd</a>, <a href="http://clagnut.com">Richard Rutter</a>, <a href="http://ma.tt">Matt Mullenweg</a>, <a href="http://jasonsantamaria.com">Jason Santa Maria</a>, <a href="http://hicksdesign.co.uk">Jon Hicks</a>, <a href="http://robweychert.com">Rob Weychert</a>, <a href="http://unstoppablerobotninja.com">Ethan Marcotte</a>, <a href="http://lloydi.com/">Ian Lloyd</a>, <a href="http://cindyli.com/">Cindy Li</a>, and <a href="http://farukat.es/">Faruk Ate&#351;</a> to name but a few. Together we bonded on those dirty, industrially-carpetted conventions center floors and those relationships became friendships and grew into new businesses and&nbsp;ventures.</p>
+<p>
+	I am incredibly thankful for the opportunity I had to go to <span class="caps">SXSW</span> that year. I&rsquo;m thankful for the carpet and the hallways. And I am ever so thankful for the friends I made there, friends that I still hold dear nearly 10 years&nbsp;later.</p>
+<hr />
+<p>
+	<em>It&rsquo;s hard to believe that <span class="caps">SXSW</span> Interactive is 20 years old. Reading through the remarks and stories in <a href="http://www.fastcompany.com/3026402/oral-history-sex-drugs-apps-and-sxswi">this awesome piece from Fast Company</a>, I felt inspired to share some of my <span class="caps">SXSW</span> stories. This is the&nbsp;second.</em></p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/hallways/</link>
+			<guid>https://blog.easy-designs.net/archives/hallways/</guid>
+			<dc:date>2014-02-27T22:09:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Filemaker</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	I started attending <span class="caps">SXSW</span> in 1997 as a music journalist. I ran a small indie music <span class="amp">&amp;</span> entertainment rag in Florida at the time and was invited by one of my publicist friends (I&rsquo;m looking at you, <a href="http://www.reybee.com/">Rey</a>) to crash in his room and check out the festival/conference. I scored a press badge and saw some amazing shows, but Interactive wasn&rsquo;t really on my&nbsp;radar.</p>
+<p>
+	Two years later, my little publication became a media sponsor of <span class="caps">SXSW</span> and I got a Platinum badge, granting me access to everything <span class="caps">SXSW</span> had to offer. I didn&rsquo;t attend any of the Interactive panels&mdash;I was far more interested in seeing Tom Waits&rsquo; first live performance in 10 years, meeting Richard Linklater and Robert Rodriguez, and interviewing Janeane Garofalo&mdash;but I did check out the trade&nbsp;show.</p>
+<p>
+	At the time, the trade show was mixed: music, film <span class="amp">&amp;</span> interactive all lumped in together. (The conferences overlapped more at the time as well.) It was an interesting time because many labels were experimenting with interactive CDs and such, but <span class="caps">MP</span>3s and digital downloads were still pretty uncommon. Napster had just launched that year and only one major-label band at the time&mdash;They Might Be Giants&mdash;had the foresight to issue a digital-only album: <a href="http://en.wikipedia.org/wiki/Long_Tall_Weekend"><cite>Long Tall Weekend</cite></a>.</p>
+<p>
+	Amid all of the music and film-related hubub, I made my way over to the one corner devoted to Interactive&rsquo;s vendors. While perusing the wares and looking for cool swag (of which there was none), I discovered a guy hocking something called a &ldquo;Content Management System&rdquo;. It sounded marvelous. I had been doing static&nbsp;(framed, of course)&nbsp;<span class="caps">HTML</span> versions of my magazine for about two years at that point and the idea of being able to enter and maintain the content in a more dynamic and flexible format was mind-blowing. I have no idea what the software was called, but the back-end was Filemaker. I bought it, of course. It wasn&rsquo;t until I got back to my hotel rom that I realized Filemaker was Mac-only. I was on Windows. Cue the sad&nbsp;trombone.</p>
+<p>
+	I never once ended up installing or using that early <span class="caps">CMS</span>, but it sowed a seed in my mind of the possibilities for a website and I began to take my practice of web design more seriously. I taught myself <span class="caps">PHP</span> and MySQL and just kept going. And I owe it all to that guy and his Filemaker <span class="caps">CMS.</span></p>
+<hr />
+<p>
+	<em>It&rsquo;s hard to believe that <span class="caps">SXSW</span> Interactive is 20 years old. Reading through the remarks and stories in <a href="http://www.fastcompany.com/3026402/oral-history-sex-drugs-apps-and-sxswi">this awesome piece from Fast Company</a>, I felt inspired to share some of my <span class="caps">SXSW</span> stories. This is the&nbsp;first.</em></p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/filemaker/</link>
+			<guid>https://blog.easy-designs.net/archives/filemaker/</guid>
+			<dc:date>2014-02-26T20:44:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>A Web For Everyone</title>
+			<author>aaron@easy-designs.net (Aaron Gustafson)</author>
+			<description><![CDATA[
+				<p>
+	I was an only child, so it shouldn&#39;t come as a surprise that I grew up thinking the world revolved around me. In fact, I&#39;ll be the first to admit that I was a pretty selfish kid. Well behaved, certainly, but not terribly concerned with how my actions affected&nbsp;others.</p>
+<p>
+	As an only child, the Golden Rule my grandparents insisted was so important&mdash;Do unto others as you would have them do unto you&mdash;didn&#39;t really resonate. But I was a kid, what did I know? I was sheltered. I was young. I was the sole beneficiary of my parents&#39; love, time, and money. I had a pretty good life, but I lacked&nbsp;perspective.</p>
+<p>
+	I like to think I&#39;ve grown immensely in the intervening years. Through my work, travel, and moving around a lot, I&#39;ve experienced dozens of cultures, and I&#39;ve met hundreds of new people, each with their own life experiences, needs, and desires. Exposure to their unique perspectives has broadened my own and helped me break down the psychological barriers I maintained between me and the &#8220;others.<span class="final quote">&#8221;</span></p>
+<p>
+	But it wasn&#39;t until I started working on the web that I came to a full understanding of the importance of the Golden Rule. Prior to becoming a developer, the ramifications of my decisions were fairly limited. But on the web, every decision I make can have a profound effect on hundreds of thousands (if not millions) of people&#39;s lives. I can make checking into a flight a breeze, or I can make it a living&nbsp;hell.</p>
+<p>
+	That&#39;s a lot of power. And to quote Stan Lee: &#8220;With great power comes great responsibility.<span class="final quote">&#8221;</span></p>
+<p>
+	My mom always told me that if you choose to do something, you should do it well, so I made it my mission to make the web an easy-to-use, friendly, and accessible place. I chose to make the Golden Rule central to my&nbsp;work.</p>
+<p>
+	As schmaltzy and self-aggrandizing as all that may sound, it&#39;s also pretty shrewd. The Golden Rule can do wonders for your business. After all, what is good customer service if not treating someone like a human being worthy of your time, consideration, and respect? If we spend every day looking for new ways to make our customers&#39; lives better, we&#39;ll create a lasting legacy and build a strong base of customer advocates along the&nbsp;way.</p>
+<p>
+	A commitment to universal accessibility is the highest form of customer service. It recognizes that we all have one special need or another at one time or another in our lives, and that fact should not preclude us from experiencing all the web has to offer. It&#39;s about providing everyone with equal opportunity to engage with your brand experience, even though they may do so in different ways. It breaks down the barriers between &#8220;us&#8221; and &#8220;them&#8221; and recognizes the humanity in our&nbsp;customers.</p>
+<p>
+	And it&#39;s really not that&nbsp;hard.</p>
+<p>
+	In the pages that follow, Whitney and Sarah beautifully lay out the case for accessibility, show you what it looks like, and demonstrate just how simple it is to achieve. They introduce us to a series of personas&mdash;Trevor, Emily, Jacob, Lea, Vishnu, Steven, Maria, and Carol&mdash;and help us effortlessly slip into each of their shoes, to see the struggles they experience when using the web, and to recognize our own needs and desires in their&nbsp;own.</p>
+<p>
+	In a time when many of us are scrambling to keep up with technological advancements and the opportunities they create, this book grounds us in what really matters: people. This book is a roadmap to providing incredible customer service and realizing the Golden Rule in our work and&mdash;much like the code we write and experiences we design&mdash;the ripple effect it generates is sure to bring about a more equitable&nbsp;web.</p>
+<hr />
+<p>
+	What you have just read is the Foreword I wrote for <cite><a href="http://rosenfeldmedia.com/books/a-web-for-everyone/">A Web For Everyone: Designing Accessible User Experiences</a></cite> by Sarah Horton <span class="amp">&amp;</span> Whitney Quesenbery. If you work on the web at all, you need this book. It&rsquo;s an amazingly easy read that brings humanity to an often dry subject and I am very thankful to have been a part of&nbsp;it.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/a-web-for-everyone/</link>
+			<guid>https://blog.easy-designs.net/archives/a-web-for-everyone/</guid>
+			<dc:date>2014-01-21T10:31:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Looking Back on 2013</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>
+	Jeez Louise, 2013 is almost over?! Time for the requisite holiday update and well-wishes. <em>(Mom was right when she said time goes faster and faster as you&nbsp;age!)</em></p>
+<p>
+	Part of the reason this year went by so fast for us was that we were just plain busy. Sure, we had a ton of client work (many thanks to a good number of you for that) and lots of conferences <span class="amp">&amp;</span> workshops to keep us busy, but we also had a few new developments as&nbsp;well:</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/jeff.jpg" alt=""/></figure>
+<h2>
+	@webcraftsman joined the Easy&nbsp;family</h2>
+<p>
+	After 6 months of searching and interviews, <strong>Jeff Bridgforth joined our team</strong> in January. He came to us from Bonnier, where he built websites for <cite>Popular Science</cite>, <cite>Popular Photography</cite>, <cite>Saveur</cite>, and <cite>Parenting</cite>. He and his family relocated to Chattanooga from Orlando over the summer and they&#39;ve settled in&nbsp;nicely.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/new-office.jpg" alt=""/></figure>
+<h2>
+	New home away from&nbsp;home</h2>
+<p>
+	In March <strong>we bought an office in Chattanooga&rsquo;s Southside neighborhood</strong> and the renovation of the space was a project and a half. We did the <span class="caps">CAD</span> drawings, lighting and electrical diagrams, interior design, and such&mdash;pretty much everything but the build-out (many thanks to <a href="http://haskelsearsdesign.com/">Haskel Sears <span class="amp">&amp;</span> team</a> for their skills in that area). We&#39;ve settled in and think the results are pretty awesome. I got to stretch her design legs on this project, picking out the colors, furniture, rugs, and flooring. I&rsquo;ll be posting details chronicling the process on <a href="http://blog.easy-designs.net">our blog</a> in the coming year, so if you&rsquo;re into mid-century modern design, keep an eye out for&nbsp;those.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/adaptive-french.jpg" alt=""/></figure>
+<h2>
+	<span class="caps">AWD</span> <i lang="fr" title="in French">en&nbsp;fran&ccedil;ais</i></h2>
+<p>
+	In May, almost 2 years to the day after it&rsquo;s original launch, Aaron&#39;s book <strong><a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> was <a href="http://www.pearson.fr/livre/?GCOI=27440100891460">released in France by Pearson</a></strong>. <i lang="fr" title="Amazing">Incroyable!</i></p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/code-and-creativity.png" alt=""/></figure>
+<h2>
+	New talk&nbsp;series</h2>
+<p>
+	In August we launched <strong>a new talk series called Code <span class="amp">&amp;</span> Creativity</strong>. The free, bimonthly series features two speakers, one from Chattanooga and one from elsewhere. We started the series to create a casual venue to bring Chattanooga&rsquo;s diverse design and development community together, celebrate local talent, and provide access to amazing presenters. The response has been phenomenal and we are quite thankful for the amazing speakers we&rsquo;ve had so far: <a href="http://www.nczonline.net/">Nicholas Zakas</a>, <a href="http://jasongriffey.net/">Jason Griffey</a>, <a href="http://jennlukas.com/">Jenn Lukas</a>, <a href="http://dryan.com/">Daniel Ryan</a>, <a href="http://katekieferlee.com/">Kate Kiefer Lee</a>, and <a href="http://www.natehill.net/">Nate Hill</a>. We&rsquo;ve already begun booking our 2014 dates and the line-up looks to be impressive. Check out <a href="http://codeandcreativity.com">codeandcreativity.com</a> for more&nbsp;information.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/device-lab.jpg" alt=""/></figure>
+<h2>
+	New community&nbsp;resource</h2>
+<p>
+	And finally, we&#39;ve opened up a portion of our new office to house the <strong>Chattanooga Open Device Lab</strong>. The <span class="caps">CHA</span>-<span class="caps">ODL</span> is a community resource that is freely available to area designers and developers working on the web or developing apps. We currently house over 40 different devices ranging from feature phones and smartphones to gaming systems, laptops, and tablets. We&rsquo;re very excited to be able to share the resources we have to help others in the community, and look forward to seeing how the lab grows. We&#39;re offering regular hours starting in 2014. If you&#39;re interested in booking some time in the lab, visit <a href="http://chadevicelab.org">chadevicelab.org</a>.</p>
+<p>
+	As you can see, it&rsquo;s been a whirlwind of a year for us and we&rsquo;re very thankful for the support of our clients and community that has helped us to grow and empowered us to continue giving back to the design <span class="amp">&amp;</span> web community. We wish you and yours a wonderful holiday season, and we hope to spend some time with you in the new&nbsp;year!</p>
+<p>&nbsp;Cheers,</p>
+<p>
+	Kelly <span class="amp">&amp;</span> the Easy&nbsp;Team</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn664163638&utmr=-&utmp=%2Frss%2F&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/looking-back-on-2013/</link>
+			<guid>https://blog.easy-designs.net/archives/looking-back-on-2013/</guid>
+			<dc:date>2013-12-19T10:17:00-05:00</dc:date>
+		</item>
+	
+	</channel>
+</rss>

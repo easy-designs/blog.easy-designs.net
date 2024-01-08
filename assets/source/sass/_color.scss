@@ -1,0 +1,316 @@
+@import 'utils';
+@import 'compass';
+ 
+$color-white:rgb(255, 255, 255);
+$color-white_alpha:rgba(255, 255, 255, .43);
+$color-black:rgb(30, 30, 30);
+$color-text:rgb(65, 65, 65);
+$color-text_green:rgb(22, 127, 53);
+$color-background_white_alpha:rgba(255,255,255,0);
+$color-background_green:rgb(104, 205, 91);
+$color-background_green_alpha:rgba(104, 205, 91, 1);
+$color-blue:rgb(180, 246, 248);
+$color-background_blue:rgb(224, 251, 253);
+$color-background_blue_alpha:rgba(180, 246, 248, .43);
+$color-background_blue_blue:rgb(204, 249, 251);
+$color-background_blue_green:rgb(137, 224, 160);
+$color-background_white_blue:rgb(242, 253, 254);
+$color-background_white_blue_alpha:rgba(255, 255, 255, .6);
+$color-light_green:rgb(84, 173, 68);
+$color-dark_green:rgb(17, 126, 63);
+$color-yellow:rgb(251, 224, 44);
+$color-orange:rgb(242, 98, 42);
+$color-dark_orange:rgb(222, 78, 22);
+$color-red:rgb(215, 34, 41);
+$color-dark_red:rgb(186, 32, 37);
+$color-light_grey:rgb(200, 200, 200);
+$color-dark_grey:rgb(180, 180, 180);
+
+/* =Elements */
+body {
+  background-color: $color-white;
+  color: $color-text;
+}
+a:link, a:visited, a:active {
+  color: $color-text_green;
+}
+a:hover,
+#more a:hover {
+  color: $color-orange;
+}
+blockquote {
+	border-color: $color-blue;
+}
+input, select, textarea {
+  border-color: $color-dark_grey;
+}
+input:hover,
+select:hover,
+textarea:hover,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: $color-text;
+}
+button {
+  background-color: $color-light_green;
+  border-color: $color-dark_green;
+  color: $color-white;
+}
+button:hover {
+  background-color: $color-orange;
+  border-color: $color-dark_orange;
+  color: $color-white;
+}
+code {
+  color: $color-dark_orange
+}
+pre.shell {
+  background-color: $color-black;
+  color: $color-light_grey;
+}
+
+/* =Classes */
+.notice {
+  background-color: $color-light_green;
+  border-color: $color-dark_green;
+  color: $color-white;
+}
+.notice.failure {
+  background-color: $color-red;
+  border-color: $color-dark_red;
+  color: $color-white;
+}
+.error label {
+  color: $color-dark_red;
+}
+.error input,
+.error select,
+.error textarea {
+  border-color: $color-dark_red;
+  color: $color-dark_red;
+}
+
+/* =Layout */
+
+#logo a {
+	background: transparent url(#{$cdn}/css/easy-blog.png) no-repeat;
+	display: block;
+	height: 45px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width:225px;
+	html.has-svg & {
+		background-image: url(#{$cdn}/css/easy-blog.svg);
+		background-size: 100%;
+	}
+}
+#page-header {
+  border-top-color: $color-background_green;
+  border-bottom-color: $color-blue;
+}
+#search-form input,
+#search-form label {
+  color: $color-text;
+}
+#page-header, #main, #elsewhere {
+  background-color: $color-background_blue;
+  background-color: $color-background_blue_alpha;
+}
+#logo {
+  background-color: $color-background_blue_blue;
+  background-color: $color-background_blue_alpha;
+}
+.promo, #page-footer, #search-form {
+  background-color: $color-background_green;
+}
+.inner {
+  background-color: $color-background_blue_blue;
+  background-color: $color-background_blue_alpha;
+}
+.sidebar .inner {
+	background: transparent;
+}
+#page-footer p, #search-form p {
+  background-color: $color-background_blue_green;
+  background-color: $color-background_blue_alpha;
+}
+
+/* =Figures */
+article.focal figure,
+article.focal figure img,
+article.focal figure video,
+article.focal figure audio,
+article.focal figure object,
+article.focal figure embed,
+article.focal figure canvas,
+article.focal figure iframe,
+article.focal figure figcaption {
+	background: $color-white;
+	border-color: $color-white;
+}
+article.focal figure:after,
+article.focal figure:before { 
+	background: transparent;
+}
+
+
+/* =Sidebars */
+.sidebar h2, .sidebar h3 {
+  color: $color-text;
+}
+
+
+/* =Archives */
+#archive .hentry .body,
+#archive .hentry .meta {
+	background-color: $color-background_white_blue;
+  background-color: $color-background_white_blue_alpha;
+}
+#archive .hentry:hover .body,
+#archive .hentry:hover .meta {
+  background-color: $color-white;
+}
+#archive .hentry h2 {
+  color: $color-dark_green;
+}
+
+
+/* =Comments */
+#comments {
+  background-color: $color-background_white_blue;
+  background-color: $color-background_blue_alpha;
+}
+#comments .meta {
+  background: transparent url(#{$cdn}/css/bubble-bottom.png) 0 -5px no-repeat;
+}
+
+
+/* =Home */
+#teasers h3 a {
+	text-shadow: $color-dark_green 0 0 8px;
+  color: $color-white;
+}
+#teasers h3:hover a {
+	text-shadow: $color-orange 0 0 8px;
+}
+#home .hentry h2 {
+  color: $color-dark_green;
+}
+#teasers .hentry {
+  background-color: $color-background_white_blue;
+  background-color: $color-background_white_blue_alpha;
+}
+#teasers .hentry:hover {
+  background-color: $color-white;
+}
+#teasers .hentry h2:hover {
+  color: $color-orange;
+}
+
+
+/* =Search */
+#search-results .term {
+	background-color: $color-yellow;
+}
+
+
+/* =Footer Content */
+#more li {
+  background: url(#{$cdn}/css/all-entries.png) no-repeat 0 50%;
+}
+#more li:first-child {
+  background: url(#{$cdn}/general/rss-icon.png) no-repeat 0 50%;
+}
+#more a {
+  color: $color-text;
+}
+#elsewhere h2,
+#elsewhere h3 {
+  color: $color-text;
+}
+
+
+/* =Pagination */
+#pagination a {
+  color: $color-text;
+}
+
+
+/* =RGBa Enhancements */
+#social-links li {
+    background: transparent;
+	@each $service in twitter, facebook, google, github {
+		&.#{$service} a {
+			background-image: url(#{$cdn}/css/#{$service}.png);
+			.has-svg & {
+				background-image: url(#{$cdn}/css/#{$service}.svg);
+				@include background-size(contain);
+			}
+		}
+	}
+}
+
+
+#easy-network a {
+    color: inherit;
+}
+@include respond-min($breakpoint-4) {
+	#easy-network a {
+		opacity: 0.5;
+	}
+	#easy-network a:hover,
+	#easy-network a:focus {
+	    opacity: 0.99;
+	}
+	#easy-network [data-icon]:before {
+		font-family: 'easy-designs';
+		content: attr(data-icon);
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		margin-right:3px;
+		-webkit-font-smoothing: antialiased;
+	}
+	#easy-network a:hover [data-icon] + span {
+		text-decoration: underline;
+	}
+}
+@include respond-min($breakpoint-2) {
+	#search-form,
+	#search-form p {
+		background: transparent;
+	}
+	.sidebar .inner {
+	  background-color: $color-background_blue_blue;
+	  background-color: $color-background_blue_alpha;
+	}
+}
+
+@include respond-min($breakpoint-5) {
+    
+    body {
+      background: $color-white url(/css/star.png) center 0 no-repeat;
+    }
+    //#comments .hentry {
+	//	background: transparent url(#{$cdn}/css/bubble-top.png) no-repeat 0 0;
+	//}
+	//#comments .entry-content {
+	//	background: transparent url(#{$cdn}/css/bubble-mid.png) repeat-y;
+	//}
+	//#comments .meta {
+	//	background-position: 0 0;
+	//}
+	#extras {
+    	background: $color-background_white_alpha url(/css/star-2.png) center top no-repeat;
+    }
+    #about {
+    	background: $color-background_green_alpha url(/css/star-2.png) center -231px no-repeat;
+    }
+	#about-us {
+		background: url(#{$cdn}/css/orange-stars.png) no-repeat 31px 19px;
+	}
+		
+}

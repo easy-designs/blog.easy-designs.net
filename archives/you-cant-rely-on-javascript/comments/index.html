@@ -1,0 +1,582 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>Face It: You Can&#8217;t Rely on JavaScript - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/you-cant-rely-on-javascript/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Face It: You Can&#8217;t Rely on JavaScript" />
+	<meta property="description" content="I" />
+	<meta property="og:description" itemprop="description" content="I" />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/you-cant-rely-on-javascript/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">Face It: You Can&#8217;t Rely on&nbsp;JavaScript</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2011-02-09T05:51:28" pubdate="pudate">09 February 2011</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>I&#8217;ve been cautioning folks against over-reliance on JavaScript for the better part of a decade. In that time, I harped a lot on Lala.com (which was eventually bought by Apple and shuttered) because they loaded all of their content via Ajax. If you showed up to the page with JavaScript disabled, you were greeted with a curt &ldquo;you must be this high to ride&rdquo; type message and, my favorite feature, a &ldquo;loading&rdquo;&nbsp;indicator:</p>
+<p><figure><img src="/posts/lala-fail.png" alt="" /></figure></p>
+<p>Of course, without JavaScript, nothing was loading; the site was devoid of content and completely unusable. Even the search box was pointless as it had no submit button and relied on predictive typing to find&nbsp;anything.</p>
+<p>That was four years ago. Skip ahead to the relaunch of the Gawker Media platform and you have a company (that should really know better) putting all of their eggs in the JavaScript basket yet again. True, they certainly haven&#8217;t been the only ones to launch a site design that relied 100% on JavaScript since Lala, but their epic fail yesterday proved, yet again, that you can&#8217;t rely on JavaScript (and&nbsp;Ajax).</p>
+<figure><img src="/posts/lifehacker-fail.png" alt="" /></figure>
+<p>So why can&#8217;t you rely on JavaScript? Let&#8217;s go through the&nbsp;list:</p>
+<ol>
+<li>Users may choose to turn JavaScript off in their browser (for performance reasons, as a low-fi way to block pop-ups and ads, or because they ascribe to the age-old misconception that JavaScript is&nbsp;inaccessible).</li>
+<li>Network administrators may block JavaScript at the firewall (usually because they think it&#8217;s&nbsp;insecure).</li>
+<li>A JavaScript issue as simple as a typo could cause a fatal error that causes JavaScript execution to be aborted&nbsp;completely.</li>
+<li>In the case of Ajax, the service you are relying on to deliver content to the browser may, itself, experience an error and return nothing or a bunch of error&nbsp;code.</li>
+</ol>
+<p>For these reasons, you should always build your website following progressive enhancement: start with the reliable baseline of <span class="caps">HTTP</span> and good copywriting; add semantic <span class="caps">HTML</span> (and microformats); apply <span class="caps">CSS</span> in layers to create visual hierarchies; use Hijax and other progressively-enhanced JavaScript patterns to improve the interactivity; and cap it off with accessibility enhancements in the form of <span class="caps">ARIA</span> roles and&nbsp;states.</p>
+<p>For musings on the Gawker redesign, progressive enhancement, and JavaScript-focused &ldquo;hash-bang&rdquo; URLs, read <a href="http://adactio.com/journal/4346/">Jeremy&#8217;s excellent post</a> and <a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Mike&#8217;s in-depth&nbsp;analysis</a>.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F&amp;source=tweetbutton&amp;text=Face+It:+You+Can&#8217;t+Rely+on+JavaScript&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fyou-cant-rely-on-javascript%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/accessibility/index.html">accessibility</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/progressive-enhancement/index.html">progressive enhancement</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/seo/index.html">search engine optimization</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/usability/index.html">usability</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-530">
+						<article class="entry-content">
+							<p>Although I agree that one can not depend on Javascript for core site functionality, I have to disagree with your four&nbsp;points.</p>
+
+<p>1) The majority of users don&#8217;t know about, or care what Javascript is.&nbsp; Most will look for plug-in&#8217;s for noscript functionality based on something they saw on facebook or some other site.&nbsp; There is a very small percentage of users (&lt;5%) that turn it off&nbsp;manually.</p>
+
+<p>2) Most network administrators don&#8217;t block Javascript.&nbsp; Sure it happens but Javascript is one of the least worrisome attack vectors on a corporate network.&nbsp; Blocking <span class="caps">JS</span> also requires packet inspection as it can not be blocked without fully parsing every <span class="caps">HTTP</span>/<span class="caps">HTTPS</span> packet and in some cases, rebuilding the <span class="caps">TCP</span>/<span class="caps">IP</span> conversation completely to determine the content.&nbsp; Most companies don&#8217;t want that overhead, some cannot afford&nbsp;it.</p>
+
+<p>3) Errors should be covered by a good development cycle.&nbsp; That being said, some error conditions may slip through&#8230; but what bugs in the <span class="caps">OS</span>, or browser, or other software packages?&nbsp; Nothing is 100% error free so why pick on&nbsp;Javascript?</p>
+
+<p>4) Again, proper error handling should make this a moot&nbsp;point.</p>
+
+<p>Further to these points, the sites you bring to light here are &#8216;fun&#8217; sites.&nbsp; So even if a network admin kills Javascript at the firewall, the user probably has no right being on there&nbsp;anyways.</p>
+
+<p>From experience as a network administrator, if you block anything from the users, they will use their mobile devices to waste their&nbsp;day.</p>
+
+<p>What it all comes down to is the target market for your site.&nbsp; If you are targeting the corporate user-base then make your site accessible as if behind a restrictive policy.&nbsp; If your site is for fun, then of course ramp up the Javascript functionality and enjoy it because most end-users will be sitting at home or in a coffee&nbsp;shop.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.silicon-vision.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/a3407312621990624667990e787003c1?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Kev C</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T13:10:32" pubdate="pudate">09 February 2011 at 1pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-530">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-531">
+						<article class="entry-content">
+							<p>I agree with the premise more than the reasoning. With the goal being 100% accessible content for all, the reasons just aren&#8217;t strong enough. I throw out the first 3 reasons, and here&#8217;s&nbsp;why:</p>
+
+<p>1 - Again,while the goal is accessible content, users turning off JavaScript (or user agents that don&#8217;t support JavaScript) is probably a negligible percentage for the majority of sites. I&#8217;ve seen the stats (on <span class="caps">JS</span> disabled) range from 1-5%, and we can speculate on both sides of the argument as to what those stats represent, so the question is, based on the project, is the client/agency willing to forgo those users in favor of a mandatory <span class="caps">JS</span>-enabled site? Most of the time that answer is&nbsp;yes.</p>
+
+<p>There are some team/client education points here, but there can be extra work involved in making sites accessible to users with <span class="caps">JS</span> disabled. This is not just something webdevs can build into their development process. Why? Because when you work for an agency, changing the way a site looks/functions is not your prerogative. There have to be rounds of client-approved designs so that the designers/<span class="caps">UX</span> and client can agree what the site/brand will look like in those instances. The tech team then has to agree on technology and approach, since again, at a large agency, you may be dealing with specific roles/functions where 1 dev doesn&#8217;t do it all, but a team of devs create a site,&nbsp; and the work may be split along client-side and server-side lines. So yeah, if you&#8217;re creating a blog, or a personal portfolio site, or you&#8217;re a webdev who handles everything&#8212; from design to development&#8212;for your client roster, then absolutely you can/should build this into your process. But if you&#8217;re, say, a large shoe manufacturer, and you engage a large agency, you may wind up positioned in the experience over accessibility category. And this may all happen before a dev ever sees the site (not saying there aren&#8217;t issues with this scenario, but it&#8217;s the&nbsp;reality).</p>
+
+<p>2 - If the sys-admin is turning off <span class="caps">JS</span>, these users have bigger problems, since that&#8217;s using a sledgehammer instead of a surgical knife, and these &#8216;corporate&#8217; users probably shouldn&#8217;t be surfing the net anyway (since it&#8217;s obvious somebody doesn&#8217;t approve), but if they do, see my response to&nbsp;#1.</p>
+
+<p>3 - Yep, simple typos or bad content can take an entire site down, but that&#8217;s true of server-side technologies too. You do something wrong, the site fails to load. That&#8217;s not a JavaScript issue, that&#8217;s a dev/<span class="caps">QA</span> problem and shouldn&#8217;t be part of the discussion. You make a typo in a <span class="caps">PHP</span> request or a variable name in .Net, or a mistake in an .htaccess file, and its bye-bye site. Nobody complains about typos in other languages being the death of the internet, so why single out JavaScript here? These things can be caught and fixed in <span class="caps">QA</span>, but things get missed and slip out as they do no matter what the&nbsp;language.</p>
+
+<p>In the case of #4, that&#8217;s about the only thing that is in the realm of the web dev and should be accounted for by the tech team&#8212;What happens on error? What&#8217;s the experience? How do we get the user back on track? This is at least a use case we can and should plan&nbsp;for.</p>
+
+<p>Again, there&#8217;s no compelling reasons here why we shouldn&#8217;t plan for and rely on <span class="caps">JS.</span> It&#8217;s even becoming a standard on all handheld devices. But I do agree that more thought needs to go into the planning stages and starting with a base of accessible content and enhancing the experience after that. It&#8217;s just not cut and&nbsp;dry.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/145a8db40216aaa396ea843254460bbd?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">mpaige</span>
+									</li>
+							<li><time class="published" datetime="2011-02-09T13:43:51" pubdate="pudate">09 February 2011 at 1pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-531">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-532">
+						<article class="entry-content">
+							<p>true, but you will got so much work doing things work without javascript for 0,1% of the users ?<br />
+nowadays things dont even work ok in&nbsp;ie6&#8230;</p>
+
+<p>ok, but in a dream world things should work fine even in&nbsp;lynx.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.twitter.com/eduardofusion">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/0a347a9519d95caf81edd03772b9ae0c?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Eduardo</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T14:01:20" pubdate="pudate">09 February 2011 at 2pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-532">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-533">
+						<article class="entry-content">
+							<p>Glad this discussion is happening!&nbsp; Thanks for the nice clean summary + thoughts + good links.&nbsp; I was glad to hit your post &#8216;first&#8217; as I read-up on this&nbsp;topic.</p>
+
+<p>I&#8217;d like to point out an assumption being made by you and Jeremy and a little by Mike: we are making webpages.&nbsp; Not a bad assumption, but an assumption nonetheless that isn&#8217;t necessarily&nbsp;universal&#8230;</p>
+
+<p>In particular, with the rise of folks wanting to do &#8216;mobile apps&#8217; but don&#8217;t have Java skills (or Objective C or whatever) <span class="caps">AND</span> were told that <span class="caps">HTML</span>5 can all-but make a mobile&nbsp;app.</p>
+
+<p>Personal opinion: this catalyzed an up-and-coming approach of not making web_pages_ but web_apps_.&nbsp; Fundamental difference, to me, is state&#8212;pages try to be stateless, apps tend to use state like the app-makers can do in Java/<span class="caps">C.</span></p>
+
+<p>If one is making a web-app-still-using-URLs, then forcing JavaScript is reasonable, I would think.&nbsp; But only from a web-<span class="caps">APP</span> approach, not a web-<span class="caps">PAGE</span>&nbsp;approach.</p>
+
+<p>Nonetheless, I really like Mike&#8217;s statement &#8220;You are already using JavaScript, so you can do this damage much later with JavaScript using a click handler on the link.&#8221; (that is, use a &#8216;normal&#8217; link and then put a click-handler on it to make it an <span class="caps">AJAX</span> call instead).&nbsp; Seems like a great paradigm.&nbsp; <span class="caps">THIS</span> seems like a great solution to the ridiculous use of <span class="caps">AJAX</span> for what is stateless (web-<span class="caps">PAGE</span>) anyway (the fuel of this&nbsp;topic).</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://dissectionbydavid.wordpress.com/">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/48fe44aaf2b5a64689a9642b8feeace7?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">David M</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T14:57:54" pubdate="pudate">09 February 2011 at 2pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-533">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-534">
+						<article class="entry-content">
+							<p>I couldn&#8217;t agree more with this article. I&#8217;m glad to see such a large movement finally speaking out against this&nbsp;nonsense.</p>
+
+<p><span class="initial quote">&#8220;</span>There is a very small percentage of users (&lt;5%) that turn it off manually.<span class="final quote">&#8221;</span></p>
+
+<p>Where did this number come from? I&#8217;ve seen it mentioned all over, but I&#8217;m curious about the source. That number is surprising to me because almost everyone I know browses with javascript disabled by default. I expected it to be at least higher than&nbsp;5%.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://epsilon-not.net/">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/96160627de1a1c142b3b5f1058dff07f?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">CHJJ</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T15:05:39" pubdate="pudate">09 February 2011 at 3pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-534">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-535">
+						<article class="entry-content">
+							<p>To all the people saying that Javascript errors are a <span class="caps">QA</span>/dev problem: that&#8217;s true if it&#8217;s a script on your site&#8230; but what about all the 3rd party analytics, tracking and ad scripts that infest every&nbsp;site? </p>
+
+<p>Errors in these scripts will cause the same problem, and there&#8217;s often nothing you can do about&nbsp;it.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/0d38d97bc6524a8a0e47f409f7b40390?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Derek</span>
+									</li>
+							<li><time class="published" datetime="2011-02-09T15:45:22" pubdate="pudate">09 February 2011 at 3pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-535">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-536">
+						<article class="entry-content">
+							<p>re: &#8220;Where did this number come from? I’ve seen it mentioned all over, but I’m curious about the source.<span class="final quote">&#8221;</span></p>
+
+<p>There are various sources available via Google search.&nbsp; The norm seems to range from 0.02% - 3.2% according to most of the ones I&#8217;ve found so&nbsp;far.</p>
+
+<p>My own site shows 0.059%, and some of that amount are bots so the number is already higher than&nbsp;actual.</p>
+
+<p>I would also like to point out that using external Javascript (i.e. analytic scripts)&nbsp; is no worse than using external Fonts like this site does.&nbsp; There is a long pause in the load time for me while it fetches fonts from TypeKit.&nbsp; Although the fallback has default fonts, it still falls into the realm of usability with a 15second load time for a simple blog&nbsp;post.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.silicon-vision.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/a3407312621990624667990e787003c1?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Kev C</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T16:13:37" pubdate="pudate">09 February 2011 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-536">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-537">
+						<article class="entry-content">
+							<p>Obviously the quality of Gawker&#8217;s implementation was&nbsp;questionable.</p>
+
+<p>But does that mean we should all stick with a web of documents for&nbsp;eternity?</p>
+
+<p>It&#8217;s great that they&#8217;re pushing on the boundaries of what&#8217;s possible with web standards, and that shouldn&#8217;t provoke a backlash against web apps in&nbsp;general.</p>
+
+<p>GMail&#8217;s been going strong for years, and I don&#8217;t recall anyone complaining that it didn&#8217;t use progressive enhancement or that it had cryptic internal <span class="caps">URL</span>&nbsp;states.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://tripleodeon.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/0bca02458e94ffff0d81d44b0c04d389?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">James Pearce</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-02-09T16:19:51" pubdate="pudate">09 February 2011 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-537">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-538">
+						<article class="entry-content">
+							<p>its like saying i disabled images and now i cant see any&nbsp;pictures</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/8a01b706dafe5e79a600b8a6a7841a0d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">drew</span>
+									</li>
+							<li><time class="published" datetime="2011-02-10T10:52:11" pubdate="pudate">10 February 2011 at 10am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-538">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-539">
+						<article class="entry-content">
+							<p>I’m really happy to see so much discussion around this topic as I think it’s an incredibly important conversation to&nbsp;have.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-530&#8221;&gt;There is a very small percentage of users (&lt;5%) that turn it off&nbsp;manually.&lt;/blockquote&gt;</p>
+
+<p>I hear this statistic a lot, probably because <a href="http://www.w3schools.com/browsers/browsers_stats.asp">it’s the most recent (2008) statistic on JavaScript use that’s been published by W3Schools</a>. I see a few problems with quoting stats like that&nbsp;though:</p>
+
+<p># every site is different and every site has a different audience, only your Javascript stats matter (as <a href="index.html#comment-530">Kev C</a> points out);<br />
+# many statistics-tracking packages rely on JavaScript to collect data and, therefore, don’t always produce the clearest picture of JavaScript&nbsp;penetration.</p>
+
+<p>It’s important to remember that, when you are looking at your own stats, your choice to rely on JavaScript from the get-go can skew your stats by driving people away who don’t have it turned&nbsp;on.</p>
+
+<p>It&#8217;s also important to keep in mind that many mobile browsers (pre-Webkit) run without JavaScript support or have it turned off by default. Blackberries, for instance, shipped with JavaScript off. The Blazer browser (seen on older Palm devices) offered an optimized browsing mode that turned off images and Javascript as well. We may like designing and developing for mobile Webkit implementations (iOS, Android, webOS), but that’s not all that’s out&nbsp;there.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-530&#8221;&gt;The question is, based on the project, is the client/agency willing to forgo those users in favor of a mandatory <span class="caps">JS</span>-enabled site? Most of the time that answer is&nbsp;yes.&lt;/blockquote&gt;</p>
+
+<p>In my opinion, that only reflects their own ignorance. It’s also part of the reason I left the agency world four years ago. When it comes to websites that we, as an agency, do for our clients, that isn’t a choice we offer our clients/partners. We build stuff to be accessible, to be progressively enhanced. Most of the time, the client is unaware, but it’s something that’s part and parcel of our development process. Most of our clients recognize that we are the experts and trust us to build them amazing websites that serve _all_ of their users and it’s why our clients have received gushing praise from their blind users and other people with disabilities. There are few things that make a client’s day like getting complemented for something they didn’t even realize they’d&nbsp;done.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-531&#8221;&gt;There are some team/client education points here, but there can be extra work involved in making sites accessible to users with <span class="caps">JS</span> disabled. This is not just something webdevs can build into their development process. Why? Because when you work for an agency, changing the way a site looks/functions is not your&nbsp;prerogative.&lt;/blockquote&gt;</p>
+
+<p>I respectfully disagree. If you practice progressive enhancement, we’ve actually found it to be cheaper because testing does not take nearly as long. When working with large (or small) development teams, you all need to be on the same page with regard to how to handle interactions without JavaScript, but that’s completely doable with a little bit of education and the occasional sit-down (led by a knowledgable dev) to walk through the <span class="caps">JS</span> and no-<span class="caps">JS</span>&nbsp;interactions.</p>
+
+<p>And in terms of client approval: if the client is interested, you can involve them in a conversation about how that interaction works, but if they aren’t, they should trust you to execute it well, based on the branding they&#8217;ve established for the remainder of the&nbsp;website.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-530&#8221;&gt;Errors should be covered by a good development&nbsp;cycle.&lt;/blockquote&gt;</p>
+
+<p>I 100% agree; they _should_. That said, based on my experience working at places where I was not in charge of the development cycle (read: not here at Easy), development teams often schedule too little time for testing of application code before releasing it to the public. And, as Derek pointed&nbsp;out:</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-535&#8221;&gt;&#8230;that’s true if it’s a script on your site&#8230; but what about all the 3rd party analytics, tracking and ad scripts that infest every&nbsp;site?&lt;/blockquote&gt;</p>
+
+<p>Amen.</p>
+
+<p>On the topic of my fourth point, regarding Ajax services being unavailable or having errors: I absolutely agree with <a href="index.html#comment-530">Kev C</a> that proper error handling should be able to shield users form experiencing errors. But what if, as with Gawker and Lala, your entire site relies on that Ajax call to show _any_ content. A failure to receive or properly load that data is the programmatic equivalent of going to school&nbsp;naked.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-533&#8221;&gt;I’d like to point out an assumption being made by you and Jeremy and a little by Mike: we are making webpages.&nbsp; Not a bad assumption, but an assumption nonetheless that isn’t necessarily&nbsp;universal…&lt;/blockquote&gt;</p>
+
+<p>That is, in fact, my assumption. And, specifically, I am addressing my comments to *public web sites*. As I&#8217;ve said many times before, if you are running a web app (e.g. Basecamp), I think you should be able to shape your audience’s expectations with regard to which browsers and technologies you’re supporting. The same goes for intranets and private websites. On the _public web_ however, I think you have a responsibility (if not to your users, at least to your content) to ensure your site works for people.&nbsp;Period.</p>
+
+<p>For what it’s worth, <a href="/archives/we-built-a-chrome-app/index.html">we recently built a web app (for the Chrome Store)</a> that did rely 100% on JavaScript, but we only did so because it was specifically targeted at the Chrome Store and the project requirements specifically outlined the <span class="caps">HTML</span>5 APIs they wanted used. But, again, that was a web app (and one specifically designed to be an in-browser app at that), not a web&nbsp;site.</p>
+
+<p>&lt;blockquote cite=&#8221;#comment-537&#8221;&gt;GMail’s been going strong for years, and I don’t recall anyone complaining that it didn’t use progressive enhancement or that it had cryptic internal <span class="caps">URL</span>&nbsp;states.&lt;/blockquote&gt;</p>
+
+<p>Again, I’d consider GMail to a web-based app, rather than a public website, so my above statement still applies. GMail’s user base, however, is far larger than an app like Basecamp, so there’s an imperative to provide a non-<span class="caps">JS</span> version, which they do. In that case, following <a href="http://domscripting.com/blog/display/41">the hijax method</a> of layering JavaScript atop a working <span class="caps">HTML</span> page allows you to build and maintain a single codebase rather than&nbsp;two.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2011-02-10T11:39:14" pubdate="pudate">10 February 2011 at 11am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-539">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-541">
+						<article class="entry-content">
+							<p>Not to say you&#8217;re completely wrong on this, but I&#8217;m not entirely convinced there&#8217;s a significant difference between <span class="caps">JS</span> typos, and link-text typos&#8212;both completely fail to load the desired content. One might argue that the probability of one is higher than the other, but testing should be sufficient to catch/fix both. Or, for that matter, between unavailable <span class="caps">AJAX</span> resources, and &#8220;normal&#8221; http server problems; again, both will fail to return the requested content. With <span class="caps">AJAX</span> failures, you can at least make an attempt to recover&nbsp;gracefully.</p>
+
+<p>Though I&#8217;m becoming less and less concerned about those who *choose* to turn off <span class="caps">JS</span> (to me they sound more and more like people who place their foot in front of the door and then complain it won&#8217;t open when they pull) I remain concerned about those without a choice. I wish there existed a reliable way to measure that group. It would help inform client meetings where,&nbsp; increasingly, I&#8217;m finding myself on the opposite side of this discussion with clients who more and more press me to &#8220;stop wasting time making it work w/o <span class="caps">JS</span>&#8221; because they&#8217;re obsessed with the&nbsp;bright/shiny.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/018792bdb5a433a0f8b40654c05566d3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Arlen</span>
+									</li>
+							<li><time class="published" datetime="2011-02-10T13:26:00" pubdate="pudate">10 February 2011 at 1pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/you-cant-rely-on-javascript/#comment-541">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/html5-and-css3-on-the-appalachian-trail/index.html">Previous Entry: <em>HTML5 & CSS3 on the Appalachian Trail</em></a></li>
+							<li class="next"><a href="/archives/knock-on-wood-pulp/index.html">Next Entry: <em>Knock on Wood (Pulp)</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

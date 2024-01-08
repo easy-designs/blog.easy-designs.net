@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Audio</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="David Stewart">
+	<!-- Date: 2010-02-15 -->
+	<script src="raphael.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery-1.4.1.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css">
+      body { margin: 0px; font-family: arial,verdana,helvetica; background: #000 url('bg.jpg');}
+      h1 { font-size: 140%; font-weight:normal; color: #036; border-bottom: 1px solid #ccc; }
+      canvas { border: 2px solid #000; float: left; margin: 0px; }
+      pre { float:left; display:block; background: rgb(238,238,238); border: 1px dashed #666; padding: 15px 20px; margin: 0 0 10px 0; }
+	  #tweet { font-family:Helvetica, Arial; position:absolute;	top:10px; left:1300px; width:330px; height:330px; color: #fff; }
+	  #tweet h1 { display:block; font-family:Helvetica, Arial; font-size:12px; font-weight:bold; color:#fff; margin:0 0 10px 0; padding:0; }
+	  #tweet strong { display:block; font-size:10px; }
+	  #tweet a { color:#61A9FF; }
+    </style>
+
+	<script type="text/javascript" charset="utf-8">
+		
+		var paper;
+		var width = window.innerWidth - 30;
+		var height = window.innerHeight - 30;
+		var centerX = width / 2;
+		var centerY = height / 2;
+		var tweetData = null;
+		var labels = null;
+		var labelBoxes = null;
+		var images = [];
+		var img = [];
+		var radius = 320;
+		var circum = 20;
+		var degree = 0;
+		var radian = 0;
+		var numImages = 18;
+		var startedAt;
+		var now;
+		var beatIndex = 0;
+		var beatArray = [109, 2141,2848,4863,5564,8273,8978,11021,11714,12382,13077,13747,13792,14445,14454,15113,15121,15809,16475,16486,17168,17839,18533,19200,19212,19896,20580,20591,21262,21918,22624,23292,23986,24657,25351,26021,26714,27382,27359,29077,29448];
+		
+		window.onload = function()
+		{
+			paper = new Raphael("canvas", width, height);
+			images = paper.set();
+			img = paper.set();
+			labels = paper.set();
+			labelBoxes = paper.set();
+			
+			var canPlayType = $('#audio')[0].canPlayType("audio/ogg");
+			if(canPlayType.match(/maybe|probably/i)) {
+				$('#audio').attr('src', 'Beat4.ogg');
+			} else {
+				$('#audio').attr('src', 'Beat4.mp3');
+			}
+
+			if(typeof HTMLAudioElement == 'object' || typeof HTMLAudioElement == 'function') {
+				$('#audio').bind('canplay', function() {
+					jQuery.ajax({
+				        url: 'http://search.twitter.com/search.json?rpp='+numImages+'&q=HTML5 Canvas',
+				        dataType: 'jsonp',
+				        success: function (data) {
+							tweetData = data.results;
+							addImages();
+				        }
+				    });		
+				});
+			} else {
+				jQuery.ajax({
+			        url: 'http://search.twitter.com/search.json?rpp='+numImages+'&q=HTML5 Canvas',
+			        dataType: 'jsonp',
+			        success: function (data) {
+						tweetData = data.results;
+						addImages();
+			        }
+			    });
+			}
+		}
+		
+		function addImages()
+		{
+			for(var i = 0; i < numImages; i++)
+			{
+				images[i] = {
+							x: width/2,
+							y: height/2,
+							s: tweetData[i].profile_image_url,
+							w: 50,
+							h: 50
+							};
+				
+				var newImage = paper.image(images[i].s, images[i].x, images[i].y, images[i].w, images[i].h);
+				newImage.tweetID = i;
+				newImage.click(function()
+				{
+					window.location = 'http://twitter.com/' + tweetData[this.tweetID].from_user;
+				});
+				
+				img.push(newImage);
+				
+				var randomColor = Math.random();				
+				var rect = paper.rect(images[i].x - 35, images[i].y + 52, 110, 20, 5);
+				rect.attr({fill: "hsb("+randomColor+", "+randomColor+", "+randomColor+")", stroke: "#fff", "fill-opacity": 0.5});
+				//rect.hide();
+				labelBoxes.push(rect);
+				
+				var lbl = paper.text(images[i].x - 30, images[i].y + 62, tweetData[i].from_user);
+				//lbl.hide();
+				labels.push(lbl);
+				
+				labels.attr({font: "14px Arial", fill: "#fff", "text-anchor": "start"});
+			}
+			
+			explode(true);
+		}
+		
+		function play()
+		{
+			startedAt = new Date();
+			setTimeout(function() {
+				$('#audio').get(0).play();
+				$('#tweet').hide();
+				loop();
+			}, 100);
+		}
+		
+		function loop()
+		{
+			now = new Date();
+			if(now.getTime() - startedAt.getTime() >= beatArray[beatIndex])
+			{	
+				for(var i = 0; i < numImages; i++)
+				{
+					var x = 50 + ( Math.random() * width) - 50;
+					var y = 50 + (Math.random() * height) - 50;
+					
+					var l = paper.path('M' + width/2 + ' ' + height/2 +  'L' + x + ' ' + y);
+					
+					img[i].animate({x: x, y: y}, 500, '>');
+					labelBoxes[i].animate({x: x-35, y: y+52}, 500, '>');
+					labels[i].animate({x: x-30, y: y+62}, 500, '>');
+				}
+				beatIndex++;
+			}
+			
+			if(beatIndex < beatArray.length)
+			{
+				var t = setTimeout("loop()", 10);
+			}
+			else
+			{
+				clearInterval(t);
+				explode(false);
+			}
+		}
+		
+		function explode(restart)
+		{
+			Raphael.getColor.reset();
+			
+			var x = 0;
+			var y = 0;
+			
+			for(var i = 0; i < numImages; i++)
+			{
+				degree = circum * i;
+				radian = (degree/180) * Math.PI;
+				
+				x = Math.cos(radian)*radius + centerX;
+				y = Math.sin(radian)*radius + centerY;
+								
+				if(restart)
+				{
+					img[i].animate({x: x, y: y}, 1500, '<>', function(){ play(); });
+					labelBoxes[i].animate({x: x-35, y: y+52}, 500, '<>');
+					labels[i].animate({x: x-30, y: y+62}, 500, '<>');
+				}
+				else
+				{
+					img[i].animate({x: x, y: y}, 1500, '<>');
+					labelBoxes[i].animate({x: x-35, y: y+52}, 500, '<>');
+					labels[i].animate({x: x-30, y: y+62}, 500, '<>');					
+				}
+			}
+		}
+		
+
+	</script>
+</head>
+<body>
+	<div id="canvas"></div>
+	<div id="tweet"></div>
+	<audio id="audio"></audio>
+</body>
+</html>

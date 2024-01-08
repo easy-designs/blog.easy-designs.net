@@ -1,0 +1,285 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>Give a hoot - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/give-a-hoot/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Give a hoot" />
+	<meta property="description" content="As any competent JavaScript knows, it&rsquo;s not cool to litter the global namespace with variables, functions, and the like.&nbsp;Occasionally, however, even closures won" />
+	<meta property="og:description" itemprop="description" content="As any competent JavaScript knows, it&rsquo;s not cool to litter the global namespace with variables, functions, and the like.&nbsp;Occasionally, however, even closures won" />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/give-a-hoot/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="../../index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="../../favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="../../rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">Give a&nbsp;hoot</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2010-07-19T19:06:57" pubdate="pudate">19 July 2010</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>As any competent JavaScript knows, it&rsquo;s not cool to litter the global namespace with variables, functions, and the like. It&rsquo;s far better to encapsulate your code in an object, a series of objects, or even a closure, exposing only what you absolutely need to via the global namespace. This helps reduce the potential for collisions that will probably cause your site to&nbsp;break.</p>
+<p>Occasionally, however, even closures won&rsquo;t help you trap a given variable. Case in&nbsp;point:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist479723" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-pollutes-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/give-a-hoot/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="pollutes.js">        <tr>          <td id="file-pollutes-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-pollutes-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>(</span><span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-pollutes-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-pollutes-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>var</span> <span class=pl-s1>a</span> <span class=pl-c1>=</span> <span class=pl-s1>b</span> <span class=pl-c1>=</span> <span class=pl-c1>0</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-pollutes-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-pollutes-js-LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/479723/raw/e18f9c7d6dea0eecdfbc6bba1f5628725176dc39/pollutes.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/479723#file-pollutes-js" class="Link--inTextBlock">          pollutes.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>If you&rsquo;re familiar with languages like <span class="caps">PHP</span>, you might think this simple closure creates two variables with the same value, but you&rsquo;d be wrong. It creates a local variable, <code class="js">a</code> and a global variable <code class="js">b</code>, both of which have their value set to&nbsp;0.</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist479723" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-example-php" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-php  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/give-a-hoot/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="PHP" data-tagsearch-path="example.php">        <tr>          <td id="file-example-php-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-example-php-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-ent>&lt;?php</span></td>        </tr>        <tr>          <td id="file-example-php-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-example-php-LC2" class="blob-code blob-code-inner js-file-line"></td>        </tr>        <tr>          <td id="file-example-php-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-example-php-LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-k>function</span> <span class=pl-en>example</span>()</td>        </tr>        <tr>          <td id="file-example-php-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-example-php-LC4" class="blob-code blob-code-inner js-file-line">&#123;</td>        </tr>        <tr>          <td id="file-example-php-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-example-php-LC5" class="blob-code blob-code-inner js-file-line">  <span class=pl-s1><span class=pl-c1>$</span>a</span> = <span class=pl-s1><span class=pl-c1>$</span>b</span> = <span class=pl-c1>0</span>;</td>        </tr>        <tr>          <td id="file-example-php-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-example-php-LC6" class="blob-code blob-code-inner js-file-line">&#125;</td>        </tr>        <tr>          <td id="file-example-php-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-example-php-LC7" class="blob-code blob-code-inner js-file-line"></td>        </tr>        <tr>          <td id="file-example-php-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-example-php-LC8" class="blob-code blob-code-inner js-file-line"><span class=pl-ent>?&gt;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/479723/raw/e18f9c7d6dea0eecdfbc6bba1f5628725176dc39/example.php" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/479723#file-example-php" class="Link--inTextBlock">          example.php        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>In exp:easy_gists this means of sharing the value assignment of variables is perfectly legit; the difference, however, is how JavaScript and <span class="caps">PHP</span> treat variable scope. By default, every variable declared in <span class="caps">PHP</span> is scoped to the function it is called within. Global variables only come into play when you use the <code class="php">global</code> declaration or the <code class="php">$_GLOBALS</code> array. In JavaScript, by contrast, any variables not instantiated with a <code class="js">var</code> are added to the global namespace. Hence the namespace pollution in the above&nbsp;example.</p>
+<p>Revisiting the closure, it&#8217;s best to rewrite it in one of two ways to maintain the variable&nbsp;scope:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist479723" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-scoped-option-1-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/give-a-hoot/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="scoped-option-1.js">        <tr>          <td id="file-scoped-option-1-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-scoped-option-1-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>(</span><span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-scoped-option-1-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-scoped-option-1-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>var</span> <span class=pl-s1>a</span> <span class=pl-c1>=</span> <span class=pl-c1>0</span><span class=pl-kos>,</span> <span class=pl-s1>b</span> <span class=pl-c1>=</span> <span class=pl-c1>0</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-scoped-option-1-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-scoped-option-1-js-LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/479723/raw/e18f9c7d6dea0eecdfbc6bba1f5628725176dc39/scoped-option-1.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/479723#file-scoped-option-1-js" class="Link--inTextBlock">          scoped-option-1.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>or</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist479723" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-scoped-option-2-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/give-a-hoot/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="scoped-option-2.js">        <tr>          <td id="file-scoped-option-2-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-scoped-option-2-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>(</span><span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-scoped-option-2-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-scoped-option-2-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>var</span> <span class=pl-s1>a</span> <span class=pl-c1>=</span> <span class=pl-c1>0</span><span class=pl-kos>,</span> <span class=pl-s1>b</span> <span class=pl-c1>=</span> <span class=pl-s1>a</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-scoped-option-2-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-scoped-option-2-js-LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/479723/raw/e18f9c7d6dea0eecdfbc6bba1f5628725176dc39/scoped-option-2.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/479723#file-scoped-option-2-js" class="Link--inTextBlock">          scoped-option-2.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>Which solution will work best is dependent solely on context. If you&#8217;re minifying the code and the value being assigned is anything more than a single character, the latter is probably the way to&nbsp;go.</p>
+<p>To help you discover and mitigate pollution in your own scripts (or to help you see what additions your standard JavaScript libraries are making to the global namespace), I&rsquo;ve created a little script called <a href="http://github.com/easy-designs/EmissionsTest.js">EmissionsTest.js</a>. It&rsquo;s pretty easy to use, you simply include it as the first script on your page (preferably in the <code class="html">head</code> of your document) and it does the rest. It will attempt to report its findings to the console (if your browser has one) or it will create a floating notice at the top of the&nbsp;page.</p>
+<p>You won&rsquo;t want to include this script on a production site and it&rsquo;s still pretty basic, but it could be very useful for tracking down any accidental emissions in your&nbsp;script.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F&amp;source=tweetbutton&amp;text=Give+a+hoot&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fgive-a-hoot%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/optimization-performance/index.html">optimization & performance</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/php/index.html">PHP</a></li>
+					
+				</ul>
+
+						<h2>Related entries</h2>
+				<ul class="browse also">
+			  		
+				</ul>
+    	
+		
+		
+	
+	
+
+			</div></section>
+
+			
+		    		    		
+	
+			<ul id="pagination">
+					<li class="prev"><a href="../monitor-your-websites-with-notifications/index.html">Previous Entry: <em>Monitor Your Websites with Notifications</em></a></li>
+							<li class="next"><a href="../brooke-valentines-celebrity-girl-fight-game/index.html">Next Entry: <em>Brooke Valentine&#8217;s Celebrity Girl Fight Game</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="../../rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="../index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<form id="search-form" method="post" action="../../index.html"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="YTo5OntzOjY6InN0YXR1cyI7czoxMDoibm90IGNsb3NlZCI7czo3OiJjaGFubmVsIjtzOjQ6ImJsb2ciO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjtzOjk6InNlYXJjaF9pbiI7czoxMDoiZXZlcnl3aGVyZSI7czo1OiJ3aGVyZSI7czozOiJhbnkiO3M6MTI6InNob3dfZXhwaXJlZCI7czozOiJ5ZXMiO3M6MTk6InNob3dfZnV0dXJlX2VudHJpZXMiO3M6MzoieWVzIjtzOjExOiJyZXN1bHRfcGFnZSI7czoxMjoic2VhcmNoL2luZGV4IjtzOjE1OiJub19yZXN1bHRzX3BhZ2UiO3M6MTc6InNlYXJjaC9uby1yZXN1bHRzIjt9ZjIzYjUzODQ0NzJhMDY3MGJkZTc2MGY5YzZiM2M2OTA=" />
+<input type="hidden" name="site_id" value="2" />
+<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
+</div>
+
+
+<p>
+	<label for="search">Search for</label>
+	<input type="search" id="search" name="keywords" value="&quot;Web Design in a&quot; xylophone" />
+	<button type="submit" value="search">Search</button>
+</p>
+</form>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

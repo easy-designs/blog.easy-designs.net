@@ -1,0 +1,418 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>On Adaptive vs. Responsive Web Design - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/on-adaptive-vs-responsive-web-design/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="On Adaptive vs. Responsive Web Design" />
+	<meta property="description" content="In the past few months, I&rsquo;ve spent an inordinate amount of time discussing the differences between the &ldquo;adaptive&rdquo; and &ldquo;responsive&rdquo; web design philosophies. Don&rsquo;t get me wrong, I love having these discussions, but I felt the need to set the record straight: these two philosophies are not at odds." />
+	<meta property="og:description" itemprop="description" content="In the past few months, I&rsquo;ve spent an inordinate amount of time discussing the differences between the &ldquo;adaptive&rdquo; and &ldquo;responsive&rdquo; web design philosophies. Don&rsquo;t get me wrong, I love having these discussions, but I felt the need to set the record straight: these two philosophies are not at odds." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/on-adaptive-vs-responsive-web-design/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">On Adaptive vs. Responsive Web&nbsp;Design</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2011-11-16T17:23:00" pubdate="pudate">16 November 2011</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>
+	In the past few months, I&rsquo;ve spent an inordinate amount of time discussing the differences between the &ldquo;adaptive&rdquo; and &ldquo;responsive&rdquo; web design philosophies. Don&rsquo;t get me wrong, I love having these discussions, but I felt the need to set the record straight: these two philosophies are not at odds, despite numerous blog posts and tweets to the&nbsp;contrary.</p>
+<p>
+	<span class="initial quote">&ldquo;</span>Responsive web design,&rdquo; as <a href="http://www.alistapart.com/articles/responsive-web-design/">coined by Ethan Marcotte</a>, means &ldquo;fluid grids, fluid images/media <span class="amp">&amp;</span> media queries.&rdquo; &ldquo;Adaptive web design,&rdquo; as <a href="http://adaptivewebdesign.info">I use it</a>, is about creating interfaces that adapt to the user&rsquo;s capabilities (in terms of both form <em>and</em> function). To me, &ldquo;adaptive web design&rdquo; is just another term for &ldquo;<a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancement</a>&rdquo; of which responsive web design can (an often should) be an integral part, but is a more holistic approach to web design in that it also takes into account varying levels of markup, <span class="caps">CSS</span>, JavaScript and assistive technology&nbsp;support.</p>
+<p>
+	For the record, I do think it&rsquo;s important to draw a distinction between &ldquo;adaptive web design&rdquo; and &ldquo;adaptive layouts&rdquo; because &ldquo;adaptive layouts&rdquo; implies only the use of media queries, which may not be done in a progressively enhanced way. Adaptive layouts achieved in a mobile-first manner, however, are very likely progressive enhancement and, thereby, a means of&nbsp;&ldquo;adaptive web design.<span class="final quote">&rdquo;</span></p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F&amp;source=tweetbutton&amp;text=On+Adaptive+vs.+Responsive+Web+Design&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fon-adaptive-vs-responsive-web-design%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/potpourri/index.html">Potpourri</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/accessibility/index.html">accessibility</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/mobile/index.html">mobile</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/progressive-enhancement/index.html">progressive enhancement</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/usability/index.html">usability</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+						<h2>Related entries</h2>
+				<ul class="browse also">
+			  		
+					<li><a href="/archives/from-mobile-friendly-to-mobile-first/index.html">From &#8220;Mobile Friendly&#8221; to &#8220;Mobile First&#8221;</a></li>
+					
+					<li><a href="/archives/i-finally-wrote-a-book/index.html">I (Finally) Wrote a Book</a></li>
+					
+					<li><a href="/archives/you-cant-rely-on-javascript/index.html">Face It: You Can&#8217;t Rely on JavaScript</a></li>
+					
+				</ul>
+    	
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-597">
+						<article class="entry-content">
+							<p>I also regularly have to clarify that &#8220;responsive&#8221; is a subset of &#8220;adaptive&#8221;.&nbsp; I usually have to give a few examples to help people&nbsp;understand.</p>
+
+<p>Can this device access my location? If so, inject a &#8220;Use Current Location&#8221; button onto the site in addition to the basic store-finder&nbsp;form. </p>
+
+<p>Does this device understand touch events? If so, make this image carousel swipeable in addition to the &#8220;previous&#8221; and &#8220;next&#8221;&nbsp;buttons.</p>
+
+<p>Does the browser support <span class="caps">HTML</span>5 canvas? If so, replace this static image with a <code>canvas</code>&nbsp;element.</p>
+
+<p>These are all concrete examples of how experiences can adapt based on the capabilities of the device/browser. The important takeaway is that we shouldn&#8217;t assume support for these features by default and instead progressively enhance up to the optimal experience. Same thing goes with responsive layouts. Don&#8217;t assume large screen (which also assumes strong connection) by default, and instead build base styles that enhance up to larger screens.&nbsp; Removing assumptions helps us design for constraints and provides better support for more&nbsp;browsers/devices.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://bradfrostweb.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/b3af6edec1a3c41ed3fac5830df8d0de?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Brad Frost</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-11-16T22:01:44" pubdate="pudate">16 November 2011 at 10pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/on-adaptive-vs-responsive-web-design/#comment-597">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-598">
+						<article class="entry-content">
+							<p>Well put, Brad. Thanks for adding your&nbsp;2¢!</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2011-11-17T01:31:27" pubdate="pudate">17 November 2011 at 1am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/on-adaptive-vs-responsive-web-design/#comment-598">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-599">
+						<article class="entry-content">
+							<p>Completely true. But I also feel there is this huge trend of getting caught up in semantics these days. I don&#8217;t really like the idea that Ethan Marcotte is now credited with coining the responsive design tag. Good developers have always been optimizing for the lowest denominator. <span class="caps">I.E.</span> <span class="caps">IE</span> (wow great unintentional pun by&nbsp;me&#8230; ).</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://Www.markanthonycianfrani.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/382d23335d8065fac29a68875b272c10?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Mark</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-11-17T05:23:40" pubdate="pudate">17 November 2011 at 5am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/on-adaptive-vs-responsive-web-design/#comment-599">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-604">
+						<article class="entry-content">
+							<p>I think that the best way to think of the Marcotte brand of responsive design is that it achieves resolution independence (which is better than nothing) but not full adaptation. Zeldman (Ethan&#8217;s publisher) later clarified their stance on responsive design to encompass *any* technique used to achieve this end, not just fluid grids/media queries&nbsp;etc.</p>
+
+<p>Note that almost all of the Alexa top sites use server-side device detection to deliver different markup depending on&nbsp;device.</p>
+
+<p>We have a survey of all adaptation techniques at&nbsp;http://mobiforge.com/starting/story/mobile-web-content-adaptation-techniques</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://mobiforge.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/405b4e8ecd82fe2215dc79902dc1cd01?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Ronan Cremin</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-12-15T14:24:21" pubdate="pudate">15 December 2011 at 2pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/on-adaptive-vs-responsive-web-design/#comment-604">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-606">
+						<article class="entry-content">
+							<p>Resolution independence — that’s a great&nbsp;term!</p>
+
+<p>It may not seem completely fair that Ethan gets so much credit for the concept of responsive design, but I can attest to the value of my first encounter with the idea in 2010 via his talk at <span class="caps">AEA.</span> His presentation changed how I do my work and, a year later, substantially changed my&nbsp;career.</p>
+
+<p>Also, it’s about a lot more than designing to the lowest common&nbsp;denominator.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://twitter.com/klayon">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/bc21a37b8788af3b70590c10d31fa0ac?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Kristofer Layon</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-12-16T12:26:24" pubdate="pudate">16 December 2011 at 12pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/on-adaptive-vs-responsive-web-design/#comment-606">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/slides-from-fowd-nyc-2011/index.html">Previous Entry: <em>Slides from FoWD NYC 2011</em></a></li>
+							<li class="next"><a href="/archives/crafting-rich-experiences-with-progressive-enhancement-at-beyond-telle/index.html">Next Entry: <em>Crafting Rich Experiences with Progressive Enhancement at Beyond Tellerrand</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

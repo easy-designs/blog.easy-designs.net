@@ -1,0 +1,500 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>Responsive Tables - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/responsive-tables/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Responsive Tables" />
+	<meta property="description" content="A few smart folks have already put together their thoughts on responsive tables and, while I think the proposed methods are pretty good, I think there might be room for improvement." />
+	<meta property="og:description" itemprop="description" content="A few smart folks have already put together their thoughts on responsive tables and, while I think the proposed methods are pretty good, I think there might be room for improvement." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/responsive-tables/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">Responsive&nbsp;Tables</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2013-02-02T17:32:27" pubdate="pudate">02 February 2013</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>A few smart folks have already put together their thoughts on responsive tables and, while I think the proposed methods are pretty good, I think there might be room for improvement. As such, I&rsquo;ve been tinkering for a while and came up with the following strategy when it comes to&nbsp;tables.</p>
+<p><strong>Step 1:</strong> Use <code class="html">data-*</code> attributes to hold information about the column header(s) associated with the&nbsp;markup:</p>
+<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist4622706" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-undoing-tables-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/responsive-tables/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="undoing-tables.html">        <tr>          <td id="file-undoing-tables-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-undoing-tables-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>table</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-undoing-tables-html-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>thead</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-undoing-tables-html-LC3" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>tr</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-undoing-tables-html-LC4" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>col</span>&quot;<span class=pl-kos>&gt;</span>Name<span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-undoing-tables-html-LC5" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>col</span>&quot;<span class=pl-kos>&gt;</span>Email<span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-undoing-tables-html-LC6" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>col</span>&quot;<span class=pl-kos>&gt;</span>Dept, Title<span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-undoing-tables-html-LC7" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>col</span>&quot;<span class=pl-kos>&gt;</span>Phone<span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-undoing-tables-html-LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>tr</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-undoing-tables-html-LC9" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>thead</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-undoing-tables-html-LC10" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>tbody</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-undoing-tables-html-LC11" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>tr</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>vcard</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>          <td id="file-undoing-tables-html-LC12" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>row</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>n</span>&quot; <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Name</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>          <td id="file-undoing-tables-html-LC13" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>family-name</span>&quot;<span class=pl-kos>&gt;</span>Smith<span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span>,</td>        </tr>        <tr>          <td id="file-undoing-tables-html-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>          <td id="file-undoing-tables-html-LC14" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>given-name</span>&quot;<span class=pl-kos>&gt;</span>Laura<span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>          <td id="file-undoing-tables-html-LC15" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>          <td id="file-undoing-tables-html-LC16" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Email</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>          <td id="file-undoing-tables-html-LC17" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>email</span>&quot; <span class=pl-c1>href</span>=&quot;<span class=pl-s>mailto:laura.smith@domain.com</span>&quot;<span class=pl-kos>&gt;</span>laura.smith@domain.com<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>          <td id="file-undoing-tables-html-LC18" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>          <td id="file-undoing-tables-html-LC19" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Dept, Title</span>&quot;<span class=pl-kos>&gt;</span>Biology, Director<span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>          <td id="file-undoing-tables-html-LC20" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>tel</span>&quot; <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Phone</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>          <td id="file-undoing-tables-html-LC21" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>href</span>=&quot;<span class=pl-s>tel:+1123456789</span>&quot;<span class=pl-kos>&gt;</span>123-456-789<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>          <td id="file-undoing-tables-html-LC22" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>          <td id="file-undoing-tables-html-LC23" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>tr</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>          <td id="file-undoing-tables-html-LC24" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>tr</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>vcard</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>          <td id="file-undoing-tables-html-LC25" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>th</span> <span class=pl-c1>scope</span>=&quot;<span class=pl-s>row</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>n</span>&quot; <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Name</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>          <td id="file-undoing-tables-html-LC26" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>family-name</span>&quot;<span class=pl-kos>&gt;</span>Johnson<span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span>,</td>        </tr>        <tr>          <td id="file-undoing-tables-html-L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>          <td id="file-undoing-tables-html-LC27" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>given-name</span>&quot;<span class=pl-kos>&gt;</span>Ron<span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>          <td id="file-undoing-tables-html-LC28" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>th</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>          <td id="file-undoing-tables-html-LC29" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Email</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>          <td id="file-undoing-tables-html-LC30" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>email</span>&quot; <span class=pl-c1>href</span>=&quot;<span class=pl-s>mailto:ron.johnson@domain.com</span>&quot;<span class=pl-kos>&gt;</span>ron.johnson@domain.com<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>          <td id="file-undoing-tables-html-LC31" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>          <td id="file-undoing-tables-html-LC32" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Dept, Title</span>&quot;<span class=pl-kos>&gt;</span>Purchasing, Director<span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>          <td id="file-undoing-tables-html-LC33" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;</span><span class=pl-ent>td</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>tel</span>&quot; <span class=pl-c1>data-title</span>=&quot;<span class=pl-s>Phone</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>          <td id="file-undoing-tables-html-LC34" class="blob-code blob-code-inner js-file-line">        <span class=pl-kos>&lt;</span><span class=pl-ent>a</span> <span class=pl-c1>href</span>=&quot;<span class=pl-s>tel:+11234567891</span>&quot;<span class=pl-kos>&gt;</span>123-456-7891<span class=pl-kos>&lt;/</span><span class=pl-ent>a</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>          <td id="file-undoing-tables-html-LC35" class="blob-code blob-code-inner js-file-line">      <span class=pl-kos>&lt;/</span><span class=pl-ent>td</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>          <td id="file-undoing-tables-html-LC36" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;/</span><span class=pl-ent>tr</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>          <td id="file-undoing-tables-html-LC37" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>tbody</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-html-L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>          <td id="file-undoing-tables-html-LC38" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>table</span><span class=pl-kos>&gt;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/4622706/raw/3bb2d72ccd9a11be97a9e81c3195c8124762da6c/undoing-tables.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/4622706#file-undoing-tables-html" class="Link--inTextBlock">          undoing-tables.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p><strong>Step 2:</strong> When the screen is below a certain threshold, set the <code class="html">table</code> elements to <code class="html">display: block</code> (thereby linearizing the table), hide the <code class="html">thead</code> where assistive tech won&rsquo;t see it, and use generated content to expose the <code class="html">data-*</code> attributes. Here&rsquo;s a snippet of <span class="caps">SASS</span> <span class="amp">&amp;</span> Compass that does&nbsp;that:</p>
+<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist4622706" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-undoing-tables-scss" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-scss  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/responsive-tables/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="SCSS" data-tagsearch-path="undoing-tables.scss">        <tr>          <td id="file-undoing-tables-scss-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-undoing-tables-scss-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> undo tables for small screens</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-undoing-tables-scss-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> $break-4 is the px-width break at which you want to cut it off</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-undoing-tables-scss-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">@media</span> (<span class="pl-c1"><span class="pl-c1">max-width</span></span>: <span class="pl-c1">px-to-ems</span>(<span class="pl-v">$break-4</span> <span class="pl-k">-</span> <span class="pl-c1">1<span class="pl-k">px</span></span>)) &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-undoing-tables-scss-LC4" class="blob-code blob-code-inner js-file-line">  </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-undoing-tables-scss-LC5" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> make each table separate from other ones</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-undoing-tables-scss-LC6" class="blob-code blob-code-inner js-file-line">  <span class="pl-ent">table</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-undoing-tables-scss-LC7" class="blob-code blob-code-inner js-file-line"></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-undoing-tables-scss-LC8" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">0</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-undoing-tables-scss-LC9" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">@include</span> <span class="pl-en">trailing-border</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-undoing-tables-scss-LC10" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">padding-bottom</span></span>: <span class="pl-c1">0</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-undoing-tables-scss-LC11" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">block</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>          <td id="file-undoing-tables-scss-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>          <td id="file-undoing-tables-scss-LC13" class="blob-code blob-code-inner js-file-line">    	</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>          <td id="file-undoing-tables-scss-LC14" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> make sure captions are displayed</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>          <td id="file-undoing-tables-scss-LC15" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">caption</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>          <td id="file-undoing-tables-scss-LC16" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">block</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>          <td id="file-undoing-tables-scss-LC17" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>          <td id="file-undoing-tables-scss-LC18" class="blob-code blob-code-inner js-file-line">    </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>          <td id="file-undoing-tables-scss-LC19" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">/*</span> </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>          <td id="file-undoing-tables-scss-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * wipe the thead from the face of the earth</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>          <td id="file-undoing-tables-scss-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * modern screen readers will expose the </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>          <td id="file-undoing-tables-scss-LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * generated content</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>          <td id="file-undoing-tables-scss-LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     <span class="pl-c">*/</span></span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>          <td id="file-undoing-tables-scss-LC24" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">thead</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>          <td id="file-undoing-tables-scss-LC25" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">none</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>          <td id="file-undoing-tables-scss-LC26" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">visibility</span></span>: <span class="pl-c1">hidden</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>          <td id="file-undoing-tables-scss-LC27" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>          <td id="file-undoing-tables-scss-LC28" class="blob-code blob-code-inner js-file-line">    </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>          <td id="file-undoing-tables-scss-LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">/*</span></span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>          <td id="file-undoing-tables-scss-LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * make everything display block so it </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>          <td id="file-undoing-tables-scss-LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * aligns vertically</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>          <td id="file-undoing-tables-scss-LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     <span class="pl-c">*/</span></span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>          <td id="file-undoing-tables-scss-LC33" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">tbody</span>, <span class="pl-ent">tr</span>, <span class="pl-ent">th</span>, <span class="pl-ent">td</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>          <td id="file-undoing-tables-scss-LC34" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">0</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>          <td id="file-undoing-tables-scss-LC35" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">block</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>          <td id="file-undoing-tables-scss-LC36" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">padding</span></span>: <span class="pl-c1">0</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>          <td id="file-undoing-tables-scss-LC37" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">text-align</span></span>: <span class="pl-c1">left</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>          <td id="file-undoing-tables-scss-LC38" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">white-space</span></span>: <span class="pl-c1">normal</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L39" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="39"></td>          <td id="file-undoing-tables-scss-LC39" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L40" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="40"></td>          <td id="file-undoing-tables-scss-LC40" class="blob-code blob-code-inner js-file-line">    </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L41" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="41"></td>          <td id="file-undoing-tables-scss-LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> give each row a little space</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L42" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="42"></td>          <td id="file-undoing-tables-scss-LC42" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">tr</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L43" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="43"></td>          <td id="file-undoing-tables-scss-LC43" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">@include</span> <span class="pl-en">trailer</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L44" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="44"></td>          <td id="file-undoing-tables-scss-LC44" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L45" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="45"></td>          <td id="file-undoing-tables-scss-LC45" class="blob-code blob-code-inner js-file-line">    </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L46" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="46"></td>          <td id="file-undoing-tables-scss-LC46" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">/*</span> Labeling</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L47" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="47"></td>          <td id="file-undoing-tables-scss-LC47" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * adding a data-title attribute to the cells</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L48" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="48"></td>          <td id="file-undoing-tables-scss-LC48" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * lets us add text before the content to provide</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L49" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="49"></td>          <td id="file-undoing-tables-scss-LC49" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * the missing context</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L50" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="50"></td>          <td id="file-undoing-tables-scss-LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L51" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="51"></td>          <td id="file-undoing-tables-scss-LC51" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * Markup: </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L52" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="52"></td>          <td id="file-undoing-tables-scss-LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     *   &lt;td data-title=&quot;Column Header&quot;&gt;Content Here&lt;/td&gt;</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L53" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="53"></td>          <td id="file-undoing-tables-scss-LC53" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L54" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="54"></td>          <td id="file-undoing-tables-scss-LC54" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * Display:</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L55" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="55"></td>          <td id="file-undoing-tables-scss-LC55" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     *   Column Header: Content Here</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L56" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="56"></td>          <td id="file-undoing-tables-scss-LC56" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     <span class="pl-c">*/</span></span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L57" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="57"></td>          <td id="file-undoing-tables-scss-LC57" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">th</span>[<span class="pl-e">data-title</span>]<span class="pl-e">:before</span>,</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L58" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="58"></td>          <td id="file-undoing-tables-scss-LC58" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">td</span>[<span class="pl-e">data-title</span>]<span class="pl-e">:before</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L59" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="59"></td>          <td id="file-undoing-tables-scss-LC59" class="blob-code blob-code-inner js-file-line">      <span class="pl-ent">content</span>: <span class="pl-c1">attr</span>(<span class="pl-v">data-title</span>) <span class="pl-s"><span class="pl-pds">&quot;</span>:<span class="pl-cce">\00A0</span><span class="pl-pds">&quot;</span></span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L60" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="60"></td>          <td id="file-undoing-tables-scss-LC60" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">font-weight</span></span>: <span class="pl-c1">bold</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L61" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="61"></td>          <td id="file-undoing-tables-scss-LC61" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L62" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="62"></td>          <td id="file-undoing-tables-scss-LC62" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">th</span><span class="pl-e">:not</span>([<span class="pl-e">data-title</span>]) &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L63" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="63"></td>          <td id="file-undoing-tables-scss-LC63" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">font-weight</span></span>: <span class="pl-c1">bold</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L64" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="64"></td>          <td id="file-undoing-tables-scss-LC64" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L65" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="65"></td>          <td id="file-undoing-tables-scss-LC65" class="blob-code blob-code-inner js-file-line">    </td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L66" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="66"></td>          <td id="file-undoing-tables-scss-LC66" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> hide empty cells</span></td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L67" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="67"></td>          <td id="file-undoing-tables-scss-LC67" class="blob-code blob-code-inner js-file-line">    <span class="pl-ent">td</span><span class="pl-e">:empty</span> &#123;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L68" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="68"></td>          <td id="file-undoing-tables-scss-LC68" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">none</span>;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L69" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="69"></td>          <td id="file-undoing-tables-scss-LC69" class="blob-code blob-code-inner js-file-line">    &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L70" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="70"></td>          <td id="file-undoing-tables-scss-LC70" class="blob-code blob-code-inner js-file-line">  &#125;</td>        </tr>        <tr>          <td id="file-undoing-tables-scss-L71" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="71"></td>          <td id="file-undoing-tables-scss-LC71" class="blob-code blob-code-inner js-file-line">&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/4622706/raw/3bb2d72ccd9a11be97a9e81c3195c8124762da6c/undoing-tables.scss" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/4622706#file-undoing-tables-scss" class="Link--inTextBlock">          undoing-tables.scss        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>We&rsquo;ve been using this approach on a number of sites currently in development and it works really well. I put together <a href="http://codepen.io/aarongustafson/pen/ucJGv">a demo of this technique</a> so you could play around with it&nbsp;yourself.</p>
+<p><strong>Notes:</strong></p>
+<ol>
+<li>I chose to use a <code class="html">data-*</code> attribute (<code class="html">data-title</code>) instead of <code class="html">title</code> as the <code class="html">title</code> attribute could be read out by assistive technology and in the case of the <code class="html">thead</code> being available as well (when not <code class="html">display: none</code>), resulting in the information being read twice (which is not ideal). <a href="http://www.paciellogroup.com/resources/articles/WE05/#slide9">That&rsquo;s not a certainty however</a>, so you could choose to go the <code class="html">title</code> route if that&rsquo;s your preference. I prefer to avoid the potential&nbsp;issue.</li>
+<li>If you have multiple header rows over a cell (say a parent row and then a child row), I&rsquo;d recommend making the <code class="html">data-title</code> something like &ldquo;Parent Header - Child Header.<span class="final quote">&rdquo;</span></li>
+<li>While you could use JavaScript to auto-generate the <code class="html">data-title</code> attributes by referencing the column headers, I feel this is information that should exist even if JavaScript is not available. You may&nbsp;disagree.</li>
+</ol>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F&amp;source=tweetbutton&amp;text=Responsive+Tables&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fresponsive-tables%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/accessibility/index.html">accessibility</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/mobile/index.html">mobile</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/progressive-enhancement/index.html">progressive enhancement</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/usability/index.html">usability</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-651">
+						<article class="entry-content">
+							<p>Hi. Brillant idea ! Thanks for your work and time. I get white screen on your Demo with iPhone 5, safari iOS 6.1 or last version of&nbsp;chrome.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/a76626b9ccffcba1265b29fbaf96acb8?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aurel</span>
+									</li>
+							<li><time class="published" datetime="2013-02-03T12:57:49" pubdate="pudate">03 February 2013 at 12pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-651">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-652">
+						<article class="entry-content">
+							<p>I see the white screen on iPhone as well. I think it is a Codepen issue. I should be able to point to this in use on a live site very soon and I promise that will work on the&nbsp;iPhone ;-)</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2013-02-04T00:52:48" pubdate="pudate">04 February 2013 at 12am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-652">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-654">
+						<article class="entry-content">
+							<p>These days, everyone is jumping on the responsive bandwagon. Apart from responsive layouts, everything is going responsive: sliders, lightboxes, galleries, you name it! But then one day, when I was working on an <span class="caps">HTML</span> table with a lot of columns, I thought &#8220;How is this going to look on my iPhone?&#8221;. And then I searched for &#8220;responsive tables&#8221; and found your blog on a few solutions out here.&nbsp;Thanks.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://pixelswebcommerce.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/d9df591e36c6fd3259ef38126a6ada55?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Paul D. Mitchell</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-09T16:48:41" pubdate="pudate">09 February 2013 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-654">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-655">
+						<article class="entry-content">
+							<p>You may want to add &#8220;visibility:hidden;&#8221; to the <span class="caps">THEAD</span> and <span class="caps">TD</span>:<span class="caps">EMPTY</span> ( at least according to A11y Project -&nbsp;http://a11yproject.com/posts/how-to-hide-content/).</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.theatre-optique.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/ffb95ed4218fd1c30078bc9ca2aeae30?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Sean Fraser</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-11T22:32:06" pubdate="pudate">11 February 2013 at 10pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-655">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-656">
+						<article class="entry-content">
+							<p>This technique is so cool! Thank you so much for sharing this! I literally yelled out &#8220;oh snap!&#8221; when the tables changed when the screen width was reduced. :) Can&#8217;t wait to share this with my&nbsp;coworkers.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.iammegan.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/2b94a1779ed1fa58391661c550fb5ac9?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Megan Radich</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-11T22:51:09" pubdate="pudate">11 February 2013 at 10pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-656">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-657">
+						<article class="entry-content">
+							<p>@Paul: I’m glad it was helpful to&nbsp;you.</p>
+
+<p>@Sean: Thanks for the heads-up! I will update the Gist and demo&nbsp;accordingly.</p>
+
+<p>@Megan: Awesome! Let me know how it&nbsp;goes.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2013-02-12T02:51:33" pubdate="pudate">12 February 2013 at 2am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-657">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-658">
+						<article class="entry-content">
+							<p>Aren&#8217;t we supposed to be making pages lighter? Not filling the source up with extra&nbsp;attributes?</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.google.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/2446b45a7fe0e5c2ac8c24b5a16c7d24?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">John</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-12T06:27:24" pubdate="pudate">12 February 2013 at 6am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-658">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-659">
+						<article class="entry-content">
+							<p>nice technique, thanks for&nbsp;share</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.saaraan.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/cefb7f6619c2c6829915f930db6b440f?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Saaraan</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-12T07:45:28" pubdate="pudate">12 February 2013 at 7am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-659">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-660">
+						<article class="entry-content">
+							<p>Really cool technique, but is it only possible with <span class="caps">SASS</span>? Could you do this with just straight <span class="caps">CSS</span>?</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/7de6f725ef5326fabb4460b1286a96c8?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Guario</span>
+									</li>
+							<li><time class="published" datetime="2013-02-12T16:50:46" pubdate="pudate">12 February 2013 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-660">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-661">
+						<article class="entry-content">
+							<p>@John: I hear where you’re coming from. Personally, I think one of the benefits of a web standards-based approach is lighter pages overall. Less markup, less presentational nonsense, etc. This reduction in bloat then frees us up to enhance the page with markup that improves the experience for users. For me, traditionally, that has meant microformats, but I think it extends to <code>data-*</code> attributes as well. We use <code>data-*</code> attributes to provide instructions for <span class="caps">JS</span> and (as seen here) to increase the flexibility of the content. I think it’s a fair trade-off, but if I did not think the additional code was adding anything to the document, I would not put it in there (instead perhaps injecting via <span class="caps">JS</span>).</p>
+
+<p>@Guario: Absolutely! I just happened to have the <span class="caps">SASS</span> code handy as we’ve been using <span class="caps">SASS</span> for pretty much everything of late. Taking a look at <a href="http://codepen.io/aarongustafson/pen/ucJGv">the rendered preview in Codepen</a> should give you the final <span class="caps">CSS</span>&nbsp;rules.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2013-02-12T17:15:01" pubdate="pudate">12 February 2013 at 5pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-661">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-662">
+						<article class="entry-content">
+							<p>Smart and efficient coding can minimize this load time. Sometimes people mistake responsive Web design for “time-saving” development, but in reality, coding responsive websites correctly is hard. Minimizing load time requires expertise in coding and a solid knowledge of how code and browsers&nbsp;work.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://www.essaypoint.co.uk/services/coursework-writing/">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/ee4d0d62235031bb6feba018844f0932?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Agrodut Mandal</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2013-02-19T04:28:09" pubdate="pudate">19 February 2013 at 4am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-662">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-663">
+						<article class="entry-content">
+							<p>Nice one,&nbsp;thanks!</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/001f0faac14bc08e58d2cdafef926ed4?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Eric</span>
+									</li>
+							<li><time class="published" datetime="2013-02-27T07:45:56" pubdate="pudate">27 February 2013 at 7am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/responsive-tables/#comment-663">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/welcome-jeff-bridgforth/index.html">Previous Entry: <em>Welcome Jeff Bridgforth</em></a></li>
+							<li class="next"><a href="/archives/presto-change-o/index.html">Next Entry: <em>Presto Change-o</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

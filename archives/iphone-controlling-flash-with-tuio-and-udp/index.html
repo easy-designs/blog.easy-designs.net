@@ -1,0 +1,284 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>iPhone Controlling Flash with TUIO and UDP - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/iphone-controlling-flash-with-tuio-and-udp/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="iPhone Controlling Flash with TUIO and UDP" />
+	<meta property="description" content="I am in the middle of constructing a&nbsp;FTIR table&nbsp;and, until my lasers arrive, I decided to get some output from my iPhone. After all, it&rsquo;s a great touch screen and a change from building apps in Flash, which I know better." />
+	<meta property="og:description" itemprop="description" content="I am in the middle of constructing a&nbsp;FTIR table&nbsp;and, until my lasers arrive, I decided to get some output from my iPhone. After all, it&rsquo;s a great touch screen and a change from building apps in Flash, which I know better." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/iphone-controlling-flash-with-tuio-and-udp/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="../../index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="../../favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="../../rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">iPhone Controlling Flash with <span class="caps">TUIO</span> and <span class="caps">UDP</span></h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/dave-stewart/index.html">Dave Stewart</a> on 
+					    <time class="published updated" datetime="2010-03-19T12:54:27" pubdate="pudate">19 March 2010</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>I am in the middle of constructing a&nbsp;<a href="http://www.google.com/search?rls=en&amp;q=FTIR+table&amp;ie=UTF-8&amp;oe=UTF-8"><span class="caps">FTIR</span> table</a>&nbsp;and&nbsp;I am going with the laser approach after less than satisfactory results using Infra Red <span class="caps">LED</span>&rsquo;s. It&rsquo;s going well and I have had some success with Fiducial tracking using my infra red modded webcam cam, plexiglass and such. I had been building the apps in Quartz Composer but I am not too familiar with Quartz&nbsp;yet.</p>
+<p>Until my lasers arrive I decided to try and get some output from my iPhone, after all it&rsquo;s a great touch screen and a change from building apps in Flash, which I know better.&nbsp;How do you get Camera or iPhone touch data out over the network to your MacBook and then have Flash read it??? Long story. If you are interested in going down this rabbit hole, check out these&nbsp;links:</p>
+<ul>
+<li><a href="http://reactivision.sourceforge.net/">http://reactivision.sourceforge.net/</a></li>
+<li><a href="http://www.tuio.org/?software">http://www.tuio.org/?software</a></li>
+<li><a href="http://vimeo.com/7131693">Georg Kaindl&rsquo;s <span class="caps">UDP</span> Flash Bridge&nbsp;video</a></li>
+<li><a href="http://bubblebird.at/tuioflash/">http://bubblebird.at/tuioflash/</a></li>
+<li><a href="http://pixelverse.org/iphone/oscemote/">http://pixelverse.org/iphone/oscemote/</a></li>
+<li>And for lasers:&nbsp;<a href="http://aixiz.globat.com/">http://aixiz.globat.com/</a></li>
+</ul>
+<p>As I recently discovered, there are a few different methods of tracking and a bunch of lib&rsquo;s on google code for such things.&nbsp;After trying most of them and trying a couple of different table designs, I decided to go with&nbsp;<a href="http://gkaindl.com/software/udp-flashlc-bridge"><span class="caps">UDP</span>-Flashlc Bridge</a>&nbsp;for <span class="caps">UDP</span> speed and&nbsp;<a href="http://bubblebird.at/tuioflash/tuio-as3-library/"><span class="caps">TULO</span>-<span class="caps">AS</span>3</a>&nbsp;for <span class="caps">TUIO</span> or Blob tracking in Flash and&nbsp;<a href="http://pixelverse.org/iphone/oscemote/">OSCemote</a>&nbsp;to track iPhone&nbsp;touches.</p>
+<p>I find that sending the data over <span class="caps">UDP</span> using udp-flashlc-bridge is way faster and more efficient than <span class="caps">XML</span>- or <span class="caps">TCP</span>-based approaches. There is virtually no lag at&nbsp;all.</p>
+<p>I modded my sea creature to work with a simple touch setup. Here is a crappy movie for now. I will do some nicer movies when I finish my&nbsp;table.</p>
+<figure></figure>
+<p>The next thing was to get some multi touch functionality. This one took some head scratching and it still needs refinement. I started thinking about moving photos around, rotating, scaling and such. I realized I needed special <code class="as">movieClip</code> class I had created for my last big Flash project. A <code class="as">movieClip</code> class can be assigned a dynamic registration point and it&rsquo;s <code class="as">globalToLocal</code> coords work no matter how deeply nested it lives. This allows for the first finger touch to be set as the registration point for the photo and the next touch to be used as the operator for scaling and rotating. Here is another crappy&nbsp;movie.</p>
+<figure></figure>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F&amp;source=tweetbutton&amp;text=iPhone+Controlling+Flash+with+TUIO+and+UDP&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fiphone-controlling-flash-with-tuio-and-udp%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/dave-stewart.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Dave Stewart</h2>
+					<p>Over the years, Dave has done work on both the server and client side, but his passion remains animation.</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/dave-stewart/index.html">See all of Dave Stewart&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/dave-stewart.rss">Subscribe to Dave Stewart&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/potpourri/index.html">Potpourri</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/flash-actionscript/index.html">Flash & ActionScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/ios/index.html">iOS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/mobile/index.html">mobile</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/projects-and-products/index.html">projects & products</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+			
+		    		    		
+	
+			<ul id="pagination">
+					<li class="prev"><a href="../counting-the-results-of-a-nested-query-in-expressionengine/index.html">Previous Entry: <em>EE Tip: Counting the results of a nested query</em></a></li>
+							<li class="next"><a href="../subtree-merge-as-an-alternative-to-submodules-with-git-svn/index.html">Next Entry: <em>Subtree merge as an alternative to submodules with git svn</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="../../rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="../index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<form id="search-form" method="post" action="../../index.html"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="YTo5OntzOjY6InN0YXR1cyI7czoxMDoibm90IGNsb3NlZCI7czo3OiJjaGFubmVsIjtzOjQ6ImJsb2ciO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjtzOjk6InNlYXJjaF9pbiI7czoxMDoiZXZlcnl3aGVyZSI7czo1OiJ3aGVyZSI7czozOiJhbnkiO3M6MTI6InNob3dfZXhwaXJlZCI7czozOiJ5ZXMiO3M6MTk6InNob3dfZnV0dXJlX2VudHJpZXMiO3M6MzoieWVzIjtzOjExOiJyZXN1bHRfcGFnZSI7czoxMjoic2VhcmNoL2luZGV4IjtzOjE1OiJub19yZXN1bHRzX3BhZ2UiO3M6MTc6InNlYXJjaC9uby1yZXN1bHRzIjt9ZjIzYjUzODQ0NzJhMDY3MGJkZTc2MGY5YzZiM2M2OTA=" />
+<input type="hidden" name="site_id" value="2" />
+<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
+</div>
+
+
+<p>
+	<label for="search">Search for</label>
+	<input type="search" id="search" name="keywords" value="&quot;Web Design in a&quot; xylophone" />
+	<button type="submit" value="search">Search</button>
+</p>
+</form>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

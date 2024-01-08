@@ -1,0 +1,323 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>A better createElementWithName() - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/a-better-createelementwithname/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="A better createElementWithName()" />
+	<meta property="description" content="Back in 2005, I wrote&nbsp;a piece about&nbsp;IE&rsquo;s abysmal generation of&nbsp;NAMEd elements via the&nbsp;DOM&nbsp;(which, interestingly enough, has proven to be one of the most popular posts on the blog, pointing to the fact that this is an obvious pain point for many&nbsp;DOM&nbsp;scripters out there)." />
+	<meta property="og:description" itemprop="description" content="Back in 2005, I wrote&nbsp;a piece about&nbsp;IE&rsquo;s abysmal generation of&nbsp;NAMEd elements via the&nbsp;DOM&nbsp;(which, interestingly enough, has proven to be one of the most popular posts on the blog, pointing to the fact that this is an obvious pain point for many&nbsp;DOM&nbsp;scripters out there)." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/a-better-createelementwithname/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">A better&nbsp;createElementWithName()</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2007-08-27T14:43:59" pubdate="pudate">27 August 2007</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>Back in 2005, I wrote <a href="http://www.easy-reader.net/archives/death-to-bad-dom-implementations/">a piece about <abbr title="Internet Explorer"><span class="caps">IE</span></abbr>&rsquo;s abysmal generation of <code>NAME</code>d elements via the <abbr title="Document Object Model"><span class="caps">DOM</span></abbr></a> (which, interestingly enough, has proven to be one of the most popular posts on the blog, pointing to the fact that this is an obvious pain point for many <abbr title="Document Object Model"><span class="caps">DOM</span></abbr> scripters out there). The the time, I&nbsp;wrote</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist489679" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-createelementwithname-1-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/a-better-createelementwithname/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="createElementWithName-1.js">        <tr>          <td id="file-createelementwithname-1-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-createelementwithname-1-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-k>function</span> <span class=pl-en>createElementWithName</span><span class=pl-kos>(</span> <span class=pl-s1>type</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-createelementwithname-1-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>var</span> <span class=pl-s1>element</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-createelementwithname-1-js-LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-c>// First try the <span class="caps">IE</span> way; if this fails then use the standard way</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-createelementwithname-1-js-LC4" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>if</span><span class=pl-kos>(</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-c1>all</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-createelementwithname-1-js-LC5" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>element</span> <span class=pl-c1>=</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-createelementwithname-1-js-LC6" class="blob-code blob-code-inner js-file-line">      <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s>&#39;&lt; &#39;</span><span class=pl-c1>+</span><span class=pl-s1>type</span><span class=pl-c1>+</span><span class=pl-s>&#39; name=&quot;&#39;</span><span class=pl-c1>+</span><span class=pl-s1>name</span><span class=pl-c1>+</span><span class=pl-s>&#39;&quot; /&gt;&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-createelementwithname-1-js-LC7" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span><span class=pl-k>else</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-createelementwithname-1-js-LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>element</span> <span class=pl-c1>=</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s1>type</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-createelementwithname-1-js-LC9" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>element</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span> <span class=pl-s>&#39;name&#39;</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-createelementwithname-1-js-LC10" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-createelementwithname-1-js-LC11" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>return</span> <span class=pl-s1>element</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-1-js-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>          <td id="file-createelementwithname-1-js-LC12" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/489679/raw/56d153dda694d7b0adec420cc6bc5a74b7929b64/createElementWithName-1.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/489679#file-createelementwithname-1-js" class="Link--inTextBlock">          createElementWithName-1.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>It was a complete hack, but it worked. More importantly, however, it began a discussion of a better way to fix the problem in a cross-browser way. The best solution offered was <a href="http://www.arantius.com/" rel="external">Anthony Lieuallen</a>&rsquo;s very efficient one-time function&nbsp;definition:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist489679" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-createelementwithname-2-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/a-better-createelementwithname/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="createElementWithName-2.js">        <tr>          <td id="file-createelementwithname-2-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-createelementwithname-2-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-k>function</span> <span class=pl-en>createElementWithName</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span><span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-createelementwithname-2-js-LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>(</span><span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-createelementwithname-2-js-LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>try</span> <span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-createelementwithname-2-js-LC4" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>var</span> <span class=pl-s1>el</span><span class=pl-c1>=</span><span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s>&#39;&lt;div name=&quot;foo&quot;&gt;&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-createelementwithname-2-js-LC5" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>if</span><span class=pl-kos>(</span> <span class=pl-s>&#39;<span class="caps">DIV</span>&#39;</span><span class=pl-c1>!=</span><span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-c1>tagName</span> <span class=pl-c1>||</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-createelementwithname-2-js-LC6" class="blob-code blob-code-inner js-file-line">        <span class=pl-s>&#39;foo&#39;</span><span class=pl-c1>!=</span><span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-c1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-createelementwithname-2-js-LC7" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>throw</span> <span class=pl-s>&#39;create element error&#39;</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-createelementwithname-2-js-LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-createelementwithname-2-js-LC9" class="blob-code blob-code-inner js-file-line">    <span class=pl-en>createElementWithName</span> <span class=pl-c1>=</span> <span class=pl-k>function</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-createelementwithname-2-js-LC10" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>return</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s>&#39;&lt;&#39;</span> <span class=pl-c1>+</span> <span class=pl-s1>tag</span> <span class=pl-c1>+</span> <span class=pl-s>&#39; name=&quot;&#39;</span> <span class=pl-c1>+</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-createelementwithname-2-js-LC11" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>name</span> <span class=pl-c1>+</span> <span class=pl-s>&#39;&quot;&gt;&lt;/&#39;</span> <span class=pl-c1>+</span> <span class=pl-s1>tag</span> <span class=pl-c1>+</span> <span class=pl-s>&#39;&gt;&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>          <td id="file-createelementwithname-2-js-LC12" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>          <td id="file-createelementwithname-2-js-LC13" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span><span class=pl-k>catch</span><span class=pl-kos>(</span> <span class=pl-s1>e</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>          <td id="file-createelementwithname-2-js-LC14" class="blob-code blob-code-inner js-file-line">    <span class=pl-en>createElementWithName</span> <span class=pl-c1>=</span> <span class=pl-k>function</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>          <td id="file-createelementwithname-2-js-LC15" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>var</span> <span class=pl-s1>el</span> <span class=pl-c1>=</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>          <td id="file-createelementwithname-2-js-LC16" class="blob-code blob-code-inner js-file-line">      <span class=pl-c>// setAttribute might be better here ?</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>          <td id="file-createelementwithname-2-js-LC17" class="blob-code blob-code-inner js-file-line">      <span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-c1>name</span> <span class=pl-c1>=</span> <span class=pl-s1>name</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>          <td id="file-createelementwithname-2-js-LC18" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>return</span> <span class=pl-s1>el</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>          <td id="file-createelementwithname-2-js-LC19" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>          <td id="file-createelementwithname-2-js-LC20" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-2-js-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>          <td id="file-createelementwithname-2-js-LC21" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/489679/raw/56d153dda694d7b0adec420cc6bc5a74b7929b64/createElementWithName-2.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/489679#file-createelementwithname-2-js" class="Link--inTextBlock">          createElementWithName-2.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>And now <a href="http://lojic.com/blog/" rel="external">Brian Adkins</a> has refactored the script to be even fewer lines of&nbsp;code:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist489679" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-createelementwithname-3-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/a-better-createelementwithname/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="createElementWithName-3.js">        <tr>          <td id="file-createelementwithname-3-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-createelementwithname-3-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-k>var</span> <span class=pl-s1>createElementWithName</span> <span class=pl-c1>=</span> <span class=pl-kos>(</span> <span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-createelementwithname-3-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-k>try</span> <span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-createelementwithname-3-js-LC3" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>var</span> <span class=pl-s1>el</span> <span class=pl-c1>=</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s>&#39;&lt;div name=&quot;foo&quot;&gt;&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-createelementwithname-3-js-LC4" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>if</span><span class=pl-kos>(</span> <span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-c1>tagName</span> <span class=pl-c1>!==</span> <span class=pl-s>&#39;<span class="caps">DIV</span>&#39;</span> <span class=pl-c1>||</span> <span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-c1>name</span> <span class=pl-c1>!==</span> <span class=pl-s>&#39;foo&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-createelementwithname-3-js-LC5" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>throw</span> <span class=pl-s>&#39;create failed&#39;</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-createelementwithname-3-js-LC6" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-createelementwithname-3-js-LC7" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-k>function</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-createelementwithname-3-js-LC8" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>return</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s>&#39;&lt;&#39;</span> <span class=pl-c1>+</span> <span class=pl-s1>tag</span> <span class=pl-c1>+</span> <span class=pl-s>&#39; name=&quot;&#39;</span> <span class=pl-c1>+</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-createelementwithname-3-js-LC9" class="blob-code blob-code-inner js-file-line">        <span class=pl-s1>name</span> <span class=pl-c1>+</span> <span class=pl-s>&#39;&quot;&gt;&lt;/&#39;</span> <span class=pl-c1>+</span> <span class=pl-s1>tag</span> <span class=pl-c1>+</span> <span class=pl-s>&#39;&gt;&#39;</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-createelementwithname-3-js-LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-createelementwithname-3-js-LC11" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span><span class=pl-k>catch</span><span class=pl-kos>(</span> <span class=pl-s1>e</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>          <td id="file-createelementwithname-3-js-LC12" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>return</span> <span class=pl-k>function</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>          <td id="file-createelementwithname-3-js-LC13" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>var</span> <span class=pl-s1>el</span> <span class=pl-c1>=</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>createElement</span><span class=pl-kos>(</span> <span class=pl-s1>tag</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>          <td id="file-createelementwithname-3-js-LC14" class="blob-code blob-code-inner js-file-line">      <span class=pl-s1>el</span><span class=pl-kos>.</span><span class=pl-en>setAttribute</span><span class=pl-kos>(</span> <span class=pl-s>&#39;name&#39;</span><span class=pl-kos>,</span> <span class=pl-s1>name</span> <span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>          <td id="file-createelementwithname-3-js-LC15" class="blob-code blob-code-inner js-file-line">      <span class=pl-k>return</span> <span class=pl-s1>el</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>          <td id="file-createelementwithname-3-js-LC16" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&#125;</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>          <td id="file-createelementwithname-3-js-LC17" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&#125;</span></td>        </tr>        <tr>          <td id="file-createelementwithname-3-js-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>          <td id="file-createelementwithname-3-js-LC18" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/489679/raw/56d153dda694d7b0adec420cc6bc5a74b7929b64/createElementWithName-3.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/489679#file-createelementwithname-3-js" class="Link--inTextBlock">          createElementWithName-3.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>Geat job Brian, thanks for&nbsp;sharing.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F&amp;source=tweetbutton&amp;text=A+better+createElementWithName()&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fa-better-createelementwithname%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+				</ul>
+
+						<h2>Related entries</h2>
+				<ul class="browse also">
+			  		
+				</ul>
+    	
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-88">
+						<article class="entry-content">
+							<p>Neat stuff, too bad <span class="caps">IE</span> just couldn’t handle this stuff right out of the&nbsp;box!</p>
+
+<p>It looks like you have a neat&nbsp;solution.</p>
+
+<p>Do you have any solution to change/set the name or the type after an element has been rendered to the screen? I see that the type attribute can’t be changed&nbsp;either!</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/956d39c237e759a949d5e514c83a326d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Brent</span>
+									</li>
+							<li><time class="published" datetime="2007-11-09T18:27:00" pubdate="pudate">09 November 2007 at 6pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/a-better-createelementwithname/#comment-88">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/tipr-now-with-added-txt/index.html">Previous Entry: <em>Tipr, now with added txt</em></a></li>
+							<li class="next"><a href="/archives/alex-russell-is-not-a-heretic/index.html">Next Entry: <em>Alex Russell is not a heretic</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,333 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>Experimenting with Grids Using eCSStender - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/experimenting-with-grids-using-ecsstender/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Experimenting with Grids Using eCSStender" />
+	<meta property="description" content="In preparation for the launch of 10K Apart (Responsive Edition) from Mix Online and An Event Apart, I&rsquo;ve been&nbsp;feverishly&nbsp;working on a modest implementation of the proposed CSS3 Grid Alignment module using eCSStender." />
+	<meta property="og:description" itemprop="description" content="In preparation for the launch of 10K Apart (Responsive Edition) from Mix Online and An Event Apart, I&rsquo;ve been&nbsp;feverishly&nbsp;working on a modest implementation of the proposed CSS3 Grid Alignment module using eCSStender." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/experimenting-with-grids-using-ecsstender/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">Experimenting with Grids Using&nbsp;eCSStender</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2011-08-04T19:59:13" pubdate="pudate">04 August 2011</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>In preparation for the launch of <a href="http://10k.aneventapart.com/">10K Apart (Responsive Edition)</a> from <a href="http://visitmix.com/">Mix Online</a> and <a href="http://aneventapart.com/">An Event Apart</a>, I&rsquo;ve been&nbsp;feverishly&nbsp;working on a modest implementation of <a href="http://dev.w3.org/csswg/css3-grid-align/">the proposed <span class="caps">CSS</span>3 Grid Layout module</a>&nbsp;(also referred to as Grid Alignment in <a href="http://www.interoperabilitybridges.com/css3-grid-align/">alternate drafts</a>)&nbsp;using <a href="http://eCSStender.org">eCSStender</a>. As you might imagine, it was a pretty massive undertaking, but it&rsquo;s been pretty rewarding to use eCSStender for it&rsquo;s original intent: prototyping implementations of proposed&nbsp;specifications.</p>
+<figure> <img src="/posts/the-grid-system.png" alt="" /> </figure>
+<p>As it stands today, the <a href="http://ie.microsoft.com/testdrive/"><span class="caps">IE</span>10 platform preview</a> is the only place you can play with <span class="caps">CSS</span>-based grid layouts and have them natively rendered by the browser. This JavaScript-based port, however, makes it possible to view them in recent builds of Chrome, Firefox, Safari and even&nbsp;Opera.</p>
+<h2>How do I use&nbsp;it?</h2>
+<p>As with most extensions, enabling grid layout with eCSStender is as simple as including <a href="http://ecsstender.org/documentation/downloading-ecsstender">the eCSStender core library</a> and <a href="http://ecsstender.org/extensions/css3-grid-alignment/">the Grid Alignment extension</a>. It&rsquo;s up to you whether you&#8217;d like to download copies of each and serve them from your own domain or whether you prefer to use <a href="http://ecsstender.org/documentation/the-ecsstender-cdn/">the new eCSStender <span class="caps">CDN</span></a> to handle the file delivery for you. To use the <span class="caps">CDN</span>, you&rsquo;d simply include the following two scripts just before the closing <code class="html">body</code>&nbsp;tag:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist1126463" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-script-inclusion-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/experimenting-with-grids-using-ecsstender/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="script-inclusion.html">        <tr>          <td id="file-script-inclusion-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-script-inclusion-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span> <span class=pl-c1>src</span>=&quot;<span class=pl-s>http://cdn.ecsstender.org/lib/latest/min/eCSStender.js</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-script-inclusion-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-script-inclusion-html-LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span> <span class=pl-c1>src</span>=&quot;<span class=pl-s>http://cdn.ecsstender.org/ext/<span class="caps">CSS</span>3-grid-alignment/latest/min/eCSStender.<span class="caps">CSS</span>3-grid-alignment.js</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/1126463/raw/4dce79fb7c22a5bdd08d5470ca0cadab3d6b58f4/script-inclusion.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/1126463#file-script-inclusion-html" class="Link--inTextBlock">          script-inclusion.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>With those in place, you can begin playing with some of the new grid syntax. <a href="http://test.ecsstender.org/extensions/eCSStender.CSS3-grid-alignment.js/test/grid-system/index.html">The test case</a> I built the extension against sets up one of several grids like&nbsp;this:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist1126463" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-grid-object-css" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-css  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/experimenting-with-grids-using-ecsstender/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="CSS" data-tagsearch-path="grid-object.css">        <tr>          <td id="file-grid-object-css-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-grid-object-css-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>#</span><span class=pl-c1>demo</span> &#123;</td>        </tr>        <tr>          <td id="file-grid-object-css-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-grid-object-css-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>width</span><span class=pl-kos>:</span><span class=pl-c1>945<span class=pl-smi>px</span></span>;</td>        </tr>        <tr>          <td id="file-grid-object-css-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-grid-object-css-LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>display</span><span class=pl-kos>:</span>grid;</td>        </tr>        <tr>          <td id="file-grid-object-css-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-grid-object-css-LC4" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>grid-columns</span><span class=pl-kos>:</span> <span class=pl-c1>145<span class=pl-smi>px</span></span> <span class=pl-c1>1<span class=pl-smi>fr</span></span> <span class=pl-c1>145<span class=pl-smi>px</span></span> <span class=pl-c1>1<span class=pl-smi>fr</span></span> <span class=pl-c1>145<span class=pl-smi>px</span></span> <span class=pl-c1>1<span class=pl-smi>fr</span></span> <span class=pl-c1>145<span class=pl-smi>px</span></span> <span class=pl-c1>1<span class=pl-smi>fr</span></span> <span class=pl-c1>145<span class=pl-smi>px</span></span> <span class=pl-c1>1<span class=pl-smi>fr</span></span> <span class=pl-c1>145<span class=pl-smi>px</span></span>;</td>        </tr>        <tr>          <td id="file-grid-object-css-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-grid-object-css-LC5" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>grid-rows</span><span class=pl-kos>:</span> <span class=pl-c1>186<span class=pl-smi>px</span></span> <span class=pl-c1>692<span class=pl-smi>px</span></span> <span class=pl-c1>357<span class=pl-smi>px</span></span>; </td>        </tr>        <tr>          <td id="file-grid-object-css-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-grid-object-css-LC6" class="blob-code blob-code-inner js-file-line">&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/1126463/raw/4dce79fb7c22a5bdd08d5470ca0cadab3d6b58f4/grid-object.css" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/1126463#file-grid-object-css" class="Link--inTextBlock">          grid-object.css        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>That code builds a grid structure within <code class="html">#demo</code> that is comprised of six primary columns (at 145px wide each) with equal-width &ldquo;gutter&rdquo; columns between them (their width is determined using equal division of the remaining space as indicated by &ldquo;1fr&rdquo; meaning &ldquo;one fraction&rdquo;). It also defines three rows of varying heights within <code class="html">#demo</code>. Grid items are then positioned on the grid using coordinate-like&nbsp;syntax:</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist1126463" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-grid-item-css" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-css  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/experimenting-with-grids-using-ecsstender/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="CSS" data-tagsearch-path="grid-item.css">        <tr>          <td id="file-grid-item-css-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-grid-item-css-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>#</span><span class=pl-c1>articles</span> &#123;</td>        </tr>        <tr>          <td id="file-grid-item-css-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-grid-item-css-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>grid-row</span><span class=pl-kos>:</span><span class=pl-c1>2</span>;</td>        </tr>        <tr>          <td id="file-grid-item-css-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-grid-item-css-LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-c1>grid-column</span><span class=pl-kos>:</span><span class=pl-c1>1</span>;</td>        </tr>        <tr>          <td id="file-grid-item-css-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-grid-item-css-LC4" class="blob-code blob-code-inner js-file-line">&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/1126463/raw/4dce79fb7c22a5bdd08d5470ca0cadab3d6b58f4/grid-item.css" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/1126463#file-grid-item-css" class="Link--inTextBlock">          grid-item.css        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>The full <span class="caps">CSS</span> for <a href="http://test.ecsstender.org/extensions/eCSStender.CSS3-grid-alignment.js/test/grid-system/index.html">the Grid System demo</a> can be viewed <a href="http://test.ecsstender.org/extensions/eCSStender.CSS3-grid-alignment.js/test/grid-system/grid.css">here</a>.</p>
+<p>The extension is by no means complete (the spec is fairly large and will require months to build an exhausitve implementation), but it does let you begin experimenting with the syntax&nbsp;immediately.</p>
+<h2>Is This the Future of Grid-based Web&nbsp;Design?</h2>
+<p>To me, this spec is very much in it&rsquo;s infancy (despite having an experimental implementation in the <span class="caps">IE</span>10 platform preview). The fine folks at Microsoft (who, in full disclosure, funded the development of the extension) are keen to get people playing with the proposed syntax. I, for one, am not completely sold on the syntax as it is currently proposed. From a developer&rsquo;s standpoint it makes sense because it feels like you&#8217;re building an invisible series of rows and columns, onto which you are attaching pieces of your document. As <a href="https://twitter.com/markboulton/status/99122324330127360">Mark Boulton pointed out on Twitter</a>, however, the syntax is not as analogous to a designer&rsquo;s concept of a grid, which could slow the adoption of the spec if it were to be finalized&nbsp;as-is.</p>
+<p>Despite obviously working my tail off to get this extension up and running, I&rsquo;m most excited to see how <a href="http://lists.w3.org/Archives/Public/www-style/2011Apr/0303.html">the conversation</a> opens up on grid-based <span class="caps">CSS</span> layouts and how the spec evolves. Will there be counterproposals? Yup. <a href="https://twitter.com/markboulton/status/99123592394059776">Mark&rsquo;s working on one</a> and I&rsquo;d love to see more. All I know is that the more we&mdash;the grunts in the <span class="caps">CSS</span>-authoring trenches&mdash;get involved in <a href="http://www.w3.org/2005/10/Process-20051014/tr.html#Reports">the spec development process</a>, the better the end result will be. And I&rsquo;m looking forward to helping turn even more ideas into workable prototypes using&nbsp;eCSStender.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F&amp;source=tweetbutton&amp;text=Experimenting+with+Grids+Using+eCSStender&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fexperimenting-with-grids-using-ecsstender%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/browsers/index.html">browsers</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/projects-and-products/index.html">projects & products</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-558">
+						<article class="entry-content">
+							<p>Like it, it mimics newspaper layout a lot better than traditional grid systems. I&#8217;m no genius but this feels a lot more natural to me and doing display:grid is just&nbsp;mind-blowing.</p>
+
+<p>Awesome work, I&#8217;d be more tempted to try this first in my next project than&nbsp;another.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://atompad.com">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/acb28b517a51f2636824ae77cd5acded?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">John</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-08-04T23:05:57" pubdate="pudate">04 August 2011 at 11pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/experimenting-with-grids-using-ecsstender/#comment-558">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/now-read-this-4/index.html">Previous Entry: <em>Now Read This IV</em></a></li>
+							<li class="next"><a href="/archives/now-read-this-v/index.html">Next Entry: <em>Now Read This V</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

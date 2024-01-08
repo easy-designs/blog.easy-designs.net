@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	
+	
+	<channel>
+		<title>The Easy Designs Blog: Posts by Dave Stewart</title>
+		<link>https://blog.easy-designs.net/archives/by-author/dave-stewart/</link>
+		<dc:language>en</dc:language>
+		<description></description>
+		<dc:rights>(c) Copyright 2005–2023 Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>Easy! Designs, LLC</dc:creator>
+		<dc:date>2013-09-16</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="http://blog.easy-designs.net/rss/by-author/dave-stewart.rss" rel="self" type="application/rss+xml"/>
+	
+		<item>
+			<title>Brooke Valentine&#8217;s Celebrity Girl Fight Game</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>If you made something that was used by over Ten Million people, would you/it be a&nbsp;success?</p>
+<p>Over the last 10 years I have made countless Flash games for various agencies and independent artists. I do the job and move on. Sometimes they barley rise to any notable or worthy existence and other&rsquo;s get viral and do well for a&nbsp;while.</p>
+<p>From time to time I perform various searches out of curiosity to see if anything still lives. Today I thought I would hunt down a game I made back in 2007 for Brooke Valentine called Celebrity Girlfight. It&rsquo;s a boxing game where you battle against Paris Hilton, Jennifer Lopez, Lindsay Lohan, Lil Kim, Beyonce Knowles and Ciara. I was stunned to see &ldquo;About 691,000 results&rdquo; from&nbsp;Google.</p>
+<figure><img src="http://src.sencha.io/x100/https://blog.easy-designs.net/img/posts/celebrity-girlfight.png" alt=""/></figure>
+<p>Clicking on the first result brings me to&nbsp;<a href="http://www.y8.com/games/Brooke_Valentine_Presents_Celebrety_Girl_Fight" target="_blank">y8.com</a>. It&rsquo;s one of those Flash game sites that collects them and offers them up for free, surrounded with advertisements.&nbsp;On this&nbsp;<strong>one site</strong>&nbsp;the game had been played&nbsp;<strong>2,371,316</strong>&nbsp;times with&nbsp;<strong>110,043</strong>&nbsp;positive votes (87.15%) vs.<strong>16,224</strong>&nbsp;negative. Over two million,&nbsp;wow!</p>
+<p>I continued through one whole page of Google results, 10,000, 9,000, 20,000 plays, on and on and on. I bet if I was to go through more of the sites, the count would exceed ten million. <em>That&rsquo;s awesome</em> I&nbsp;thought.</p>
+<p>Now in most situations, the Flash programmer does not put his name on the game and remains anonymous. That&#8217;s fine, I realize the focus here is the artist, but I thought it would make an interesting blog post from the perspective of a developer. If I had 1&cent; for every time it was played I could have made upwards of&nbsp;$100,000.</p>
+<p>It&#8217;s food for&nbsp;thought.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/brooke-valentines-celebrity-girl-fight-game/</link>
+			<guid>https://blog.easy-designs.net/archives/brooke-valentines-celebrity-girl-fight-game/</guid>
+			<dc:date>2010-07-24T12:54:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>iPhone Controlling Flash with TUIO and UDP</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I am in the middle of constructing a&nbsp;<a href="http://www.google.com/search?rls=en&amp;q=FTIR+table&amp;ie=UTF-8&amp;oe=UTF-8"><span class="caps">FTIR</span> table</a>&nbsp;and&nbsp;I am going with the laser approach after less than satisfactory results using Infra Red <span class="caps">LED</span>&rsquo;s. It&rsquo;s going well and I have had some success with Fiducial tracking using my infra red modded webcam cam, plexiglass and such. I had been building the apps in Quartz Composer but I am not too familiar with Quartz&nbsp;yet.</p>
+<p>Until my lasers arrive I decided to try and get some output from my iPhone, after all it&rsquo;s a great touch screen and a change from building apps in Flash, which I know better.&nbsp;How do you get Camera or iPhone touch data out over the network to your MacBook and then have Flash read it??? Long story. If you are interested in going down this rabbit hole, check out these&nbsp;links:</p>
+<ul>
+<li><a href="http://reactivision.sourceforge.net/">http://reactivision.sourceforge.net/</a></li>
+<li><a href="http://www.tuio.org/?software">http://www.tuio.org/?software</a></li>
+<li><a href="http://vimeo.com/7131693">Georg Kaindl&rsquo;s <span class="caps">UDP</span> Flash Bridge&nbsp;video</a></li>
+<li><a href="http://bubblebird.at/tuioflash/">http://bubblebird.at/tuioflash/</a></li>
+<li><a href="http://pixelverse.org/iphone/oscemote/">http://pixelverse.org/iphone/oscemote/</a></li>
+<li>And for lasers:&nbsp;<a href="http://aixiz.globat.com/">http://aixiz.globat.com/</a></li>
+</ul>
+<p>As I recently discovered, there are a few different methods of tracking and a bunch of lib&rsquo;s on google code for such things.&nbsp;After trying most of them and trying a couple of different table designs, I decided to go with&nbsp;<a href="http://gkaindl.com/software/udp-flashlc-bridge"><span class="caps">UDP</span>-Flashlc Bridge</a>&nbsp;for <span class="caps">UDP</span> speed and&nbsp;<a href="http://bubblebird.at/tuioflash/tuio-as3-library/"><span class="caps">TULO</span>-<span class="caps">AS</span>3</a>&nbsp;for <span class="caps">TUIO</span> or Blob tracking in Flash and&nbsp;<a href="http://pixelverse.org/iphone/oscemote/">OSCemote</a>&nbsp;to track iPhone&nbsp;touches.</p>
+<p>I find that sending the data over <span class="caps">UDP</span> using udp-flashlc-bridge is way faster and more efficient than <span class="caps">XML</span>- or <span class="caps">TCP</span>-based approaches. There is virtually no lag at&nbsp;all.</p>
+<p>I modded my sea creature to work with a simple touch setup. Here is a crappy movie for now. I will do some nicer movies when I finish my&nbsp;table.</p>
+<figure></figure>
+<p>The next thing was to get some multi touch functionality. This one took some head scratching and it still needs refinement. I started thinking about moving photos around, rotating, scaling and such. I realized I needed special <code class="as">movieClip</code> class I had created for my last big Flash project. A <code class="as">movieClip</code> class can be assigned a dynamic registration point and it&rsquo;s <code class="as">globalToLocal</code> coords work no matter how deeply nested it lives. This allows for the first finger touch to be set as the registration point for the photo and the next touch to be used as the operator for scaling and rotating. Here is another crappy&nbsp;movie.</p>
+<figure></figure>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/iphone-controlling-flash-with-tuio-and-udp/</link>
+			<guid>https://blog.easy-designs.net/archives/iphone-controlling-flash-with-tuio-and-udp/</guid>
+			<dc:date>2010-03-19T12:54:27-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Audio Spectrum Analysis in JSON</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I have been unsuccessful so far in syncing animation drawn in <code class="html">canvas</code> using Processing.js <span class="amp">&amp;</span> audio played using the browser <code class="html">audio</code> tag with audio spectrum data I create from a ByteArray in Flash. It works in Flash due to the fact that the spectrum analysis and animation are executed together in an <code class="as">onEnterFrame</code> event. The drawback to not having real time audio spectrum analysis from within the browser is the need to supply all the data to Processing.js at initialization. It can be rather large and I have yet to perfect syncing the reading of the array with the current time of the audio. Some sort of progressive data stream and excellent timing&nbsp;system?!?</p>
+<p>It may be I just have to wait until this feature is implemented into browsers. In the meantime, I thought I would post the source for the the Spectrum Analysis tool I created for anyone wanting a quick way to get some data from their favorite tune and perhaps figure out a way to use it in a optimized fashion. The tool is very simple and outputs <span class="caps">JSON</span> with Left and Right channels as floating point numbers between 0 and&nbsp;1.</p>
+<p>You can use it to make stuff move to the groove. It has a simple execution of this in the ui for you to see. <a href="/img/posts/Audio_Spectrum_Output.zip">Download the Flash and <span class="caps">PHP</span></a> and throw it on your local&nbsp;server.</p>
+<p>The process of accessing audio data from within the browser is quite beyond me, I really just want to see what I can create visually in Processing.js and <code class="html">canvas</code>. Until it&rsquo;s available in an easy-to-use <span class="caps">API</span>, I just have to keep looking for a way to get spectrum data quickly, hence this contraption. Have&nbsp;fun.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/audio-spectrum-analysis-in-json/</link>
+			<guid>https://blog.easy-designs.net/archives/audio-spectrum-analysis-in-json/</guid>
+			<dc:date>2010-02-23T11:54:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>A Twitter Search Visualizer in Processing.js</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>
+<p>I jumped over from Raphael back to Processing again today. I have said it before: us Flash guys might get frustrated trying to pull off some simple stuff in either Processing or Raphael. Just keep in mind that they are young languages and the future looks&nbsp;bright.</p>
+<p>Anyway, another attempt to do something here with Processing. It took a me minute to find an elegant way to get Twitter <span class="caps">JSON</span> data into Processing without being too sloppy. <a href="/demos/processing-tweets/">The visualizer</a> works perfectly in Safari and Chrome, but it&rsquo;s completely hosed in&nbsp;Firefox.</p>
+</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/a-twitter-search-visualizer-in-processing.js/</link>
+			<guid>https://blog.easy-designs.net/archives/a-twitter-search-visualizer-in-processing.js/</guid>
+			<dc:date>2010-02-19T11:54:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Canvas, Audio, Raphael &amp;amp; Twitter</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>Last week I worked up an audio visualizer in Flash for a friend that yielded some nice results. The ActionScript 3.0 ByteArray and computeSpectrum are powerful and have many potential uses. Doing the same thing with <code class="html">canvas</code> and JavaScript requires a more roundabout method that is less accurate but more gratifying from a coding&nbsp;perspective.</p>
+<p>My journey down this rabbit hole led me to almost doing <a href="http://vocamus.net/dave/?p=914">this</a>. I got myself a copy of <a href="http://www.mozilla.org/projects/minefield">Minfield</a> and read up on how to build <a href="http://weblog.bocoup.com/javascript-fft-audio-sampling-in-firefox">my own audio patched version</a> of Firefox&hellip; yeah, not going to&nbsp;happen.</p>
+<p>Needing more of a quick fix, I came up with two solutions. My first attempt at a solution was to build a Flash audio sampler that piped out the -1 to 1 floating point numbers to a file and use them in a <span class="caps">JS</span> array to manipulate coordinates of sprites on a <code class="html">canvas</code>. It worked quite well but the synchronization was off. I have not fixed this in that version but in the interim I got sidetracked and found another way to get some data. Quite simple really: load up an mp3 into Audacity and go Analyze -&gt; Time -&gt; Beat Finder. Set the tolerance to about 55 and this will generate beat labels. Export those to a text file and then clean up the numbers to get an array of milliseconds for your <span class="caps">JS</span> <code class="js">setInterval()</code>.</p>
+<p>Granted this is not spectrum data&mdash;it&rsquo;s simpler beat info&mdash;but in a way it works better for animating sprites because it&rsquo;s cleaner. Spectrum data is very granular and works nice in widgets designed to show this (e.g. Graphs and Histogram&nbsp;visuals).</p>
+<p><a href="/demos/audio-twitter/">This test shows twitter searches</a>&nbsp;on an <span class="caps">HTML</span>5 <code class="html">canvas</code> and moves them around in time to the beat of the music loaded in an audio tag. It&rsquo;s not very exciting at this point but it&rsquo;s got me thinking of some fun stuff to do. Every experiment like this is a step closer to moving away from Flash. I still can&rsquo;t settle on using Processing or Raphael&nbsp;though.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/canvas-audio-raphael-twitter/</link>
+			<guid>https://blog.easy-designs.net/archives/canvas-audio-raphael-twitter/</guid>
+			<dc:date>2010-02-16T11:54:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>See Creature</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I took a day to extend the tentacle class to work on 360&deg; and secondary motion from a parent node, but here it is, the first critter for my ocean. Thanks to Keith Peters book&nbsp;<a href="http://www.amazon.com/Foundation-Actionscript-3-0-Animation-Making/dp/1590597915">ActionScript 3 Animation</a>, useful formulas section for getting me through this. It kicked my butt and fried my brain, but it&rsquo;s so clear now.&nbsp;Onwards!</p>
+<figure> 
+<object data="/img/posts/SeaCreature1.swf" height="500" type="application/x-shockwave-flash" width="500">
+<param name="src" value="/img/posts/SeaCreature1.swf" />
+</object>
+</figure>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/see-creature/</link>
+			<guid>https://blog.easy-designs.net/archives/see-creature/</guid>
+			<dc:date>2010-01-21T11:54:06-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Logarithmic Spirals</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I spent last evening coding some circles <span class="amp">&amp;</span> spirals in Flash. I love&nbsp;spirals!</p>
+<p>A logarithmic spiral, equiangular spiral or growth spiral is a special kind of spiral curve which often appears in nature. The logarithmic spiral was first described by Descartes and later extensively investigated by Jakob Bernoulli, who called it Spira mirabilis, &ldquo;the marvelous spiral.<span class="final quote">&rdquo;</span></p>
+<p>This kind of simple Math and lengthy tweaking of geometry animation is akin to whittling a piece of wood for me, whenever I have some free time and get the urge to write some code with no particular objective. It&rsquo;s very&nbsp;relaxing.</p>
+<p>It went through numerous iterations over the weekend and truly came to life when I started using Vectors and local3DToGlobal to convert the x,y,z coords to draw the 2D lines. Throwing in some random offsets from time to time helps keep it interesting. I used Math.sin and Math.cos a lot with random offsets to create smooth undulating motion that sometimes reminds me of jelly fish or some sort of under water plant waving around in the current. Other times it takes on a galaxy&nbsp;formation.</p>
+<p>Watch it for 10 minutes or so and you will see some interesting spiral explosions. I can stare at it for 20-30&nbsp;minutes.</p>
+<p>
+<object data="/img/posts/SpiralExperiments.swf" height="500" type="application/x-shockwave-flash" width="500">
+<param name="src" value="/img/posts/SpiralExperiments.swf" />
+</object>
+</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/logarithmic-spirals/</link>
+			<guid>https://blog.easy-designs.net/archives/logarithmic-spirals/</guid>
+			<dc:date>2010-01-11T11:53:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>HTML Canvas &amp;amp; Processing.js</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I&nbsp;have been experimenting with the new <span class="caps">HTML</span>5 <a href="https://developer.mozilla.org/en/Canvas_tutorial"><code class="html">canvas</code> element</a> and trying to get up to speed on the syntax. As a seasoned ActionScript developer, I find JavaScript easy to understand, but difficult to write. I find myself thinking Flash and trying to work a Flash approach. Anyhow, I have tried <code class="html">canvas</code> with raw JavaScript and <code class="html">canvas</code> with <a href="http://raphaeljs.com/">Raphael</a> and now <code class="html">canvas</code> with <a href="http://processingjs.org/">Processing.js</a>.</p>
+<p>They all have advantages and drawbacks. Processing.js is giving me the most fun for now and I can&rsquo;t wait till they finish implementing the entire set of methods, or at least what&rsquo;s left that can be implemented into <code class="html">canvas</code>.</p>
+<p>I have read some eager articles saying that <code class="html">canvas</code> will be the end of Flash. That may be true at some point in the future, but I can tell ya right now it&rsquo;s not even close. With no dedicated <span class="caps">VM</span>, it craps out if you try anything with a couple hundred worthy sprites on screen. Also, objects are painted onto the <code class="html">canvas</code> and no longer exist as objects you can have a pointer to. You basically have to paint the the <code class="html">canvas</code> each time with your updates. For example, Processing uses <code class="js">pushMatrix()</code> and <code class="js">popMatrix()</code> to store and restore stage translations. This is pissing me off and I am still trying to get my head around it. I just want to move stuff around. On the other hand, when you paint, you can have an infinite amount of detail without worrying about overhead, like when you pipe movieclips into Bitmap object in&nbsp;Flash.</p>
+<p>It&rsquo;s all good though and a step in the right direction as far as I am concerned. No plugins, no 3rd party expensive <span class="caps">IDE</span>&rsquo;s etc. It&rsquo;s all free range and organic,&nbsp;yay.</p>
+<p>As with all things animation and drawing, I like to start off with basic math and growing plants, trees, etc. Processing has no real shading, 3d or drop shadowing built in right now and it&rsquo;s kind of refreshing going back to the old way of thinking where you have to fake it&nbsp;all.</p>
+<p>Here is <a href="/demos/processing-plants/">a demo of the alien plant thing I am writing</a>. It takes about 20 mins to draw the entire 360&deg; view. The depth and dimension is all fake like I said, drawing all the highlights, shadows etc in separate passes with slight&nbsp;offsets.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/html-canvas-processing.js/</link>
+			<guid>https://blog.easy-designs.net/archives/html-canvas-processing.js/</guid>
+			<dc:date>2010-01-03T11:54:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Charter For Compassion</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>Our latest project, launched November 12, was the <a href="http://charterforcompassion.org/">Charter For Compassion</a>. The &ldquo;Collective,&rdquo; the Flash component I built, is a growing list of compassionate acts done by people all over the&nbsp;globe.</p>
+<p>Over 30,000 people signed up in a week and the collective is growing. The challenges for this Flash project were multi lingual capabilities and the management of infinite data, visualized in a space governed by physics and chock full of user interaction. Each act is like a mini bio, complete with image, video, text, links, buttons etc. Far too much just to load in at once and throw around. I devised a system of progressively loading in chunks, left and right, so the user could move in a linear or non linear fashion through the collective. All the while, maintaining a physical position within the data.&nbsp;The collective can also be launched from an entry point via sharing on numerous networks and thus be capable of non linear progression,&nbsp;etc.</p>
+<p>So visit the site, sign up and try it out. Here is <a href="http://news.bbc.co.uk/2/hi/programmes/world_news_america/8358005.stm">a link to a spot on the <span class="caps">BBC</span> world news with Karen Armstrong talking about the&nbsp;Charter</a>.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/charter-for-compassion/</link>
+			<guid>https://blog.easy-designs.net/archives/charter-for-compassion/</guid>
+			<dc:date>2009-11-18T11:54:33-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Underwater Environment with ActionScript</title>
+			<author>dave@easy-designs.net (Dave Stewart)</author>
+			<description><![CDATA[
+				<p>I have had some ideas recently about creating an underwater type environment with actionscript. Not a fish tank thing. Ideally I would like deep sea primitive life forms, lots of environment noise from caustics, particles of plankton, light scattering,&nbsp;etc.</p>
+<p>Lots of layers like this would quickly bog down the flash player. Careful thought and usage would be required to strike a balance, switching out the objects in&nbsp;motion.</p>
+<p>The particles, bubbles etc. would be easy enough. The Math <span class="amp">&amp;</span> drawing required for the creatures would be more challenging. This first class written is for things like seaweed or Jellyfish tentacles. It makes use of the drawing <span class="caps">API</span>, curveTo, etc. our old friends cosine and sine and is completely random each time it is generated. Stay tuned to the&nbsp;evolution.</p>
+<p>
+<object data="/img/posts/Seaweed.swf" height="138" type="application/x-shockwave-flash" width="500">
+<param name="src" value="/img/posts/Seaweed.swf" />
+</object>
+</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn840995797&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fdave-stewart%2F&utmp=%2Frss%2Fby-author%2Fdave-stewart.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/underwater-environment-with-actionscript/</link>
+			<guid>https://blog.easy-designs.net/archives/underwater-environment-with-actionscript/</guid>
+			<dc:date>2009-08-20T12:54:33-04:00</dc:date>
+		</item>
+	
+	</channel>
+</rss>

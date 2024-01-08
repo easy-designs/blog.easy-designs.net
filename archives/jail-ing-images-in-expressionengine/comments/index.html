@@ -1,0 +1,416 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>JAIL-ing images in ExpressionEngine - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/jail-ing-images-in-expressionengine/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="JAIL-ing images in ExpressionEngine" />
+	<meta property="description" content="Lazy loading images is a great way to reduce page load, but some of the markup patterns for accomplishing it following progressive enhancement are a little tricky to manage in a CMS. Thankfully, we have plug-ins." />
+	<meta property="og:description" itemprop="description" content="Lazy loading images is a great way to reduce page load, but some of the markup patterns for accomplishing it following progressive enhancement are a little tricky to manage in a CMS. Thankfully, we have plug-ins." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/jail-ing-images-in-expressionengine/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title"><span class="caps">JAIL</span>-ing images in&nbsp;ExpressionEngine</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2013-07-22T18:04:00" pubdate="pudate">22 July 2013</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>
+	A while back I came across a link to <a href="https://github.com/sebarmeli/JAIL">Sebastiano Armeli-Battana&rsquo;s jQuery Asynchronous Image Loader</a> (<span class="caps">JAIL</span>) and filed it away to revisit when I had some time. I finally made some time this&nbsp;weekend.</p>
+<p>
+	<span class="caps">JAIL</span>&rsquo;s a cool little script that takes care of lazy loading images for you in order to speed up initial page rendering. To use it, you implement the following markup&nbsp;pattern:</p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-jail-markup-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="jail-markup.html">        <tr>          <td id="file-jail-markup-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-jail-markup-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>img</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>jail</span>&quot; <span class=pl-c1>src</span>=&quot;<span class=pl-s>blank.gif</span>&quot; <span class=pl-c1>data-src</span>=&quot;<span class=pl-s>foo.png</span>&quot; <span class=pl-c1>alt</span>=&quot;&quot;/&gt;</td>        </tr>        <tr>          <td id="file-jail-markup-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-jail-markup-html-LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>noscript</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-jail-markup-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-jail-markup-html-LC3" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>img</span> <span class=pl-c1>src</span>=&quot;<span class=pl-s>foo.png</span>&quot; <span class=pl-c1>alt</span>=&quot;&quot;/&gt;</td>        </tr>        <tr>          <td id="file-jail-markup-html-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-jail-markup-html-LC4" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>noscript</span><span class=pl-kos>&gt;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/jail-markup.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-jail-markup-html" class="Link--inTextBlock">          jail-markup.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	This is pretty ingenious actually. Without <span class="caps">JS</span>, the actual image is served up, but with JavaScript, the blank image is displayed until <span class="caps">JAIL</span> lazy loads the real image path stored in the <code>data-src</code> attribute. You initialize <span class="caps">JAIL</span> like&nbsp;this:</p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-jail-init-js" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="JavaScript" data-tagsearch-path="jail-init.js">        <tr>          <td id="file-jail-init-js-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-jail-init-js-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-en>$</span><span class=pl-kos>(</span><span class=pl-k>function</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>&#123;</span></td>        </tr>        <tr>          <td id="file-jail-init-js-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-jail-init-js-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-en>$</span><span class=pl-kos>(</span><span class=pl-s>&#39;img.jail&#39;</span><span class=pl-kos>)</span><span class=pl-kos>.</span><span class=pl-en>jail</span><span class=pl-kos>(</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>        <tr>          <td id="file-jail-init-js-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-jail-init-js-LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&#125;</span><span class=pl-kos>)</span><span class=pl-kos>;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/jail-init.js" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-jail-init-js" class="Link--inTextBlock">          jail-init.js        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	Simple, right? Well, yes and&nbsp;no.</p>
+<p>
+	On a site that isn&rsquo;t updated frequently and where a skilled front-end coder is involved, this is cake. That, however, is seldom the reality. Heck, even on this blog, remembering to use that pattern while authoring content in the backend is not terribly likely. I needed a way to make it easier. So I <a href="https://github.com/easy-designs/easy_jail.ee_addon">automated <span class="caps">JAIL</span> as an ExpressionEngine&nbsp;plug-in</a>.</p>
+<p>
+	With this plug-in I can automatically enable (or remove) <span class="caps">JAIL</span> at the template level with a simple tag pair: <code>exp:easy_jail:prep</code></p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-easy-jail-tag-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="easy-jail-tag.html">        <tr>          <td id="file-easy-jail-tag-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-easy-jail-tag-html-LC1" class="blob-code blob-code-inner js-file-line">&#123;exp:easy_jail:prep&#125;</td>        </tr>        <tr>          <td id="file-easy-jail-tag-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-easy-jail-tag-html-LC2" class="blob-code blob-code-inner js-file-line">  &#123;body&#125;</td>        </tr>        <tr>          <td id="file-easy-jail-tag-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-easy-jail-tag-html-LC3" class="blob-code blob-code-inner js-file-line">&#123;/exp:easy_jail:prep&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/easy-jail-tag.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-easy-jail-tag-html" class="Link--inTextBlock">          easy-jail-tag.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	The plugin will hunt for any image elements inside the tag pair and convert them to use the <span class="caps">JAIL</span> markup pattern. By default, it uses a base-64 encoded representation of a blank <span class="caps">GIF</span> (a.k.a. a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">Data <span class="caps">URI</span></a>) to reduce the number of requests, but you can override that with the path to your own image (or a different Data <span class="caps">URI</span>) using the <code>blank_img</code> property. You can also customize the <code>class</code> used for the blank image using the <code>class_name</code>&nbsp;property.</p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-easy-jail-custom-tag-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="easy-jail-custom-tag.html">        <tr>          <td id="file-easy-jail-custom-tag-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-easy-jail-custom-tag-html-LC1" class="blob-code blob-code-inner js-file-line">&#123;exp:easy_jail:prep blank_img=&quot;/i/blank.gif&quot; class_name=&quot;my_class&quot;&#125;</td>        </tr>        <tr>          <td id="file-easy-jail-custom-tag-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-easy-jail-custom-tag-html-LC2" class="blob-code blob-code-inner js-file-line">  &#123;body&#125;</td>        </tr>        <tr>          <td id="file-easy-jail-custom-tag-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-easy-jail-custom-tag-html-LC3" class="blob-code blob-code-inner js-file-line">&#123;/exp:easy_jail:prep&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/easy-jail-custom-tag.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-easy-jail-custom-tag-html" class="Link--inTextBlock">          easy-jail-custom-tag.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	Then it&rsquo;s just a matter of including the <span class="caps">JAIL</span> JavaScript code and executing it. You can, of course, include Sebastiano&rsquo;s script and your <span class="caps">JAIL</span> config in your own JavaScript build, but the plug-in also includes a convenience function to drop it in for you. Simply add the <code>exp:easy_jail:js</code> tag before the close of the <code>body</code> element (after jQuery of&nbsp;course):</p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-easy-jail-script-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="easy-jail-script.html">        <tr>          <td id="file-easy-jail-script-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-easy-jail-script-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span> <span class=pl-c1>src</span>=&quot;<span class=pl-s>//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-easy-jail-script-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-easy-jail-script-html-LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span><span class=pl-smi>window</span><span class=pl-kos>.</span><span class=pl-c1>jQuery</span> <span class=pl-c1>||</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>write</span><span class=pl-kos>(</span><span class=pl-s>&#39;&lt;script src=&quot;/j/jquery.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class=pl-kos>)</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-easy-jail-script-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-easy-jail-script-html-LC3" class="blob-code blob-code-inner js-file-line">&#123;exp:easy_jail:js&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/easy-jail-script.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-easy-jail-script-html" class="Link--inTextBlock">          easy-jail-script.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	As with the <code>exp:easy_jail:prep</code> tag, you can customize the JavaScript output using the <code>class_name</code> property to tell <span class="caps">JAIL</span> what to lazy load. You can also customize the <span class="caps">JAIL</span> configuraiton using the <code>config</code> property. Just pass in a valid <span class="caps">JSON</span> object describing the configuration you want. <span class="caps">JAIL</span> is pretty darn configurable. There are a ton of options available, but the most intriguing to me currently is <code>offset</code>. We&rsquo;re using it here on the blog to load images when you scroll to within 300px of the top of the image. Here&rsquo;s how you&rsquo;d do that using the&nbsp;plug-in:</p>
+<p>
+	<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist6057702" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-easy-jail-custom-script-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/jail-ing-images-in-expressionengine/comments/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="easy-jail-custom-script.html">        <tr>          <td id="file-easy-jail-custom-script-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-easy-jail-custom-script-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span> <span class=pl-c1>src</span>=&quot;<span class=pl-s>//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-easy-jail-custom-script-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-easy-jail-custom-script-html-LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span><span class=pl-smi>window</span><span class=pl-kos>.</span><span class=pl-c1>jQuery</span> <span class=pl-c1>||</span> <span class=pl-smi>document</span><span class=pl-kos>.</span><span class=pl-en>write</span><span class=pl-kos>(</span><span class=pl-s>&#39;&lt;script src=&quot;/j/jquery.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class=pl-kos>)</span><span class=pl-kos>&lt;/</span><span class=pl-ent>script</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-easy-jail-custom-script-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-easy-jail-custom-script-html-LC3" class="blob-code blob-code-inner js-file-line">&#123;exp:easy_jail:js config=&quot;&#123;offset:300&#125;&quot;&#125;</td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/6057702/raw/805f03fde3418e9947f565102e67fbcc95178ff5/easy-jail-custom-script.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/6057702#file-easy-jail-custom-script-html" class="Link--inTextBlock">          easy-jail-custom-script.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>
+	And there you have it. Simple, lazy loaded images without having to train content editors to author the relatively complex markup pattern. If you want to have a play, feel free to <a href="https://github.com/easy-designs/easy_jail.ee_addon">grab the code from Github</a> or <a href="https://github.com/easy-designs/easy_jail.ee_addon/fork">you can fork it and help us to make it even more&nbsp;useful</a>.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F&amp;source=tweetbutton&amp;text=JAIL-ing+images+in+ExpressionEngine&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fjail-ing-images-in-expressionengine%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/cms/index.html">content management</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/expressionengine/index.html">ExpressionEngine</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/optimization-performance/index.html">optimization & performance</a></li>
+					
+				</ul>
+
+		
+		
+							<h2>Available translations</h2>
+				<ul class="also">
+								<li class="offsite"><a href="http://www.piecesdiscount24.fr/edu/?p=6172" hreflang="fr">Français</a></li>
+			    			</ul>
+					
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-680">
+						<article class="entry-content">
+							<p>Is it possible to use this with <span class="caps">CE</span>&nbsp;Image?</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/ee8a7b6f8aa36ec6fd83a49d2f960198?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Kel</span>
+									</li>
+							<li><time class="published" datetime="2013-08-02T04:38:52" pubdate="pudate">02 August 2013 at 4am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/jail-ing-images-in-expressionengine/#comment-680">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-681">
+						<article class="entry-content">
+							<p>It should. As a plug-in, it just wraps the inserted image tags. Based on <span class="caps">EE</span>’s parsing order, the <span class="caps">CE</span> Image tags should be parsed&nbsp;first.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2013-08-02T09:09:14" pubdate="pudate">02 August 2013 at 9am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/jail-ing-images-in-expressionengine/#comment-681">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		<section id="comment-form" class="focal">
+			<h2>Post a Comment</h2>
+									<form id="comment_form" method="post" action="https://blog.easy-designs.net/archives/jail-ing-images-in-expressionengine/comments"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="1" />
+<input type="hidden" name="RET" value="https://blog.easy-designs.net/archives/jail-ing-images-in-expressionengine/comments" />
+<input type="hidden" name="URI" value="archives/jail-ing-images-in-expressionengine/comments" />
+<input type="hidden" name="PRV" value="" />
+<input type="hidden" name="entry_id" value="653" />
+<input type="hidden" name="site_id" value="2" />
+<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
+</div>
+
+
+				<ol>
+								<li>
+						<label for="comments-name">Name<abbr aria-hidden="true" title="required">*</abbr></label>
+						<input type="text" id="comments-name" name="name" aria-required="true" required="required" value=""/>
+					</li>
+					<li>
+						<label for="comments-email">Email<abbr aria-hidden="true" title="required">*</abbr></label>
+						<input type="email" id="comments-email" name="email" aria-required="true" required="required" value=""/>
+					</li>
+					<li>
+						<label for="comments-url">URL</label>
+						<input type="url" id="comments-url" name="url" placeholder="http://mydomain.com" />
+					</li>
+								<li class="textarea">
+						<label for="comments-comment">Comments<abbr aria-hidden="true" title="required">*</abbr></label>
+						<textarea id="comments-comment" name="comment" cols="50" rows="5" aria-required="true" required="required"></textarea>
+					</li>
+								<li class="checkbox">
+						<label for="comments-save-info">
+							<input type="checkbox" id="comments-save-info" name="save_info" value="yes" />
+							Remember my personal information
+						</label>
+					</li>
+								<li class="checkbox">
+						<label for="comments-notify-me">
+							<input type="checkbox" id="comments-notify-me" name="notify_me" value="yes" />
+							Notify me of follow-up comments?
+						</label>
+					</li>
+					<li class="submit">
+						<input type="hidden" name="RET" value="https://blog.easy-designs.net/archives/jail-ing-images-in-expressionengine/#comments"/>
+						<div style="position: absolute !important; top: -10000px !important;"><input type="text" id="snap_anhxsJkVY" name="snap_anhxsJkVY" value="" /></div>
+
+						<button type="submit" name="submit">Submit</button>
+					</li>
+				</ol>
+			<div style="position: absolute !important; top: -10000px !important;"><input type="text" id="snap_dOlAviHNE" name="snap_dOlAviHNE" value="" /></div>
+</form>
+		</section>
+					
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/download-awd-direct-to-dropbox/index.html">Previous Entry: <em>Download AWD direct to Dropbox</em></a></li>
+							<li class="next"><a href="/archives/should-all-sites-be-responsive/index.html">Next Entry: <em>Should All Sites Be Responsive?</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	
+	
+	<channel>
+		<title>The Easy Designs Blog: Posts by Matt Turnure</title>
+		<link>https://blog.easy-designs.net/archives/by-author/matt-turnure/</link>
+		<dc:language>en</dc:language>
+		<description></description>
+		<dc:rights>(c) Copyright 2005–2023 Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>Easy! Designs, LLC</dc:creator>
+		<dc:date>2013-09-16</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="http://blog.easy-designs.net/rss/by-author/matt-turnure.rss" rel="self" type="application/rss+xml"/>
+	
+		<item>
+			<title>Dr. StrangeWeb or: How I Learned to Stop Worrying and Love HTML5 and CSS3</title>
+			<author>matthew@easy-designs.net (Matt Turnure)</author>
+			<description><![CDATA[
+				<p>Tell me if this sounds familiar: &ldquo;<span class="caps">HTML</span>5 and <span class="caps">CSS</span>3 do not have enough browser support to start using them today.&rdquo; Or, how about this one: &ldquo;We still have to support <span class="caps">IE</span>6, so using advanced <span class="caps"><span class="caps">CSS</span></span> techniques would be a wasted effort.&rdquo; Here is my favorite: &ldquo;I will start embracing <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3 when it becomes a W3C spec.<span class="final quote">&rdquo;</span></p>
+<p>Do you know why I am so familiar with these developer woes? Because I have expressed them all. That&rsquo;s right. I was afraid. Afraid to embrace <span class="caps">HTML</span>5 because it did not have enough browser support. Afraid to confidently liberalize my <span class="caps"><span class="caps">CSS</span></span> with advanced selectors and properties such as <code>nth-child</code>, <code>border-radius</code>, and RGBa for fear that I would have to mimic the exact look and feel in <span class="caps">IE</span>6. After all, it was <strong><span class="caps"><span class="caps">WAAAAY</span></span></strong> too early to use <code>header</code>, <code>section</code>, <code>article</code>, and <code>footer</code> right? And what was up with that weird doctype, <code>&lt;!DOCTYPE html&gt;</code>,&nbsp;anyway?</p>
+<p>My fears began to subside last year while working on the <a href="http://registrar.sewanee.edu/">Office of the University Registar</a>. It was my first client project using advanced selectors, <code>box-shadow</code>, and RGBa, which are all a part of <span class="caps">CSS</span>3. After working on the site, I started to feel pretty good about trusting these advanced <span class="caps">CSS</span>3&nbsp;techniques.</p>
+<p>Not long afterwards, I used <span class="caps">HTML</span>5 and lots more <span class="caps">CSS</span>3 during the re-design of this blog, which launched just a couple of months ago. And if <em>that</em> wasn&rsquo;t enough to convince me that <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3 were safe to adopt, attending <a href="http://aneventapart.com/2010/dc/">An Event Apart in Washington, <span class="caps">DC</span></a> last week completely shattered any lingering doubts. <a href="http://zeldman.com">Jeffrey Zeldman</a>, <a href="http://stubbornella.org">Nicole Sullivan</a>, <a href="http://simplebits.com">Dan Cederholm</a>, <a href="http://lukew.com">Luke Wroblewski</a>, <a href="http://braintraffic.com">Kristina Halvorson</a>, <a href="http://uie.com">Jared Spool</a>, <a href="http://meyerweb.com">Eric Meyer</a>, <a href="http://adactio.com">Jeremy Keith</a>, <a href="http://aarronwalter.com">Aarron Walter</a>, <a href="http://forabeautifulweb.com">Andy Clarke</a>, <a href="http://unstoppablerobotninja.com">Ethan Marcotte</a>, and <a href="http://veen.com/jeff">Jeff Veen</a> delivered one of the most convincing, well-crafted, beautifully-themed, and appropriately-paced arguments for embracing <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3&nbsp;today.</p>
+<p>But it wasn&rsquo;t <em>just</em> about really cool stuff that you can do with the aforementioned markup and presentational languages. In contrast, the messaging of the 3-day event highlighted a much needed paradigm shift in the way people perceive various browsers and devices and how they render content. We should embrace the richness of the technical innovations brought forth the last decade, not by attempting to render web pages the same in every browser, but to celebrate the varying differences of modern displays. Dan Cederholm sums up the general sentiment with two <a href="http://dowebsitesneedtobeexperiencedexactlythesameineverybrowser.com/">beautiful</a> <a href="http://shouldwebsiteslookthesameinallbrowsers.com/">statements</a>.</p>
+<p>You may be wondering, &ldquo;That is great and all, but really, <em>what about</em> <span class="caps">IE</span>? Seriously.&rdquo; Well, let me tell you some good news: Gecko, Webkit, Opera, and (drumroll) <span class="caps">IE</span>9 Beta offer tons of <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3 support. In fact, <span class="caps">IE</span>9 Beta supports most of the new <span class="caps">HTML</span>5 elements and even supports some <span class="caps">CSS</span>3 features without vendor prefixes. Weird, huh? After years of <span class="caps">IE</span>6, <span class="caps">IE</span>7, and <span class="caps">IE</span>8 frustrations, <span class="caps">IE</span>9 is now setting the example. But that is a subject for another post, so I&nbsp;digress.</p>
+<p>I don&rsquo;t know about you, but I think that last paragraph effectively shuts down any arguments against developing with these modern techniques for <a href="http://developer.yahoo.com/yui/articles/gbs/">grade-A browsers</a>. But <em>what about</em> <span class="caps">IE</span>6, <span class="caps">IE</span>7, and <span class="caps">IE</span>8? Well, all of the <abbr title="An Event Apart"><span class="caps"><span class="caps">AEA</span></span></abbr> presenters collectively made a strong case for designing with flexible strategies, allowing these various relics to vary slightly in their rendering. So <em>what if</em> <span class="caps">IE</span> doesn&rsquo;t get the subtle rounded corners of a submit button suavely executed via <code>border-radius</code>. Are Firefox users going to complain if they miss out on 3D animations, but have all of the content delivered successfully? Perhaps, those Firefox users did&rsquo;t realize that Webkit users get that same content, but with a little more pizzaz. Even if they did, that&rsquo;s okay. Let&rsquo;s face it, most users don&rsquo;t even know they are missing anything to begin with (and we don&rsquo;t want them to know, do&nbsp;we?).</p>
+<p>In <span class="caps">DC</span>, Dan, Eric, and Ethan demonstrated that <code>@media</code> queries can stealthily deliver the flexibility of desktop, iPad, iPhone, and Android displays depending on screen size. And do you know what else? Eric deftly pointed out that we (designers and developers) are the only ones who resize our browsers anyway! By the way, if you are curious to see <code>@media</code> in action, check out the <a href="http://retreats4geeks.com/">Retreats 4 Geeks site</a>, which we launched last&nbsp;week.</p>
+<p>In closing, I want to thank Jeffery, Eric, and all of the <abbr title="An Event Apart"><span class="caps"><span class="caps">AEA</span></span></abbr> presenters for clearly framing the great potential of flexible design patterns, progressive enhancement, and thoughtful interactions through the use of these modern techniques. So, stop worrying and embrace <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3&nbsp;today!</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn2081504846&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fmatt-turnure%2F&utmp=%2Frss%2Fby-author%2Fmatt-turnure.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/dr-strangeweb-or-how-i-learned-to-stop-worrying-and-love-html5-and-css/</link>
+			<guid>https://blog.easy-designs.net/archives/dr-strangeweb-or-how-i-learned-to-stop-worrying-and-love-html5-and-css/</guid>
+			<dc:date>2010-09-26T04:16:43-04:00</dc:date>
+		</item>
+	
+	</channel>
+</rss>

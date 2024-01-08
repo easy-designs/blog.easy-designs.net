@@ -1,0 +1,381 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>The &#8220;Native&#8221; vs. &#8220;Stylable&#8221; Tug of War - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/the-native-vs-stylable-tug-of-war/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The &#8220;Native&#8221; vs. &#8220;Stylable&#8221; Tug of War" />
+	<meta property="description" content="In his astute post &ldquo;&lsquo;Native experience&rsquo; vs styling select boxes&rdquo;, Bruce Lawson correctly identified a common tension in the web world: wanting better native controls vs. wanting to throw away what the browser does. Here are my thoughts." />
+	<meta property="og:description" itemprop="description" content="In his astute post &ldquo;&lsquo;Native experience&rsquo; vs styling select boxes&rdquo;, Bruce Lawson correctly identified a common tension in the web world: wanting better native controls vs. wanting to throw away what the browser does. Here are my thoughts." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/the-native-vs-stylable-tug-of-war/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">The &#8220;Native&#8221; vs. &#8220;Stylable&#8221; Tug of&nbsp;War</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2014-07-20T08:14:00" pubdate="pudate">20 July 2014</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>
+	In his astute post <a href="https://www.brucelawson.co.uk/2014/native-experience-vs-styling-select-boxes/"><span class="initial quote">&ldquo;</span>&lsquo;Native experience&rsquo; vs styling select boxes<span class="final quote">&rdquo;</span></a>, Bruce Lawson correctly identified a common tension in the web&nbsp;world:</p>
+<blockquote>
+	<p>
+		But why this urge to re-style page elements that end-users are familiar with? &hellip; Or is it that we love native look and feel, except when we&nbsp;don&rsquo;t?</p>
+</blockquote>
+<p>
+	Speaking as the guy who not only wrote JavaScript to help me create an accessible <code>select</code> element alternative, but who also made it <a href="http://d1b14unh5d6w7g.cloudfront.net/1590598563.01.S0ER.LXXXXXXX.jpg?Expires=1405686346&amp;Signature=DCT4Z0l75JQESDNyP0PVGVonuJYwY9XYtaTI3grX/RhdlLcXGRAVADJCB/N/fAj7GxLhEVzuXqstMebJIJ9Ip5I6kE7IKYt2F20F5EGD+1ghua9zKwyjS1e4KBgumMKzQytbcfIVX4dMr7XFzj26mScFKz9bSKtZT5jU1LU6hWM=&amp;Key-Pair-Id=APKAIUO27P366FGALUMQ">the focus of a case study (image)</a> in <a href="http://amzn.to/TaoffD">AdvancED <span class="caps">DOM</span> Scripting</a>, I am fully aware of the desire to have it both ways. I have not often seen the desire for both in a single individual, but it does happen in one particular instance&nbsp;occasionally.</p>
+<p>
+	Based on my own experience, I see the following arguments in favor of changing the display of a native control quite&nbsp;often:</p>
+<ol>
+	<li>
+		It doesn&rsquo;t look good to&nbsp;me.</li>
+	<li>
+		It is not &ldquo;on&nbsp;brand&rdquo;.</li>
+	<li>
+		It clashes with our brand&rsquo;s color&nbsp;scheme.</li>
+	<li>
+		We want the web experience to feel like a native&nbsp;app.</li>
+	<li>
+		It doesn&rsquo;t behave how we think it&nbsp;should.</li>
+</ol>
+<p>
+	<em>(<abbr lang="it" title="nota bene: please note">n.b.</abbr> Browsers have done a pretty good job reducing the amount of color and the overall visual strength used in native controls to help them better blend in with a wide variety of designs, so clashes as mentioned in #3 happen far less often than they did nearly a decade&nbsp;ago.)</em></p>
+<p>
+	As the weathered, battle tested (and, admittedly, somewhat jaded) front-end dev that I am, I typically push back with one or more of the&nbsp;following:</p>
+<h2>
+	In Addressing Desired Design&nbsp;Changes</h2>
+<p>
+	In terms of aesthetics (addressing arguments 1, 2, and 3), I understand where you&rsquo;re coming from. Native controls are not the most appealing things, but they are familiar to your users. A <code>select</code> box they see on your site that looks like the one they see on Wikipedia or their banking site will be immediately recognizable. Sure, the looks and feel may differ from browser to browser, but most people use only a small number of browsers throughout the day&mdash;at work, at home, on their device&mdash;and if you want to ensure the design of a form control feels &ldquo;right&rdquo; in the browser they are using, sometimes it&rsquo;s best to let go of that&nbsp;control.</p>
+<h2>
+	In Addressing <span class="caps">OS</span>&nbsp;Parity</h2>
+<p>
+	I can understand the desire to have a form control in a web page look and feel like the same (or a similar) control within the native operating system (argument 4), but I am not sure that&rsquo;s a rabbit hole you want to go down. Here&rsquo;s why: Achieving exact design and functional parity between a native control and a web control quite often requires extra markup, a bunch of <span class="caps">CSS</span>, and a bit of JavaScript. Anything is achievable with unlimited time and budget, so it&rsquo;s completely doable, but it would be good to estimate the cost to see if you still think it is a worthwhile&nbsp;endeavor.</p>
+<p>
+	Assuming it is, we then have the question of which operating system to model the control after. Or maybe you want to offer a different take on the control based on the operating system your user is using. In that case, we may need to multiply the original estimate by the number of operating systems you want to support. But it&rsquo;s worth noting that, in the Android world, different device manufacturers often &ldquo;skin&rdquo; the operating system to look different from other ones. Sometimes they even do it on a device-by-device basis. We&rsquo;ll need to figure out which ones you want to include in your native control matrix and multiply the estimate&nbsp;accordingly.</p>
+<p>
+	Then there&rsquo;s maintenance. We&rsquo;ll need to test these native-like controls on each of their corresponding platforms and test the script that determines which experience gets delivered to which device to make sure we&rsquo;re not accidentally sending the wrong experience. We&rsquo;ll also need to test the delivery script on every other browser in our test matrix to ensure it is not causing issues&nbsp;there.</p>
+<p>
+	What should we do when a new operating system version is rolled out? iOS, for example, has made radical shifts in the design of their native controls in each major release. We&rsquo;ll probably want to create unique versions of the control for each version of each <span class="caps">OS</span> we support and we&rsquo;ll need to keep tabs on upgrades so we don&rsquo;t end up confusing our users if they visit our site in iOS 7 and have a control that looks like it&rsquo;s from iOS 6. We&rsquo;ll need to add the number of <span class="caps">OS</span> versions into the multiplier as&nbsp;well.</p>
+<p>
+	Ok, and finally: How many controls did you want to apply this approach to&nbsp;again?</p>
+<p>
+	Or we could use the native form control and it will just&nbsp;work.</p>
+<h2>
+	In Addressing Altered&nbsp;Behavior</h2>
+<p>
+	I completely agree that not all native controls work exactly how I would like, but there are several risks in changing the expected behavior of a native&nbsp;control.</p>
+<p>
+	First of all, there&rsquo;s the possibility we could actually end up making the interface more confusing or that the change in behavior might not be exactly what our user&rsquo;s wanted (either based on what they are used to or our mental model not aligning with theirs). In order to rule out these issues, we should run a few rounds of usability tests. These could be quick caf&eacute; tests or more formal studies depending on the&nbsp;budget.</p>
+<p>
+	Assuming our tests go well, we will need to maintain this code and do all of the requisite browser testing. And potentially upgrade our code as new browsers and browser versions come out. Depending on the complexity of the code, this could become a large requirement, but if it is ultimately in the service of making the web a better, more usable interaction environment, it could be worth&nbsp;it.</p>
+<p>
+	For what it&rsquo;s worth, if we go this route and are successful, we should consider getting involved in the spec-writing process at the <a href="http://w3.org">W3C</a> or&nbsp;<a href="http://whatwg.org">WhatWG</a>. We should contribute our recommended changes back to the community and share what we learned. If we make a compelling argument, perhaps our idea will become part of some future standard and we can taper off our browser testing when the change goes&nbsp;native.</p>
+<hr />
+<p>
+	As you can probably tell, I&rsquo;m not a really big fan of changing existing controls as I feel it can amount to a wasted effort. That said, if there are design improvements to be made&mdash;&ldquo;design&rdquo; in the true sense: being about how usable something is, not just how aesthetically-pleasing it is to someone (e.g. improving contrast, making the control more intuitive, etc.)&mdash;I&rsquo;m willing to accept the change as something we <em>should</em> do and then work to make sure that change has been vetted and, if successful, given away for inclusion in other projects. If it solves a major issue on the web, I want to give that change every opportunity to make it into the appropriate spec by talking to the appropriate folks about it both in-person, in blog posts, and on the appropriate mailing list. If the change solves a problem in a specific browser, I want to see it incorporated into said browser and will file a bug report and try to build momentum around it by engaging the&nbsp;community.</p>
+<p>
+	Anyway, that&rsquo;s my general position on augmenting native controls. What are your thoughts on the&nbsp;topic?</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F&amp;source=tweetbutton&amp;text=The+&#8220;Native&#8221;+vs.+&#8220;Stylable&#8221;+Tug+of+War&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fthe-native-vs-stylable-tug-of-war%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/books-and-articles/index.html">books & articles</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/browsers/index.html">browsers</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/client-relations/index.html">client relations</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/usability/index.html">usability</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-758">
+						<article class="entry-content">
+							<p>In my experience, designers/developers who want to modify native controls are making these kinds of decisions based on insufficient testing, personal preference, or just a whim. As a result, little consideration is paid to users who are accustomed to how native controls work, often causing frustration. In particular, users who rely on assistive technologies (<span class="caps">AT</span>) can be disproportionately affected. This is compounded by developers who &#8220;roll their own&#8221; controls, maybe sprinkle them with <span class="caps">ARIA</span>, and consider it a&nbsp;success.</p>
+
+<p>As an industry we tend to do a terrible job with even the most fundamental &#8220;control&#8221; on the web (the hyperlink), as evidenced by the proliferation of :focus &#123;outline:none&#125; styles (compounded when :focus isn&#8217;t appended to the :hover styles). When the industry in general fails at this most basic level, I am wary of our ability to style or modify native controls&nbsp;effectively.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://adrianroselli.com/">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/6ab7b8d621d1842ce733228fbc6d1ecf?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Adrian Roselli</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2014-07-22T11:20:53" pubdate="pudate">22 July 2014 at 11am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/the-native-vs-stylable-tug-of-war/#comment-758">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/beyond-responsive-workshops-this-may/index.html">Previous Entry: <em>Beyond Responsive Workshops this May</em></a></li>
+							<li class="next"><a href="/archives/responsive-typography/index.html">Next Entry: <em>Responsive Typography</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,278 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>Trash + DOM = Treasure? - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/trash-dom-treasure/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Trash + DOM = Treasure?" />
+	<meta property="description" content="I am also a big believer in clean, semantic markup, so I become concerned when anyone is adding superfluous code to the document to force a design issue." />
+	<meta property="og:description" itemprop="description" content="I am also a big believer in clean, semantic markup, so I become concerned when anyone is adding superfluous code to the document to force a design issue." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/trash-dom-treasure/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="../../index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="../../favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="../../rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">Trash + <span class="caps">DOM</span> =&nbsp;Treasure?</h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2005-05-27T02:42:47" pubdate="pudate">27 May 2005</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>I was browsing the popular links on <a href="http://del.icio.us/">del.icio.us</a> today and stumbled onto <a href="http://pro.html.it/esempio/nifty/">Nifty Corners</a> and (via that page) <a href="http://pro.html.it/articoli/id_599/idcat_31/pag_1/pag.html">More Nifty Corners</a>. I have to say that I am incredibly impressed with the scripting, but I fear there is something wrong with this&nbsp;picture.</p>
+<p>Lately, <a href="http://novemberborn.net/javascript/using-dom-for-hover">there</a> <a href="http://www.adactio.com/journal/display.php/20050421185604.xml">have</a> <a href="http://www.kurafire.net/log/archive/2005/04/26/on-separating-style-and-behaviour">been</a> <a href="http://www.robertnyman.com/2005/04/25/53/">some</a> <a href="http://novemberborn.net/javascript/using-dom-for-hover/seriously">border</a> <a href="http://www.adactio.com/journal/display.php/20040804214738.xml">wars</a> over the <abbr title="Cascading Style Sheets"><span class="caps">CSS</span></abbr> <code>:hover</code> pseudo-class and its forays into the behavior layer. Sure, it&#8217;s easier to have <abbr title="Cascading Style Sheets"><span class="caps">CSS</span></abbr> do the work sometimes, but that doesn&#8217;t make it right. Frankly, I agree with the concept that behavior should be separated from presentation, just as presentation should be separated from content (which is why I use JavaScript to open and close the faux-<code>&lt;select&gt;</code> in my <a href="http://www.easy-designs.net/articles/"><code>&lt;select&gt;</code> Something New&nbsp;series</a>).</p>
+<p>I am also a big believer in clean, semantic markup, so I become concerned when anyone is adding superfluous code to the document to force a design issue. I know some might say I live in a glass house, but when I see someone putting code like&nbsp;this</p>
+<p><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-c77408be8058.css"><div id="gist489207" class="gist">    <div class="gist-file" translate="no">      <div class="gist-data">        <div class="js-gist-file-update-container js-task-list-container file-box">  <div id="file-lame-html" class="file my-2">        <div itemprop="text" class="Box-body p-0 blob-wrapper data type-html  ">        <div class="js-check-bidi js-blob-code-container blob-code-content">  <template class="js-file-alert-template">  <div data-view-component="true" class="flash flash-warn flash-full d-flex flex-items-center">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>    <span>      This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.      <a class="Link--inTextBlock" href="https://github.co/hiddenchars" target="_blank">Learn more about bidirectional Unicode characters</a>    </span>  <div data-view-component="true" class="flash-action">        <a href="/archives/trash-dom-treasure/{{&#32;revealButtonHref&#32;}}" data-view-component="true" class="btn-sm btn">    Show hidden characters</a></div></div></template><template class="js-line-alert-template">  <span aria-label="This line has hidden Unicode characters" data-view-component="true" class="line-alert tooltipped tooltipped-e">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span></template>  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="HTML" data-tagsearch-path="lame.html">        <tr>          <td id="file-lame-html-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>          <td id="file-lame-html-LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>div</span> <span class=pl-c1>id</span>=&quot;<span class=pl-s>container</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>          <td id="file-lame-html-LC2" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>rtop</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>          <td id="file-lame-html-LC3" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r1</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span> <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r2</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>          <td id="file-lame-html-LC4" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r3</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span> <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r4</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>          <td id="file-lame-html-LC5" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>          <td id="file-lame-html-LC6" class="blob-code blob-code-inner js-file-line">  <span class=pl-c>&lt;!&#8211;content goes here &#8211;&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>          <td id="file-lame-html-LC7" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>rbottom</span>&quot;<span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>          <td id="file-lame-html-LC8" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r4</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span> <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r3</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>          <td id="file-lame-html-LC9" class="blob-code blob-code-inner js-file-line">    <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r2</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span> <span class=pl-kos>&lt;</span><span class=pl-ent>b</span> <span class=pl-c1>class</span>=&quot;<span class=pl-s>r1</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>          <td id="file-lame-html-LC10" class="blob-code blob-code-inner js-file-line">  <span class=pl-kos>&lt;/</span><span class=pl-ent>b</span><span class=pl-kos>&gt;</span></td>        </tr>        <tr>          <td id="file-lame-html-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>          <td id="file-lame-html-LC11" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>div</span><span class=pl-kos>&gt;</span></td>        </tr>  </table></div>    </div>  </div></div>      </div>      <div class="gist-meta">        <a href="https://gist.github.com/aarongustafson/489207/raw/e02f8792acaf258cd968c43749c124b95319e750/lame.html" style="float:right" class="Link--inTextBlock">view raw</a>        <a href="https://gist.github.com/aarongustafson/489207#file-lame-html" class="Link--inTextBlock">          lame.html        </a>        hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>      </div>    </div></div>
+<p>into their document (even if it is via the <abbr title="Document Object Model"><span class="caps">DOM</span></abbr>), I begin to shudder. Maybe it&#8217;s the nagging purist in me, but that just seems&nbsp;wrong.</p>
+<p>Are we falling into the old patterns again, forcing design issues through hacky markup? Does the use of non-semantic markup (<a href="http://www.meyerweb.com/eric/thoughts/2004/08/23/markup-missive/">taking a page from Eric</a>, no doubt) make it <span class="caps">OK</span>? Does the fact that it&#8217;s inserted via the <abbr title="Document Object Model"><span class="caps">DOM</span></abbr> make it any more valid? Where do we draw the&nbsp;line?</p>
+<p>I don&#8217;t have the answer, but I think we need to have the&nbsp;conversation.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F&amp;source=tweetbutton&amp;text=Trash+++DOM+=+Treasure?&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ftrash-dom-treasure%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/programming/index.html">Programming</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/css/index.html">CSS</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/javascript/index.html">JavaScript</a></li>
+					
+				</ul>
+
+		
+		
+		
+	
+	
+
+			</div></section>
+
+			
+		    		    			<section id="comments" class="focal">
+				<a id="comment-loader" data-include-on-tap data-replace="./comments/index.html#comments" data-include-size="large" href="./comments/index.html#comments">View comments on this entry</a>
+			</section>
+					
+	
+			<ul id="pagination">
+					<li class="prev"><a href="../say-what-you-mean/index.html">Previous Entry: <em>Say what you mean</em></a></li>
+							<li class="next"><a href="../i-wanna-be-a-big-player/index.html">Next Entry: <em>I wanna be a big player</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="../../rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="../index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<form id="search-form" method="post" action="../../index.html"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="19" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="YTo5OntzOjY6InN0YXR1cyI7czoxMDoibm90IGNsb3NlZCI7czo3OiJjaGFubmVsIjtzOjQ6ImJsb2ciO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjtzOjk6InNlYXJjaF9pbiI7czoxMDoiZXZlcnl3aGVyZSI7czo1OiJ3aGVyZSI7czozOiJhbnkiO3M6MTI6InNob3dfZXhwaXJlZCI7czozOiJ5ZXMiO3M6MTk6InNob3dfZnV0dXJlX2VudHJpZXMiO3M6MzoieWVzIjtzOjExOiJyZXN1bHRfcGFnZSI7czoxMjoic2VhcmNoL2luZGV4IjtzOjE1OiJub19yZXN1bHRzX3BhZ2UiO3M6MTc6InNlYXJjaC9uby1yZXN1bHRzIjt9ZjIzYjUzODQ0NzJhMDY3MGJkZTc2MGY5YzZiM2M2OTA=" />
+<input type="hidden" name="site_id" value="2" />
+<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
+</div>
+
+
+<p>
+	<label for="search">Search for</label>
+	<input type="search" id="search" name="keywords" value="&quot;Web Design in a&quot; xylophone" />
+	<button type="submit" value="search">Search</button>
+</p>
+</form>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+	
+	
+	<channel>
+		<title>The Easy Designs Blog: Posts by Kelly McCarthy</title>
+		<link>https://blog.easy-designs.net/archives/by-author/kelly-mccarthy/</link>
+		<dc:language>en</dc:language>
+		<description></description>
+		<dc:rights>(c) Copyright 2005–2023 Easy! Designs, LLC. All rights reserved unless otherwise noted.</dc:rights>
+		<dc:creator>Easy! Designs, LLC</dc:creator>
+		<dc:date>2013-09-16</dc:date>
+		<admin:generatorAgent rdf:resource="http://expressionengine.com/"/>
+		<atom:link href="http://blog.easy-designs.net/rss/by-author/kelly-mccarthy.rss" rel="self" type="application/rss+xml"/>
+	
+		<item>
+			<title>Looking Back on 2013</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>
+	Jeez Louise, 2013 is almost over?! Time for the requisite holiday update and well-wishes. <em>(Mom was right when she said time goes faster and faster as you&nbsp;age!)</em></p>
+<p>
+	Part of the reason this year went by so fast for us was that we were just plain busy. Sure, we had a ton of client work (many thanks to a good number of you for that) and lots of conferences <span class="amp">&amp;</span> workshops to keep us busy, but we also had a few new developments as&nbsp;well:</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/jeff.jpg" alt=""/></figure>
+<h2>
+	@webcraftsman joined the Easy&nbsp;family</h2>
+<p>
+	After 6 months of searching and interviews, <strong>Jeff Bridgforth joined our team</strong> in January. He came to us from Bonnier, where he built websites for <cite>Popular Science</cite>, <cite>Popular Photography</cite>, <cite>Saveur</cite>, and <cite>Parenting</cite>. He and his family relocated to Chattanooga from Orlando over the summer and they&#39;ve settled in&nbsp;nicely.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/new-office.jpg" alt=""/></figure>
+<h2>
+	New home away from&nbsp;home</h2>
+<p>
+	In March <strong>we bought an office in Chattanooga&rsquo;s Southside neighborhood</strong> and the renovation of the space was a project and a half. We did the <span class="caps">CAD</span> drawings, lighting and electrical diagrams, interior design, and such&mdash;pretty much everything but the build-out (many thanks to <a href="http://haskelsearsdesign.com/">Haskel Sears <span class="amp">&amp;</span> team</a> for their skills in that area). We&#39;ve settled in and think the results are pretty awesome. I got to stretch her design legs on this project, picking out the colors, furniture, rugs, and flooring. I&rsquo;ll be posting details chronicling the process on <a href="http://blog.easy-designs.net">our blog</a> in the coming year, so if you&rsquo;re into mid-century modern design, keep an eye out for&nbsp;those.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/adaptive-french.jpg" alt=""/></figure>
+<h2>
+	<span class="caps">AWD</span> <i lang="fr" title="in French">en&nbsp;fran&ccedil;ais</i></h2>
+<p>
+	In May, almost 2 years to the day after it&rsquo;s original launch, Aaron&#39;s book <strong><a href="http://adaptivewebdesign.info"><cite>Adaptive Web Design</cite></a> was <a href="http://www.pearson.fr/livre/?GCOI=27440100891460">released in France by Pearson</a></strong>. <i lang="fr" title="Amazing">Incroyable!</i></p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/code-and-creativity.png" alt=""/></figure>
+<h2>
+	New talk&nbsp;series</h2>
+<p>
+	In August we launched <strong>a new talk series called Code <span class="amp">&amp;</span> Creativity</strong>. The free, bimonthly series features two speakers, one from Chattanooga and one from elsewhere. We started the series to create a casual venue to bring Chattanooga&rsquo;s diverse design and development community together, celebrate local talent, and provide access to amazing presenters. The response has been phenomenal and we are quite thankful for the amazing speakers we&rsquo;ve had so far: <a href="http://www.nczonline.net/">Nicholas Zakas</a>, <a href="http://jasongriffey.net/">Jason Griffey</a>, <a href="http://jennlukas.com/">Jenn Lukas</a>, <a href="http://dryan.com/">Daniel Ryan</a>, <a href="http://katekieferlee.com/">Kate Kiefer Lee</a>, and <a href="http://www.natehill.net/">Nate Hill</a>. We&rsquo;ve already begun booking our 2014 dates and the line-up looks to be impressive. Check out <a href="http://codeandcreativity.com">codeandcreativity.com</a> for more&nbsp;information.</p>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/http://cdn3.easy-designs.net/posts/device-lab.jpg" alt=""/></figure>
+<h2>
+	New community&nbsp;resource</h2>
+<p>
+	And finally, we&#39;ve opened up a portion of our new office to house the <strong>Chattanooga Open Device Lab</strong>. The <span class="caps">CHA</span>-<span class="caps">ODL</span> is a community resource that is freely available to area designers and developers working on the web or developing apps. We currently house over 40 different devices ranging from feature phones and smartphones to gaming systems, laptops, and tablets. We&rsquo;re very excited to be able to share the resources we have to help others in the community, and look forward to seeing how the lab grows. We&#39;re offering regular hours starting in 2014. If you&#39;re interested in booking some time in the lab, visit <a href="http://chadevicelab.org">chadevicelab.org</a>.</p>
+<p>
+	As you can see, it&rsquo;s been a whirlwind of a year for us and we&rsquo;re very thankful for the support of our clients and community that has helped us to grow and empowered us to continue giving back to the design <span class="amp">&amp;</span> web community. We wish you and yours a wonderful holiday season, and we hope to spend some time with you in the new&nbsp;year!</p>
+<p>&nbsp;Cheers,</p>
+<p>
+	Kelly <span class="amp">&amp;</span> the Easy&nbsp;Team</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/looking-back-on-2013/</link>
+			<guid>https://blog.easy-designs.net/archives/looking-back-on-2013/</guid>
+			<dc:date>2013-12-19T10:17:00-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Code &amp;amp; Creativity is Coming!</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>
+	Chattanooga is brimming with smart (dare we say, brilliant) designers and developers. Unfortunately, we don&#39;t come together to share our knowledge and our passions as much as we could. Until now, that&nbsp;is!</p>
+<p>
+	Code <span class="amp">&amp;</span> Creativity is a social talk series created to connect us with each other and our larger community. Every other month, we&rsquo;ll gather at the Camp House for a few hours to listen to&nbsp;one local and one visiting&nbsp;designer/developer&nbsp;as they share their passions,&nbsp;wisdom, and war stories. We&#39;ll ask questions, talk shop, and maybe even make some new friends.&nbsp;Of course no gathering would be complete without something yummy in your tummy, so snacks and a tasty beverage (coffee, soft&nbsp;drink,&nbsp;or beer) are on&nbsp;us!</p>
+<p>
+	Our first speakers could only be nicer if they gave away free legos at every talk! The line-up starts with&nbsp;<span class="caps">UTC</span>&rsquo;s&nbsp;Head of Library <span class="caps">IT</span>&nbsp;<strong>Jason Griffey</strong>, who will kick off the evening with a brief talk about the LibraryBox Project and the ups and downs of a successful Kickstarter campaign.&nbsp;Following Jason, <strong>Nicholas Zakas</strong>&mdash;the acclaimed author and JavaScript&nbsp;guru with a pedigree that includes VistaPrint, Yahoo!, and Box&mdash;will be taking the stage to deliver the&nbsp;headlining talk&nbsp;&ldquo;Enough with the JavaScript Already.&rdquo; (You can find their bios and full talk descriptions below.&nbsp;<em>Disclaimer: Legos not&nbsp;included.</em>)</p>
+<p>
+	We&rsquo;re still working to fill in <a href="http://codeandcreativity.eventbrite.com/">the next year&rsquo;s worth of programming</a>. You won&#39;t want to miss a single one, we&nbsp;promise.</p>
+<h2>
+	Enough With The JavaScript&nbsp;Already!</h2>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/https://evbdn.eventbrite.com/s3-s3/eventlogos/2201834/nicholaszakas.jpg" /></figure>
+<p>
+	One of the biggest performance issues facing websites today is the sheer amount of JavaScript needed to power the page. The demand for more interactive and responsive applications has driven JavaScript usage through the roof, and it&rsquo;s common for large sites to end up with more than 1 <span class="caps">MB</span> of JavaScript per page even after minification. But do we really need that much&nbsp;JavaScript?</p>
+<p>
+	Putting several large websites under the microscope, Nicholas will work his magic and show just how little of that JavaScript is actually necessary. He&rsquo;ll also discuss JavaScript library design and how some flawed patterns contribute to code bloat and unnecessary memory usage, ultimately wrestling with the dilemma: is it better to write the component yourself rather than using an off-the-shelf&nbsp;one?</p>
+<p>
+	Nicholas <span class="caps">C.</span> Zakas is a staff software engineer at <a href="https://app.box.com/">Box</a> in beautiful Los Altos, a well-known author, and speaker. He was the front-end tech lead for the Yahoo! homepage and a contributor to the <a href="http://yuilibrary.com/"><span class="caps">YUI</span> library</a>. He&rsquo;s written several books, the most recent of which is <a href="http://amzn.to/UE7c0A"><cite>Maintainable JavaScript</cite></a> (O&rsquo;Reilly, 2012). Nicholas is a strong advocate for development best practices including progressive enhancement, accessibility, performance, scalability, and maintainability. He blogs regularly at <a href="http://www.nczonline.net/">nczonline.net</a> and can be found on Twitter as <a href="http://twitter.com/slicknet">@slicknet</a>.</p>
+<h2>
+	Lessons from&nbsp;LibraryBox</h2>
+<figure class="wrap">
+	<img src="http://src.sencha.io/x100/https://evbdn.eventbrite.com/s3-s3/eventlogos/2201834/jasongriffey.jpg" /></figure>
+<p>
+	Jason Griffey will talk about his current passion: <a href="http://librarybox.us">the LibraryBox Project</a>, an open source wifi file sharing device that recently had its v2.0 funded on Kickstarter to the tune of $33,000. He will discuss the genesis of the project, his ongoing goals for v2.0, and why receiving 1000% of his funding goals via Kickstarter keeps him up at&nbsp;night.</p>
+<p>
+	Jason Griffey is an Associate Professor and Head of Library Information Technology at the University of Tennessee at Chattanooga. His latest book, <a href="http://amzn.to/12al2hg"><cite>Mobile Technology and Libraries</cite></a>, is available as a part of the award winning Neal Schuman&rsquo;s Tech Set. He was named a Library Journal Mover <span class="amp">&amp;</span> Shaker in 2009, and speaks internationally on the future of libraries, mobile technology, eBooks, and other technology related issues. You can find him at <a href="http://jasongriffey.net">jasongriffey.net</a> and on <a href="http://www.alatechsource.org/blog">the <span class="caps">ALA</span> Techsource blog</a>. Jason spends his free time with his daughter Eliza, reading, obsessing over gadgets, and preparing for the inevitable zombie&nbsp;uprising.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/code-creativity-1/</link>
+			<guid>https://blog.easy-designs.net/archives/code-creativity-1/</guid>
+			<dc:date>2013-08-20T10:06:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Should All Sites Be Responsive?</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>
+	If I had a kitten for every time we&#39;ve been asked &#8220;Does my site need to be responsive?&#8221; I would be that crazy cat lady that lives down the&nbsp;street.</p>
+<p>
+	But, seriously, Aaron captured our thoughts on it perfectly in a recent interview in <em>.net</em>:</p>
+<blockquote>
+	<p>
+		I think all sites should be capable of adapting to whatever device is being used to access them. To me it&rsquo;s about offering good customer service and not forcibly ejecting someone from your website (or making them endure a crappy experience) because they happen to be using a browser you don&rsquo;t like or didn&rsquo;t bother testing. That&rsquo;s why we at Easy Designs follow the philosophy of progressive enhancement. And mobile-first, responsive web design is a great tool in the progressive enhancement tool&nbsp;chest.</p>
+</blockquote>
+<p>
+	You can read <a href="http://www.netmagazine.com/advertorial/responsive-web-design-6-experts-4-questions">other musings on the subject from Aaron (as well as from our friends Brad Frost and Tim Kadlec) over on <cite>.net</cite></a>.&nbsp;</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/should-all-sites-be-responsive/</link>
+			<guid>https://blog.easy-designs.net/archives/should-all-sites-be-responsive/</guid>
+			<dc:date>2013-08-01T10:42:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Download AWD direct to Dropbox</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>
+	If you&rsquo;ve ordered a digital copy of Aaron&rsquo;s book, <cite><a href="http://adaptivewebdesign.info">Adaptive Web Design</a></cite>, you can now send it directly to your <a href="http://dropbox.com">Dropbox</a> account from the download page. This should simplify loading it on your favorite mobile device, assuming you you aren&rsquo;t reading it in <a href="http://readmill.com">Readmill</a> already. (You did know we have a Send to Readmill button,&nbsp;right?)</p>
+<figure>
+	<img src="http://src.sencha.io/x100/https://blog.easy-designs.net/img/posts/save-to-dropbox.png" alt=""/></figure>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/download-awd-direct-to-dropbox/</link>
+			<guid>https://blog.easy-designs.net/archives/download-awd-direct-to-dropbox/</guid>
+			<dc:date>2013-07-17T14:23:00-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Hackanooga registration is now open</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>In a world with universal, ultra high-speed networks, all our assumptions about the web can be reset. What kinds of apps can we build when data can travel as fast as it needs to and processing power is never a bottleneck? The GigCity is going to find&nbsp;out.</p>
+<p>Join Mozilla, <span class="caps">US</span> Ignite and a crew of forward-thinking technologists September 14-16th for a weekend of innovation, coding and fun. Leveraging the power of Chattanooga&rsquo;s Gigabit network, we&rsquo;ll spend two days prototyping the apps of the future. And we&rsquo;ll get a glimpse at the new experiences made possible by next-generation networks and our own&nbsp;ingenuity.</p>
+<p>If you plan, build or design for the web, we want you! This is not a spectator sport, so plan to get your hands&nbsp;dirty.</p>
+<p><strong>What will&nbsp;happen?</strong></p>
+<p>Hackanooga is a participatory event focused on making and doing. We want running code, not just cool concepts. Less yak, more&nbsp;hack.</p>
+<p>Over the course of two days we&rsquo;ll code, collaborate and kick ass! We&rsquo;ll eat pancake breakfasts, laugh over midnight marshmallows, and hack furiously into the wee hours. Hackanooga will provide you with meals, snacks, general merriment and even a place to nap over the course of the weekend, so you can focus on your team&rsquo;s&nbsp;app.</p>
+<p>At the end of the event, we&rsquo;ll revel in the fruits of our collective handiwork and make plans to join forces again. Plus, prototypes created during the event could evolve into submissions to the Mozilla Ignite challenge, with $500,000 of seed money and mentorship available to help get the apps off the&nbsp;ground.</p>
+<p>Up for the&nbsp;challenge?</p>
+<p><strong>Hack yes! What do I need to&nbsp;do?</strong></p>
+<p>Everyone is welcome, but space is limited, so sign-up early. If you&rsquo;re  interested in participating, please register at  http://hackanooga-2012.eventbrite.com by Tuesday, August, 21, 2012.  (We&rsquo;re also offering a limited number of travel scholarships for out-of-town  hackers. If you&rsquo;re seeking travel support, please complete the appropriate  application fields when you&nbsp;register.)</p>
+<p>Don&rsquo;t worry if you don&rsquo;t have a team or an app idea; we&rsquo;ll pair you up with  a team based on your interests. We&rsquo;ve partnered with organizations around  Chattanooga to uncover potential projects in the areas of strategic growth,  distance education, library technology, clean energy, government  transparency, healthcare and public safety. We have an abundance of  ideas and expert resources, now we just need&nbsp;you.</p>
+<p>Additional event details are available on  http://hackanooga-2012.eventbrite.com. Questions, comments or concerns  about Hackanooga? Please email&nbsp;kelly@easy-designs.net.</p>
+<p>For more, check out http://mozillaignite.org, http://www.thegigcity.com/,  and http://us-ignite.org. If you have questions about the scholarship, the  Mozilla Ignite challenge, or <span class="caps">US</span> Ignite, please email&nbsp;ignite@mozillafoundation.org.</p>
+<p>We hope to see you&nbsp;there!</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/hackanooga-registration-is-now-open/</link>
+			<guid>https://blog.easy-designs.net/archives/hackanooga-registration-is-now-open/</guid>
+			<dc:date>2012-08-07T13:55:44-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Aaron on the BBC (and UIE)</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>Aaron&rsquo;s been all over the place lately. He&nbsp;was recently interviewed for <a href="http://www.bbc.co.uk/news/business-17931814">a segment on <span class="caps">HTML</span>5 that ran on <span class="caps">BBC</span> television</a> in the <span class="caps">UK.</span> True to form, his hour-long conversation boiled down to a few sound bites, but it was still an amazing opportunity. You can check the video out&nbsp;below:</p>
+<figure></figure>
+<p>In advance of his workshop at User Interface 17 this coming November, Aaron also sat down for a chat with Jared Spool to talk about responsive design, adaptive user interfaces, mobile and more. You can <a href="http://www.uie.com/brainsparks/2012/07/20/aaron-gustafson-adapting-your-designs-with-progressive-enhancement/">check out the podcast on the User Interface Engineering&nbsp;blog</a>.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/aaron-on-the-bbc/</link>
+			<guid>https://blog.easy-designs.net/archives/aaron-on-the-bbc/</guid>
+			<dc:date>2012-08-03T14:34:32-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>We Want You!</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>Finding quality talent is never a simple task. Being a small agency, we&rsquo;ve primarily worked with a talented pool of awesome freelance designers and developers to &ldquo;staff up&rdquo; as needed for various projects. Most of our team members have been with us for years, but since our relocation to Chattanooga, Tennessee in 2008, we&rsquo;ve been very interested in growing a strong local team. Working remotely with people is good, but being able to walk over to someone&rsquo;s desk to ask a question or get a spot check on something you built is&nbsp;priceless.</p>
+<p>So here&rsquo;s the deal: We are looking for two more talented folks to join the Easy team here in <a href="http://www.outsideonline.com/adventure-travel/best-towns/Sweet-HomeChattanooga.html">Chattanooga</a> (the &ldquo;<a href="http://www.nooga.com/154041/chattanoogas-high-speed-internet-serves-as-example-for-others/">next tech city</a>&rdquo;) full-time. The enviroment here is best suited for someone who is flexible, loves variety and is eager to produce quality work. At any given time, our work consists of: client production (for clients like wikiHow, EllisLab <span class="amp">&amp;</span> Nichols College and on internal projects), training <span class="amp">&amp;</span> consulting (for folks like Spectra Energy <span class="amp">&amp;</span> the <cite>New York Times</cite>), electronic <span class="amp">&amp;</span> physical publishing through our sister company <a href="http://easy-readers.net">Easy Readers</a>, and event-based training through <a href="http://retreats4geeks.com">Retreats 4 Geeks</a>. Our projects offer a variety of experience, encourage continued growth, and require a robust skill&nbsp;set.</p>
+<p>If you&rsquo;re the kind of person that thrives on a good challenge, read&nbsp;on&hellip;</p>
+<p>Our ideal team members&nbsp;are:</p>
+<ul>
+<li>excellent&nbsp;communicators;</li>
+<li>fun to be around <span class="amp">&amp;</span> have a good sense of&nbsp;humor;</li>
+<li>detail-oriented to the point of being a little <abbr title="obsessive-cumpulsive"><span class="caps">OCD</span></abbr>;</li>
+<li>not afraid to fail quickly and&nbsp;often;</li>
+<li>passionate about their&nbsp;work;</li>
+<li>eager to share what they know via speaking, training, and writing;&nbsp;and</li>
+<li>dedicated to making the web&nbsp;better.</li>
+</ul>
+<p>From a technical perfective, here&rsquo;s what we&rsquo;re looking&nbsp;for:</p>
+<h2>Front-end&nbsp;Gal/Guy</h2>
+<p>We&rsquo;re expecting this team member&nbsp;to:</p>
+<ul>
+<li>know <span class="caps">HTML</span> <span class="amp">&amp;</span> <span class="caps">CSS</span> like it&rsquo;s her/his mother&nbsp;tongue;</li>
+<li>understand the importance of&nbsp;semantics;</li>
+<li>be passionate about progressive&nbsp;enhancement;</li>
+<li>get excited by the opportunities of&nbsp;mobile;</li>
+<li>grok adaptive layouts, media queries <span class="amp">&amp;</span>&nbsp;mobile-first;</li>
+<li>be a competant JavaScript programmer (jQuery is ok);&nbsp;and</li>
+<li>understand the importance of optimization (images, <span class="caps">JS</span>,&nbsp;etc.).</li>
+</ul>
+<p>It would be awesome if this team&nbsp;member:</p>
+<ul>
+<li>is comfortable working with version control (e.g.&nbsp;Git);</li>
+<li>has made open source&nbsp;contributions;</li>
+<li>can program in JavaScript without the aid of a&nbsp;library;</li>
+<li>understands how to optimize JavaScript for&nbsp;performance;</li>
+<li>can also program on the server-side (<span class="caps">PHP</span>, Node, Python/Django);&nbsp;and/or</li>
+<li>is familiar with&nbsp;ExpressionEngine.</li>
+</ul>
+<h2>Back-end&nbsp;Gal/Guy</h2>
+<p>We&rsquo;re expecting this team member&nbsp;to:</p>
+<ul>
+<li>know and love <span class="caps">PHP</span>;</li>
+<li>be comfortable in at least one other server-side language (Node, Python,&nbsp;Ruby);</li>
+<li>be familiar with server-side <span class="caps">MVC</span> frameworks (CodeIgniter, CakePHP, Django, Rails,&nbsp;etc.);</li>
+<li>program in JavaScript without the aid of a&nbsp;library;</li>
+<li>live and breathes <span class="caps">SQL</span> (especially&nbsp;MySQL);</li>
+<li>know the ins and outs of ExpressionEngine (1 and&nbsp;2);</li>
+<li>use Git daily;&nbsp;and</li>
+<li>understand the importance of&nbsp;optimization.</li>
+</ul>
+<p>It would be awesome if this team member&nbsp;also:</p>
+<ul>
+<li>has written ExpressionEngine&nbsp;add-ons;</li>
+<li>has made open source&nbsp;contributions;</li>
+<li>understands how to optimize programs for&nbsp;performance;</li>
+<li>can write shell scripts;&nbsp;and</li>
+<li>can do a little light server&nbsp;maintenance.</li>
+</ul>
+<p>If you think you&rsquo;re a good match for either of these positions, please email <em>contact [at] easy-designs [dot] net</em> with the subject &ldquo;Hire me&rdquo; and tell us why you&rsquo;d be perfect for either one (or both) of these jobs. Be sure to include your contact info, Twitter handle and links to your work and/or code&nbsp;samples.</p>
+<p>We can&rsquo;t wait to meet&nbsp;you!</p>
+<p><strong><span class="caps">UPDATE</span> 2012-07-19</strong>: These two positions have been pre-qualified for <a href="http://thegigcity.com/geekmove">Chattanooga&rsquo;s GeekMove program</a>, meaning that if you relocate here to work for us and you buy a house, you would qualify could receive a $10,000 forgivable second mortgage and $1,250 for relocation expenses. Talk about a sweet&nbsp;bonus!</p>
+<p><strong><span class="caps">UPDATE</span> 2012-07-21:</strong>&nbsp;Please note that these jobs are in the United States and we are not able to sponsor non-<span class="caps">U.S.</span> citizens with an H1B&nbsp;visa.</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/we-want-you/</link>
+			<guid>https://blog.easy-designs.net/archives/we-want-you/</guid>
+			<dc:date>2012-07-09T14:25:35-04:00</dc:date>
+		</item>
+	
+		<item>
+			<title>HTML5 &amp;amp; CSS3 on the Appalachian Trail</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<figure><a href="http://retreats4geeks.com/events/2011/html5-css3/"><img src="http://src.sencha.io/x100/https://blog.easy-designs.net/img/posts/retreats-4-geeks-spring-2011.jpg" alt=""/></a></figure>
+<p>We&rsquo;re very excited to announce that our flagship training series, <a href="http://retreats4geeks.com">Retreats 4 Geeks</a>, is returning in 2011! We&rsquo;ll be kicking things off April 8th with <a href="http://retreats4geeks.com/events/2011/html5-css3/">3 days of <span class="caps">HTML</span>5 and <span class="caps">CSS</span>3 with Eric Meyer and our own Aaron&nbsp;Gustafson</a>.</p>
+<p>This year, we&rsquo;ll be doing things a little differently. First, we&rsquo;re offering retreat attendees access to not one, but <a href="http://retreats4geeks.com/events/2011/html5-css3/#instructors">two incredibly talented web professionals</a>. Plus, we&rsquo;ve added a third day to <a href="http://retreats4geeks.com/events/2011/html5-css3/#schedule">the schedule</a> where attendees will practice what they&rsquo;ve learned by working on an actual project under the guidance of our exceptional instructors. (And since we geeks like to give back, the project workshop will benefit a local nonprofit.) We hope these changes will give attendees more opportunities to have their questions answered and really engage with the&nbsp;instructors.</p>
+<p>Not everything is changing though. We are still adamantly committed to keeping our class sizes small <em>(as in around 15)</em>. We firmly believe that a small student-teacher ratio helps ensure that our retreat attendees get the most out of the experience and leave with a head full of practical knowledge, rather than one reeling with unanswered&nbsp;questions.</p>
+<p>We&rsquo;re also sticking with a unique, inspiring venue that helps our attendees step away from their day-to-day distractions and focus on learning. Our Spring event will be hosted in <a href="http://retreats4geeks.com/events/2011/html5-css3/#lodging">a luxury lodge on the side of a mountain</a> in <a href="http://retreats4geeks.com/events/2011/html5-css3/#location">Gatlinburg, <span class="caps">TN</span></a>. It&rsquo;s chock full of amenities <em>(yes, including wi-fi)</em>, and we&rsquo;ll have our own in-house chef whipping up fresh, organic meals and snacks to keep the group well-fueled for the entirety of the&nbsp;event.</p>
+<p>If this sounds like your kind of training, we hope you&rsquo;ll consider joining us this April. For more details on the event, you can visit <a href="http://retreats4geeks.com/events/2011/html5-css3/">the Retreats 4 Geeks website</a> or <a href="http://retreats4geeks.com/events/2011/html5-css3/HTML5-and-CSS3-2011-Fact-Sheet.pdf">download the <span class="caps"><span class="caps">PDF</span></span> fact sheet for this retreat</a>. And keep an eye out for more Retreats 4 Geeks coming later this&nbsp;year!</p>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/html5-and-css3-on-the-appalachian-trail/</link>
+			<guid>https://blog.easy-designs.net/archives/html5-and-css3-on-the-appalachian-trail/</guid>
+			<dc:date>2011-01-12T17:05:56-05:00</dc:date>
+		</item>
+	
+		<item>
+			<title>Thank you for a wonderful 2010!</title>
+			<author>kelly@easy-designs.net (Kelly McCarthy)</author>
+			<description><![CDATA[
+				<p>As we near the end of our 10th year <em>(we can hardly believe it&rsquo;s been a decade already!)</em>, we wanted to take a few moments to thank you&mdash;our clients, our partners, and our friends&mdash;for continuing to challenge, inspire, and employ&nbsp;us.</p>
+<p>We like to show our gratitude by taking some small action to help others, &ldquo;paying it forward&rdquo; if you will. In the past we&rsquo;ve contributed on a more global scale through our donations to <a href="http://heifer.org">Heifer International</a> and <a href="http://laptop.org/">One Laptop Per Child</a>, but this year we wanted to direct our support to projects that are doing good in our community, so we have decided to donate to the <a href="http://chattfoodbank.org/">Chattanooga Area Food&nbsp;Bank</a>.</p>
+<p>As you know, our economy has taken some major hits over the past couple of years, which has been particularly tough on working families, so we wanted to help ensure that folks in our local community did not go hungry this winter. The Chattanooga Area Food Bank has been helping individuals and families in southeast Tennessee and northwest Georgia for nearly 30 years by &ldquo;bridging the gap between America&rsquo;s food bounty and those who cannot provide for themselves&rdquo;. We especially love the fact that, in addition to distributing food (over 8.8 million pounds last year alone), the Food Bank has an active community gardens program that helps residents in low-income apartments grow their own&nbsp;food.</p>
+<figure> <img src="http://src.sencha.io/x100/https://blog.easy-designs.net/img/posts/community-garden.jpg" alt=""/><figcaption>Photo by <a href="http://www.flickr.com/photos/vickimoore/">vicki moore</a></figcaption></figure>
+<p>If you have the means, we encourage you to contribute to <a href="http://chattfoodbank.org/">Chattanooga Area Food Bank</a> or your own local food&nbsp;bank.</p>
+<p>Wishing you all the best for a lovely, healthy and successful 2011,<br />The Easy Designs&nbsp;Team</p>
+<h2>2010&nbsp;Highlights</h2>
+<p>As our way of saying farewell to 2010, we&rsquo;ve prepared a list of some of our favorite geeky, interesting, and amazing things from this past year. If you&rsquo;ve missed any of these, we highly recommend taking a&nbsp;peek.</p>
+<ul>
+<li><a href="http://www.thewildernessdowntown.com/">The Wilderness Downtown</a><br /> A fantastic interactive music video demo created for Google&rsquo;s Chrome browser. Bonus for a great song by Arcade&nbsp;Fire.</li>
+<li><a href="http://lostworldsfairs.com/">Lost World&rsquo;s Fairs</a><br /> A wonderfully inventive demonstration of the typographic possibilities brought about by support for real fonts on the&nbsp;web.</li>
+<li><a href="http://www.20thingsilearned.com/">20 Things I Learned About Browsers <span class="amp">&amp;</span> the Web</a><br /> A great storybook that explains a lot about the web. Bonus points for clever&nbsp;illustrations.</li>
+<li><a href="http://keyringapp.com/">Key Ring App</a><br /> A excellent way to rid yourself of a bulky wallet by storing your loyalty cards on your&nbsp;phone.</li>
+<li><a href="http://www.UCBComedy.com/videos/play/6472/bp-spills-coffee"><span class="caps">BP</span> Spills Coffee</a><br /> A brilliant spoof of a profound&nbsp;tragedy.</li>
+<li><a href="http://blog.okcupid.com/index.php/dont-be-ugly-by-accident/">Don&rsquo;t Be Ugly By Accident!</a><br /> An amazing photographic analysis of attractiveness from the folks at&nbsp;OkCupid.</li>
+<li><a href="http://pdxapi.com/"><span class="caps"><span class="caps">PDX</span></span>-<span class="caps"><span class="caps">API</span></span></a><br /> A city puts its data out there. In&nbsp;real-time.</li>
+<li><a href="http://littlebigdetails.com/">Little Big Details</a><br /> It&rsquo;s the little details that make an interface&nbsp;fun.</li>
+<li><a href="http://yearinreview.twitter.com/">Twitter 2010: Year in Review</a><br /> A beautiful and informative look back at 2010 as seen through the eyes of&nbsp;Twitter.</li>
+<li><a href="http://instagr.am/">Instagram</a><br /> Transform and share snapshots of your world from your&nbsp;iPhone.</li>
+</ul>
+				<img src="https://blog.easy-designs.net/?ACT=38&utmac=UA-176472-10&utmn1732876399&utmr=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Fby-author%2Fkelly-mccarthy%2F&utmp=%2Frss%2Fby-author%2Fkelly-mccarthy.rss&guid=ON" alt="" style="position:absolute;"/>
+			]]></description>
+					<link>https://blog.easy-designs.net/archives/thank-you-for-a-wonderful-2010/</link>
+			<guid>https://blog.easy-designs.net/archives/thank-you-for-a-wonderful-2010/</guid>
+			<dc:date>2010-12-17T12:00:29-05:00</dc:date>
+		</item>
+	
+	</channel>
+</rss>

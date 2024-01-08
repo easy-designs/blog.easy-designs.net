@@ -1,0 +1,467 @@
+
+
+	
+		
+		
+	
+		
+
+		
+		
+	
+
+
+
+
+	
+
+	
+<!DOCTYPE html>
+<html lang="en" id="easy-reader_net" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Language" content="en"/>
+	
+	<title>From &#8220;Mobile Friendly&#8221; to &#8220;Mobile First&#8221; - The Easy Designs Blog</title>
+<meta name="robots" content="index,follow,archive" />
+
+<meta name="geo.position" content="35 02 00 N,085 18 00 W" />
+<meta name="geo.placename" content="Chattanooga" />
+<meta name="geo.region" content="US-TN" />
+
+ <link rel="canonical_url" href="https://blog.easy-designs.net/archives/from-mobile-friendly-to-mobile-first/" /> 	
+	<meta property="og:site_name" content="The Easy Designs Blog" />
+	<meta property="og:image" content="https://b.ed-cdn.com/img/facebook-icon.png?v=20111226" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="fb:admins" content="aaronmgustafson" />
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:site" value="@EasyDesigns"/>
+    <meta name="twitter:domain" content="Easy Design’s Blog">
+    
+    
+    <meta name="twitter:creator" value="@AaronGustafson">
+    
+    
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="From &#8220;Mobile Friendly&#8221; to &#8220;Mobile First&#8221;" />
+	<meta property="description" content="You may not have noticed, but we just turned this blog on it&rsquo;s head, design-wise. Those of you browsing on something other than a desktop browser should now be enjoying a much better reading experience. Here&rsquo;s what&rsquo;s changed and how we did it." />
+	<meta property="og:description" itemprop="description" content="You may not have noticed, but we just turned this blog on it&rsquo;s head, design-wise. Those of you browsing on something other than a desktop browser should now be enjoying a much better reading experience. Here&rsquo;s what&rsquo;s changed and how we did it." />
+	<meta property="og:url" content="https://blog.easy-designs.net/archives/from-mobile-friendly-to-mobile-first/" />
+	<meta name="medium" content="blog" />
+	
+	<meta name="MSSmartTagsPreventParsing" content="true"/>
+	<meta name="Copyright" content="(c) Copyright 2005–2017. All rights reserved unless otherwise indicated."/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta name="Rating" content="General"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta name="viewport" content="width=device-width"/>
+	
+	<link rel="home" href="/index.html"/>
+	<link rel="copyright" href="/index.html#copyright"/>
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if (gt IE 8)|(IE 6)|(IEMobile)]><!-->
+		<link rel="stylesheet" href="/css/main.css">
+	<!--<![endif]-->
+	<!--[if (lte IE 8)&(gte IE 7)&(!IEMobile)]><link rel="stylesheet" href="/css/main-old-ie.css"><![endif]-->
+	
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/><![endif]-->
+	<!--[if IEMobile 7]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7-mobile.css"/><![endif]-->
+	<!--[if (lte IE 7)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/><![endif]-->
+	<!--[if (lte IE 6)&!(IEMobile)]><link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->  
+	
+		<link rel="alternate" type="application/rss+xml" title="All Posts" href="/rss/posts.rss"/>
+
+
+</head>
+	<body id="single-entry" class="hentry">
+	<header role="banner" id="page-header" class="jeff">
+ 		<h4 id="logo"><a href="/index.html" title="Return to the homepage">
+			<a href="/index.html">The Easy Designs Blog</a>
+		</a></h4>
+
+	</header>
+	<section id="content">
+
+
+		<div role="main" id="main">
+			<article role="article" class="focal">
+
+				<header>
+					<h1 itemprop="name" class="entry-title">From &#8220;Mobile Friendly&#8221; to &#8220;Mobile First<span class="final quote">&#8221;</span></h1>
+                    
+					<h3 class="meta byline author vcard">Posted by <a class="fn" href="/archives/by-author/aaron-gustafson/index.html">Aaron Gustafson</a> on 
+					    <time class="published updated" datetime="2011-10-12T11:33:00" pubdate="pudate">12 October 2011</time> | 
+  					    <a rel="bookmark" href="./index.html">Permalink</a></h3>
+                    
+				</header>
+				<div class="entry-content">
+						
+							
+								
+										<p>
+	If you&rsquo;re reading this on a desktop browser, you may not have noticed, but we just turned this blog on it&rsquo;s head, design-wise.&nbsp;Those of you browsing on a tablet or mobile device, however, should be enjoying a much more comfortable reading experience.&nbsp;Now that&rsquo;s not to say that we&rsquo;ve been giving mobile the short end of the stick before pushing out the new code, but our approach to mobile has changed drastically since the redesign of this blog early last year and we&rsquo;re really happy to be able to bring the lessons we&rsquo;ve learned back&nbsp;here.</p>
+<p>
+	Our initial approach to this site involved building out the desktop view as the default layout. We then used&nbsp;<span class="caps">CSS</span>3 media queries to &ldquo;dumb down&rdquo; the content by removing some page components and reconfiguring some of the content. It worked pretty well, but we were relying on our mobile users to have media query support in their device. Given that our audience tends to have more capable mobile devices, it probably wasn&rsquo;t an incorrect assumption, but it wasn&rsquo;t all that kind to people who happen to have less-capable devices. And, in truth, it didn&rsquo;t sit well with us because it didn&rsquo;t really jive with <a href="http://adaptivewebdesign.info">the progressive enhancement philosophy I advocate so hard for</a>. That said, the world of media queries was pretty new at the&nbsp;time.&nbsp;</p>
+<p>
+	We know better&nbsp;now.</p>
+<p>
+	In the past year, our approach to mobile has become much more nuanced as we embraced the &ldquo;mobile first&rdquo; idea <a href="http://lukew.com">Luke Wroblewski</a> has been pushing for (and recently <a href="http://www.lukew.com/resources/mobile_first.asp">wrote a book about</a>). The idea of &ldquo;mobile first&rdquo; is that you optimize your site for use in a mobile context and then layer on additional styles, JavaScript, and content as you find you have more real estate to work with or a more capable&nbsp;device.</p>
+<p>
+	In terms of media queries, it meant switching the layout around to be mobile when media query support was lacking and then making tweaks to the styes as the browser&rsquo;s width exceeded certain milestones (using <code class="css">min-width</code> values rather than the <code class="css">max-width</code>&nbsp;ones we&rsquo;d been using previously to skrink the site). On the JavaScript end, it meant witholding certain scripts until we knew they&rsquo;d be useful (the comment preview, for instance, is terribly distracting on a mobile device).&nbsp;These were techniques we&rsquo;d already put into practice on other sites,&nbsp;but that we had not gotten around to applying&nbsp;here.</p>
+<p>
+	The biggest difference most people will see is the visual one. In its previous incarnation, this site only supported 2 resolutions: wide and narrow. It didn&rsquo;t matter is you were on a tablet or a handheld device; you were getting the mobile layout. Under the new setup, the layout is far more nuanced, adjusting roughly 6 times. Some of the adjustments are subtle (such as relocation of search from the footer to the header as you cross the 570px mark), but others are more substantial (such as the introduction of sidebar content at 651px). Below are a series of screenshots depicting the differences between the two approaches at different&nbsp;milestones.</p>
+<figure>
+	<img alt="" src="/img/posts/blog-comparison-tiny.png" /><figcaption>A comparison of the narrow layout of this blog. The differences are pretty subtle, mostly having to do with spacing.</figcaption></figure>
+<figure>
+	<img alt="" src="/img/posts/blog-comparison-small.png" /><figcaption>A comparison of the small screen layout of this blog. Small tablet and Kindle users benefit from slightly larger text.</figcaption></figure>
+<figure>
+	<img alt="" src="/img/posts/blog-comparison-mid.png" /><figcaption>A comparison of the mid-size layout of this blog. Slightly larger tablets will get a sidebar (as appropriate) and the line lengths are a little better.</figcaption></figure>
+<figure>
+	<img alt="" src="/img/posts/blog-comparison-wide.png" /><figcaption>A comparison of the wide/desktop layout of this blog. There are some minor spacing differences, but not much else has changed.</figcaption></figure>
+<p>
+	Taken altogether, the differences don&rsquo;t appear that substantial, but given that every device/browser has access to the narrow layout, the reading experience is vastly improved.&nbsp;<em>Note: to get <span class="caps">IE</span> to apply media queries in versions 8 and under, we&rsquo;re using the <a href="https://github.com/scottjehl/Respond">Scott Jehl&rsquo;s&nbsp;Respond.js</a>.</em></p>
+<p>
+	So that gives you a pretty good sense of how we&rsquo;re adjusting the layout based on the device size, but there are a few other niceities going on under the hood that I&rsquo;d like to share as well. Here&rsquo;s a&nbsp;round-up:</p>
+<ol>
+	<li>
+		<strong>Our content images are now being served via src.sencha.io</strong>, a free web service and <span class="caps">CDN</span> from the folks behind <a href="http://www.sencha.com/">Sencha</a> that takes the pain out of serving images based on the device requesting them. To keep the implementation simple (and easily swappable), I wrote <a href="https://github.com/easy-designs/easy_src_sencha_io.ee_addon">an ExpressionEngine plugin to automatically swap images for their src.sencha.io equivalents</a>&nbsp;(<span class="caps">EE</span>1 only for right now, but I&rsquo;ll port it shortly). For more detail on using src.sencha.io, check out <a href="http://www.sencha.com/learn/how-to-use-src-sencha-io/">this&nbsp;article</a>.</li>
+	<li>
+		<strong>Comments are now loaded via Ajax.</strong> I know, it sounds crazy, but it makes sense. By default, we include a link to an alternate version of the blog post template with comments exposed (well, really it&rsquo;s the same template with an additional <span class="caps">URL</span> segment passed in). Then, using JavaScript, we look for that link and replace it with the comments thread after the page finishes loading. You know, <em>progressive enhancement</em>. The overall effect is that it reduces the time it takes to download the page, which means you get to the content you want to read faster. You can check out <a href="https://gist.github.com/b976b67e88ffbfc9f125">the code that makes it work over on Github</a> (it&rsquo;s a slightly modified version of <a href="https://gist.github.com/d0e4918cf5e97edf99f3">Scott Jehl&rsquo;s original&nbsp;script</a>).</li>
+	<li>
+		<strong>Our social plugins now protect your privacy.</strong> We hadn&rsquo;t really thought about the fact that every time a script is included from Twitter or Facebook, that can be used to track your movement around the web. Once we realized it though, we decided we needed to change our social links to protect you. As such, we&rsquo;ve changed the links to work without JavaScript and using images delivered by servers we control. <a href="http://plus.google.com">Google+</a> has been dropped for the time being as they do not seem to offer a consistent destination <span class="caps">URL</span> for their +1 service. If they change that or someone can tell us what it is, we&rsquo;ll likely bring it&nbsp;back.</li>
+	<li>
+		<strong>Better support for services like <a href="http://www.readability.com/">Readability</a>.</strong> We want you to be comfortable reading our content; if you don&rsquo;t like our layout, that&rsquo;s fine with&nbsp;us.</li>
+</ol>
+<p>
+	What do you think? Did we miss anything that would make your reding experience better on this&nbsp;blog?</p>
+<p>
+	<span class="caps">PS</span> - If you&rsquo;re interested, I&rsquo;ll be giving <a href="http://inspireconf.com/">a full-day Adaptive Web Design workshop in Amsterdam on 29 November 2011</a>, during which I will be discussing these topics and more in much greater depth and mentoring attendees on how to craft truly rich web experiences with progressive enhancement. Tickets are available <a href="http://inspire-adaptivewebdesign.eventbrite.com/">on&nbsp;EventBrite</a>.</p>
+				</div>
+
+				
+
+
+				<section id="bookmark">
+					<h2>Like it? Share it</h2>
+	      			<p class="twitter"><a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F&amp;source=tweetbutton&amp;text=From+&#8220;Mobile+Friendly&#8221;+to+&#8220;Mobile+First&#8221;&amp;url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F&amp;via=EasyDesigns"><img src="/css/button-twitter-enabled.png" alt="Tweet"/></a></p>
+	                <p class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F"><img src="/css/button-facebook-enabled.png" alt="Like on Facebook"/></a></p>
+					<p class="linkedin"><a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F&amp;original_referer=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F"><img src="/css/button-linkedin-enabled.png" alt="Share on LinkedIn"/></a></p>
+					<p class="google_plus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.easy-designs.net%2Farchives%2Ffrom-mobile-friendly-to-mobile-first%2Fcomments%2F"><img src="/css/button-googleplus-enabled.png" alt="Share on Google Plus"/></a></p>
+	            </section>
+
+			</article>
+
+	
+
+
+			<section class="sidebar" role="complementary"><div class="inner">
+
+
+
+	
+
+				<div class="vcard">
+					<figure>
+						<img class="photo" src="https://a.ed-cdn.com/global/aaron-gustafson.jpg" alt="" />
+						<b class="frame"></b>
+					</figure>
+					<h2 class="fn">Aaron Gustafson</h2>
+					<p>Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP).</p>
+				</div>
+				<ul class="browse author">
+  						<li><a href="/archives/by-author/aaron-gustafson/index.html">See all of Aaron Gustafson&#8217;s posts</a></li>
+	  					<li><a rel="feed" href="/rss/by-author/aaron-gustafson.rss">Subscribe to Aaron Gustafson&#8217;s posts</a></li>
+				</ul>
+
+	
+
+
+
+
+
+	
+				<h2>Filed under</h2>
+				<ul class="browse">
+		
+					<li><a rel="tag" href="/archives/by-category/process/index.html">Process</a></li>
+		
+				</ul>
+
+				<h2>Tagged</h2>
+				<ul class="browse inline">
+		
+					
+								<li><a rel="tag" href="/archives/by-tag/html/index.html">(x)HTML</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/accessibility/index.html">accessibility</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/browsers/index.html">browsers</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/coding/index.html">coding</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/cms/index.html">content management</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/design/index.html">design</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/expressionengine/index.html">ExpressionEngine</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/mobile/index.html">mobile</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/optimization-performance/index.html">optimization & performance</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/progressive-enhancement/index.html">progressive enhancement</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/projects-and-products/index.html">projects & products</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/usability/index.html">usability</a></li>
+					
+								<li><a rel="tag" href="/archives/by-tag/web-standards/index.html">web standards</a></li>
+					
+				</ul>
+
+						<h2>Related entries</h2>
+				<ul class="browse also">
+			  		
+					<li><a href="/archives/on-redirecting-mobile-traffic/index.html">On Redirecting Mobile Traffic</a></li>
+					
+					<li><a href="/archives/i-finally-wrote-a-book/index.html">I (Finally) Wrote a Book</a></li>
+					
+					<li><a href="/archives/you-cant-rely-on-javascript/index.html">Face It: You Can&#8217;t Rely on JavaScript</a></li>
+					
+				</ul>
+    	
+		
+		
+	
+	
+
+			</div></section>
+
+				<section id="comments" class="focal">
+				
+	
+
+		
+
+		
+		
+
+	
+
+	
+	   	
+		        		<h2>Comments</h2>
+    	        <ol class="hfeed">
+							<li class="hentry" id="comment-590">
+						<article class="entry-content">
+							<p>Really interesting article.<br />
+Now I know on which website I&#8217;ll be peeking into the source to find out how to take a responsive design&nbsp;approach&#8230;</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://julianlanderreche.com.ar">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/bf85f96fdc8527904a9688253d164db0?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Julián Landerreche</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-10-15T23:28:47" pubdate="pudate">15 October 2011 at 11pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-590">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-591">
+						<article class="entry-content">
+							<p>Very nice! Thanks for the&nbsp;write-up.</p>
+
+<p>Your Facebook &#8220;Like&#8221; button is more of a &#8220;share&#8221; button actually. &#8220;Like&#8221; without javascript and Facebook tracking code is not possible as far as I&nbsp;know. </p>
+
+<p>What is the reason you chose sencha.io over a self-hosted solution like for example&nbsp;http://adaptive-images.com/ ?</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://fsch.ro">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/ad02b4b3143709328242f4c88db1a90d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Florian</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-10-16T16:20:22" pubdate="pudate">16 October 2011 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-591">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-592">
+						<article class="entry-content">
+							<p>Thanks for the heads up on “Share” vs. “Like” Florian. With all of the changes going on over at Facebook with regard to the documentation (and functions), it’s been a little tough to keep&nbsp;up.</p>
+
+<p>As for the src.sencha.io solution… I was intrigued by <a href="http://tripleodeon.com/">James Pearce</a>’s mention of it at <a href="http://bdconf.com"><span class="caps">BD</span> Conf</a> last month. Shortly after a conference, <a href="http://cloudfour.com/">Jason Grigsby</a> posted <a href="https://docs.google.com/spreadsheet/ccc?key=0AisdYBkuKzZ9dHpzSmd6ZTdhbDdoN21YZ29WRVdlckE&amp;hl=en_US#gid=0">his rough notes regarding responsive image techniques</a> and, in terms of bang-for-the-buck, src.sencha.io seemed like a clear winner. I contemplated Adaptive Images (going into it, that was my first choice), but as we use a <span class="caps">CDN</span> for our images, setting up something like <span class="caps">AI</span> was going to require more work to get it up and running than&nbsp;src.sencha.io.</p>
+
+<p>For what it’s worth, I decided to implement src.sencha.io as an add-on for ExpressionEngine in order to allow us the flexibility to try it out without having to tinker with the content of the site or individual posts. The plugin essentially operates as a filter for &lt;code class=&#8220;html&#8221;&gt;img&lt;/code&gt; elements in the content body and rewrites them to include the necessary src.sencha.io prefix. That allows us to keep the source of each post pristine and will allow us to turn it on and off at will as we experiment with other responsive image&nbsp;options.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2011-10-18T02:21:14" pubdate="pudate">18 October 2011 at 2am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-592">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-593">
+						<article class="entry-content">
+							<p>That plugin seems like a great idea, I&#8217;d like to try it out when you&#8217;re ready to release&nbsp;it.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://fsch.ro">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/ad02b4b3143709328242f4c88db1a90d?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Florian</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-10-18T07:48:27" pubdate="pudate">18 October 2011 at 7am</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-593">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-594">
+						<article class="entry-content">
+							<p>It’s available: <a href="https://github.com/easy-designs/easy_src_sencha_io.ee_addon">https://github.com/easy-designs/easy_src_sencha_io.ee_addon</a> (<span class="caps">EE</span>1.x only right&nbsp;now).</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/323311bb4cc5af1a4b2c5c26b4cfc5a3?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Aaron Gustafson</span>
+									</li>
+							<li><time class="published" datetime="2011-10-18T16:18:17" pubdate="pudate">18 October 2011 at 4pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-594">#</a></li>
+						</ul>
+					</li>
+			
+	   	
+							<li class="hentry" id="comment-595">
+						<article class="entry-content">
+							<p>Great&nbsp;write-up!</p>
+
+<p>re: non-javascript Google +1.<br />
+There is an issue on the G+ issue tracker&#8212;http://code.google.com/p/google-plus-platform/issues/detail?id=50<br />
+Not sure how they prioritise, but starring, commenting on it may help speed up&nbsp;things.</p>
+						</article>
+						<ul class="meta">
+							<li class="author vcard">
+										<a class="url" href="http://zerolab.org">
+											<img src="/img/css/frame-comment-avatar.png" style="background-image:url(https://secure.gravatar.com/avatar/df68a522b814934405e768200f1efd66?s=32&d=https://blog.easy-designs.netimg/gravitar.png);" alt=""/>
+									<span class="fn">Dan</span>
+			  						</a>
+									</li>
+							<li><time class="published" datetime="2011-10-18T20:41:21" pubdate="pudate">18 October 2011 at 8pm</time> | <a rel="bookmark" title="Permalink to this comment" href="/archives/from-mobile-friendly-to-mobile-first/#comment-595">#</a></li>
+						</ul>
+					</li>
+						</ol>
+			
+
+	
+		    		
+	
+
+			</section>
+	
+			<ul id="pagination">
+					<li class="prev"><a href="/archives/on-redirecting-mobile-traffic/index.html">Previous Entry: <em>On Redirecting Mobile Traffic</em></a></li>
+							<li class="next"><a href="/archives/progressive-enhancement-and-expressionengine/index.html">Next Entry: <em>Progressive Enhancement and ExpressionEngine</em></a></li>
+				</ul>
+
+
+
+
+
+      
+    </div>
+
+		<section id="extras">
+
+			<aside id="about" class="promo"><div class="inner">
+	<article id="about-us">
+		<h2>Who are these people?</h2>
+		<p>We are the people that power <a rel="me" href="https://easy-designs.net/">Easy Designs</a>, a content-focused web development consultancy. We live to improve the usability, accessibility, “findability,” and interoperability of the web through the use of web standards, progressive enhancement, and other best practices. This is our blog.</p>
+	</article>
+	
+	<article id="more">
+		<h2>Like what you are reading?</h2>
+		<ul>
+			<li><a href="/rss/all-posts/index.html">Subscribe</a></li>
+			<li><a href="/archives/index.html">View all Entries</a></li>
+		</ul>
+		<h2>Read our minds, fork our code</h2>
+		<ul id="social-links">
+			<li class="twitter"><a href="https://twitter.com/EasyDesigns">Follow us on Twitter</a></li>
+			<li class="facebook"><a href="https://www.facebook.com/EasyDesignsLLC">Like us on Facebook</a></li>
+			<li class="google"><a href="https://plus.google.com/u/0/108855855192834389606/posts">Follow us on Google+</a></li>
+			<li class="github"><a href="https://github.com/easy-designs">Fork us on Github</a></li>
+		</ul>
+	</article>
+</div></aside>
+			
+			<aside id="elsewhere" class="promo" data-append="/inc/elsewhere" data-include-size="large"></aside>	
+
+		</section>
+	</section>
+
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
+
+	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
+		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
+			<a class="org fn url" href="https://easy-designs.net/">Easy Designs LLC</a>. All rights reserved unless otherwise indicated.</span>
+	  		<!--a href="//easy-designs.net/about/standards/">Got Standards?</a-->
+		</p>
+	</footer>
+  
+	<nav id="easy-network">
+		<ul>
+			<li class="easy-designs"><a href="https://easy-designs.net/">
+				<span aria-hidden="true" data-icon="&#xe602;"></span><span>Easy Designs</span></a></li>
+			<li class="r4g"><a href="https://retreats4geeks.com/">
+				<span aria-hidden="true" data-icon="&#xe601;"></span><span>Retreats 4 Geeks</span></a></li>
+	    	<li class="easy-readers"><a href="https://easy-readers.net/">
+	    		<span aria-hidden="true" data-icon="&#xe603;"></span><span>Easy Readers</span></a></li>
+	    	<li class="cha-device-lab"><a href="https://chadevicelab.org/">
+	    		<span aria-hidden="true" data-icon="&#xe604;"></span><span>CHA Device Lab</span></a></li>
+
+	    	<li class="code-and-creativity"><a href="https://codeandcreativity.com/">
+	    		<span aria-hidden="true" data-icon="&#xe600;"></span><span>Code &amp; Creativity</span></a></li>
+	    </ul>
+	</nav>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery.js?20130823"><\/script>')</script>
+	<script src="/js/main.js?20130823"></script>
+	
+	
+
+	
+</body>
+</html>
