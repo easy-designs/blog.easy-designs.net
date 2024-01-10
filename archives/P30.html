@@ -574,22 +574,31 @@
 		</section>
 	</section>
 
-	<form id="search-form" method="post" action="../index.html"  >
-<div class='hiddenFields'>
-<input type="hidden" name="ACT" value="19" />
-<input type="hidden" name="RES" value="10" />
-<input type="hidden" name="meta" value="YTo5OntzOjY6InN0YXR1cyI7czoxMDoibm90IGNsb3NlZCI7czo3OiJjaGFubmVsIjtzOjQ6ImJsb2ciO3M6ODoiY2F0ZWdvcnkiO3M6MDoiIjtzOjk6InNlYXJjaF9pbiI7czoxMDoiZXZlcnl3aGVyZSI7czo1OiJ3aGVyZSI7czozOiJhbnkiO3M6MTI6InNob3dfZXhwaXJlZCI7czozOiJ5ZXMiO3M6MTk6InNob3dfZnV0dXJlX2VudHJpZXMiO3M6MzoieWVzIjtzOjExOiJyZXN1bHRfcGFnZSI7czoxMjoic2VhcmNoL2luZGV4IjtzOjE1OiJub19yZXN1bHRzX3BhZ2UiO3M6MTc6InNlYXJjaC9uby1yZXN1bHRzIjt9ZjIzYjUzODQ0NzJhMDY3MGJkZTc2MGY5YzZiM2M2OTA=" />
-<input type="hidden" name="site_id" value="2" />
-<input type="hidden" name="csrf_token" value="184ed152c0f7ba74c6f1230c5f9354e5a9f80520" />
-</div>
-
-
-<p>
-	<label for="search">Search for</label>
-	<input type="search" id="search" name="keywords" value="&quot;Web Design in a&quot; xylophone" />
-	<button type="submit" value="search">Search</button>
-</p>
-</form>
+	<search role="search">
+		<form id="search-form"
+					class="form form--search"
+					action="https://duckduckgo.com"
+					method="get">
+			<p>
+				<input type="hidden" id="prepend" value="site:blog.easy-designs.net">
+				<input type="hidden" name="kaf" value="1">
+				<input type="hidden" name="kh" value="1">
+				<label for="search">Search for</label>
+				<input type="search" id="search" name="q" value="&quot;Web Design in a&quot; xylophone" />
+				<button type="submit" name="sa" value="Search">Search</button>
+			</p>
+		</form>
+		<script>
+		(function(){
+			var $form = document.getElementById('search-form'),
+					$prepend = document.getElementById('prepend'),
+					$search = document.getElementById('search');
+			$form.addEventListener('submit', function(e){
+				$search.value = $prepend.value + " " + $search.value;
+			}, false);
+		})();
+		</script>
+	</search>
 
 	<footer role="contentinfo" id="page-footer" class="source-org vcard copyright">
 		<p style="overflow:hidden;"><span id="copyright">&#169; Copyright 2005&ndash;2014 
